@@ -1,0 +1,520 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  min-height: 100vh;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.team-name {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.lineup-indicators {
+  display: flex;
+  gap: 10px;
+}
+
+.lineup-item {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lineup-item.active {
+  background: #ff6b35;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+/* Main game area */
+.game-area {
+  flex: 1;
+  display: flex;
+  padding: 20px;
+  gap: 30px;
+}
+
+/* Court container */
+.court-container {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.court {
+  position: relative;
+  width: 500px;
+  height: 600px;
+  background: linear-gradient(45deg, #8b4513, #d2691e);
+  border: 4px solid #654321;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.court::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="wood" patternUnits="userSpaceOnUse" width="20" height="20"><rect width="20" height="20" fill="%23D2691E"/><rect width="10" height="20" fill="%23CD853F"/></pattern></defs><rect width="100" height="100" fill="url(%23wood)"/></svg>');
+  opacity: 0.3;
+}
+
+/* Net */
+.net {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.net::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 24px;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 5px,
+    rgba(255, 255, 255, 0.6) 5px,
+    rgba(255, 255, 255, 0.6) 6px
+  );
+}
+
+/* Player positions */
+.position {
+  position: absolute;
+  width: 120px;
+  height: 140px;
+  z-index: 20;
+}
+
+/* Position layouts - based on volleyball rotation */
+.position-1 {
+  top: 140px;
+  left: 40px;
+} /* Back left - WS */
+.position-6 {
+  top: 140px;
+  left: 190px;
+} /* Back center - MB */
+.position-5 {
+  top: 140px;
+  right: 40px;
+} /* Back right - WS */
+.position-4 {
+  top: 280px;
+  left: 40px;
+} /* Front left - OP */
+.position-3 {
+  top: 280px;
+  left: 190px;
+} /* Front center - MB */
+.position-2 {
+  top: 280px;
+  right: 40px;
+} /* Front right - S */
+.position-libero {
+  top: 420px;
+  left: 40px;
+} /* Libero */
+
+.player-slot {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-card {
+  width: 90px;
+  height: 120px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.player-card.empty {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-style: dashed;
+}
+
+.player-card.empty:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.player-card.libero {
+  background: rgba(255, 193, 7, 0.2);
+  border-color: #ffc107;
+}
+
+.player-card.filled {
+  background: linear-gradient(145deg, #667eea 0%, #764ba2 100%);
+  border-color: #764ba2;
+  overflow: hidden;
+}
+
+.player-card.filled .player-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.player-card.filled .player-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 2px 4px;
+  font-size: 0.6rem;
+  text-align: center;
+  border-radius: 0 0 15px 15px;
+}
+
+.player-card.filled .position-tag {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-size: 0.5rem;
+  font-weight: bold;
+}
+
+.player-card.filled:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(118, 75, 162, 0.4);
+}
+
+.position-label {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 5px;
+}
+
+.position-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.player-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ccc;
+  margin-bottom: 5px;
+  background-size: cover;
+  background-position: center;
+}
+
+.player-card.empty .player-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.player-name {
+  font-size: 0.7rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Player panel */
+.player-panel {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.player-panel h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.player-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 15px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.available-player {
+  width: 80px;
+  height: 100px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #667eea 0%, #764ba2 100%);
+  border: 2px solid #764ba2;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.available-player:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+}
+
+.available-player .player-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.available-player .player-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 2px 4px;
+  font-size: 0.5rem;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+}
+
+.available-player .position-tag {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1px 4px;
+  border-radius: 6px;
+  font-size: 0.4rem;
+  font-weight: bold;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: linear-gradient(145deg, #1e3c72 0%, #2a5298 100%);
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 20px;
+  width: 500px;
+  max-width: 90%;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.close:hover {
+  color: white;
+}
+
+.player-details {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.player-details .player-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+}
+
+.player-info h2 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.player-stats {
+  margin-bottom: 20px;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.stat-value {
+  color: white;
+  font-weight: bold;
+}
+
+.select-player-btn {
+  background: #ff6b35;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.select-player-btn:hover {
+  background: #e55a2b;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .game-area {
+    flex-direction: column;
+  }
+
+  .court {
+    width: 400px;
+    height: 480px;
+  }
+
+  .position {
+    width: 80px;
+    height: 100px;
+  }
+
+  .player-card {
+    width: 60px;
+    height: 80px;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Scrollbar styling */
+.player-panel::-webkit-scrollbar,
+.player-grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.player-panel::-webkit-scrollbar-track,
+.player-grid::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.player-panel::-webkit-scrollbar-thumb,
+.player-grid::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.player-panel::-webkit-scrollbar-thumb:hover,
+.player-grid::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}

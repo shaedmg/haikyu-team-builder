@@ -1,0 +1,48 @@
+{
+  "name": "haikyu-flight-high-team-builder",
+  "version": "1.0.0",
+  "description": "Interactive team builder for Haikyu!! volleyball positions inspired by the anime/manga",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 3000",
+    "serve": "npx serve .",
+    "build": "echo 'No build process needed for vanilla HTML/CSS/JS'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "haikyu",
+    "volleyball",
+    "team-builder",
+    "anime",
+    "interactive",
+    "game"
+  ],
+  "author": "Angelo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/haikyu-team-builder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/username/haikyu-team-builder/issues"
+  },
+  "homepage": "https://github.com/username/haikyu-team-builder#readme",
+  "devDependencies": {
+    "serve": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "files": [
+    "index.html",
+    "styles.css",
+    "script.js",
+    "extended-players.js",
+    "README.md"
+  ]
+}

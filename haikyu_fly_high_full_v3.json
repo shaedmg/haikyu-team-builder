@@ -1,0 +1,1473 @@
+{
+  "generated_at": "2025-08-14T16:37:07.929954Z",
+  "source_index": {
+    "Karasuno": "https://naoshisan.com/?p=2172",
+    "Aoba Johsai": "https://naoshisan.com/?p=2189",
+    "Date Tech": "https://naoshisan.com/?p=2193",
+    "Shiratorizawa": "https://naoshisan.com/?p=2196",
+    "Fukurodani": "https://naoshisan.com/?p=2199",
+    "Jozenji": "https://naoshisan.com/?p=2204",
+    "Inarizaki": "https://naoshisan.com/?p=2202",
+    "Kamomedai": "https://naoshisan.com/?p=3542",
+    "Nekoma": "https://naoshisan.com/?p=2177"
+  },
+  "characters": [
+    {
+      "id": 1,
+      "school": "Karasuno",
+      "name": "Shoyo Hinata",
+      "name_jp": "日向翔陽",
+      "variant": "Hanami",
+      "rarity": "SP",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/0d7550378369e76fa0690595e0848076.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 2,
+      "school": "Karasuno",
+      "name": "Shoyo Hinata",
+      "name_jp": "日向翔陽",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/03/28cced128bf2a4498597c0161fc4f3f3.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 3,
+      "school": "Karasuno",
+      "name": "Shoyo Hinata",
+      "name_jp": "日向翔陽",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/8911620083f32b08e17b40be5b9e750c.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 4,
+      "school": "Karasuno",
+      "name": "Tobio Kageyama",
+      "name_jp": "影山飛雄",
+      "variant": null,
+      "rarity": "UR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/ca6bb0e7b26f52219d1e1840215a093d.png",
+      "personal_page_url": "https://naoshisan.com/?p=3456"
+    },
+    {
+      "id": 5,
+      "school": "Karasuno",
+      "name": "Tobio Kageyama",
+      "name_jp": "影山飛雄",
+      "variant": "Practice",
+      "rarity": "SSR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/4de74e26d29c9cfb3a0d095541d153ad-1.png",
+      "personal_page_url": "https://naoshisan.com/?p=3494"
+    },
+    {
+      "id": 6,
+      "school": "Karasuno",
+      "name": "Daichi Sawamura",
+      "name_jp": "澤村大地",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/984598f1c1dd4e7b249a80be6a3fe796.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 7,
+      "school": "Karasuno",
+      "name": "Daichi Sawamura",
+      "name_jp": "澤村大地",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/79a82b10abe2103433bb4b8845a63021.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 8,
+      "school": "Karasuno",
+      "name": "Koshi Sugawara",
+      "name_jp": "菅原孝支",
+      "variant": "Afterschool",
+      "rarity": "SP",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/05/5fcf1022440a77f151988f1229581687.png",
+      "personal_page_url": "https://naoshisan.com/?p=3449"
+    },
+    {
+      "id": 9,
+      "school": "Karasuno",
+      "name": "Koshi Sugawara",
+      "name_jp": "菅原孝支",
+      "variant": null,
+      "rarity": "SR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/7bfd17b6d9d9a95b3438b44e71d38c63.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 10,
+      "school": "Karasuno",
+      "name": "Asahi Azumane",
+      "name_jp": "東峰旭",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/0affb263d8084c40f6eb8aec1443c040.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 11,
+      "school": "Karasuno",
+      "name": "Asahi Azumane",
+      "name_jp": "東峰旭",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/062950775a0cc9ed7bfd8e4a8c0cc590.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 12,
+      "school": "Karasuno",
+      "name": "Yuu Nishinoya",
+      "name_jp": "西谷夕",
+      "variant": "Afterschool",
+      "rarity": "SP",
+      "position": "Li",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/04/83df3bf18a7ac1b266ed6569f694bc27.png",
+      "personal_page_url": "https://naoshisan.com/?p=3417"
+    },
+    {
+      "id": 13,
+      "school": "Karasuno",
+      "name": "Yuu Nishinoya",
+      "name_jp": "西谷夕",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "Li",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/3491ad3eb1e911aa855d0aaaefb85a7c.png",
+      "personal_page_url": "https://naoshisan.com/?p=3462"
+    },
+    {
+      "id": 14,
+      "school": "Karasuno",
+      "name": "Yuu Nishinoya",
+      "name_jp": "西谷夕",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "Li",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/a147c348dd1a78121da9c2265b145337.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 15,
+      "school": "Karasuno",
+      "name": "Ryunosuke Tanaka",
+      "name_jp": "田中龍之介",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/ca0fb1ed47c26ce9834163eba64321b1.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 16,
+      "school": "Karasuno",
+      "name": "Ryunosuke Tanaka",
+      "name_jp": "田中龍之介",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/2278977cadff1df91d51901c78706c0f.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 17,
+      "school": "Karasuno",
+      "name": "Kei Tsukishima",
+      "name_jp": "月島蛍",
+      "variant": "Fireworks",
+      "rarity": "SP",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/08/6992af6f6cdce618b99fd43295fa76be.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 18,
+      "school": "Karasuno",
+      "name": "Kei Tsukishima",
+      "name_jp": "月島蛍",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/b8ed79d7e3ebbd0d4fadabee1c52d0f9.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 19,
+      "school": "Karasuno",
+      "name": "Kei Tsukishima",
+      "name_jp": "月島蛍",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/e1f718d627051053afc5a9ad2bb5ca33.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 20,
+      "school": "Karasuno",
+      "name": "Tadashi Yamaguchi",
+      "name_jp": "山口忠",
+      "variant": null,
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/d60a1e6c162e618278051351958db40c.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 21,
+      "school": "Karasuno",
+      "name": "Tadashi Yamaguchi",
+      "name_jp": "山口忠",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/025a9eb48148112d3a6764b09d14b73f.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 22,
+      "school": "Karasuno",
+      "name": "Chikara Ennoshita",
+      "name_jp": "縁下力",
+      "variant": null,
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/72fbd5d82a8354dbccca05fbfcd25397.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 23,
+      "school": "Karasuno",
+      "name": "Chikara Ennoshita",
+      "name_jp": "縁下力",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/4eeb384a9d83acb08dfb4278a95a68c0.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 24,
+      "school": "Karasuno",
+      "name": "Hisashi Kinoshita",
+      "name_jp": "木下久志",
+      "variant": null,
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/c766080e324cb398f9b622f8235d06d6.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 25,
+      "school": "Karasuno",
+      "name": "Kazuhito Narita",
+      "name_jp": "成田一仁",
+      "variant": null,
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/949319dc374e8cab790d96d3cd058bc8.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 26,
+      "school": "Aoba Johsai",
+      "name": "Toru Oikawa",
+      "name_jp": "及川徹",
+      "variant": null,
+      "rarity": "UR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/170121cad2ffb93a1ada3b3c8c9d6019.png",
+      "personal_page_url": "https://naoshisan.com/?p=3511"
+    },
+    {
+      "id": 27,
+      "school": "Aoba Johsai",
+      "name": "Toru Oikawa",
+      "name_jp": "及川徹",
+      "variant": "Practice",
+      "rarity": "SSR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/e46568755c0d5fbf9397e36a746d03c4.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 28,
+      "school": "Aoba Johsai",
+      "name": "Hajime Iwaizumi",
+      "name_jp": "岩泉一",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/22f5f5c5ad3c5d3b5258806650d24462.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 29,
+      "school": "Aoba Johsai",
+      "name": "Hajime Iwaizumi",
+      "name_jp": "岩泉一",
+      "variant": null,
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/937ee6ff1714cbcb509b63d2394b0dea.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 30,
+      "school": "Aoba Johsai",
+      "name": "Issei Matsukawa",
+      "name_jp": "松川一静",
+      "variant": null,
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/4b4226d91beba7961fa6133530b11077.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 31,
+      "school": "Aoba Johsai",
+      "name": "Takahiro Hanamaki",
+      "name_jp": "花巻貴大",
+      "variant": null,
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/665fba134353abea9043a198ed00a50e.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 32,
+      "school": "Aoba Johsai",
+      "name": "Shigeru Yahaba",
+      "name_jp": "矢巾秀",
+      "variant": null,
+      "rarity": "SR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/5972ee0c71f60ad1bf7e97f1a02810c3.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 33,
+      "school": "Aoba Johsai",
+      "name": "Shinji Watari",
+      "name_jp": "渡親治",
+      "variant": null,
+      "rarity": "SR",
+      "position": "Li",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/9bbb6082bdd99d0ded7c06432b38ff51.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 34,
+      "school": "Aoba Johsai",
+      "name": "Yutaro Kindaichi",
+      "name_jp": "金田一勇太郎",
+      "variant": null,
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/68fb221d0aab84a94fdd0dc90299b2da.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 35,
+      "school": "Aoba Johsai",
+      "name": "Akira Kunimi",
+      "name_jp": "国見英",
+      "variant": null,
+      "rarity": "SR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/9488f1969dfb3cea1d668772bfb41612.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 36,
+      "school": "Aoba Johsai",
+      "name": "Kentaro Kyotani",
+      "name_jp": "京谷賢太郎",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/ea11e45674f5db94f8bd4fc623870f5e.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 37,
+      "school": "Aoba Johsai",
+      "name": "Kentaro Kyotani",
+      "name_jp": "京谷賢太郎",
+      "variant": null,
+      "rarity": "SR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/a2bfb847a5c06344c54d2ad864691100.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 38,
+      "school": "Date Tech",
+      "name": "Takanobu Aone",
+      "name_jp": "青根高伸",
+      "variant": "Beach",
+      "rarity": "SP",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/07/4cec091132ef657bd39eaae606b0dd77.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 39,
+      "school": "Date Tech",
+      "name": "Takanobu Aone",
+      "name_jp": "青根高伸",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/6481a59d346a2be3234facc47be549b7.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 40,
+      "school": "Date Tech",
+      "name": "Takanobu Aone",
+      "name_jp": "青根高伸",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/eb07e8b54c613acde9c366e587d9e0af.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 41,
+      "school": "Date Tech",
+      "name": "Kenji Futakuchi",
+      "name_jp": "二口堅治",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/bbfa15218828f42847db048b0e05b34d.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 42,
+      "school": "Date Tech",
+      "name": "Kenji Futakuchi",
+      "name_jp": "二口堅治",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/beabb34fb36a7cc4b6e43b6c3dc3de94.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 43,
+      "school": "Date Tech",
+      "name": "Takanobu Obara",
+      "name_jp": "黄金川貫至",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/ec4b2c81caaff4ad194fe6c9bfa10dda.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 44,
+      "school": "Date Tech",
+      "name": "Takanobu Obara",
+      "name_jp": "黄金川貫至",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/bd25de4bc9f89f4df62145ea95da14b9.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 45,
+      "school": "Date Tech",
+      "name": "Kosuke Sakunami",
+      "name_jp": "作並浩輔",
+      "variant": null,
+      "rarity": "R",
+      "position": "Li",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/a95e7d9b7e9388cfd9fd2c4e91ff6563.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 46,
+      "school": "Date Tech",
+      "name": "Yasushi Kamasaki",
+      "name_jp": "鎌崎靖志",
+      "variant": null,
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/b64899c9d6dfafe6c20e6670758b0f97.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 47,
+      "school": "Date Tech",
+      "name": "Kaname Moniwa",
+      "name_jp": "茂庭要",
+      "variant": null,
+      "rarity": "SR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/5381ad32e434e2c498f35fc8dbc9436e.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 48,
+      "school": "Date Tech",
+      "name": "Takehito Sasaya",
+      "name_jp": "笹谷武仁",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/a239bf0cc0d8dcb798b1cdcf8e6fae84.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 49,
+      "school": "Date Tech",
+      "name": "Takehito Sasaya",
+      "name_jp": "笹谷武仁",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/3bfbfae7bf194e0c1b2e8c4eb0f8c5f0.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 50,
+      "school": "Date Tech",
+      "name": "Yutaka Obara",
+      "name_jp": "小原豊",
+      "variant": null,
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/3bfbfae7bf194e0c1b2e8c4eb0f8c5f0.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 51,
+      "school": "Date Tech",
+      "name": "Taro Onagawa",
+      "name_jp": "女川太郎",
+      "variant": null,
+      "rarity": "R",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/3e87d5e850f5a513c982f233fcf7bbad.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 52,
+      "school": "Date Tech",
+      "name": "Jingo Fukiage",
+      "name_jp": "吹上仁悟",
+      "variant": null,
+      "rarity": "R",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/a883210178096eaf465ee066f22c1f4f.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 53,
+      "school": "Shiratorizawa",
+      "name": "Wakatoshi Ushijima",
+      "name_jp": "牛島若利",
+      "variant": null,
+      "rarity": "UR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/e65617803c5dfa3548d75bd038911b0b.png",
+      "personal_page_url": "https://naoshisan.com/?p=3516"
+    },
+    {
+      "id": 54,
+      "school": "Shiratorizawa",
+      "name": "Satori Tendo",
+      "name_jp": "天童覚",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/28aacb39b5a23157574740f3aed14880.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 55,
+      "school": "Shiratorizawa",
+      "name": "Tsutomu Goshiki",
+      "name_jp": "五色工",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/f2ee3efad01f80920549635643f7142b.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 56,
+      "school": "Shiratorizawa",
+      "name": "Kenjiro Shirabu",
+      "name_jp": "白布賢二郎",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/516c00a4541b74f41e393517ab699750.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 57,
+      "school": "Shiratorizawa",
+      "name": "Eita Semi",
+      "name_jp": "瀬見英太",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/8403cebfd90ca46ca93a8abbafb2a777.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 58,
+      "school": "Shiratorizawa",
+      "name": "Reon Ohira",
+      "name_jp": "大平獅音",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/0ac9bb79cd12a87fdec122cb9b212f19.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 59,
+      "school": "Shiratorizawa",
+      "name": "Taichi Kawanishi",
+      "name_jp": "川西太一",
+      "variant": null,
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/d76d5b5be20ba5a34e61565f36bae99e.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 60,
+      "school": "Shiratorizawa",
+      "name": "Hayato Yamagata",
+      "name_jp": "山形隼人",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "Li",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/56bd7294b9b956e612911dc52ecc91ed.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 61,
+      "school": "Fukurodani",
+      "name": "Kotaro Bokuto",
+      "name_jp": "木兎光太郎",
+      "variant": "Beach",
+      "rarity": "SP",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/07/70dd8c5a30ef3e705594bf36976d8c6b.png",
+      "personal_page_url": "https://naoshisan.com/?p=3437"
+    },
+    {
+      "id": 62,
+      "school": "Fukurodani",
+      "name": "Kotaro Bokuto",
+      "name_jp": "木兎光太郎",
+      "variant": null,
+      "rarity": "UR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/92995808790715a60ea9af1e6297189d.png",
+      "personal_page_url": "https://naoshisan.com/?p=3437"
+    },
+    {
+      "id": 63,
+      "school": "Fukurodani",
+      "name": "Keiji Akaashi",
+      "name_jp": "赤葦京治",
+      "variant": "Beach",
+      "rarity": "SP",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/07/6fe84d4f91caf39ca12998cb4bb9bbaa.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 64,
+      "school": "Fukurodani",
+      "name": "Keiji Akaashi",
+      "name_jp": "赤葦京治",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/916d6f115e4349e5a8bb2e53198869a4.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 65,
+      "school": "Fukurodani",
+      "name": "Akinori Konoha",
+      "name_jp": "木葉秋紀",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/5c1eb3ba20bb803593e134b4a74eccad.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 66,
+      "school": "Fukurodani",
+      "name": "Yamato Sarukui",
+      "name_jp": "猿杙大和",
+      "variant": null,
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/5bba2695a8ba9faac65973a891e7a809.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 67,
+      "school": "Fukurodani",
+      "name": "Haruki Komi",
+      "name_jp": "小見春樹",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "Li",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/2e236f0f4de5e24c6b2015037ac690be.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 68,
+      "school": "Fukurodani",
+      "name": "Wataru Onaga",
+      "name_jp": "尾長渉",
+      "variant": null,
+      "rarity": "R",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/9e9a3300879bb02d14c008e78fff96a9.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 69,
+      "school": "Fukurodani",
+      "name": "Tatsuo Washio",
+      "name_jp": "鷲尾辰生",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/3831d529256b58cb62bf0bf7f9f5241e.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 70,
+      "school": "Jozenji",
+      "name": "Yuji Terushima",
+      "name_jp": "照島遊児",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/170121cad2ffb93a1ada3b3c8c9d6019.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 71,
+      "school": "Jozenji",
+      "name": "Kazuma Mombata",
+      "name_jp": "母畑和馬",
+      "variant": null,
+      "rarity": "R",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/170121cad2ffb93a1ada3b3c8c9d6019.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 72,
+      "school": "Jozenji",
+      "name": "Takeharu Nikai",
+      "name_jp": "二岐丈春",
+      "variant": null,
+      "rarity": "SR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/170121cad2ffb93a1ada3b3c8c9d6019.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 73,
+      "school": "Jozenji",
+      "name": "Katsumichi Higashiyama",
+      "name_jp": "東山勝道",
+      "variant": null,
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/170121cad2ffb93a1ada3b3c8c9d6019.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 74,
+      "school": "Jozenji",
+      "name": "Nobuyoshi Iizaka",
+      "name_jp": "飯坂信義",
+      "variant": null,
+      "rarity": "R",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/170121cad2ffb93a1ada3b3c8c9d6019.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 75,
+      "school": "Jozenji",
+      "name": "Rintaro Numajiri",
+      "name_jp": "沼尻凛太郎",
+      "variant": null,
+      "rarity": "R",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/170121cad2ffb93a1ada3b3c8c9d6019.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 76,
+      "school": "Jozenji",
+      "name": "Arata Tsuchiyu",
+      "name_jp": "土湯新",
+      "variant": null,
+      "rarity": "R",
+      "position": "Li",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/170121cad2ffb93a1ada3b3c8c9d6019.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 77,
+      "school": "Inarizaki",
+      "name": "Atsumu Miya",
+      "name_jp": "宮侑",
+      "variant": null,
+      "rarity": "UR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/578f69c7e4f380a8bcd36f6d8eefe801.png",
+      "personal_page_url": "https://naoshisan.com/?p=3521"
+    },
+    {
+      "id": 78,
+      "school": "Inarizaki",
+      "name": "Osamu Miya",
+      "name_jp": "宮治",
+      "variant": null,
+      "rarity": "UR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/ce62f6d8e7ddc93e907230d931df288e.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 79,
+      "school": "Inarizaki",
+      "name": "Shinsuke Kita",
+      "name_jp": "北信介",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/efbf0f5d851ceae9499b9706ef7c669c.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 80,
+      "school": "Inarizaki",
+      "name": "Rintaro Suna",
+      "name_jp": "角名倫太郎",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/6768a03ccb6d10736e5d5396360558dc.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 81,
+      "school": "Inarizaki",
+      "name": "Aran Ojiro",
+      "name_jp": "尾白アラン",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/f505eefde79ce3b78ec0a83bc493ac9d.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 82,
+      "school": "Inarizaki",
+      "name": "Michiaki Akagi",
+      "name_jp": "赤木路成",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "Li",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/a260e360b74611ac38c9f87b73801788.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 83,
+      "school": "Inarizaki",
+      "name": "Yui Ginshima",
+      "name_jp": "銀島結",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/035ffc5b1434e1d4a736cee8950e1729.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 84,
+      "school": "Inarizaki",
+      "name": "Atsumu Oomimi",
+      "name_jp": "大耳練",
+      "variant": null,
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/f590db8d7c24d99360a38fdd8c8f14aa.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 85,
+      "school": "Inarizaki",
+      "name": "Yuto Osaku",
+      "name_jp": "小作裕渡",
+      "variant": null,
+      "rarity": "R",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/7de97dfc51d213f57fc1376a40252e48.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 86,
+      "school": "Inarizaki",
+      "name": "Heisuke Riseiki",
+      "name_jp": "理石平介",
+      "variant": null,
+      "rarity": "R",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/13c427a20238092b8f0bde61b5ce7510.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 87,
+      "school": "Kamomedai",
+      "name": "Korai Hoshiumi",
+      "name_jp": "星海光来",
+      "variant": null,
+      "rarity": "UR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/170121cad2ffb93a1ada3b3c8c9d6019.png",
+      "personal_page_url": "https://naoshisan.com/?p=3533"
+    },
+    {
+      "id": 88,
+      "school": "Kamomedai",
+      "name": "Sachiro Hirugami",
+      "name_jp": "昼神幸郎",
+      "variant": null,
+      "rarity": "UR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/170121cad2ffb93a1ada3b3c8c9d6019.png",
+      "personal_page_url": "https://naoshisan.com/?p=3538"
+    },
+    {
+      "id": 89,
+      "school": "Nekoma",
+      "name": "Kenma Kozume",
+      "name_jp": "孤爪研磨",
+      "variant": "Hanami",
+      "rarity": "SP",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/04/5a90c5a5ca4ea4a6b588b1b539ca9edf.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 90,
+      "school": "Nekoma",
+      "name": "Kenma Kozume",
+      "name_jp": "孤爪研磨",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "S",
+      "profile_image_url": null,
+      "personal_page_url": null
+    },
+    {
+      "id": 91,
+      "school": "Nekoma",
+      "name": "Tetsuro Kuroo",
+      "name_jp": "黒尾鉄朗",
+      "variant": null,
+      "rarity": "UR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/959fa8d71a5da70792b16c3f1b192a19.png",
+      "personal_page_url": "https://naoshisan.com/?p=3427"
+    },
+    {
+      "id": 92,
+      "school": "Nekoma",
+      "name": "Tetsuro Kuroo",
+      "name_jp": "黒尾鉄朗",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/959fa8d71a5da70792b16c3f1b192a19.png",
+      "personal_page_url": "https://naoshisan.com/?p=3554"
+    },
+    {
+      "id": 93,
+      "school": "Nekoma",
+      "name": "Morisuke Yaku",
+      "name_jp": "夜久衛輔",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "Li",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/ca3b372bafda62b27433a985655a1a79.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 94,
+      "school": "Nekoma",
+      "name": "Lev Haiba",
+      "name_jp": "灰羽リエーフ",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/5300be922e7f2074b800069279193a4b.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 95,
+      "school": "Nekoma",
+      "name": "Takeru Yamamoto",
+      "name_jp": "山本猛虎",
+      "variant": null,
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/f8278d38409738f6eb0ec313f931e8ea.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 96,
+      "school": "Nekoma",
+      "name": "Nobuyuki Kai",
+      "name_jp": "海信行",
+      "variant": null,
+      "rarity": "SR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/32d032078af3485b6d0057751d188713.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 97,
+      "school": "Nekoma",
+      "name": "Shohei Fukunaga",
+      "name_jp": "福永招平",
+      "variant": null,
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/fdadc6f23f710e41c89d0b3b39c89d6b.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 98,
+      "school": "Nekoma",
+      "name": "Soh Inuoka",
+      "name_jp": "犬岡走",
+      "variant": null,
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/80de35f69f933526503f1a12007b338f.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 99,
+      "school": "Nekoma",
+      "name": "Yuki Shibayama",
+      "name_jp": "芝山優生",
+      "variant": null,
+      "rarity": "R",
+      "position": "Li",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/8db112938b7fa7021b25b3d219ad63d2.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 100,
+      "school": "Nekoma",
+      "name": "Tamahiko Teshiro",
+      "name_jp": "手白球彦",
+      "variant": null,
+      "rarity": "SR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/0afc759dcf72677df8d45cab3e8e6773.png",
+      "personal_page_url": null
+    }
+  ],
+  "bonds": [
+    {
+      "name": "Karasuno: genios",
+      "effects_summary_es": "Durante pinch serve aliado, reduce la duración de interferencia en total un 5%.",
+      "effects_jp": "味方のピンチサーブ時の妨害時間が合計5%減",
+      "participants": [
+        12,
+        4
+      ],
+      "source_url": "https://naoshisan.com/?p=3417"
+    },
+    {
+      "name": "Karasuno: Grupo de los 'rojos' (akaten-gumi)",
+      "effects_summary_es": "Bloqueo del equipo +15.",
+      "effects_jp": "味方チームのブロックポイント+15",
+      "participants": [
+        1,
+        4,
+        12,
+        15
+      ],
+      "source_url": "https://naoshisan.com/?p=3417"
+    },
+    {
+      "name": "Los genios (Oikawa & Kageyama)",
+      "effects_summary_es": "Ataque del rival -2% (resumen).",
+      "effects_jp": "相手の攻撃ポイントが2%低下",
+      "participants": [
+        4,
+        26
+      ],
+      "source_url": "https://naoshisan.com/?p=3456"
+    },
+    {
+      "name": "3º curso de Karasuno (Sawamura, Sugawara, Azumane)",
+      "effects_summary_es": "Recepción (excepto líbero) del rival -2% (resumen).",
+      "effects_jp": "相手のリベロ以外のメンバーの受けポイントが2%低下",
+      "participants": [
+        4,
+        6,
+        8,
+        10
+      ],
+      "source_url": "https://naoshisan.com/?p=3456"
+    },
+    {
+      "name": "Kageyama & Miya Atsumu",
+      "effects_summary_es": "(ver página; skill de Kizuna)",
+      "effects_jp": "キズナスキル（詳細は元ページ参照）",
+      "participants": [
+        4,
+        77
+      ],
+      "source_url": "https://naoshisan.com/?p=3456"
+    },
+    {
+      "name": "Auto‑proclamado punta de lanza (Bokuto & Akaashi)",
+      "effects_summary_es": "Efecto de apoyo al OP (resumen).",
+      "effects_jp": "味方OPの受け後のブロック時間が短縮（詳細は元ページ参照）",
+      "participants": [
+        62,
+        64
+      ],
+      "source_url": "https://naoshisan.com/?p=3437"
+    },
+    {
+      "name": "Prácticas libres del campamento de Tokio",
+      "effects_summary_es": "Bonificación de equipo (resumen).",
+      "effects_jp": "東京合宿の自主練習仲間",
+      "participants": [
+        62,
+        64,
+        91,
+        18
+      ],
+      "source_url": "https://naoshisan.com/?p=3437"
+    },
+    {
+      "name": "El primer discípulo (Bokuto & Hinata)",
+      "effects_summary_es": "Mejora de WS (resumen).",
+      "effects_jp": "1番弟子",
+      "participants": [
+        62,
+        2
+      ],
+      "source_url": "https://naoshisan.com/?p=3437"
+    },
+    {
+      "name": "El momento de 'engancharse' al volley (Bokuto & Konoha)",
+      "effects_summary_es": "Apoyo ofensivo (resumen).",
+      "effects_jp": "バレーに”ハマる”瞬間",
+      "participants": [
+        62,
+        65
+      ],
+      "source_url": "https://naoshisan.com/?p=3437"
+    },
+    {
+      "name": "Ace milagroso y setter atento",
+      "effects_summary_es": "Ataque de WS +2% (resumen).",
+      "effects_jp": "WSのアタックポイントを上げる効果（詳細は元ページ参照）",
+      "participants": [
+        62,
+        64
+      ],
+      "source_url": "https://naoshisan.com/?p=3437"
+    },
+    {
+      "name": "Compañeros del campamento de Tokio (Kizuna Skill)",
+      "effects_summary_es": "Mejora por afinidad (resumen).",
+      "effects_jp": "東京合宿の自主練習仲間（キズナスキル）",
+      "participants": [
+        62,
+        66
+      ],
+      "source_url": "https://naoshisan.com/?p=3437"
+    },
+    {
+      "name": "高校最強ツインズ（キズナスキル）",
+      "effect": "Atsumu levanta y Osamu hace twin quick minus-tempo; OP TEC +15% para Osamu hasta que uno salga; no se bloquea.",
+      "participants": [
+        77,
+        78
+      ],
+      "missing_participants": []
+    },
+    {
+      "name": "頭と主軸（キズナスキル）",
+      "effect": "Buff inicial: Atsumu obtiene Donpishari stacks; Kita obtiene Certeza; bonus a técnica/stack; Osamu primer quick de cada set +12% de速攻.",
+      "participants": [
+        77,
+        78,
+        79
+      ],
+      "missing_participants": []
+    },
+    {
+      "name": "バレーボール教室の友達（キズナ）",
+      "effect": "Atsumu サーブ, Osamu 速攻, Aran 強打 +% según nivel.",
+      "participants": [
+        77,
+        78,
+        81
+      ],
+      "missing_participants": []
+    },
+    {
+      "name": "ユース合宿のセッター同志（キズナ）",
+      "effect": "Kageyama & Atsumu: ambos トス +% según nivel.",
+      "participants": [
+        4,
+        77
+      ],
+      "missing_participants": []
+    },
+    {
+      "name": "稲荷崎2年生（キズナ）",
+      "effect": "Suna 速攻, Ginjima 強打, Osamu 速攻 +% según nivel.",
+      "participants": [
+        80,
+        83,
+        78
+      ],
+      "missing_participants": []
+    },
+    {
+      "name": "全日本ユース強化合宿のチームメイト（キズナ）",
+      "effect": "Atsumu トス, Sakusa 強打, Komori レシーブ, Hoshiumi 強打 +% según nivel.",
+      "participants": [
+        77,
+        87
+      ],
+      "missing_participants": []
+    },
+    {
+      "name": "“脳”と”司令塔”（キズナスキル）",
+      "effect": "Kenma levanta y Kuroo hace quick; daño escala por nivel.",
+      "participants": [
+        89,
+        91
+      ],
+      "missing_participants": []
+    },
+    {
+      "name": "笑顔の裏（キズナ）",
+      "effect": "Daichi & Kuroo: ambos reciben buff de レシーブ.",
+      "participants": [
+        6,
+        91
+      ],
+      "missing_participants": []
+    },
+    {
+      "name": "頼もしい先輩達（キズナ）",
+      "effect": "Kuroo 速攻 +% (con dos senpais de Nekoma).",
+      "participants": [
+        91
+      ],
+      "missing_participants": [
+        [
+          "Nekoma",
+          "Tatsuo Washio"
+        ],
+        [
+          "Nekoma",
+          "Akinori Konoha"
+        ]
+      ]
+    },
+    {
+      "name": "師匠と弟子（キズナ）",
+      "effect": "Tsukishima & Kuroo: ブロック +% ambos.",
+      "participants": [
+        17,
+        91
+      ],
+      "missing_participants": []
+    },
+    {
+      "name": "阿吽の呼吸（キズナスキル）",
+      "effect": "Oikawa levanta y Iwaizumi remata fuerte; gana 'ritmo de ataque' stacks.",
+      "participants": [
+        26,
+        28
+      ],
+      "missing_participants": []
+    },
+    {
+      "name": "因縁のライバル（キズナ）",
+      "effect": "Oikawa UR トス up con Kageyama.",
+      "participants": [
+        26,
+        4
+      ],
+      "missing_participants": []
+    },
+    {
+      "name": "“王様”と”大王様”（キズナ）",
+      "effect": "Ambos (Kageyama & Oikawa) サーブ +%.",
+      "participants": [
+        4,
+        26
+      ],
+      "missing_participants": []
+    },
+    {
+      "name": "無慈悲な信頼（キズナ）",
+      "effect": "Oikawa ブロック+, Kyotani 強打+.",
+      "participants": [
+        26,
+        36
+      ],
+      "missing_participants": []
+    },
+    {
+      "name": "終生のマブダチ（キズナスキル）",
+      "effect": "Ushijima 攻テク+, Tendo 守テク+.",
+      "participants": [
+        53,
+        54
+      ],
+      "missing_participants": []
+    },
+    {
+      "name": "“絶対王者”と堅実派セッター（キズナスキル）",
+      "effect": "Shirabu levanta y Ushijima remata; +10% パワー en esa jugada.",
+      "participants": [
+        53,
+        56
+      ],
+      "missing_participants": []
+    },
+    {
+      "name": "白鳥沢3年生（キズナ）",
+      "effect": "Tendo ブロック+, Semi サーブ+, Ohira 強打+, Yamagata レシーブ+.",
+      "participants": [
+        54,
+        57,
+        58,
+        60
+      ],
+      "missing_participants": []
+    },
+    {
+      "name": "大エースからエースへ（キズナ）",
+      "effect": "Ushijima 強打+, Goshiki レシーブ+.",
+      "participants": [
+        53,
+        55
+      ],
+      "missing_participants": []
+    },
+    {
+      "name": "「ウシワカ」と「弁慶」（キズナ）",
+      "effect": "Ushijima ブロック+, Ohira レシーブ+.",
+      "participants": [
+        53,
+        58
+      ],
+      "missing_participants": []
+    },
+    {
+      "name": "中高を共にした親友（キズナスキル）",
+      "effect": "Hoshiumi メイン+%, 前衛ブロック+% ; start-of-match buffs con Hirugami.",
+      "participants": [
+        87,
+        88
+      ],
+      "missing_participants": []
+    },
+    {
+      "name": "体格の近い者同士（キズナ）",
+      "effect": "Hinata(Hanami) 速攻+, Hoshiumi 強打+.",
+      "participants": [
+        1,
+        87
+      ],
+      "missing_participants": []
+    },
+    {
+      "name": "全日本ユース強化合宿のチームメイト（キズナ）",
+      "effect": "Atsumu トス+, Sakusa 強打+, Komori レシーブ+, Hoshiumi 強打+.",
+      "participants": [
+        77,
+        87
+      ],
+      "missing_participants": []
+    },
+    {
+      "name": "Karasuno Geniuses (Kizuna Skill)",
+      "effect": "Boosts Nishinoya (Afterschool) Reaction by +5% to +10% depending on level; extra boost if his Stamina < 80 (per page).",
+      "participants": [
+        8,
+        12
+      ],
+      "source_url": "https://naoshisan.com/?p=4582"
+    },
+    {
+      "name": "Karasuno Setters (Kizuna)",
+      "effect": "Sugawara (Afterschool) Toss +5% to +15% depending on level.",
+      "participants": [
+        8,
+        4
+      ],
+      "source_url": "https://naoshisan.com/?p=4582"
+    },
+    {
+      "name": "Karasuno 3rd Years (Kizuna)",
+      "effect": "Sugawara Block, Sawamura Receive, Azumane Strong Hit each get +5% to +15% (scales by level).",
+      "participants": [
+        8,
+        6,
+        10
+      ],
+      "source_url": "https://naoshisan.com/?p=4582"
+    }
+  ]
+}

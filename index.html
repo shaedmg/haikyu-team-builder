@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haikyu Flight High - Team Builder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>🏐 Haikyu Flight High - Team Builder</h1>
+        <div class="team-info">
+          <span class="team-name">Team Lineup</span>
+          <div class="lineup-indicators">
+            <span class="lineup-item">Lineup A</span>
+            <span class="lineup-item">Lineup B</span>
+            <span class="lineup-item active">Lineup C</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="game-area">
+        <!-- Court container -->
+        <div class="court-container">
+          <div class="court">
+            <!-- Net in the middle -->
+            <div class="net"></div>
+
+            <!-- Player positions -->
+            <!-- Back row -->
+            <div
+              class="position position-1"
+              data-position="WS1"
+              data-name="Wing Spiker"
+            >
+              <div class="player-slot">
+                <div class="player-card empty">
+                  <span class="position-label">WS</span>
+                  <span class="position-number">4</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="position position-6"
+              data-position="MB1"
+              data-name="Middle Blocker"
+            >
+              <div class="player-slot">
+                <div class="player-card empty">
+                  <span class="position-label">MB</span>
+                  <span class="position-number">6</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="position position-5"
+              data-position="WS2"
+              data-name="Wing Spiker"
+            >
+              <div class="player-slot">
+                <div class="player-card empty">
+                  <span class="position-label">WS</span>
+                  <span class="position-number">2</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Front row -->
+            <div
+              class="position position-4"
+              data-position="OP"
+              data-name="Opposite"
+            >
+              <div class="player-slot">
+                <div class="player-card empty">
+                  <span class="position-label">OP</span>
+                  <span class="position-number">1</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="position position-3"
+              data-position="MB2"
+              data-name="Middle Blocker"
+            >
+              <div class="player-slot">
+                <div class="player-card empty">
+                  <span class="position-label">MB</span>
+                  <span class="position-number">3</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="position position-2"
+              data-position="S"
+              data-name="Setter"
+            >
+              <div class="player-slot">
+                <div class="player-card empty">
+                  <span class="position-label">S</span>
+                  <span class="position-number">5</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Libero position -->
+            <div
+              class="position position-libero"
+              data-position="L"
+              data-name="Libero"
+            >
+              <div class="player-slot">
+                <div class="player-card empty libero">
+                  <span class="position-label">L</span>
+                  <span class="position-number">7</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Player selection panel -->
+        <div class="player-panel">
+          <h3>Seleccionar Jugadores</h3>
+          <div class="player-grid" id="playerGrid">
+            <!-- Players will be dynamically loaded here -->
+          </div>
+        </div>
+      </main>
+
+      <!-- Player info modal -->
+      <div class="modal" id="playerModal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="player-details">
+            <div class="player-image">
+              <img id="modalPlayerImage" src="" alt="Player" />
+            </div>
+            <div class="player-info">
+              <h2 id="modalPlayerName"></h2>
+              <div class="player-stats">
+                <div class="stat">
+                  <span class="stat-label">Altura:</span>
+                  <span class="stat-value" id="modalPlayerHeight"></span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">Posición:</span>
+                  <span class="stat-value" id="modalPlayerPosition"></span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">Poder:</span>
+                  <span class="stat-value" id="modalPlayerPower"></span>
+                </div>
+              </div>
+              <button class="select-player-btn" id="selectPlayerBtn">
+                Seleccionar Jugador
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
