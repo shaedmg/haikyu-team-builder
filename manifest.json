@@ -1,0 +1,138 @@
+{
+  "name": "Haikyu Flight High Team Builder - Create Perfect Volleyball Teams",
+  "short_name": "Haikyu Team Builder",
+  "description": "🏐 Build your ultimate Haikyu Flight High volleyball team! Interactive team creator with character bonds, school synergies and real-time statistics. Free online tool for anime fans.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#667eea",
+  "background_color": "#1e3c72",
+  "categories": ["games", "sports", "entertainment", "productivity"],
+  "lang": "en",
+  "dir": "ltr",
+  "keywords": ["haikyu", "flight high", "team builder", "volleyball", "anime", "character bonds", "sports game"],
+
+  "icons": [
+    {
+      "src": "assets/images/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+
+  "screenshots": [
+    {
+      "src": "assets/images/screenshot-wide.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Haikyu Team Builder - Vista del juego en escritorio"
+    },
+    {
+      "src": "assets/images/screenshot-narrow.jpg",
+      "sizes": "640x1136",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Haikyu Team Builder - Vista móvil"
+    }
+  ],
+
+  "shortcuts": [
+    {
+      "name": "Crear Equipo",
+      "short_name": "Crear",
+      "description": "Crear un nuevo equipo de voleibol",
+      "url": "/#create-team",
+      "icons": [
+        {
+          "src": "assets/images/shortcut-create.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Ver Personajes",
+      "short_name": "Personajes",
+      "description": "Explorar todos los personajes disponibles",
+      "url": "/#characters",
+      "icons": [
+        {
+          "src": "assets/images/shortcut-characters.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+
+  "related_applications": [],
+  "prefer_related_applications": false,
+
+  "protocol_handlers": [
+    {
+      "protocol": "web+haikyu",
+      "url": "/#share=%s"
+    }
+  ],
+
+  "share_target": {
+    "action": "/#share",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}
