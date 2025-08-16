@@ -1,0 +1,143 @@
+# robots.txt para Haikyu Flight High Team Builder
+# Optimizado para SEO y crawling eficiente
+
+# Reglas generales para todos los bots
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /*.json
+Allow: /*.js
+Allow: /*.css
+
+# Optimización para Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Optimización para Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Bloquear archivos innecesarios
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /.git/
+Disallow: /*.log
+
+# Sitemap principal
+Sitemap: https://haikyu-team-builder.netlify.app/sitemap.xml
+
+# URLs específicas permitidas
+Allow: /index.html
+Allow: /about.html
+Allow: /characters.html
+Allow: /schools.html
+Allow: /faq.html
+Allow: /assets/images/
+Allow: /manifest.json
+
+# Archivos de desarrollo y configuración bloqueados
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /tsconfig.json
+Disallow: /.git/
+Disallow: /.gitignore
+Disallow: /README.md
+Disallow: /*-backup.*
+Disallow: /*-temp.*
+Disallow: /*-test.*
+
+# Archivos específicos bloqueados
+Disallow: /sw.js
+Disallow: /download-images.js
+Disallow: /browserconfig.xml
+
+# Archivos temporales y de desarrollo
+Disallow: /*.log
+Disallow: /*.tmp
+Disallow: /*~
+Disallow: /*.bak
+
+# Configuración específica para bots principales
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot  
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Bloquear bots problemáticos o innecesarios
+User-agent: CCBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+# Bloquear crawlers agresivos
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+# Host principal (importante para Google)
+Host: haikyu-team-builder.netlify.app
+
+# Información adicional para crawlers
+# Clean-param: utm_source&utm_medium&utm_campaign
+
+# Comentarios para desarrolladores:
+# Este robots.txt está optimizado para:
+# 1. Permitir indexación completa del contenido público
+# 2. Bloquear archivos de desarrollo y configuración
+# 3. Gestionar la velocidad de crawling
+# 4. Priorizar bots de motores de búsqueda principales
+# 5. Bloquear bots AI/scraping innecesarios

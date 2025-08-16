@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Página Principal -->
+  <url>
+    <loc>https://haikyu-team-builder.netlify.app/</loc>
+    <lastmod>2025-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://haikyu-team-builder.netlify.app/assets/images/og-preview.png</image:loc>
+      <image:title>Haikyu Flight High Team Builder - Interactive Volleyball Team Creator</image:title>
+      <image:caption>Build your perfect Haikyu Flight High volleyball team with character bonds and school synergies</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Página About -->
+  <url>
+    <loc>https://haikyu-team-builder.netlify.app/about.html</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Guía de Personajes -->
+  <url>
+    <loc>https://haikyu-team-builder.netlify.app/characters.html</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://haikyu-team-builder.netlify.app/assets/images/characters-guide.jpg</image:loc>
+      <image:title>Guía completa de personajes de Haikyu</image:title>
+      <image:caption>Todos los personajes disponibles con estadísticas y habilidades</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Guía de Escuelas -->
+  <url>
+    <loc>https://haikyu-team-builder.netlify.app/schools.html</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://haikyu-team-builder.netlify.app/assets/images/schools-guide.jpg</image:loc>
+      <image:title>Escuelas de voleibol de Haikyu</image:title>
+      <image:caption>Información detallada de todas las escuelas y sus equipos</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Preguntas Frecuentes -->
+  <url>
+    <loc>https://haikyu-team-builder.netlify.app/faq.html</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Personajes individuales más populares -->
+  <url>
+    <loc>https://haikyu-team-builder.netlify.app/characters/hinata-shoyo</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://haikyu-team-builder.netlify.app/assets/images/characters/hinata_shoyo.png</image:loc>
+      <image:title>Hinata Shoyo - Karasuno High</image:title>
+      <image:caption>El protagonista de Haikyu, jugador de voleibol con increíble salto</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://haikyu-team-builder.netlify.app/characters/kageyama-tobio</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://haikyu-team-builder.netlify.app/assets/images/characters/kageyama_tobio.png</image:loc>
+      <image:title>Kageyama Tobio - Rey de la Cancha</image:title>
+      <image:caption>Setter de élite conocido por sus pases precisos</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://haikyu-team-builder.netlify.app/characters/oikawa-tooru</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://haikyu-team-builder.netlify.app/assets/images/characters/oikawa_tooru.png</image:loc>
+      <image:title>Oikawa Tooru - Aoba Johsai</image:title>
+      <image:caption>Setter experimentado y capitán carismático</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://haikyu-team-builder.netlify.app/characters/kuroo-tetsurou</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://haikyu-team-builder.netlify.app/assets/images/characters/kuroo_tetsurou.png</image:loc>
+      <image:title>Kuroo Tetsurou - Nekoma High</image:title>
+      <image:caption>Capitán y middle blocker estratégico de Nekoma</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://haikyu-team-builder.netlify.app/characters/ushijima-wakatoshi</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://haikyu-team-builder.netlify.app/assets/images/characters/ushijima_wakatoshi.png</image:loc>
+      <image:title>Ushijima Wakatoshi - Shiratorizawa</image:title>
+      <image:caption>Ace poderoso y uno de los mejores jugadores de Japón</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Escuelas principales -->
+  <url>
+    <loc>https://haikyu-team-builder.netlify.app/schools/karasuno</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://haikyu-team-builder.netlify.app/assets/images/schools/karasuno.jpg</image:loc>
+      <image:title>Karasuno High School - Los Cuervos</image:title>
+      <image:caption>La escuela principal de Haikyu, hogar de Hinata y Kageyama</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://haikyu-team-builder.netlify.app/schools/nekoma</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://haikyu-team-builder.netlify.app/assets/images/schools/nekoma.jpg</image:loc>
+      <image:title>Nekoma High School - Los Gatos</image:title>
+      <image:caption>Rivales tradicionales de Karasuno, conocidos por su defensa</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://haikyu-team-builder.netlify.app/schools/aoba-johsai</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://haikyu-team-builder.netlify.app/assets/images/schools/aoba-johsai.jpg</image:loc>
+      <image:title>Aoba Johsai High School</image:title>
+      <image:caption>Escuela de Oikawa, conocida por su juego ofensivo</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://haikyu-team-builder.netlify.app/schools/shiratorizawa</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://haikyu-team-builder.netlify.app/assets/images/schools/shiratorizawa.jpg</image:loc>
+      <image:title>Shiratorizawa Academy</image:title>
+      <image:caption>Academia de élite con Ushijima como estrella</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Páginas de tutoriales y guías -->
+  <url>
+    <loc>https://haikyu-team-builder.netlify.app/how-to-play</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://haikyu-team-builder.netlify.app/volleyball-positions</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://haikyu-team-builder.netlify.app/team-bonds-guide</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Recursos estáticos importantes -->
+  <url>
+    <loc>https://haikyu-team-builder.netlify.app/manifest.json</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Versiones en otros idiomas (futuras) -->
+  <url>
+    <loc>https://haikyu-team-builder.netlify.app/en/</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://haikyu-team-builder.netlify.app/ja/</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>
