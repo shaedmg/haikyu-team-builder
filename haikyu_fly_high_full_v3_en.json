@@ -1,0 +1,4489 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "school": "Karasuno",
+      "name": "Shoyo Hinata",
+      "name_jp": "日向翔陽",
+      "variant": "Hanami",
+      "rarity": "SP",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/0d7550378369e76fa0690595e0848076.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 2,
+      "school": "Karasuno",
+      "name": "Shoyo Hinata",
+      "name_jp": "日向翔陽",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/03/28cced128bf2a4498597c0161fc4f3f3.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 3,
+      "school": "Karasuno",
+      "name": "Shoyo Hinata",
+      "name_jp": "日向翔陽",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/8911620083f32b08e17b40be5b9e750c.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 4,
+      "school": "Karasuno",
+      "name": "Tobio Kageyama",
+      "name_jp": "影山飛雄",
+      "variant": null,
+      "rarity": "UR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/ca6bb0e7b26f52219d1e1840215a093d.png",
+      "personal_page_url": "https://naoshisan.com/?p=3456"
+    },
+    {
+      "id": 5,
+      "school": "Karasuno",
+      "name": "Tobio Kageyama",
+      "name_jp": "影山飛雄",
+      "variant": "Practice",
+      "rarity": "SSR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/4de74e26d29c9cfb3a0d095541d153ad-1.png",
+      "personal_page_url": "https://naoshisan.com/?p=3494"
+    },
+    {
+      "id": 6,
+      "school": "Karasuno",
+      "name": "Daichi Sawamura",
+      "name_jp": "澤村大地",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/984598f1c1dd4e7b249a80be6a3fe796.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 7,
+      "school": "Karasuno",
+      "name": "Daichi Sawamura",
+      "name_jp": "澤村大地",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/79a82b10abe2103433bb4b8845a63021.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 8,
+      "school": "Karasuno",
+      "name": "Koshi Sugawara",
+      "name_jp": "菅原孝支",
+      "variant": "Afterschool",
+      "rarity": "SP",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/05/5fcf1022440a77f151988f1229581687.png",
+      "personal_page_url": "https://naoshisan.com/?p=3449"
+    },
+    {
+      "id": 9,
+      "school": "Karasuno",
+      "name": "Koshi Sugawara",
+      "name_jp": "菅原孝支",
+      "variant": null,
+      "rarity": "SR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/7bfd17b6d9d9a95b3438b44e71d38c63.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 10,
+      "school": "Karasuno",
+      "name": "Asahi Azumane",
+      "name_jp": "東峰旭",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/0affb263d8084c40f6eb8aec1443c040.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 11,
+      "school": "Karasuno",
+      "name": "Asahi Azumane",
+      "name_jp": "東峰旭",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/062950775a0cc9ed7bfd8e4a8c0cc590.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 12,
+      "school": "Karasuno",
+      "name": "Yuu Nishinoya",
+      "name_jp": "西谷夕",
+      "variant": "Afterschool",
+      "rarity": "SP",
+      "position": "L",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/04/83df3bf18a7ac1b266ed6569f694bc27.png",
+      "personal_page_url": "https://naoshisan.com/?p=3417"
+    },
+    {
+      "id": 13,
+      "school": "Karasuno",
+      "name": "Yuu Nishinoya",
+      "name_jp": "西谷夕",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "L",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/3491ad3eb1e911aa855d0aaaefb85a7c.png",
+      "personal_page_url": "https://naoshisan.com/?p=3462"
+    },
+    {
+      "id": 14,
+      "school": "Karasuno",
+      "name": "Yuu Nishinoya",
+      "name_jp": "西谷夕",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "L",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/a147c348dd1a78121da9c2265b145337.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 15,
+      "school": "Karasuno",
+      "name": "Ryunosuke Tanaka",
+      "name_jp": "田中龍之介",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/ca0fb1ed47c26ce9834163eba64321b1.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 16,
+      "school": "Karasuno",
+      "name": "Ryunosuke Tanaka",
+      "name_jp": "田中龍之介",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/2278977cadff1df91d51901c78706c0f.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 17,
+      "school": "Karasuno",
+      "name": "Kei Tsukishima",
+      "name_jp": "月島蛍",
+      "variant": "Fireworks",
+      "rarity": "SP",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/08/6992af6f6cdce618b99fd43295fa76be.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 18,
+      "school": "Karasuno",
+      "name": "Kei Tsukishima",
+      "name_jp": "月島蛍",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/b8ed79d7e3ebbd0d4fadabee1c52d0f9.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 19,
+      "school": "Karasuno",
+      "name": "Kei Tsukishima",
+      "name_jp": "月島蛍",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/e1f718d627051053afc5a9ad2bb5ca33.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 20,
+      "school": "Karasuno",
+      "name": "Tadashi Yamaguchi",
+      "name_jp": "山口忠",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/d60a1e6c162e618278051351958db40c.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 21,
+      "school": "Karasuno",
+      "name": "Tadashi Yamaguchi",
+      "name_jp": "山口忠",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/025a9eb48148112d3a6764b09d14b73f.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 22,
+      "school": "Karasuno",
+      "name": "Chikara Ennoshita",
+      "name_jp": "縁下力",
+      "variant": null,
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/72fbd5d82a8354dbccca05fbfcd25397.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 23,
+      "school": "Karasuno",
+      "name": "Chikara Ennoshita",
+      "name_jp": "縁下力",
+      "variant": "Practice",
+      "rarity": "R",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/4eeb384a9d83acb08dfb4278a95a68c0.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 24,
+      "school": "Karasuno",
+      "name": "Hisashi Kinoshita",
+      "name_jp": "木下久志",
+      "variant": null,
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/c766080e324cb398f9b622f8235d06d6.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 25,
+      "school": "Karasuno",
+      "name": "Kazuhito Narita",
+      "name_jp": "成田一仁",
+      "variant": null,
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/949319dc374e8cab790d96d3cd058bc8.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 26,
+      "school": "Aoba Johsai",
+      "name": "Toru Oikawa",
+      "name_jp": "及川徹",
+      "variant": null,
+      "rarity": "UR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/170121cad2ffb93a1ada3b3c8c9d6019.png",
+      "personal_page_url": "https://naoshisan.com/?p=3511"
+    },
+    {
+      "id": 27,
+      "school": "Aoba Johsai",
+      "name": "Toru Oikawa",
+      "name_jp": "及川徹",
+      "variant": "Practice",
+      "rarity": "SSR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/e46568755c0d5fbf9397e36a746d03c4.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 28,
+      "school": "Aoba Johsai",
+      "name": "Hajime Iwaizumi",
+      "name_jp": "岩泉一",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/22f5f5c5ad3c5d3b5258806650d24462.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 29,
+      "school": "Aoba Johsai",
+      "name": "Hajime Iwaizumi",
+      "name_jp": "岩泉一",
+      "variant": null,
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/937ee6ff1714cbcb509b63d2394b0dea.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 30,
+      "school": "Aoba Johsai",
+      "name": "Issei Matsukawa",
+      "name_jp": "松川一静",
+      "variant": null,
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/177073fb4cd6f32363c3a5e987ee901d.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 31,
+      "school": "Aoba Johsai",
+      "name": "Takahiro Hanamaki",
+      "name_jp": "花巻貴大",
+      "variant": null,
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/4b4226d91beba7961fa6133530b11077.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 32,
+      "school": "Aoba Johsai",
+      "name": "Shigeru Yahaba",
+      "name_jp": "矢巾秀",
+      "variant": null,
+      "rarity": "SR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/665fba134353abea9043a198ed00a50e.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 33,
+      "school": "Aoba Johsai",
+      "name": "Shinji Watari",
+      "name_jp": "渡親治",
+      "variant": null,
+      "rarity": "SR",
+      "position": "L",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/9bbb6082bdd99d0ded7c06432b38ff51.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 34,
+      "school": "Aoba Johsai",
+      "name": "Yutaro Kindaichi",
+      "name_jp": "金田一勇太郎",
+      "variant": null,
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/68fb221d0aab84a94fdd0dc90299b2da.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 35,
+      "school": "Aoba Johsai",
+      "name": "Akira Kunimi",
+      "name_jp": "国見英",
+      "variant": null,
+      "rarity": "SR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/9488f1969dfb3cea1d668772bfb41612.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 36,
+      "school": "Aoba Johsai",
+      "name": "Kentaro Kyotani",
+      "name_jp": "京谷賢太郎",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/ea11e45674f5db94f8bd4fc623870f5e.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 37,
+      "school": "Aoba Johsai",
+      "name": "Kentaro Kyotani",
+      "name_jp": "京谷賢太郎",
+      "variant": null,
+      "rarity": "SR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/ea11e45674f5db94f8bd4fc623870f5e.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 38,
+      "school": "Date Tech",
+      "name": "Takanobu Aone",
+      "name_jp": "青根高伸",
+      "variant": "Beach",
+      "rarity": "SP",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/07/4cec091132ef657bd39eaae606b0dd77.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 39,
+      "school": "Date Tech",
+      "name": "Takanobu Aone",
+      "name_jp": "青根高伸",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/6481a59d346a2be3234facc47be549b7.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 40,
+      "school": "Date Tech",
+      "name": "Takanobu Aone",
+      "name_jp": "青根高伸",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/eb07e8b54c613acde9c366e587d9e0af.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 41,
+      "school": "Date Tech",
+      "name": "Kenji Futakuchi",
+      "name_jp": "二口堅治",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/bbfa15218828f42847db048b0e05b34d.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 42,
+      "school": "Date Tech",
+      "name": "Kenji Futakuchi",
+      "name_jp": "二口堅治",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/beabb34fb36a7cc4b6e43b6c3dc3de94.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 43,
+      "school": "Date Tech",
+      "name": "Takanobu Obara",
+      "name_jp": "黄金川貫至",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/ec4b2c81caaff4ad194fe6c9bfa10dda.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 44,
+      "school": "Date Tech",
+      "name": "Takanobu Obara",
+      "name_jp": "黄金川貫至",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/bd25de4bc9f89f4df62145ea95da14b9.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 45,
+      "school": "Date Tech",
+      "name": "Kosuke Sakunami",
+      "name_jp": "作並浩輔",
+      "variant": null,
+      "rarity": "R",
+      "position": "L",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/a95e7d9b7e9388cfd9fd2c4e91ff6563.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 46,
+      "school": "Date Tech",
+      "name": "Yasushi Kamasaki",
+      "name_jp": "鎌崎靖志",
+      "variant": null,
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/b64899c9d6dfafe6c20e6670758b0f97.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 47,
+      "school": "Date Tech",
+      "name": "Kaname Moniwa",
+      "name_jp": "茂庭要",
+      "variant": null,
+      "rarity": "SR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/5972ee0c71f60ad1bf7e97f1a02810c3.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 48,
+      "school": "Date Tech",
+      "name": "Takehito Sasaya",
+      "name_jp": "笹谷武仁",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/5381ad32e434e2c498f35fc8dbc9436e.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 49,
+      "school": "Date Tech",
+      "name": "Takehito Sasaya",
+      "name_jp": "笹谷武仁",
+      "variant": "Practice",
+      "rarity": "SR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/a239bf0cc0d8dcb798b1cdcf8e6fae84.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 50,
+      "school": "Date Tech",
+      "name": "Yutaka Obara",
+      "name_jp": "小原豊",
+      "variant": null,
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/3bfbfae7bf194e0c1b2e8c4eb0f8c5f0.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 51,
+      "school": "Date Tech",
+      "name": "Taro Onagawa",
+      "name_jp": "女川太郎",
+      "variant": null,
+      "rarity": "R",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/3e87d5e850f5a513c982f233fcf7bbad.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 52,
+      "school": "Date Tech",
+      "name": "Jingo Fukiage",
+      "name_jp": "吹上仁悟",
+      "variant": null,
+      "rarity": "R",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/a883210178096eaf465ee066f22c1f4f.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 53,
+      "school": "Shiratorizawa",
+      "name": "Wakatoshi Ushijima",
+      "name_jp": "牛島若利",
+      "variant": null,
+      "rarity": "UR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/e65617803c5dfa3548d75bd038911b0b.png",
+      "personal_page_url": "https://naoshisan.com/?p=3516"
+    },
+    {
+      "id": 54,
+      "school": "Shiratorizawa",
+      "name": "Satori Tendo",
+      "name_jp": "天童覚",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/28aacb39b5a23157574740f3aed14880.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 55,
+      "school": "Shiratorizawa",
+      "name": "Tsutomu Goshiki",
+      "name_jp": "五色工",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/f2ee3efad01f80920549635643f7142b.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 56,
+      "school": "Shiratorizawa",
+      "name": "Kenjiro Shirabu",
+      "name_jp": "白布賢二郎",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/516c00a4541b74f41e393517ab699750.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 57,
+      "school": "Shiratorizawa",
+      "name": "Eita Semi",
+      "name_jp": "瀬見英太",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/8403cebfd90ca46ca93a8abbafb2a777.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 58,
+      "school": "Shiratorizawa",
+      "name": "Reon Ohira",
+      "name_jp": "大平獅音",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/0ac9bb79cd12a87fdec122cb9b212f19.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 59,
+      "school": "Shiratorizawa",
+      "name": "Taichi Kawanishi",
+      "name_jp": "川西太一",
+      "variant": null,
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/d76d5b5be20ba5a34e61565f36bae99e.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 60,
+      "school": "Shiratorizawa",
+      "name": "Hayato Yamagata",
+      "name_jp": "山形隼人",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "L",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/56bd7294b9b956e612911dc52ecc91ed.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 61,
+      "school": "Fukurodani",
+      "name": "Kotaro Bokuto",
+      "name_jp": "木兎光太郎",
+      "variant": "Beach",
+      "rarity": "SP",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/07/70dd8c5a30ef3e705594bf36976d8c6b.png",
+      "personal_page_url": "https://naoshisan.com/?p=3437"
+    },
+    {
+      "id": 62,
+      "school": "Fukurodani",
+      "name": "Kotaro Bokuto",
+      "name_jp": "木兎光太郎",
+      "variant": null,
+      "rarity": "UR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/92995808790715a60ea9af1e6297189d.png",
+      "personal_page_url": "https://naoshisan.com/?p=3437"
+    },
+    {
+      "id": 63,
+      "school": "Fukurodani",
+      "name": "Keiji Akaashi",
+      "name_jp": "赤葦京治",
+      "variant": "Beach",
+      "rarity": "SP",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/07/6fe84d4f91caf39ca12998cb4bb9bbaa.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 64,
+      "school": "Fukurodani",
+      "name": "Keiji Akaashi",
+      "name_jp": "赤葦京治",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/916d6f115e4349e5a8bb2e53198869a4.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 65,
+      "school": "Fukurodani",
+      "name": "Akinori Konoha",
+      "name_jp": "木葉秋紀",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/5c1eb3ba20bb803593e134b4a74eccad.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 66,
+      "school": "Fukurodani",
+      "name": "Yamato Sarukui",
+      "name_jp": "猿杙大和",
+      "variant": null,
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/5bba2695a8ba9faac65973a891e7a809.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 67,
+      "school": "Fukurodani",
+      "name": "Haruki Komi",
+      "name_jp": "小見春樹",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "L",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/2e236f0f4de5e24c6b2015037ac690be.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 68,
+      "school": "Fukurodani",
+      "name": "Wataru Onaga",
+      "name_jp": "尾長渉",
+      "variant": null,
+      "rarity": "R",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/9e9a3300879bb02d14c008e78fff96a9.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 69,
+      "school": "Fukurodani",
+      "name": "Tatsuo Washio",
+      "name_jp": "鷲尾辰生",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/3831d529256b58cb62bf0bf7f9f5241e.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 70,
+      "school": "Jozenji",
+      "name": "Yuji Terushima",
+      "name_jp": "照島遊児",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/bf5b6dfaee07c7524a5b54c5a8ca3a27.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 71,
+      "school": "Jozenji",
+      "name": "Kazuma Bobata",
+      "name_jp": "母畑和馬",
+      "variant": null,
+      "rarity": "R",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/69f51382e697c56dfe3fe712e81cb2be.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 72,
+      "school": "Jozenji",
+      "name": "Takeharu Futamata",
+      "name_jp": "二岐丈春",
+      "variant": null,
+      "rarity": "SR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/e7e157fb133eceb7d3fb99b93c38080e.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 73,
+      "school": "Jozenji",
+      "name": "Katsumichi Higashiyama",
+      "name_jp": "東山勝道",
+      "variant": null,
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/d267fb1c535a482e22fd05f83fec115e.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 74,
+      "school": "Jozenji",
+      "name": "Nobuyoshi Īzaka",
+      "name_jp": "飯坂信義",
+      "variant": null,
+      "rarity": "R",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/d5d37d83402e95c013bc01ca915b55d0.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 75,
+      "school": "Jozenji",
+      "name": "Rintarō Numajiri",
+      "name_jp": "沼尻凛太郎",
+      "variant": null,
+      "rarity": "R",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/ae0d1cb93b761d702c0d307fda1ea0c7.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 76,
+      "school": "Jozenji",
+      "name": "Arata Tsuchiyu",
+      "name_jp": "土湯新",
+      "variant": null,
+      "rarity": "R",
+      "position": "L",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/00841ea8e65ff41d690499ae98689424.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 77,
+      "school": "Inarizaki",
+      "name": "Atsumu Miya",
+      "name_jp": "宮侑",
+      "variant": null,
+      "rarity": "UR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/578f69c7e4f380a8bcd36f6d8eefe801.png",
+      "personal_page_url": "https://naoshisan.com/?p=3521"
+    },
+    {
+      "id": 78,
+      "school": "Inarizaki",
+      "name": "Osamu Miya",
+      "name_jp": "宮治",
+      "variant": null,
+      "rarity": "UR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/ce62f6d8e7ddc93e907230d931df288e.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 79,
+      "school": "Inarizaki",
+      "name": "Shinsuke Kita",
+      "name_jp": "北信介",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/efbf0f5d851ceae9499b9706ef7c669c.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 80,
+      "school": "Inarizaki",
+      "name": "Rintaro Suna",
+      "name_jp": "角名倫太郎",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/6768a03ccb6d10736e5d5396360558dc.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 81,
+      "school": "Inarizaki",
+      "name": "Aran Ojiro",
+      "name_jp": "尾白アラン",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/f505eefde79ce3b78ec0a83bc493ac9d.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 82,
+      "school": "Inarizaki",
+      "name": "Michiaki Akagi",
+      "name_jp": "赤木路成",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "L",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/a260e360b74611ac38c9f87b73801788.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 83,
+      "school": "Inarizaki",
+      "name": "Yui Ginshima",
+      "name_jp": "銀島結",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/035ffc5b1434e1d4a736cee8950e1729.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 84,
+      "school": "Inarizaki",
+      "name": "Atsumu Oomimi",
+      "name_jp": "大耳練",
+      "variant": null,
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/f590db8d7c24d99360a38fdd8c8f14aa.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 85,
+      "school": "Inarizaki",
+      "name": "Yuto Osaku",
+      "name_jp": "小作裕渡",
+      "variant": null,
+      "rarity": "R",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/7de97dfc51d213f57fc1376a40252e48.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 86,
+      "school": "Inarizaki",
+      "name": "Heisuke Riseiki",
+      "name_jp": "理石平介",
+      "variant": null,
+      "rarity": "R",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/13c427a20238092b8f0bde61b5ce7510.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 87,
+      "school": "Kamomedai",
+      "name": "Korai Hoshiumi",
+      "name_jp": "星海光来",
+      "variant": null,
+      "rarity": "UR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/04/a13568732e7b6a9d7e69062d6094db55.png",
+      "personal_page_url": "https://naoshisan.com/?p=3533"
+    },
+    {
+      "id": 88,
+      "school": "Kamomedai",
+      "name": "Sachiro Hirugami",
+      "name_jp": "昼神幸郎",
+      "variant": null,
+      "rarity": "UR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/04/6d68129ff6f45a637b39b9b4bce5bc1b.png",
+      "personal_page_url": "https://naoshisan.com/?p=3538"
+    },
+    {
+      "id": 89,
+      "school": "Nekoma",
+      "name": "Kenma Kozume",
+      "name_jp": "孤爪研磨",
+      "variant": "Hanami",
+      "rarity": "SP",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/04/5a90c5a5ca4ea4a6b588b1b539ca9edf.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 90,
+      "school": "Nekoma",
+      "name": "Kenma Kozume",
+      "name_jp": "孤爪研磨",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/3b54ef6c6a344cebc8b0d11accbb8e24.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 91,
+      "school": "Nekoma",
+      "name": "Tetsuro Kuroo",
+      "name_jp": "黒尾鉄朗",
+      "variant": null,
+      "rarity": "UR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/959fa8d71a5da70792b16c3f1b192a19.png",
+      "personal_page_url": "https://naoshisan.com/?p=3427"
+    },
+    {
+      "id": 92,
+      "school": "Nekoma",
+      "name": "Tetsuro Kuroo",
+      "name_jp": "黒尾鉄朗",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/26920a7cd5b73796bd11e144750fe828.png",
+      "personal_page_url": "https://naoshisan.com/?p=3554"
+    },
+    {
+      "id": 93,
+      "school": "Nekoma",
+      "name": "Morisuke Yaku",
+      "name_jp": "夜久衛輔",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "L",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/ca3b372bafda62b27433a985655a1a79.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 94,
+      "school": "Nekoma",
+      "name": "Lev Haiba",
+      "name_jp": "灰羽リエーフ",
+      "variant": null,
+      "rarity": "SSR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/5300be922e7f2074b800069279193a4b.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 95,
+      "school": "Nekoma",
+      "name": "Takeru Yamamoto",
+      "name_jp": "山本猛虎",
+      "variant": null,
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/f8278d38409738f6eb0ec313f931e8ea.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 96,
+      "school": "Nekoma",
+      "name": "Nobuyuki Kai",
+      "name_jp": "海信行",
+      "variant": null,
+      "rarity": "SR",
+      "position": "OP",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/32d032078af3485b6d0057751d188713.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 97,
+      "school": "Nekoma",
+      "name": "Shohei Fukunaga",
+      "name_jp": "福永招平",
+      "variant": null,
+      "rarity": "SR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/fdadc6f23f710e41c89d0b3b39c89d6b.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 98,
+      "school": "Nekoma",
+      "name": "Soh Inuoka",
+      "name_jp": "犬岡走",
+      "variant": null,
+      "rarity": "SR",
+      "position": "MB",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/80de35f69f933526503f1a12007b338f.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 99,
+      "school": "Nekoma",
+      "name": "Yuki Shibayama",
+      "name_jp": "芝山優生",
+      "variant": null,
+      "rarity": "R",
+      "position": "L",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/8db112938b7fa7021b25b3d219ad63d2.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 100,
+      "school": "Nekoma",
+      "name": "Tamahiko Teshiro",
+      "name_jp": "手白球彦",
+      "variant": null,
+      "rarity": "SR",
+      "position": "S",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/0afc759dcf72677df8d45cab3e8e6773.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 101,
+      "school": "Seidatsuzan",
+      "name": "Kiyoomi Sakusa",
+      "name_jp": "佐久早聖臣",
+      "variant": null,
+      "rarity": "UR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/07/60e4cc709e90c29193bcd3808e589358-1.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 102,
+      "school": "Seidatsuzan",
+      "name": "Motoya Komori",
+      "name_jp": "古森元也",
+      "variant": null,
+      "rarity": "UR",
+      "position": "L",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/07/67f11f194566e8449d2826a464c513e0.png",
+      "personal_page_url": null
+    }
+  ],
+  "bonds": [
+    {
+      "name": "Rare Duo",
+      "participants": [
+        1,
+        4
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 4,
+          "bonuses": [
+            {
+              "attribute": "Competitive Spirit (accumulation when Hinata uses super)",
+              "levels": [
+                "1",
+                "1",
+                "1",
+                "1",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 1,
+          "bonuses": [
+            {
+              "attribute": "Reaction (when using reception skill with Competitive Spirit)",
+              "levels": [
+                "+15%",
+                "+15%",
+                "+15%",
+                "+15%",
+                "+15%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cherry Blossom Viewing",
+      "participants": [
+        1,
+        89
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 89,
+          "bonuses": [
+            {
+              "attribute": "Flawless Defense (initial accumulations)",
+              "levels": [
+                "3",
+                "3",
+                "3",
+                "3",
+                "3"
+              ]
+            },
+            {
+              "attribute": "Awareness (per Flawless Defense accumulation)",
+              "levels": [
+                "+0.8%",
+                "+1%",
+                "+1%",
+                "+1%",
+                "+1.2%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 1,
+          "bonuses": [
+            {
+              "attribute": "Quick Attack (on good play)",
+              "levels": [
+                "+1%",
+                "+1.25%",
+                "+1.25%",
+                "+1.5%",
+                "+1.5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Karasuno 'Reds' Group",
+      "participants": [
+        1,
+        4,
+        12,
+        15
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 1,
+          "bonuses": [
+            {
+              "attribute": "Reception",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 12,
+          "bonuses": [
+            {
+              "attribute": "Set",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Peculiar Friendship",
+      "participants": [
+        1,
+        38
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 1,
+          "bonuses": [
+            {
+              "attribute": "Quick Attack",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 38,
+          "bonuses": [
+            {
+              "attribute": "Block",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rare Duo (SSR ver.)",
+      "participants": [
+        4,
+        2
+      ],
+      "is_link_skill": false,
+      "effect_summary": "Kageyama coloca para Hinata, quien realiza un ataque rápido con una potencia de 'Ataque Rápido' x 280%~340%. La 'Conciencia' de Hinata aumenta un 30% y su 'Potencia' aumenta según su 'Conciencia' (máximo 60%~100%). Este ataque no puede ser bloqueado. Al anotar, el tiempo de recarga de la habilidad se reinicia."
+    },
+    {
+      "name": "Friends",
+      "participants": [
+        2,
+        90
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 2,
+          "bonuses": [
+            {
+              "attribute": "Quick Attack",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 90,
+          "bonuses": [
+            {
+              "attribute": "Set",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Aspiring Aces",
+      "participants": [
+        2,
+        94
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 2,
+          "bonuses": [
+            {
+              "attribute": "Block",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 94,
+          "bonuses": [
+            {
+              "attribute": "Quick Attack",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Good Rivals",
+      "participants": [
+        2,
+        98
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 2,
+          "bonuses": [
+            {
+              "attribute": "Reception",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 98,
+          "bonuses": [
+            {
+              "attribute": "Set",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "First Duo",
+      "participants": [
+        5,
+        7
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 5,
+          "bonuses": [
+            {
+              "attribute": "Awareness (when activating quick attack skill)",
+              "levels": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 7,
+          "bonuses": [
+            {
+              "attribute": "Awareness (when activating quick attack skill)",
+              "levels": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trust in Formation",
+      "participants": [
+        5,
+        16
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 16,
+          "bonuses": [
+            {
+              "attribute": "Reception",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 5,
+          "bonuses": [
+            {
+              "attribute": "Serve",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Karasuno Third Years",
+      "participants": [
+        6,
+        10,
+        9
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 6,
+          "bonuses": [
+            {
+              "attribute": "Strong Skills/Attacks Stamina (reduction)",
+              "levels": [
+                "-10%",
+                "-10%",
+                "-10%",
+                "-10%",
+                "-10%"
+              ]
+            },
+            {
+              "attribute": "Attack Technique (when attacking)",
+              "levels": [
+                "+6%",
+                "+7%",
+                "+8%",
+                "+9%",
+                "+10%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 10,
+          "bonuses": [
+            {
+              "attribute": "Strong Skills/Attacks Stamina (reduction)",
+              "levels": [
+                "-10%",
+                "-10%",
+                "-10%",
+                "-10%",
+                "-10%"
+              ]
+            },
+            {
+              "attribute": "Attack Technique (when attacking)",
+              "levels": [
+                "+6%",
+                "+7%",
+                "+8%",
+                "+9%",
+                "+10%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 9,
+          "bonuses": [
+            {
+              "attribute": "Strong Skills/Attacks Stamina (reduction)",
+              "levels": [
+                "-10%",
+                "-10%",
+                "-10%",
+                "-10%",
+                "-10%"
+              ]
+            },
+            {
+              "attribute": "Attack Technique (when attacking)",
+              "levels": [
+                "+6%",
+                "+7%",
+                "+8%",
+                "+9%",
+                "+10%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Karasuno's Foundation",
+      "participants": [
+        6,
+        22
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 6,
+          "bonuses": [
+            {
+              "attribute": "Team Morale (when reception is PERFECT)",
+              "levels": [
+                "+3%",
+                "+3%",
+                "+4%",
+                "+4%",
+                "+5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 22,
+          "bonuses": [
+            {
+              "attribute": "Team Morale (when reception is PERFECT)",
+              "levels": [
+                "+3%",
+                "+3%",
+                "+4%",
+                "+4%",
+                "+5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Behind the Smiles",
+      "participants": [
+        6,
+        92
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 6,
+          "bonuses": [
+            {
+              "attribute": "Reception",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 92,
+          "bonuses": [
+            {
+              "attribute": "Reception",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "'Guardian' and 'Ace'",
+      "participants": [
+        10,
+        13
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 10,
+          "bonuses": [
+            {
+              "attribute": "Attack Technique",
+              "levels": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 13,
+          "bonuses": [
+            {
+              "attribute": "Defense Technique",
+              "levels": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cannon and Iron Wall",
+      "participants": [
+        10,
+        39
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 10,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kiyoko-san Fan Club",
+      "participants": [
+        13,
+        15
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 13,
+          "bonuses": [
+            {
+              "attribute": "Team Morale (when scoring)",
+              "levels": [
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 15,
+          "bonuses": [
+            {
+              "attribute": "Team Morale (when scoring)",
+              "levels": [
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Karasuno Second Years",
+      "participants": [
+        15,
+        13,
+        22
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 22,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 13,
+          "bonuses": [
+            {
+              "attribute": "Set",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 15,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Friend!",
+      "participants": [
+        15,
+        95
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 15,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 95,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "'Shield' and 'Spear'",
+      "participants": [
+        18,
+        20
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 18,
+          "bonuses": [
+            {
+              "attribute": "Block",
+              "levels": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 20,
+          "bonuses": [
+            {
+              "attribute": "Serve",
+              "levels": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Master and Disciple",
+      "participants": [
+        18,
+        92
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 18,
+          "bonuses": [
+            {
+              "attribute": "Block",
+              "levels": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 92,
+          "bonuses": [
+            {
+              "attribute": "Block",
+              "levels": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Karasuno's Geniuses",
+      "participants": [
+        8,
+        12
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 12,
+          "bonuses": [
+            {
+              "attribute": "Receive (conditional on special movement)",
+              "levels": [
+                "+5%",
+                "+7%",
+                "+9%",
+                "+11%",
+                "+13%"
+              ]
+            },
+            {
+              "attribute": "Reaction",
+              "levels": [
+                "+5%",
+                "+5%",
+                "+5%",
+                "+5%",
+                "+5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Karasuno Setters",
+      "participants": [
+        8,
+        4
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 8,
+          "bonuses": [
+            {
+              "attribute": "Set",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Karasuno Third Years (SP ver.)",
+      "participants": [
+        8,
+        6,
+        10
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 8,
+          "bonuses": [
+            {
+              "attribute": "Block",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 6,
+          "bonuses": [
+            {
+              "attribute": "Reception",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 10,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sun and Moon",
+      "participants": [
+        1,
+        17
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 1,
+          "bonuses": [
+            {
+              "attribute": "Team Member Awareness (during set)",
+              "levels": [
+                "+10%",
+                "+15%",
+                "+20%",
+                "+25%",
+                "+30%"
+              ]
+            },
+            {
+              "attribute": "'Fly High' Cooldown Reduced (when quick attack is nice play)",
+              "levels": [
+                "active",
+                "active",
+                "active",
+                "active",
+                "active"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 17,
+          "bonuses": [
+            {
+              "attribute": "Awareness (based on Hinata's Awareness)",
+              "levels": [
+                "+10%",
+                "+15%",
+                "+20%",
+                "+25%",
+                "+30%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Moment of Getting 'Hooked' on Volleyball",
+      "participants": [
+        17,
+        61
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 61,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 17,
+          "bonuses": [
+            {
+              "attribute": "Quick Attack",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "'Courage' and 'Competitive Spirit'",
+      "participants": [
+        89,
+        95
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 89,
+          "bonuses": [
+            {
+              "attribute": "Set",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 95,
+          "bonuses": [
+            {
+              "attribute": "Reception",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "'Brain' and 'Control Tower'",
+      "participants": [
+        91,
+        90
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 91,
+          "bonuses": [
+            {
+              "attribute": "Toss for Kuroo's quick attack",
+              "levels": [
+                "available",
+                "available",
+                "available",
+                "available",
+                "available"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 90,
+          "bonuses": [
+            {
+              "attribute": "Quick Attack (power)",
+              "levels": [
+                "+265%",
+                "+280%",
+                "+295%",
+                "+310%",
+                "+325%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reliable Senpais",
+      "participants": [
+        91,
+        93,
+        96
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 91,
+          "bonuses": [
+            {
+              "attribute": "Quick Attack",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "'Core' and 'Control Tower'",
+      "participants": [
+        92,
+        90
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 90,
+          "bonuses": [
+            {
+              "attribute": "Block",
+              "levels": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 92,
+          "bonuses": [
+            {
+              "attribute": "Set",
+              "levels": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Similar Types",
+      "participants": [
+        92,
+        7
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 7,
+          "bonuses": [
+            {
+              "attribute": "Reception",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 92,
+          "bonuses": [
+            {
+              "attribute": "Block",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "'Protection' Educational Guide",
+      "participants": [
+        93,
+        94
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 93,
+          "bonuses": [
+            {
+              "attribute": "Reception",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 94,
+          "bonuses": [
+            {
+              "attribute": "Quick Attack",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Team Guardians",
+      "participants": [
+        93,
+        13
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 13,
+          "bonuses": [
+            {
+              "attribute": "Reception",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 93,
+          "bonuses": [
+            {
+              "attribute": "Reception",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "'Unconquerable' Opponent",
+      "participants": [
+        94,
+        90
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 94,
+          "bonuses": [
+            {
+              "attribute": "Block",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Synchronized Breathing",
+      "participants": [
+        26,
+        28
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 26,
+          "bonuses": [
+            {
+              "attribute": "Special Set for Iwaizumi",
+              "levels": [
+                "available",
+                "available",
+                "available",
+                "available",
+                "available"
+              ]
+            },
+            {
+              "attribute": "Attack Rhythm (accumulations per combo)",
+              "levels": [
+                "2",
+                "2",
+                "2",
+                "2",
+                "2"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 28,
+          "bonuses": [
+            {
+              "attribute": "Spike (with Oikawa's set)",
+              "levels": [
+                "+255%",
+                "+275%",
+                "+295%",
+                "+315%",
+                "+315%"
+              ]
+            },
+            {
+              "attribute": "Team Awareness (per Attack Rhythm accumulation)",
+              "levels": [
+                "+1%",
+                "+1%",
+                "+1%",
+                "+1%",
+                "+1%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Destined Rivals",
+      "participants": [
+        26,
+        53
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 26,
+          "bonuses": [
+            {
+              "attribute": "Set",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "'King' and 'Great King'",
+      "participants": [
+        4,
+        26
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 4,
+          "bonuses": [
+            {
+              "attribute": "Serve",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 26,
+          "bonuses": [
+            {
+              "attribute": "Serve",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Towards New Heights",
+      "participants": [
+        26,
+        34
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 26,
+          "bonuses": [
+            {
+              "attribute": "Set",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ruthless Trust",
+      "participants": [
+        26,
+        36
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 26,
+          "bonuses": [
+            {
+              "attribute": "Block",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 36,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trusted Partner",
+      "participants": [
+        27,
+        29
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 27,
+          "bonuses": [
+            {
+              "attribute": "Awareness",
+              "levels": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 29,
+          "bonuses": [
+            {
+              "attribute": "Awareness",
+              "levels": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Wolf Society",
+      "participants": [
+        28,
+        36
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 28,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 36,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Honesty and Calm",
+      "participants": [
+        35,
+        34
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 35,
+          "bonuses": [
+            {
+              "attribute": "Quick Attack",
+              "levels": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 34,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hidden Passion",
+      "participants": [
+        36,
+        32
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 36,
+          "bonuses": [
+            {
+              "attribute": "Reception",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Aoba Johsai Second Years",
+      "participants": [
+        36,
+        32,
+        33
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 33,
+          "bonuses": [
+            {
+              "attribute": "Reception",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 32,
+          "bonuses": [
+            {
+              "attribute": "Reception",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sea Bathing",
+      "participants": [
+        38,
+        61,
+        63
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 38,
+          "bonuses": [
+            {
+              "attribute": "Reaction (in 2/3 block during team morale)",
+              "levels": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            },
+            {
+              "attribute": "Team Morale (at rally start)",
+              "levels": [
+                "+20",
+                "+20",
+                "+20",
+                "+20",
+                "+20"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 61,
+          "bonuses": [
+            {
+              "attribute": "Reaction (in 2/3 block during team morale)",
+              "levels": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 63,
+          "bonuses": [
+            {
+              "attribute": "Reaction (in 2/3 block during team morale)",
+              "levels": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Taciturn and Sharp Tongue",
+      "participants": [
+        38,
+        41
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 38,
+          "bonuses": [
+            {
+              "attribute": "Block",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Taciturn and Sharp Tongue (SSR ver.)",
+      "participants": [
+        39,
+        41
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 39,
+          "bonuses": [
+            {
+              "attribute": "Double Block (combined power)",
+              "levels": [
+                "x180%",
+                "x200%",
+                "x220%",
+                "x230%",
+                "x240%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 41,
+          "bonuses": [
+            {
+              "attribute": "Anger towards opposing spiker",
+              "levels": [
+                "Activated",
+                "Activated",
+                "Activated",
+                "Activated",
+                "Activated"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Peculiar Friendship (SSR ver.)",
+      "participants": [
+        39,
+        2
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 39,
+          "bonuses": [
+            {
+              "attribute": "Block",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "New Captain and Great Rookie",
+      "participants": [
+        41,
+        43
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 41,
+          "bonuses": [
+            {
+              "attribute": "Front Line Block (team)",
+              "levels": [
+                "2%",
+                "2.5%",
+                "3%",
+                "3.5%",
+                "4%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 43,
+          "bonuses": [
+            {
+              "attribute": "Front Line Block (team)",
+              "levels": [
+                "2%",
+                "2.5%",
+                "3%",
+                "3.5%",
+                "4%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Former and New Date Tech Captain",
+      "participants": [
+        41,
+        47
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 41,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Date Tech Setters",
+      "participants": [
+        43,
+        47
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 43,
+          "bonuses": [
+            {
+              "attribute": "Set",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Date Tech Third Years",
+      "participants": [
+        48,
+        47,
+        46
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 48,
+          "bonuses": [
+            {
+              "attribute": "Team Morale (when activating block)",
+              "levels": [
+                "3%",
+                "3%",
+                "4%",
+                "4%",
+                "5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 47,
+          "bonuses": [
+            {
+              "attribute": "Team Morale (when activating block)",
+              "levels": [
+                "3%",
+                "3%",
+                "4%",
+                "4%",
+                "5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 46,
+          "bonuses": [
+            {
+              "attribute": "Team Morale (when activating block)",
+              "levels": [
+                "3%",
+                "3%",
+                "4%",
+                "4%",
+                "5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Date Tech Spikers",
+      "participants": [
+        48,
+        50
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 48,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "2%",
+                "2.5%",
+                "3%",
+                "3.5%",
+                "4%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 50,
+          "bonuses": [
+            {
+              "attribute": "Block",
+              "levels": [
+                "2%",
+                "2.5%",
+                "3%",
+                "3.5%",
+                "4%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Friends Forever",
+      "participants": [
+        53,
+        54
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 53,
+          "bonuses": [
+            {
+              "attribute": "Attack Technique",
+              "levels": [
+                "3%",
+                "3.5%",
+                "4%",
+                "4.5%",
+                "5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 54,
+          "bonuses": [
+            {
+              "attribute": "Defense Technique",
+              "levels": [
+                "3%",
+                "3.5%",
+                "4%",
+                "4.5%",
+                "5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "'Absolute Champion' and Solid Setter",
+      "participants": [
+        53,
+        56
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 53,
+          "bonuses": [
+            {
+              "attribute": "Spike (with Shirabu's set)",
+              "levels": [
+                "x260%",
+                "x280%",
+                "x300%",
+                "x310%",
+                "x320%"
+              ]
+            },
+            {
+              "attribute": "Power (in combo with Shirabu)",
+              "levels": [
+                "+10%",
+                "+10%",
+                "+10%",
+                "+10%",
+                "+10%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 56,
+          "bonuses": [
+            {
+              "attribute": "Set (for combo with Ushijima)",
+              "levels": [
+                "Activated",
+                "Activated",
+                "Activated",
+                "Activated",
+                "Activated"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Shiratorizawa Third Years",
+      "participants": [
+        53,
+        54,
+        57,
+        58,
+        60
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 54,
+          "bonuses": [
+            {
+              "attribute": "Block",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 57,
+          "bonuses": [
+            {
+              "attribute": "Serve",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 58,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 60,
+          "bonuses": [
+            {
+              "attribute": "Reception",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "From Great Ace to Ace",
+      "participants": [
+        53,
+        55
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 53,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 55,
+          "bonuses": [
+            {
+              "attribute": "Reception",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "'Ushiwaka' and 'Benkei'",
+      "participants": [
+        53,
+        58
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 53,
+          "bonuses": [
+            {
+              "attribute": "Block",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 58,
+          "bonuses": [
+            {
+              "attribute": "Reception",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Shiratorizawa Central Blockers",
+      "participants": [
+        54,
+        59
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 54,
+          "bonuses": [
+            {
+              "attribute": "Front Line Block (team)",
+              "levels": [
+                "5%",
+                "5.5%",
+                "6%",
+                "6.5%",
+                "7%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 59,
+          "bonuses": [
+            {
+              "attribute": "Front Line Block (team)",
+              "levels": [
+                "5%",
+                "5.5%",
+                "6%",
+                "6.5%",
+                "7%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Senpai's Expectation",
+      "participants": [
+        54,
+        55
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 54,
+          "bonuses": [
+            {
+              "attribute": "Quick Attack",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 55,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Intuition vs. System",
+      "participants": [
+        54,
+        18
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 54,
+          "bonuses": [
+            {
+              "attribute": "Block",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Shiratorizawa Spikers",
+      "participants": [
+        55,
+        58
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 55,
+          "bonuses": [
+            {
+              "attribute": "Team Spike",
+              "levels": [
+                "4%",
+                "4.5%",
+                "5%",
+                "5.5%",
+                "6%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 58,
+          "bonuses": [
+            {
+              "attribute": "Team Spike",
+              "levels": [
+                "4%",
+                "4.5%",
+                "5%",
+                "5.5%",
+                "6%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Shiratorizawa Second Years",
+      "participants": [
+        56,
+        59
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 56,
+          "bonuses": [
+            {
+              "attribute": "Set",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 59,
+          "bonuses": [
+            {
+              "attribute": "Quick Attack",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Different Type Setters",
+      "participants": [
+        56,
+        57
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 56,
+          "bonuses": [
+            {
+              "attribute": "Serve",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 57,
+          "bonuses": [
+            {
+              "attribute": "Set",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Miraculous Ace and Attentive Setter",
+      "participants": [
+        62,
+        64
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 62,
+          "bonuses": [
+            {
+              "attribute": "Depressive Mode",
+              "levels": [
+                "Eliminated",
+                "Eliminated",
+                "Eliminated",
+                "Eliminated",
+                "Eliminated"
+              ]
+            },
+            {
+              "attribute": "Spike (with Akaashi's set)",
+              "levels": [
+                "x265%",
+                "x285%",
+                "x305%",
+                "x315%",
+                "x325%"
+              ]
+            },
+            {
+              "attribute": "Spike (additional bonus)",
+              "levels": [
+                "+20%",
+                "+20%",
+                "+20%",
+                "+20%",
+                "+20%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 64,
+          "bonuses": [
+            {
+              "attribute": "Set (for combo with Bokuto)",
+              "levels": [
+                "Activated",
+                "Activated",
+                "Activated",
+                "Activated",
+                "Activated"
+              ]
+            },
+            {
+              "attribute": "Team Morale",
+              "levels": [
+                "+15",
+                "+15",
+                "+15",
+                "+15",
+                "+15"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tokyo Practice Partners",
+      "participants": [
+        62,
+        64,
+        91,
+        18
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 62,
+          "bonuses": [
+            {
+              "attribute": "Serve",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 64,
+          "bonuses": [
+            {
+              "attribute": "Set",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "First Disciple",
+      "participants": [
+        62,
+        2
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 62,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hooked on Volleyball",
+      "participants": [
+        62,
+        65
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 62,
+          "bonuses": [
+            {
+              "attribute": "Reception",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tokyo Practice Partners (Skill)",
+      "participants": [
+        62,
+        66
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 66,
+          "bonuses": [
+            {
+              "attribute": "Serve",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fukurodani Third Years",
+      "participants": [
+        62,
+        65,
+        69,
+        67,
+        66
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 69,
+          "bonuses": [
+            {
+              "attribute": "Block",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 66,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 65,
+          "bonuses": [
+            {
+              "attribute": "Reception",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 67,
+          "bonuses": [
+            {
+              "attribute": "Reception",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fukurodani Central Blockers",
+      "participants": [
+        69,
+        68
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 69,
+          "bonuses": [
+            {
+              "attribute": "Quick Attack",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Importance of a 'Foundation'",
+      "participants": [
+        70,
+        6
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 70,
+          "bonuses": [
+            {
+              "attribute": "Block",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "High Tension Duo",
+      "participants": [
+        70,
+        71
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 70,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jozenji Spikers",
+      "participants": [
+        70,
+        73
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 70,
+          "bonuses": [
+            {
+              "attribute": "Reception",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 73,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Strongest High School Twins",
+      "participants": [
+        77,
+        78
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 77,
+          "bonuses": [
+            {
+              "attribute": "Set (for negative tempo quick attack)",
+              "levels": [
+                "Activated",
+                "Activated",
+                "Activated",
+                "Activated",
+                "Activated"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 78,
+          "bonuses": [
+            {
+              "attribute": "Quick Attack (negative tempo, unblockable)",
+              "levels": [
+                "Activated",
+                "Activated",
+                "Activated",
+                "Activated",
+                "Activated"
+              ]
+            },
+            {
+              "attribute": "Attack Technique (until one leaves court)",
+              "levels": [
+                "+15%",
+                "+15%",
+                "+15%",
+                "+15%",
+                "+15%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Brain and Axis",
+      "participants": [
+        77,
+        78,
+        79
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 77,
+          "bonuses": [
+            {
+              "attribute": "Técnica de colocación",
+              "levels": [
+                "+3%",
+                "+3.5%",
+                "+4%",
+                "+4.5%",
+                "+5%"
+              ]
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Donpishari",
+              "description": "Al inicio del partido, gana acumulaciones de efecto 3 stacks. Por cada stack, la técnica mejora un +3%. Máximo 10 stacks.",
+              "levels": [
+                "+3%",
+                "+3.5%",
+                "+4%",
+                "+4.5%",
+                "+5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 78,
+          "bonuses": [
+            {
+              "attribute": "Quick Attack",
+              "levels": [
+                "+3%",
+                "+3.5%",
+                "+4%",
+                "+4.5%",
+                "+5%"
+              ]
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Primer ataque rápido potenciado",
+              "description": "El primer ataque rápido de cada set aumenta su potencia de 'Ataque Rápido' en un 12%.",
+              "levels": [
+                "+12%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 79,
+          "bonuses": [
+            {
+              "attribute": "Leader Parameters",
+              "levels": [
+                "+3%",
+                "+3.5%",
+                "+4%",
+                "+4.5%",
+                "+5%"
+              ]
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Certeza",
+              "description": "Al inicio del partido, gana efecto de certeza que mejora la estabilidad del equipo.",
+              "levels": [
+                "+2%",
+                "+2.5%",
+                "+3%",
+                "+3.5%",
+                "+4%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Volleyball Class Friends",
+      "participants": [
+        77,
+        78,
+        81
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 77,
+          "bonuses": [
+            {
+              "attribute": "Serve",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 78,
+          "bonuses": [
+            {
+              "attribute": "Quick Attack",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 81,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Youth Camp Setter Companions",
+      "participants": [
+        4,
+        77
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 4,
+          "bonuses": [
+            {
+              "attribute": "Set",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 77,
+          "bonuses": [
+            {
+              "attribute": "Set",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Inarizaki Second Years",
+      "participants": [
+        77,
+        78,
+        80,
+        83
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 80,
+          "bonuses": [
+            {
+              "attribute": "Quick Attack",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 83,
+          "bonuses": [
+            {
+              "attribute": "Spike",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 78,
+          "bonuses": [
+            {
+              "attribute": "Quick Attack",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Japan Youth Intensive Camp Companions",
+      "participants": [
+        77,
+        87
+      ],
+      "is_link_skill": false,
+      "effect_summary": "Aumenta la 'Colocación' de Atsumu, el 'Remate Fuerte' de Sakusa, la 'Recepción' de Komori y el 'Remate Fuerte' de Hoshiumi según el nivel."
+    },
+    {
+      "name": "Childhood Friends Who Played in Middle and High School",
+      "participants": [
+        87,
+        88
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 87,
+          "bonuses": [
+            {
+              "attribute": "Main Parameter",
+              "levels": [
+                "+6%",
+                "+7%",
+                "+8%",
+                "+9%",
+                "+10%"
+              ]
+            },
+            {
+              "attribute": "Block",
+              "levels": [
+                "+6%",
+                "+7%",
+                "+8%",
+                "+9%",
+                "+10%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 88,
+          "bonuses": [
+            {
+              "attribute": "All-Rounder (effect at match start)",
+              "levels": [
+                "1 stack",
+                "1 stack",
+                "1 stack",
+                "1 stack",
+                "1 stack"
+              ]
+            },
+            {
+              "attribute": "Solid Block (effect at match start)",
+              "levels": [
+                "1 stack",
+                "1 stack",
+                "1 stack",
+                "1 stack",
+                "1 stack"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "A first-class attacker and a first-class libero",
+      "participants": [
+        101,
+        102
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 101,
+          "bonuses": [
+            {
+              "attribute": "Powerful Hit",
+              "levels": [
+                "10%",
+                "12.5%",
+                "15%",
+                "17.5%",
+                "20%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 102,
+          "bonuses": [
+            {
+              "attribute": "Receive",
+              "levels": [
+                "10%",
+                "12.5%",
+                "15%",
+                "17.5%",
+                "20%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "All-Japan Youth Training Camp Teammates (Kizuna)",
+      "participants": [
+        77,
+        101,
+        102,
+        87
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 77,
+          "bonuses": [
+            {
+              "attribute": "Throw",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 101,
+          "bonuses": [
+            {
+              "attribute": "Powerful Hit",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 102,
+          "bonuses": [
+            {
+              "attribute": "Receive",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 87,
+          "bonuses": [
+            {
+              "attribute": "Powerful Hit",
+              "levels": [
+                "+5 +1%",
+                "+7 +2%",
+                "+9 +3%",
+                "+12 +4%",
+                "+15 +5%"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
