@@ -4,9 +4,11 @@
   "description": "Interactive team builder for Haikyu!! volleyball positions inspired by the anime/manga",
   "main": "index.html",
   "scripts": {
-    "start": "python -m http.server 3000",
+    "start": "npm run build && npx serve .",
     "serve": "npx serve .",
-    "build": "echo 'No build process needed for vanilla HTML/CSS/JS'",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "dev": "npm run build:watch & npx serve .",
     "test": "echo 'No tests specified'"
   },
   "keywords": [
@@ -28,7 +30,9 @@
   },
   "homepage": "https://github.com/username/haikyu-team-builder#readme",
   "devDependencies": {
-    "serve": "^14.0.0"
+    "serve": "^14.0.0",
+    "typescript": "^5.3.0",
+    "@types/node": "^20.0.0"
   },
   "engines": {
     "node": ">=14.0.0"
@@ -41,8 +45,8 @@
   "files": [
     "index.html",
     "styles.css",
-    "script.js",
-    "extended-players.js",
+    "dist/",
+    "src/",
     "README.md"
   ]
 }

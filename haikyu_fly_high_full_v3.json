@@ -1,16 +1,4 @@
 {
-  "generated_at": "2025-08-14T16:37:07.929954Z",
-  "source_index": {
-    "Karasuno": "https://naoshisan.com/?p=2172",
-    "Aoba Johsai": "https://naoshisan.com/?p=2189",
-    "Date Tech": "https://naoshisan.com/?p=2193",
-    "Shiratorizawa": "https://naoshisan.com/?p=2196",
-    "Fukurodani": "https://naoshisan.com/?p=2199",
-    "Jozenji": "https://naoshisan.com/?p=2204",
-    "Inarizaki": "https://naoshisan.com/?p=2202",
-    "Kamomedai": "https://naoshisan.com/?p=3542",
-    "Nekoma": "https://naoshisan.com/?p=2177"
-  },
   "characters": [
     {
       "id": 1,
@@ -140,7 +128,7 @@
       "name_jp": "西谷夕",
       "variant": "Afterschool",
       "rarity": "SP",
-      "position": "Li",
+      "position": "L",
       "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/04/83df3bf18a7ac1b266ed6569f694bc27.png",
       "personal_page_url": "https://naoshisan.com/?p=3417"
     },
@@ -151,7 +139,7 @@
       "name_jp": "西谷夕",
       "variant": null,
       "rarity": "SSR",
-      "position": "Li",
+      "position": "L",
       "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/3491ad3eb1e911aa855d0aaaefb85a7c.png",
       "personal_page_url": "https://naoshisan.com/?p=3462"
     },
@@ -162,7 +150,7 @@
       "name_jp": "西谷夕",
       "variant": "Practice",
       "rarity": "SR",
-      "position": "Li",
+      "position": "L",
       "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/a147c348dd1a78121da9c2265b145337.png",
       "personal_page_url": null
     },
@@ -227,7 +215,7 @@
       "name": "Tadashi Yamaguchi",
       "name_jp": "山口忠",
       "variant": null,
-      "rarity": "SR",
+      "rarity": "SSR",
       "position": "MB",
       "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/d60a1e6c162e618278051351958db40c.png",
       "personal_page_url": null
@@ -260,7 +248,7 @@
       "name": "Chikara Ennoshita",
       "name_jp": "縁下力",
       "variant": "Practice",
-      "rarity": "SR",
+      "rarity": "R",
       "position": "WS",
       "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/4eeb384a9d83acb08dfb4278a95a68c0.png",
       "personal_page_url": null
@@ -339,7 +327,7 @@
       "variant": null,
       "rarity": "SR",
       "position": "MB",
-      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/4b4226d91beba7961fa6133530b11077.png",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/177073fb4cd6f32363c3a5e987ee901d.png",
       "personal_page_url": null
     },
     {
@@ -350,7 +338,7 @@
       "variant": null,
       "rarity": "SR",
       "position": "WS",
-      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/665fba134353abea9043a198ed00a50e.png",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/4b4226d91beba7961fa6133530b11077.png",
       "personal_page_url": null
     },
     {
@@ -361,7 +349,7 @@
       "variant": null,
       "rarity": "SR",
       "position": "S",
-      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/5972ee0c71f60ad1bf7e97f1a02810c3.png",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/665fba134353abea9043a198ed00a50e.png",
       "personal_page_url": null
     },
     {
@@ -371,7 +359,7 @@
       "name_jp": "渡親治",
       "variant": null,
       "rarity": "SR",
-      "position": "Li",
+      "position": "L",
       "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/9bbb6082bdd99d0ded7c06432b38ff51.png",
       "personal_page_url": null
     },
@@ -416,7 +404,7 @@
       "variant": null,
       "rarity": "SR",
       "position": "OP",
-      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/a2bfb847a5c06344c54d2ad864691100.png",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/ea11e45674f5db94f8bd4fc623870f5e.png",
       "personal_page_url": null
     },
     {
@@ -503,7 +491,7 @@
       "name_jp": "作並浩輔",
       "variant": null,
       "rarity": "R",
-      "position": "Li",
+      "position": "L",
       "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/a95e7d9b7e9388cfd9fd2c4e91ff6563.png",
       "personal_page_url": null
     },
@@ -526,7 +514,7 @@
       "variant": null,
       "rarity": "SR",
       "position": "S",
-      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/5381ad32e434e2c498f35fc8dbc9436e.png",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/5972ee0c71f60ad1bf7e97f1a02810c3.png",
       "personal_page_url": null
     },
     {
@@ -537,7 +525,7 @@
       "variant": null,
       "rarity": "SSR",
       "position": "OP",
-      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/a239bf0cc0d8dcb798b1cdcf8e6fae84.png",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/5381ad32e434e2c498f35fc8dbc9436e.png",
       "personal_page_url": null
     },
     {
@@ -548,7 +536,7 @@
       "variant": "Practice",
       "rarity": "SR",
       "position": "OP",
-      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/3bfbfae7bf194e0c1b2e8c4eb0f8c5f0.png",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/a239bf0cc0d8dcb798b1cdcf8e6fae84.png",
       "personal_page_url": null
     },
     {
@@ -668,7 +656,7 @@
       "name_jp": "山形隼人",
       "variant": null,
       "rarity": "SSR",
-      "position": "Li",
+      "position": "L",
       "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/56bd7294b9b956e612911dc52ecc91ed.png",
       "personal_page_url": null
     },
@@ -745,7 +733,7 @@
       "name_jp": "小見春樹",
       "variant": null,
       "rarity": "SSR",
-      "position": "Li",
+      "position": "L",
       "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/2e236f0f4de5e24c6b2015037ac690be.png",
       "personal_page_url": null
     },
@@ -779,29 +767,29 @@
       "variant": null,
       "rarity": "SSR",
       "position": "WS",
-      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/170121cad2ffb93a1ada3b3c8c9d6019.png",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/bf5b6dfaee07c7524a5b54c5a8ca3a27.png",
       "personal_page_url": null
     },
     {
       "id": 71,
       "school": "Jozenji",
-      "name": "Kazuma Mombata",
+      "name": "Kazuma Bobata",
       "name_jp": "母畑和馬",
       "variant": null,
       "rarity": "R",
       "position": "MB",
-      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/170121cad2ffb93a1ada3b3c8c9d6019.png",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/69f51382e697c56dfe3fe712e81cb2be.png",
       "personal_page_url": null
     },
     {
       "id": 72,
       "school": "Jozenji",
-      "name": "Takeharu Nikai",
+      "name": "Takeharu Futamata",
       "name_jp": "二岐丈春",
       "variant": null,
       "rarity": "SR",
       "position": "S",
-      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/170121cad2ffb93a1ada3b3c8c9d6019.png",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/e7e157fb133eceb7d3fb99b93c38080e.png",
       "personal_page_url": null
     },
     {
@@ -812,29 +800,29 @@
       "variant": null,
       "rarity": "SR",
       "position": "WS",
-      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/170121cad2ffb93a1ada3b3c8c9d6019.png",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/d267fb1c535a482e22fd05f83fec115e.png",
       "personal_page_url": null
     },
     {
       "id": 74,
       "school": "Jozenji",
-      "name": "Nobuyoshi Iizaka",
+      "name": "Nobuyoshi Īzaka",
       "name_jp": "飯坂信義",
       "variant": null,
       "rarity": "R",
       "position": "MB",
-      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/170121cad2ffb93a1ada3b3c8c9d6019.png",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/d5d37d83402e95c013bc01ca915b55d0.png",
       "personal_page_url": null
     },
     {
       "id": 75,
       "school": "Jozenji",
-      "name": "Rintaro Numajiri",
+      "name": "Rintarō Numajiri",
       "name_jp": "沼尻凛太郎",
       "variant": null,
       "rarity": "R",
       "position": "OP",
-      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/170121cad2ffb93a1ada3b3c8c9d6019.png",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/ae0d1cb93b761d702c0d307fda1ea0c7.png",
       "personal_page_url": null
     },
     {
@@ -844,8 +832,8 @@
       "name_jp": "土湯新",
       "variant": null,
       "rarity": "R",
-      "position": "Li",
-      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/170121cad2ffb93a1ada3b3c8c9d6019.png",
+      "position": "L",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/00841ea8e65ff41d690499ae98689424.png",
       "personal_page_url": null
     },
     {
@@ -910,7 +898,7 @@
       "name_jp": "赤木路成",
       "variant": null,
       "rarity": "SSR",
-      "position": "Li",
+      "position": "L",
       "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/a260e360b74611ac38c9f87b73801788.png",
       "personal_page_url": null
     },
@@ -966,7 +954,7 @@
       "variant": null,
       "rarity": "UR",
       "position": "WS",
-      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/170121cad2ffb93a1ada3b3c8c9d6019.png",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/04/a13568732e7b6a9d7e69062d6094db55.png",
       "personal_page_url": "https://naoshisan.com/?p=3533"
     },
     {
@@ -977,7 +965,7 @@
       "variant": null,
       "rarity": "UR",
       "position": "MB",
-      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/170121cad2ffb93a1ada3b3c8c9d6019.png",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/04/6d68129ff6f45a637b39b9b4bce5bc1b.png",
       "personal_page_url": "https://naoshisan.com/?p=3538"
     },
     {
@@ -999,7 +987,7 @@
       "variant": null,
       "rarity": "SSR",
       "position": "S",
-      "profile_image_url": null,
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/3b54ef6c6a344cebc8b0d11accbb8e24.png",
       "personal_page_url": null
     },
     {
@@ -1021,7 +1009,7 @@
       "variant": null,
       "rarity": "SSR",
       "position": "MB",
-      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/959fa8d71a5da70792b16c3f1b192a19.png",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/26920a7cd5b73796bd11e144750fe828.png",
       "personal_page_url": "https://naoshisan.com/?p=3554"
     },
     {
@@ -1031,7 +1019,7 @@
       "name_jp": "夜久衛輔",
       "variant": null,
       "rarity": "SSR",
-      "position": "Li",
+      "position": "L",
       "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/ca3b372bafda62b27433a985655a1a79.png",
       "personal_page_url": null
     },
@@ -1097,7 +1085,7 @@
       "name_jp": "芝山優生",
       "variant": null,
       "rarity": "R",
-      "position": "Li",
+      "position": "L",
       "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/8db112938b7fa7021b25b3d219ad63d2.png",
       "personal_page_url": null
     },
@@ -1111,363 +1099,2130 @@
       "position": "S",
       "profile_image_url": "https://naoshisan.com/wp-content/uploads/2024/12/0afc759dcf72677df8d45cab3e8e6773.png",
       "personal_page_url": null
+    },
+    {
+      "id": 101,
+      "school": "Seidatsuzan",
+      "name": "Kiyoomi Sakusa",
+      "name_jp": "佐久早聖臣",
+      "variant": null,
+      "rarity": "UR",
+      "position": "WS",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/07/60e4cc709e90c29193bcd3808e589358-1.png",
+      "personal_page_url": null
+    },
+    {
+      "id": 102,
+      "school": "Seidatsuzan",
+      "name": "Motoya Komori",
+      "name_jp": "古森元也",
+      "variant": null,
+      "rarity": "UR",
+      "position": "L",
+      "profile_image_url": "https://naoshisan.com/wp-content/uploads/2025/07/67f11f194566e8449d2826a464c513e0.png",
+      "personal_page_url": null
     }
   ],
   "bonds": [
     {
-      "name": "Karasuno: genios",
-      "effects_summary_es": "Durante pinch serve aliado, reduce la duración de interferencia en total un 5%.",
-      "effects_jp": "味方のピンチサーブ時の妨害時間が合計5%減",
-      "participants": [
-        12,
-        4
-      ],
-      "source_url": "https://naoshisan.com/?p=3417"
-    },
-    {
-      "name": "Karasuno: Grupo de los 'rojos' (akaten-gumi)",
-      "effects_summary_es": "Bloqueo del equipo +15.",
-      "effects_jp": "味方チームのブロックポイント+15",
-      "participants": [
-        1,
-        4,
-        12,
-        15
-      ],
-      "source_url": "https://naoshisan.com/?p=3417"
-    },
-    {
-      "name": "Los genios (Oikawa & Kageyama)",
-      "effects_summary_es": "Ataque del rival -2% (resumen).",
-      "effects_jp": "相手の攻撃ポイントが2%低下",
-      "participants": [
-        4,
-        26
-      ],
-      "source_url": "https://naoshisan.com/?p=3456"
-    },
-    {
-      "name": "3º curso de Karasuno (Sawamura, Sugawara, Azumane)",
-      "effects_summary_es": "Recepción (excepto líbero) del rival -2% (resumen).",
-      "effects_jp": "相手のリベロ以外のメンバーの受けポイントが2%低下",
-      "participants": [
-        4,
-        6,
-        8,
-        10
-      ],
-      "source_url": "https://naoshisan.com/?p=3456"
-    },
-    {
-      "name": "Kageyama & Miya Atsumu",
-      "effects_summary_es": "(ver página; skill de Kizuna)",
-      "effects_jp": "キズナスキル（詳細は元ページ参照）",
-      "participants": [
-        4,
-        77
-      ],
-      "source_url": "https://naoshisan.com/?p=3456"
-    },
-    {
-      "name": "Auto‑proclamado punta de lanza (Bokuto & Akaashi)",
-      "effects_summary_es": "Efecto de apoyo al OP (resumen).",
-      "effects_jp": "味方OPの受け後のブロック時間が短縮（詳細は元ページ参照）",
-      "participants": [
-        62,
-        64
-      ],
-      "source_url": "https://naoshisan.com/?p=3437"
-    },
-    {
-      "name": "Prácticas libres del campamento de Tokio",
-      "effects_summary_es": "Bonificación de equipo (resumen).",
-      "effects_jp": "東京合宿の自主練習仲間",
-      "participants": [
-        62,
-        64,
-        91,
-        18
-      ],
-      "source_url": "https://naoshisan.com/?p=3437"
-    },
-    {
-      "name": "El primer discípulo (Bokuto & Hinata)",
-      "effects_summary_es": "Mejora de WS (resumen).",
-      "effects_jp": "1番弟子",
-      "participants": [
-        62,
-        2
-      ],
-      "source_url": "https://naoshisan.com/?p=3437"
-    },
-    {
-      "name": "El momento de 'engancharse' al volley (Bokuto & Konoha)",
-      "effects_summary_es": "Apoyo ofensivo (resumen).",
-      "effects_jp": "バレーに”ハマる”瞬間",
-      "participants": [
-        62,
-        65
-      ],
-      "source_url": "https://naoshisan.com/?p=3437"
-    },
-    {
-      "name": "Ace milagroso y setter atento",
-      "effects_summary_es": "Ataque de WS +2% (resumen).",
-      "effects_jp": "WSのアタックポイントを上げる効果（詳細は元ページ参照）",
-      "participants": [
-        62,
-        64
-      ],
-      "source_url": "https://naoshisan.com/?p=3437"
-    },
-    {
-      "name": "Compañeros del campamento de Tokio (Kizuna Skill)",
-      "effects_summary_es": "Mejora por afinidad (resumen).",
-      "effects_jp": "東京合宿の自主練習仲間（キズナスキル）",
-      "participants": [
-        62,
-        66
-      ],
-      "source_url": "https://naoshisan.com/?p=3437"
-    },
-    {
-      "name": "高校最強ツインズ（キズナスキル）",
-      "effect": "Atsumu levanta y Osamu hace twin quick minus-tempo; OP TEC +15% para Osamu hasta que uno salga; no se bloquea.",
-      "participants": [
-        77,
-        78
-      ],
-      "missing_participants": []
-    },
-    {
-      "name": "頭と主軸（キズナスキル）",
-      "effect": "Buff inicial: Atsumu obtiene Donpishari stacks; Kita obtiene Certeza; bonus a técnica/stack; Osamu primer quick de cada set +12% de速攻.",
-      "participants": [
-        77,
-        78,
-        79
-      ],
-      "missing_participants": []
-    },
-    {
-      "name": "バレーボール教室の友達（キズナ）",
-      "effect": "Atsumu サーブ, Osamu 速攻, Aran 強打 +% según nivel.",
-      "participants": [
-        77,
-        78,
-        81
-      ],
-      "missing_participants": []
-    },
-    {
-      "name": "ユース合宿のセッター同志（キズナ）",
-      "effect": "Kageyama & Atsumu: ambos トス +% según nivel.",
-      "participants": [
-        4,
-        77
-      ],
-      "missing_participants": []
-    },
-    {
-      "name": "稲荷崎2年生（キズナ）",
-      "effect": "Suna 速攻, Ginjima 強打, Osamu 速攻 +% según nivel.",
-      "participants": [
-        80,
-        83,
-        78
-      ],
-      "missing_participants": []
-    },
-    {
-      "name": "全日本ユース強化合宿のチームメイト（キズナ）",
-      "effect": "Atsumu トス, Sakusa 強打, Komori レシーブ, Hoshiumi 強打 +% según nivel.",
-      "participants": [
-        77,
-        87
-      ],
-      "missing_participants": []
-    },
-    {
-      "name": "“脳”と”司令塔”（キズナスキル）",
-      "effect": "Kenma levanta y Kuroo hace quick; daño escala por nivel.",
-      "participants": [
-        89,
-        91
-      ],
-      "missing_participants": []
-    },
-    {
-      "name": "笑顔の裏（キズナ）",
-      "effect": "Daichi & Kuroo: ambos reciben buff de レシーブ.",
-      "participants": [
-        6,
-        91
-      ],
-      "missing_participants": []
-    },
-    {
-      "name": "頼もしい先輩達（キズナ）",
-      "effect": "Kuroo 速攻 +% (con dos senpais de Nekoma).",
-      "participants": [
-        91
-      ],
-      "missing_participants": [
-        [
-          "Nekoma",
-          "Tatsuo Washio"
-        ],
-        [
-          "Nekoma",
-          "Akinori Konoha"
-        ]
+      "name": "Dúo de Raros",
+      "participants": [1, 4],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 4,
+          "bonuses": [
+            {
+              "attribute": "Espíritu Competitivo (acumulación cuando Hinata usa súper)",
+              "levels": ["1", "1", "1", "1", "1"]
+            }
+          ]
+        },
+        {
+          "character_id": 1,
+          "bonuses": [
+            {
+              "attribute": "Reacción (al usar habilidad de recepción con Espíritu Competitivo)",
+              "levels": ["+15%", "+15%", "+15%", "+15%", "+15%"]
+            }
+          ]
+        }
       ]
     },
     {
-      "name": "師匠と弟子（キズナ）",
-      "effect": "Tsukishima & Kuroo: ブロック +% ambos.",
-      "participants": [
-        17,
-        91
-      ],
-      "missing_participants": []
+      "name": "Contemplando los Cerezos en Flor",
+      "participants": [1, 89],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 89,
+          "bonuses": [
+            {
+              "attribute": "Defensa sin Fisuras (acumulaciones iniciales)",
+              "levels": ["3", "3", "3", "3", "3"]
+            },
+            {
+              "attribute": "Conciencia (por cada acumulación de Defensa sin Fisuras)",
+              "levels": ["+0.8%", "+1%", "+1%", "+1%", "+1.2%"]
+            }
+          ]
+        },
+        {
+          "character_id": 1,
+          "bonuses": [
+            {
+              "attribute": "Ataque Rápido (en buena jugada)",
+              "levels": ["+1%", "+1.25%", "+1.25%", "+1.5%", "+1.5%"]
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "阿吽の呼吸（キズナスキル）",
-      "effect": "Oikawa levanta y Iwaizumi remata fuerte; gana 'ritmo de ataque' stacks.",
-      "participants": [
-        26,
-        28
-      ],
-      "missing_participants": []
+      "name": "Grupo de los 'Rojos' de Karasuno",
+      "participants": [1, 4, 12, 15],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 1,
+          "bonuses": [
+            {
+              "attribute": "Recepción",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 12,
+          "bonuses": [
+            {
+              "attribute": "Colocación",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "因縁のライバル（キズナ）",
-      "effect": "Oikawa UR トス up con Kageyama.",
-      "participants": [
-        26,
-        4
-      ],
-      "missing_participants": []
+      "name": "Amistad Peculiar",
+      "participants": [1, 38],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 1,
+          "bonuses": [
+            {
+              "attribute": "Ataque Rápido",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 38,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "“王様”と”大王様”（キズナ）",
-      "effect": "Ambos (Kageyama & Oikawa) サーブ +%.",
-      "participants": [
-        4,
-        26
-      ],
-      "missing_participants": []
+      "name": "Dúo de Raros (SSR ver.)",
+      "participants": [4, 2],
+      "is_link_skill": false,
+      "effect_summary": "Kageyama coloca para Hinata, quien realiza un ataque rápido con una potencia de 'Ataque Rápido' x 280%~340%. La 'Conciencia' de Hinata aumenta un 30% y su 'Potencia' aumenta según su 'Conciencia' (máximo 60%~100%). Este ataque no puede ser bloqueado. Al anotar, el tiempo de recarga de la habilidad se reinicia."
     },
     {
-      "name": "無慈悲な信頼（キズナ）",
-      "effect": "Oikawa ブロック+, Kyotani 強打+.",
-      "participants": [
-        26,
-        36
-      ],
-      "missing_participants": []
+      "name": "Amigos",
+      "participants": [2, 90],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 2,
+          "bonuses": [
+            {
+              "attribute": "Ataque Rápido",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 90,
+          "bonuses": [
+            {
+              "attribute": "Colocación",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "終生のマブダチ（キズナスキル）",
-      "effect": "Ushijima 攻テク+, Tendo 守テク+.",
-      "participants": [
-        53,
-        54
-      ],
-      "missing_participants": []
+      "name": "Aspirantes a As",
+      "participants": [2, 94],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 2,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 94,
+          "bonuses": [
+            {
+              "attribute": "Ataque Rápido",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "“絶対王者”と堅実派セッター（キズナスキル）",
-      "effect": "Shirabu levanta y Ushijima remata; +10% パワー en esa jugada.",
-      "participants": [
-        53,
-        56
-      ],
-      "missing_participants": []
+      "name": "Buenos Rivales",
+      "participants": [2, 98],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 2,
+          "bonuses": [
+            {
+              "attribute": "Recepción",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 98,
+          "bonuses": [
+            {
+              "attribute": "Colocación",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "白鳥沢3年生（キズナ）",
-      "effect": "Tendo ブロック+, Semi サーブ+, Ohira 強打+, Yamagata レシーブ+.",
-      "participants": [
-        54,
-        57,
-        58,
-        60
-      ],
-      "missing_participants": []
+      "name": "Primer Dúo",
+      "participants": [5, 7],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 5,
+          "bonuses": [
+            {
+              "attribute": "Conciencia (al activar habilidad de ataque rápido)",
+              "levels": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          ]
+        },
+        {
+          "character_id": 7,
+          "bonuses": [
+            {
+              "attribute": "Conciencia (al activar habilidad de ataque rápido)",
+              "levels": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "大エースからエースへ（キズナ）",
-      "effect": "Ushijima 強打+, Goshiki レシーブ+.",
-      "participants": [
-        53,
-        55
-      ],
-      "missing_participants": []
+      "name": "Confianza en Formación",
+      "participants": [5, 16],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 16,
+          "bonuses": [
+            {
+              "attribute": "Recepción",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 5,
+          "bonuses": [
+            {
+              "attribute": "Saque",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "「ウシワカ」と「弁慶」（キズナ）",
-      "effect": "Ushijima ブロック+, Ohira レシーブ+.",
-      "participants": [
-        53,
-        58
-      ],
-      "missing_participants": []
+      "name": "Tercer Año de Karasuno",
+      "participants": [6, 10, 9],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 6,
+          "bonuses": [
+            {
+              "attribute": "Stamina de habilidades fuertes/ataques (reducción)",
+              "levels": ["-10%", "-10%", "-10%", "-10%", "-10%"]
+            },
+            {
+              "attribute": "Técnica de Ataque (al atacar)",
+              "levels": ["+6%", "+7%", "+8%", "+9%", "+10%"]
+            }
+          ]
+        },
+        {
+          "character_id": 10,
+          "bonuses": [
+            {
+              "attribute": "Stamina de habilidades fuertes/ataques (reducción)",
+              "levels": ["-10%", "-10%", "-10%", "-10%", "-10%"]
+            },
+            {
+              "attribute": "Técnica de Ataque (al atacar)",
+              "levels": ["+6%", "+7%", "+8%", "+9%", "+10%"]
+            }
+          ]
+        },
+        {
+          "character_id": 9,
+          "bonuses": [
+            {
+              "attribute": "Stamina de habilidades fuertes/ataques (reducción)",
+              "levels": ["-10%", "-10%", "-10%", "-10%", "-10%"]
+            },
+            {
+              "attribute": "Técnica de Ataque (al atacar)",
+              "levels": ["+6%", "+7%", "+8%", "+9%", "+10%"]
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "中高を共にした親友（キズナスキル）",
-      "effect": "Hoshiumi メイン+%, 前衛ブロック+% ; start-of-match buffs con Hirugami.",
-      "participants": [
-        87,
-        88
-      ],
-      "missing_participants": []
+      "name": "La Base de Karasuno",
+      "participants": [6, 22],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 6,
+          "bonuses": [
+            {
+              "attribute": "Moral del equipo (cuando recepción es PERFECT)",
+              "levels": ["+3%", "+3%", "+4%", "+4%", "+5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 22,
+          "bonuses": [
+            {
+              "attribute": "Moral del equipo (cuando recepción es PERFECT)",
+              "levels": ["+3%", "+3%", "+4%", "+4%", "+5%"]
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "体格の近い者同士（キズナ）",
-      "effect": "Hinata(Hanami) 速攻+, Hoshiumi 強打+.",
-      "participants": [
-        1,
-        87
-      ],
-      "missing_participants": []
+      "name": "Detrás de las Sonrisas",
+      "participants": [6, 92],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 6,
+          "bonuses": [
+            {
+              "attribute": "Recepción",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 92,
+          "bonuses": [
+            {
+              "attribute": "Recepción",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "全日本ユース強化合宿のチームメイト（キズナ）",
-      "effect": "Atsumu トス+, Sakusa 強打+, Komori レシーブ+, Hoshiumi 強打+.",
-      "participants": [
-        77,
-        87
-      ],
-      "missing_participants": []
+      "name": "'Guardián' y 'As'",
+      "participants": [10, 13],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 10,
+          "bonuses": [
+            {
+              "attribute": "Técnica de Ataque",
+              "levels": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          ]
+        },
+        {
+          "character_id": 13,
+          "bonuses": [
+            {
+              "attribute": "Técnica de Defensa",
+              "levels": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "Karasuno Geniuses (Kizuna Skill)",
-      "effect": "Boosts Nishinoya (Afterschool) Reaction by +5% to +10% depending on level; extra boost if his Stamina < 80 (per page).",
-      "participants": [
-        8,
-        12
-      ],
-      "source_url": "https://naoshisan.com/?p=4582"
+      "name": "Cañón y Muro de Hierro",
+      "participants": [10, 39],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 10,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "Karasuno Setters (Kizuna)",
-      "effect": "Sugawara (Afterschool) Toss +5% to +15% depending on level.",
-      "participants": [
-        8,
-        4
-      ],
-      "source_url": "https://naoshisan.com/?p=4582"
+      "name": "Club de Fans de Kiyoko-san",
+      "participants": [13, 15],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 13,
+          "bonuses": [
+            {
+              "attribute": "Moral del equipo (al anotar)",
+              "levels": ["6", "7", "8", "9", "10"]
+            }
+          ]
+        },
+        {
+          "character_id": 15,
+          "bonuses": [
+            {
+              "attribute": "Moral del equipo (al anotar)",
+              "levels": ["6", "7", "8", "9", "10"]
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "Karasuno 3rd Years (Kizuna)",
-      "effect": "Sugawara Block, Sawamura Receive, Azumane Strong Hit each get +5% to +15% (scales by level).",
-      "participants": [
-        8,
-        6,
-        10
-      ],
-      "source_url": "https://naoshisan.com/?p=4582"
+      "name": "Segundo Año de Karasuno",
+      "participants": [15, 13, 22],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 22,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 13,
+          "bonuses": [
+            {
+              "attribute": "Colocación",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 15,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "¡Amigo!",
+      "participants": [15, 95],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 15,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 95,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "'Escudo' y 'Lanza'",
+      "participants": [18, 20],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 18,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo",
+              "levels": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          ]
+        },
+        {
+          "character_id": 20,
+          "bonuses": [
+            {
+              "attribute": "Saque",
+              "levels": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Maestro y Discípulo",
+      "participants": [18, 92],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 18,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo",
+              "levels": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          ]
+        },
+        {
+          "character_id": 92,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo",
+              "levels": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Los Genios de Karasuno",
+      "participants": [8, 12],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 12,
+          "bonuses": [
+            {
+              "attribute": "Recibir (condicionado a movimiento especial)",
+              "levels": ["+5%", "+7%", "+9%", "+11%", "+13%"]
+            },
+            {
+              "attribute": "Reacción",
+              "levels": ["+5%", "+5%", "+5%", "+5%", "+5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Colocadores de Karasuno",
+      "participants": [8, 4],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 8,
+          "bonuses": [
+            {
+              "attribute": "Colocación",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tercer Año de Karasuno (SP ver.)",
+      "participants": [8, 6, 10],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 8,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 6,
+          "bonuses": [
+            {
+              "attribute": "Recepción",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 10,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sol y Luna",
+      "participants": [1, 17],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 1,
+          "bonuses": [
+            {
+              "attribute": "Conciencia de miembros del equipo (durante colocación)",
+              "levels": ["+10%", "+15%", "+20%", "+25%", "+30%"]
+            },
+            {
+              "attribute": "Cooldown de 'Vuela Alto' reducido (cuando ataque rápido es nice play)",
+              "levels": ["activo", "activo", "activo", "activo", "activo"]
+            }
+          ]
+        },
+        {
+          "character_id": 17,
+          "bonuses": [
+            {
+              "attribute": "Conciencia (basada en la Conciencia de Hinata)",
+              "levels": ["+10%", "+15%", "+20%", "+25%", "+30%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "El Momento de 'Engancharse' al Voleibol",
+      "participants": [17, 61],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 61,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 17,
+          "bonuses": [
+            {
+              "attribute": "Ataque Rápido",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "'Coraje' y 'Espíritu Competitivo'",
+      "participants": [89, 95],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 89,
+          "bonuses": [
+            {
+              "attribute": "Colocación",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 95,
+          "bonuses": [
+            {
+              "attribute": "Recepción",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "'Cerebro' y 'Torre de Control'",
+      "participants": [91, 90],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 91,
+          "bonuses": [
+            {
+              "attribute": "Toss para ataque rápido de Kuroo",
+              "levels": [
+                "disponible",
+                "disponible",
+                "disponible",
+                "disponible",
+                "disponible"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 90,
+          "bonuses": [
+            {
+              "attribute": "Ataque Rápido (potencia)",
+              "levels": ["+265%", "+280%", "+295%", "+310%", "+325%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Senpais Confiables",
+      "participants": [91, 93, 96],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 91,
+          "bonuses": [
+            {
+              "attribute": "Ataque Rápido",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "'Núcleo' y 'Torre de Control'",
+      "participants": [92, 90],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 90,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo",
+              "levels": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          ]
+        },
+        {
+          "character_id": 92,
+          "bonuses": [
+            {
+              "attribute": "Colocación",
+              "levels": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tipos Similares",
+      "participants": [92, 7],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 7,
+          "bonuses": [
+            {
+              "attribute": "Recepción",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 92,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Guía Educativa de 'Protección'",
+      "participants": [93, 94],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 93,
+          "bonuses": [
+            {
+              "attribute": "Recepción",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 94,
+          "bonuses": [
+            {
+              "attribute": "Ataque Rápido",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Guardianes del Equipo",
+      "participants": [93, 13],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 13,
+          "bonuses": [
+            {
+              "attribute": "Recepción",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 93,
+          "bonuses": [
+            {
+              "attribute": "Recepción",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Oponente 'Inconquistable'",
+      "participants": [94, 90],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 94,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Respiración Acompasada",
+      "participants": [26, 28],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 26,
+          "bonuses": [
+            {
+              "attribute": "Colocación especial para Iwaizumi",
+              "levels": [
+                "disponible",
+                "disponible",
+                "disponible",
+                "disponible",
+                "disponible"
+              ]
+            },
+            {
+              "attribute": "Ritmo de Ataque (acumulaciones por combo)",
+              "levels": ["2", "2", "2", "2", "2"]
+            }
+          ]
+        },
+        {
+          "character_id": 28,
+          "bonuses": [
+            {
+              "attribute": "Remate (con colocación de Oikawa)",
+              "levels": ["+255%", "+275%", "+295%", "+315%", "+315%"]
+            },
+            {
+              "attribute": "Conciencia del equipo (por acumulación de Ritmo de Ataque)",
+              "levels": ["+1%", "+1%", "+1%", "+1%", "+1%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rivales Predestinados",
+      "participants": [26, 53],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 26,
+          "bonuses": [
+            {
+              "attribute": "Colocación",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "'Rey' y 'Gran Rey'",
+      "participants": [4, 26],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 4,
+          "bonuses": [
+            {
+              "attribute": "Saque",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 26,
+          "bonuses": [
+            {
+              "attribute": "Saque",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hacia Nuevas Alturas",
+      "participants": [26, 34],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 26,
+          "bonuses": [
+            {
+              "attribute": "Colocación",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Confianza Despiadada",
+      "participants": [26, 36],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 26,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 36,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Compañero de Confianza",
+      "participants": [27, 29],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 27,
+          "bonuses": [
+            {
+              "attribute": "Conciencia",
+              "levels": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          ]
+        },
+        {
+          "character_id": 29,
+          "bonuses": [
+            {
+              "attribute": "Conciencia",
+              "levels": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sociedad de Lobos",
+      "participants": [28, 36],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 28,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          ]
+        },
+        {
+          "character_id": 36,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Honestidad y Calma",
+      "participants": [35, 34],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 35,
+          "bonuses": [
+            {
+              "attribute": "Ataque Rápido",
+              "levels": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          ]
+        },
+        {
+          "character_id": 34,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pasión Oculta",
+      "participants": [36, 32],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 36,
+          "bonuses": [
+            {
+              "attribute": "Recepción",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Segundo Año de Aoba Johsai",
+      "participants": [36, 32, 33],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 33,
+          "bonuses": [
+            {
+              "attribute": "Recepción",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 32,
+          "bonuses": [
+            {
+              "attribute": "Recepción",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Baño en el Mar",
+      "participants": [38, 61, 63],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 38,
+          "bonuses": [
+            {
+              "attribute": "Reacción (en bloqueo de 2/3 durante moral de equipo)",
+              "levels": ["6%", "7%", "8%", "9%", "10%"]
+            },
+            {
+              "attribute": "Moral del equipo (al inicio del rally)",
+              "levels": ["+20", "+20", "+20", "+20", "+20"]
+            }
+          ]
+        },
+        {
+          "character_id": 61,
+          "bonuses": [
+            {
+              "attribute": "Reacción (en bloqueo de 2/3 durante moral de equipo)",
+              "levels": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          ]
+        },
+        {
+          "character_id": 63,
+          "bonuses": [
+            {
+              "attribute": "Reacción (en bloqueo de 2/3 durante moral de equipo)",
+              "levels": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Taciturno y Lengua Afilada",
+      "participants": [38, 41],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 38,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Taciturno y Lengua Afilada (SSR ver.)",
+      "participants": [39, 41],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 39,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo de dos (potencia combinada)",
+              "levels": ["x180%", "x200%", "x220%", "x230%", "x240%"]
+            }
+          ]
+        },
+        {
+          "character_id": 41,
+          "bonuses": [
+            {
+              "attribute": "Ira al rematador oponente",
+              "levels": [
+                "Activado",
+                "Activado",
+                "Activado",
+                "Activado",
+                "Activado"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Amistad Peculiar (SSR ver.)",
+      "participants": [39, 2],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 39,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nuevo Capitán y Gran Novato",
+      "participants": [41, 43],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 41,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo de línea delantera (equipo)",
+              "levels": ["2%", "2.5%", "3%", "3.5%", "4%"]
+            }
+          ]
+        },
+        {
+          "character_id": 43,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo de línea delantera (equipo)",
+              "levels": ["2%", "2.5%", "3%", "3.5%", "4%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Antiguo y Nuevo Capitán de Date Tech",
+      "participants": [41, 47],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 41,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Colocadores de Date Tech",
+      "participants": [43, 47],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 43,
+          "bonuses": [
+            {
+              "attribute": "Colocación",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tercer Año de Date Tech",
+      "participants": [48, 47, 46],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 48,
+          "bonuses": [
+            {
+              "attribute": "Moral del equipo (al activar bloqueo)",
+              "levels": ["3%", "3%", "4%", "4%", "5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 47,
+          "bonuses": [
+            {
+              "attribute": "Moral del equipo (al activar bloqueo)",
+              "levels": ["3%", "3%", "4%", "4%", "5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 46,
+          "bonuses": [
+            {
+              "attribute": "Moral del equipo (al activar bloqueo)",
+              "levels": ["3%", "3%", "4%", "4%", "5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rematadores de Date Tech",
+      "participants": [48, 50],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 48,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["2%", "2.5%", "3%", "3.5%", "4%"]
+            }
+          ]
+        },
+        {
+          "character_id": 50,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo",
+              "levels": ["2%", "2.5%", "3%", "3.5%", "4%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Amigos para Siempre",
+      "participants": [53, 54],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 53,
+          "bonuses": [
+            {
+              "attribute": "Técnica de Ataque",
+              "levels": ["3%", "3.5%", "4%", "4.5%", "5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 54,
+          "bonuses": [
+            {
+              "attribute": "Técnica de Defensa",
+              "levels": ["3%", "3.5%", "4%", "4.5%", "5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "'Campeón Absoluto' y Colocador Sólido",
+      "participants": [53, 56],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 53,
+          "bonuses": [
+            {
+              "attribute": "Remate (con colocación de Shirabu)",
+              "levels": ["x260%", "x280%", "x300%", "x310%", "x320%"]
+            },
+            {
+              "attribute": "Potencia (en combo con Shirabu)",
+              "levels": ["+10%", "+10%", "+10%", "+10%", "+10%"]
+            }
+          ]
+        },
+        {
+          "character_id": 56,
+          "bonuses": [
+            {
+              "attribute": "Colocación (para combo con Ushijima)",
+              "levels": [
+                "Activado",
+                "Activado",
+                "Activado",
+                "Activado",
+                "Activado"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tercer Año de Shiratorizawa",
+      "participants": [53, 54, 57, 58, 60],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 54,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 57,
+          "bonuses": [
+            {
+              "attribute": "Saque",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 58,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 60,
+          "bonuses": [
+            {
+              "attribute": "Recepción",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Del Gran As al As",
+      "participants": [53, 55],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 53,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 55,
+          "bonuses": [
+            {
+              "attribute": "Recepción",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "'Ushiwaka' y 'Benkei'",
+      "participants": [53, 58],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 53,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 58,
+          "bonuses": [
+            {
+              "attribute": "Recepción",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bloqueadores Centrales de Shiratorizawa",
+      "participants": [54, 59],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 54,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo de línea delantera (equipo)",
+              "levels": ["5%", "5.5%", "6%", "6.5%", "7%"]
+            }
+          ]
+        },
+        {
+          "character_id": 59,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo de línea delantera (equipo)",
+              "levels": ["5%", "5.5%", "6%", "6.5%", "7%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Expectativa del Senpai",
+      "participants": [54, 55],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 54,
+          "bonuses": [
+            {
+              "attribute": "Ataque Rápido",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 55,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adivinanza vs. Sistema",
+      "participants": [54, 18],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 54,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rematadores de Shiratorizawa",
+      "participants": [55, 58],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 55,
+          "bonuses": [
+            {
+              "attribute": "Remate del equipo",
+              "levels": ["4%", "4.5%", "5%", "5.5%", "6%"]
+            }
+          ]
+        },
+        {
+          "character_id": 58,
+          "bonuses": [
+            {
+              "attribute": "Remate del equipo",
+              "levels": ["4%", "4.5%", "5%", "5.5%", "6%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Segundo Año de Shiratorizawa",
+      "participants": [56, 59],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 56,
+          "bonuses": [
+            {
+              "attribute": "Colocación",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 59,
+          "bonuses": [
+            {
+              "attribute": "Ataque Rápido",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Colocadores de Diferentes Tipos",
+      "participants": [56, 57],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 56,
+          "bonuses": [
+            {
+              "attribute": "Saque",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 57,
+          "bonuses": [
+            {
+              "attribute": "Colocación",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "As Milagroso y Colocador Atento",
+      "participants": [62, 64],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 62,
+          "bonuses": [
+            {
+              "attribute": "Modo Depresivo",
+              "levels": [
+                "Eliminado",
+                "Eliminado",
+                "Eliminado",
+                "Eliminado",
+                "Eliminado"
+              ]
+            },
+            {
+              "attribute": "Remate (con colocación de Akaashi)",
+              "levels": ["x265%", "x285%", "x305%", "x315%", "x325%"]
+            },
+            {
+              "attribute": "Remate (bonus adicional)",
+              "levels": ["+20%", "+20%", "+20%", "+20%", "+20%"]
+            }
+          ]
+        },
+        {
+          "character_id": 64,
+          "bonuses": [
+            {
+              "attribute": "Colocación (para combo con Bokuto)",
+              "levels": [
+                "Activado",
+                "Activado",
+                "Activado",
+                "Activado",
+                "Activado"
+              ]
+            },
+            {
+              "attribute": "Moral del equipo",
+              "levels": ["+15", "+15", "+15", "+15", "+15"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Compañeros de Práctica de Tokio",
+      "participants": [62, 64, 91, 18],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 62,
+          "bonuses": [
+            {
+              "attribute": "Saque",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 64,
+          "bonuses": [
+            {
+              "attribute": "Colocación",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Primer Discípulo",
+      "participants": [62, 2],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 62,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Enganchados al Voleibol",
+      "participants": [62, 65],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 62,
+          "bonuses": [
+            {
+              "attribute": "Recepción",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Compañeros de Práctica de Tokio (Habilidad)",
+      "participants": [62, 66],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 66,
+          "bonuses": [
+            {
+              "attribute": "Saque",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tercer Año de Fukurōdani",
+      "participants": [62, 65, 69, 67, 66],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 69,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 66,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 65,
+          "bonuses": [
+            {
+              "attribute": "Recepción",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 67,
+          "bonuses": [
+            {
+              "attribute": "Recepción",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bloqueadores Centrales de Fukurōdani",
+      "participants": [69, 68],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 69,
+          "bonuses": [
+            {
+              "attribute": "Ataque Rápido",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "La Importancia de una 'Base'",
+      "participants": [70, 6],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 70,
+          "bonuses": [
+            {
+              "attribute": "Bloqueo",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dos de Alta Tensión",
+      "participants": [70, 71],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 70,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rematadores de Jōzenji",
+      "participants": [70, 73],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 70,
+          "bonuses": [
+            {
+              "attribute": "Recepción",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 73,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Los Gemelos Más Fuertes de la Preparatoria",
+      "participants": [77, 78],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 77,
+          "bonuses": [
+            {
+              "attribute": "Colocación (para ataque rápido tempo negativo)",
+              "levels": [
+                "Activado",
+                "Activado",
+                "Activado",
+                "Activado",
+                "Activado"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 78,
+          "bonuses": [
+            {
+              "attribute": "Ataque Rápido (tempo negativo, no bloqueabLe)",
+              "levels": [
+                "Activado",
+                "Activado",
+                "Activado",
+                "Activado",
+                "Activado"
+              ]
+            },
+            {
+              "attribute": "Técnica de Ataque (hasta que uno deje cancha)",
+              "levels": ["+15%", "+15%", "+15%", "+15%", "+15%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cerebro y Eje",
+      "participants": [77, 78, 79],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 77,
+          "bonuses": [
+            {
+              "attribute": "Técnica de colocación",
+              "levels": ["+3%", "+3.5%", "+4%", "+4.5%", "+5%"]
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Donpishari",
+              "description": "Al inicio del partido, gana acumulaciones de efecto 3 stacks. Por cada stack, la técnica mejora un +3%. Máximo 10 stacks.",
+              "levels": ["+3%", "+3.5%", "+4%", "+4.5%", "+5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 78,
+          "bonuses": [
+            {
+              "attribute": "Ataque Rápido",
+              "levels": ["+3%", "+3.5%", "+4%", "+4.5%", "+5%"]
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Primer ataque rápido potenciado",
+              "description": "El primer ataque rápido de cada set aumenta su potencia de 'Ataque Rápido' en un 12%.",
+              "levels": ["+12%"]
+            }
+          ]
+        },
+        {
+          "character_id": 79,
+          "bonuses": [
+            {
+              "attribute": "Parámetros de líder",
+              "levels": ["+3%", "+3.5%", "+4%", "+4.5%", "+5%"]
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Certeza",
+              "description": "Al inicio del partido, gana efecto de certeza que mejora la estabilidad del equipo.",
+              "levels": ["+2%", "+2.5%", "+3%", "+3.5%", "+4%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Amigos de la Clase de Voleibol",
+      "participants": [77, 78, 81],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 77,
+          "bonuses": [
+            {
+              "attribute": "Saque",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 78,
+          "bonuses": [
+            {
+              "attribute": "Ataque Rápido",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 81,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Compañeros Colocadores del Campamento Juvenil",
+      "participants": [4, 77],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 4,
+          "bonuses": [
+            {
+              "attribute": "Colocación",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 77,
+          "bonuses": [
+            {
+              "attribute": "Colocación",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Segundo Año de Inarizaki",
+      "participants": [77, 78, 80, 83],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 80,
+          "bonuses": [
+            {
+              "attribute": "Ataque Rápido",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 83,
+          "bonuses": [
+            {
+              "attribute": "Remate",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 78,
+          "bonuses": [
+            {
+              "attribute": "Ataque Rápido",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Compañeros del Campamento Intensivo Juvenil de Japón",
+      "participants": [77, 87],
+      "is_link_skill": false,
+      "effect_summary": "Aumenta la 'Colocación' de Atsumu, el 'Remate Fuerte' de Sakusa, la 'Recepción' de Komori y el 'Remate Fuerte' de Hoshiumi según el nivel."
+    },
+    {
+      "name": "Amigos de la Infancia que Jugaron en Secundaria y Preparatoria",
+      "participants": [87, 88],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 87,
+          "bonuses": [
+            {
+              "attribute": "Parámetro principal",
+              "levels": ["+6%", "+7%", "+8%", "+9%", "+10%"]
+            },
+            {
+              "attribute": "Bloqueo",
+              "levels": ["+6%", "+7%", "+8%", "+9%", "+10%"]
+            }
+          ]
+        },
+        {
+          "character_id": 88,
+          "bonuses": [
+            {
+              "attribute": "All-Rounder (efecto al inicio del partido)",
+              "levels": ["1 stack", "1 stack", "1 stack", "1 stack", "1 stack"]
+            },
+            {
+              "attribute": "Bloqueo sólido (efecto al inicio del partido)",
+              "levels": ["1 stack", "1 stack", "1 stack", "1 stack", "1 stack"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Un atacante de primer nivel y un libero de primer nivel",
+      "participants": [101, 102],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 101,
+          "bonuses": [
+            {
+              "attribute": "Golpe Poderoso",
+              "levels": ["10%", "12.5%", "15%", "17.5%", "20%"]
+            }
+          ]
+        },
+        {
+          "character_id": 102,
+          "bonuses": [
+            {
+              "attribute": "Recibir",
+              "levels": ["10%", "12.5%", "15%", "17.5%", "20%"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Compañeros de equipo en el campamento de entrenamiento juvenil de todo Japón (Kizuna)",
+      "participants": [77, 101, 102, 87],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 77,
+          "bonuses": [
+            {
+              "attribute": "Lanzamiento",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 101,
+          "bonuses": [
+            {
+              "attribute": "Golpe Poderoso",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 102,
+          "bonuses": [
+            {
+              "attribute": "Recibir",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        },
+        {
+          "character_id": 87,
+          "bonuses": [
+            {
+              "attribute": "Golpe Poderoso",
+              "levels": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
