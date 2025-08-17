@@ -6,6 +6,8 @@ class HaikyuTeamBuilder {
     this.imageMapping = {};
     this.currentTeam = {};
     this.selectedPlayer = null;
+    this.selectedPosition = null; // For position selector
+    this.positionSelectorActive = false; // Track if position selector is open
     this.usedPlayerIds = new Set(); // Track players already in team
     this.positionMappings = {
       'position-1': 'OP', // Back left - Opposite (SERVING POSITION)
@@ -19,8 +21,8 @@ class HaikyuTeamBuilder {
     this.draggedPlayer = null;
     this.draggedFromTeam = false;
     this.dragSuccess = false;
-    this.selectedPosition = null; // Current selected position for quick assignment
-    this.selectedPositionElement = null; // DOM element of selected position
+    this.isDragging = false; // Track if a drag operation is in progress
+    this.dragStartTime = 0; // Track when drag started
     this.init();
   }
 
@@ -36,6 +38,7 @@ class HaikyuTeamBuilder {
     this.renderAvailablePlayers();
     this.setupDragAndDrop();
     this.setupEventListeners();
+    this.setupPositionSelector(); // Add position selector setup
     this.initializeSchoolStats();
     this.initializeBonds();
     this.setupRotationButton();
@@ -549,6 +552,8 @@ class HaikyuTeamBuilder {
 
     // Add drag event listeners for players in positions
     playerCard.addEventListener('dragstart', (e) => {
+      this.isDragging = true;
+      this.dragStartTime = Date.now();
       this.draggedPlayer = player;
       this.draggedFromTeam = true;
       this.draggedFromPosition = positionElement.className
@@ -574,11 +579,31 @@ class HaikyuTeamBuilder {
       this.draggedPlayer = null;
       this.draggedFromTeam = false;
       this.dragSuccess = false;
+      
+      // Reset drag state after a short delay to allow click event to detect it
+      setTimeout(() => {
+        this.isDragging = false;
+        this.dragStartTime = 0;
+      }, 100);
     });
 
-    // Add click event to view player details
-    playerSlot.addEventListener('click', () => {
-      // this.showPlayerModal(player); // Deshabilitado temporalmente
+    // Add click event to open position selector (only if not dragging)
+    playerSlot.addEventListener('click', (e) => {
+      const timeSinceDrag = Date.now() - this.dragStartTime;
+      
+      // Only open selector if no recent drag operation and position selector not already active
+      if (!this.isDragging && timeSinceDrag > 200 && !this.positionSelectorActive) {
+        e.stopPropagation();
+        // Remove the current player first
+        this.removePlayerFromPosition(positionElement);
+        // Then show the position selector
+        const positionClass = positionElement.className
+          .split(' ')
+          .find((cls) => cls.startsWith('position-') && this.positionMappings[cls]);
+        if (positionClass) {
+          this.showPositionSelector(positionClass, positionElement);
+        }
+      }
     });
 
     // Add right-click to remove player
@@ -610,12 +635,6 @@ class HaikyuTeamBuilder {
                 }</div>
             </div>
         `;
-
-    // Add click handler for position selection
-    playerSlot.addEventListener('click', (e) => {
-      e.stopPropagation();
-      this.selectPosition(positionElement, positionClass);
-    });
   }
 
   getPositionNumber(positionClass) {
@@ -651,122 +670,6 @@ class HaikyuTeamBuilder {
       // Update school statistics and bonds
       this.updateTeamStats();
     }
-  }
-
-  // Position Selection Functions
-  selectPosition(positionElement, positionClass) {
-    // Clear previous selection
-    this.clearPositionSelection();
-    
-    // Set current selection
-    this.selectedPosition = positionClass;
-    this.selectedPositionElement = positionElement;
-    
-    // Add visual feedback
-    positionElement.classList.add('selected');
-    
-    // Show filtered players for this position
-    this.showFilteredPlayers(positionClass);
-  }
-
-  clearPositionSelection() {
-    if (this.selectedPositionElement) {
-      this.selectedPositionElement.classList.remove('selected');
-    }
-    this.selectedPosition = null;
-    this.selectedPositionElement = null;
-    this.hidePositionSelector();
-  }
-
-  showFilteredPlayers(positionClass) {
-    const requiredPosition = this.positionMappings[positionClass];
-    const positionSelector = document.getElementById('positionSelector');
-    const filteredPlayersContainer = document.getElementById('filteredPlayers');
-    const selectorTitle = document.getElementById('positionSelectorTitle');
-    
-    // Get position names in Spanish
-    const positionNames = {
-      L: 'Líbero',
-      MB: 'Bloqueador Central',
-      WS: 'Atacante',
-      OP: 'Opuesto',
-      S: 'Armador',
-    };
-    
-    // Update title
-    selectorTitle.textContent = `Selecciona un ${positionNames[requiredPosition] || requiredPosition}`;
-    
-    // Filter available players for this position
-    const availablePlayers = this.players.filter(player => {
-      return player.position === requiredPosition && !this.usedPlayerIds.has(player.id);
-    });
-
-    // Clear previous content
-    filteredPlayersContainer.innerHTML = '';
-
-    if (availablePlayers.length === 0) {
-      filteredPlayersContainer.innerHTML = `
-        <div style="text-align: center; padding: 40px; color: rgba(255,255,255,0.7);">
-          <p>No hay jugadores disponibles para esta posición</p>
-        </div>
-      `;
-    } else {
-      // Create player cards
-      availablePlayers.forEach(player => {
-        const playerCard = this.createFilteredPlayerCard(player);
-        filteredPlayersContainer.appendChild(playerCard);
-      });
-    }
-
-    // Show the selector
-    positionSelector.style.display = 'block';
-    
-    // Scroll to the selector
-    positionSelector.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }
-
-  createFilteredPlayerCard(player) {
-    const card = document.createElement('div');
-    card.className = 'filtered-player-card';
-    
-    const imageUrl = this.getPlayerImageUrl(player);
-    
-    card.innerHTML = `
-      <img src="${imageUrl}" alt="${player.name}" onerror="this.src='./assets/images/characters/default.png'">
-      <div class="player-name">${player.name}</div>
-      <div class="player-details">${player.school || 'Unknown'}</div>
-      <div class="player-power">⚡ ${player.power || 'N/A'}</div>
-    `;
-    
-    // Add click handler
-    card.addEventListener('click', () => {
-      this.assignPlayerToSelectedPosition(player);
-    });
-    
-    return card;
-  }
-
-  assignPlayerToSelectedPosition(player) {
-    if (!this.selectedPosition || !this.selectedPositionElement) return;
-    
-    // Assign player to position
-    this.currentTeam[this.selectedPosition] = player;
-    this.usedPlayerIds.add(player.id);
-    
-    // Render player in position
-    this.renderPlayerInPosition(this.selectedPositionElement, player, this.selectedPosition);
-    
-    // Update statistics and bonds
-    this.updateTeamStats();
-    this.renderAvailablePlayers();
-    
-    // Clear selection and hide selector
-    this.clearPositionSelection();
-  }
-
-  hidePositionSelector() {
-    const positionSelector = document.getElementById('positionSelector');
-    positionSelector.style.display = 'none';
   }
 
   showPlayerModal(player) {
@@ -847,32 +750,22 @@ class HaikyuTeamBuilder {
       }
     };
 
-    // Position Selector events
-    const closeSelectorBtn = document.getElementById('closeSelectorBtn');
-    const positionSelector = document.getElementById('positionSelector');
-
-    if (closeSelectorBtn) {
-      closeSelectorBtn.onclick = () => {
-        this.clearPositionSelection();
-      };
-    }
-
-    // Close selector when clicking outside
-    document.addEventListener('click', (event) => {
-      if (positionSelector.style.display === 'block') {
-        const isClickInsideSelector = positionSelector.contains(event.target);
-        const isClickOnPosition = event.target.closest('.position');
-        
-        if (!isClickInsideSelector && !isClickOnPosition) {
-          this.clearPositionSelection();
-        }
-      }
-    });
-
-    // Close selector with Escape key
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && positionSelector.style.display === 'block') {
-        this.clearPositionSelection();
+    // Add click events to empty positions
+    positions.forEach((position) => {
+      const positionClass = position.className
+        .split(' ')
+        .find(
+          (cls) => cls.startsWith('position-') && this.positionMappings[cls]
+        );
+      
+      if (positionClass) {
+        position.addEventListener('click', (e) => {
+          // Only show position selector if position is empty
+          if (!this.currentTeam[positionClass]) {
+            e.stopPropagation();
+            this.showPositionSelector(positionClass, position);
+          }
+        });
       }
     });
 
@@ -1664,6 +1557,131 @@ class HaikyuTeamBuilder {
       });
       callback();
     }, 800);
+  }
+
+  // Position Selector Methods
+  setupPositionSelector() {
+    const positionSelector = document.getElementById('positionSelector');
+    const closeBtn = document.getElementById('positionSelectorClose');
+    
+    // Close button event
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        this.hidePositionSelector();
+      });
+    }
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && this.positionSelectorActive) {
+        this.hidePositionSelector();
+      }
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (this.positionSelectorActive && 
+          !positionSelector.contains(e.target) && 
+          !e.target.closest('.position')) {
+        this.hidePositionSelector();
+      }
+    });
+  }
+
+  showPositionSelector(positionClass, positionElement) {
+    const requiredPosition = this.positionMappings[positionClass];
+    const positionSelector = document.getElementById('positionSelector');
+    const positionPlayersList = document.getElementById('positionPlayersList');
+    const positionSelectorTitle = document.getElementById('positionSelectorTitle');
+    
+    // Store selected position
+    this.selectedPosition = positionClass;
+    this.positionSelectorActive = true;
+    
+    // Get current language and translations
+    const currentLanguage = window.languageManager ? window.languageManager.getCurrentLanguage() : 'es';
+    const t = translations[currentLanguage];
+    
+    // Update title with translation
+    const positionNames = {
+      'OP': t.opposite,
+      'WS': t.wingSpiker, 
+      'MB': t.middleBlocker,
+      'S': t.setter,
+      'L': t.libero
+    };
+    positionSelectorTitle.textContent = `${t.selectPlayerFor} ${positionNames[requiredPosition]} ${t.forThisPosition}`;
+    
+    // Filter players for this position
+    const compatiblePlayers = this.players.filter(player => 
+      player.position === requiredPosition && 
+      !this.usedPlayerIds.has(player.id)
+    );
+    
+    // Clear previous content
+    positionPlayersList.innerHTML = '';
+    
+    // Add compatible players
+    compatiblePlayers.forEach(player => {
+      const playerCard = this.createPositionPlayerCard(player);
+      positionPlayersList.appendChild(playerCard);
+    });
+    
+    // Show selector with animation
+    document.body.classList.add('position-selector-active');
+    positionSelector.classList.add('active');
+    positionSelector.setAttribute('aria-hidden', 'false');
+  }
+
+  hidePositionSelector() {
+    const positionSelector = document.getElementById('positionSelector');
+    
+    this.selectedPosition = null;
+    this.positionSelectorActive = false;
+    
+    // Hide with animation
+    document.body.classList.remove('position-selector-active');
+    positionSelector.classList.remove('active');
+    positionSelector.setAttribute('aria-hidden', 'true');
+  }
+
+  createPositionPlayerCard(player) {
+    const playerCard = document.createElement('div');
+    playerCard.className = 'position-player-card';
+    playerCard.setAttribute('role', 'button');
+    playerCard.setAttribute('tabindex', '0');
+    playerCard.setAttribute('title', player.name); // Tooltip for name
+    
+    const imageUrl = this.getPlayerImageUrl(player);
+    
+    playerCard.innerHTML = `
+      <img src="${imageUrl}" alt="${player.name}" loading="lazy" />
+    `;
+    
+    // Click event to select player
+    playerCard.addEventListener('click', () => {
+      this.selectPlayerFromPositionSelector(player);
+    });
+    
+    // Keyboard support
+    playerCard.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.selectPlayerFromPositionSelector(player);
+      }
+    });
+    
+    return playerCard;
+  }
+
+  selectPlayerFromPositionSelector(player) {
+    if (this.selectedPosition) {
+      const positionElement = document.querySelector(`.${this.selectedPosition}`);
+      if (positionElement) {
+        this.placePlayerInPosition(player, positionElement);
+        this.hidePositionSelector();
+      }
+    }
   }
 }
 

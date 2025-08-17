@@ -676,6 +676,8 @@ body {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   margin-right: 20px;
+  max-height: calc(100vh - 200px); /* Reduce height to make space for position selector */
+  overflow-y: auto;
 }
 
 .school-panel h2,
@@ -690,10 +692,10 @@ body {
 .school-stats {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 30px;
+  gap: 8px; /* Reduce gap */
+  margin-bottom: 20px; /* Reduce margin */
   border-top: 2px solid rgba(255, 255, 255, 0.3);
-  padding-top: 25px;
+  padding-top: 15px; /* Reduce padding */
 }
 
 .school-item {
@@ -749,9 +751,9 @@ body {
 
 /* Bonds section */
 .bonds-section {
-  margin-top: 30px;
+  margin-top: 20px; /* Reduce margin */
   border-top: 2px solid rgba(255, 255, 255, 0.3);
-  padding-top: 25px;
+  padding-top: 15px; /* Reduce padding */
 }
 
 .bond-item {
@@ -1173,147 +1175,151 @@ body {
   background: rgba(255, 255, 255, 0.5);
 }
 
-/* Position Selector */
+/* Position Selector - Bottom Panel */
 .position-selector {
-  margin: 20px auto;
-  max-width: 1200px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  padding: 20px;
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  animation: slideIn 0.3s ease-out;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  border-top: 3px solid rgba(255, 255, 255, 0.2);
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  max-height: 50vh;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.position-selector.active {
+  transform: translateY(0);
 }
 
 .position-selector-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .position-selector-header h3 {
-  font-size: 1.3rem;
-  color: #fff;
+  color: white;
+  font-size: 1.2rem;
   margin: 0;
+  font-weight: 600;
 }
 
-.close-selector {
+.position-selector-close {
   background: none;
   border: none;
-  color: #fff;
-  font-size: 2rem;
+  color: white;
+  font-size: 1.5rem;
   cursor: pointer;
-  padding: 0;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 5px 10px;
   border-radius: 50%;
   transition: background-color 0.2s ease;
 }
 
-.close-selector:hover {
+.position-selector-close:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.filtered-players {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 15px;
-  max-height: 400px;
+.position-selector-content {
+  padding: 15px 20px;
+  max-height: calc(50vh - 80px);
   overflow-y: auto;
 }
 
-.filtered-player-card {
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
+.position-players-list {
+  display: flex;
+  gap: 8px; /* Reduced gap for tighter spacing */
+  overflow-x: auto;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+}
+
+.position-players-list::-webkit-scrollbar {
+  height: 6px;
+}
+
+.position-players-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.position-players-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.position-players-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.position-player-card {
+  flex: 0 0 auto;
+  width: 80px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
   border: 2px solid transparent;
-  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.filtered-player-card:hover {
-  background: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+.position-player-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
-.filtered-player-card img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+.position-player-card.selected {
+  background: rgba(102, 126, 234, 0.3);
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+.position-player-card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
   object-fit: cover;
-  margin-bottom: 10px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
 }
 
-.filtered-player-card .player-name {
-  font-size: 0.9rem;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #fff;
-}
-
-.filtered-player-card .player-details {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.filtered-player-card .player-power {
-  font-size: 0.85rem;
-  color: #ffd700;
-  font-weight: bold;
-  margin-top: 5px;
-}
-
-/* Position highlighting */
-.position.selected {
-  animation: positionPulse 0.5s ease-in-out;
-  border: 3px solid #ffd700 !important;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes positionPulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
-
-/* Responsive design for position selector */
+/* Responsive adjustments for position selector */
 @media (max-width: 768px) {
-  .filtered-players {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 10px;
+  .position-selector {
+    max-height: 60vh;
   }
   
-  .filtered-player-card {
-    padding: 10px;
+  .position-selector-content {
+    max-height: calc(60vh - 80px);
+    padding: 10px 15px;
   }
   
-  .filtered-player-card img {
-    width: 50px;
-    height: 50px;
+  .position-player-card {
+    width: 70px;
+    height: 100px;
+  }
+  
+  .position-players-list {
+    gap: 6px;
+  }
+}
+
+/* Adjust main content when position selector is active */
+.container.position-selector-active {
+  padding-bottom: 50vh;
+}
+
+@media (max-width: 768px) {
+  .container.position-selector-active {
+    padding-bottom: 60vh;
   }
 }

@@ -25,6 +25,10 @@ const translations = {
     selectPlayer: 'Select Player',
     playerBonds: 'Character Bonds:',
 
+    // Position Selector
+    selectPlayerFor: 'Select',
+    forThisPosition: 'for this position',
+    
     // Rotation
     rotateTooltip: 'Rotate players clockwise',
 
@@ -128,6 +132,10 @@ const translations = {
     power: 'Poder:',
     selectPlayer: 'Seleccionar Jugador',
     playerBonds: 'Vínculos de este Personaje:',
+
+    // Position Selector
+    selectPlayerFor: 'Seleccionar',
+    forThisPosition: 'para esta posición',
 
     // Rotation
     rotateTooltip: 'Rotar jugadores en sentido horario',
@@ -314,6 +322,13 @@ class LanguageManager {
     document
       .querySelector('#rotationButton')
       .setAttribute('title', t.rotateTooltip);
+
+    // Update position selector close button
+    const positionSelectorClose = document.querySelector('#positionSelectorClose');
+    if (positionSelectorClose) {
+      positionSelectorClose.setAttribute('aria-label', 
+        lang === 'en' ? 'Close position selector' : 'Cerrar selector de posición');
+    }
 
     // Update language selector label
     if (document.querySelector('.language-selector label')) {

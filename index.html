@@ -480,17 +480,6 @@
           </div>
         </div>
 
-        <!-- Position Player Selector -->
-        <div class="position-selector" id="positionSelector" style="display: none;">
-          <div class="position-selector-header">
-            <h3 id="positionSelectorTitle">Selecciona un jugador para esta posición</h3>
-            <button class="close-selector" id="closeSelectorBtn" aria-label="Cerrar selector">&times;</button>
-          </div>
-          <div class="filtered-players" id="filteredPlayers">
-            <!-- Filtered players will be displayed here -->
-          </div>
-        </div>
-
         <!-- Player selection panel -->
         <section class="player-panel" aria-labelledby="players-heading">
           <h2 id="players-heading">Seleccionar Jugadores</h2>
@@ -504,6 +493,21 @@
           </div>
         </section>
       </main>
+
+      <!-- Position selector - appears at bottom when position is clicked -->
+      <div class="position-selector" id="positionSelector" aria-hidden="true">
+        <div class="position-selector-header">
+          <h3 id="positionSelectorTitle">Seleccionar jugador para posición</h3>
+          <button class="position-selector-close" id="positionSelectorClose" aria-label="Cerrar selector de posición">
+            ×
+          </button>
+        </div>
+        <div class="position-selector-content">
+          <div class="position-players-list" id="positionPlayersList" role="list">
+            <!-- Compatible players will be loaded here -->
+          </div>
+        </div>
+      </div>
 
       <!-- Player info modal -->
       <div
