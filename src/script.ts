@@ -42,43 +42,57 @@ export class HaikyuTeamBuilder {
     }
 
     async init(): Promise<void> {
-        // Cargar el mapeo de imágenes primero
-        await this.imageManager.loadImageMapping();
+        // Get the current language from languageManager
+        const currentLanguage = (window as any).languageManager
+            ? (window as any).languageManager.getCurrentLanguage()
+            : 'es';
+        console.log('Initializing with language:', currentLanguage);
 
-        await this.loadPlayers();
-
-        // Precargar imágenes críticas para mejor rendimiento
-        this.imageManager.preloadCriticalImages(this.players);
-
+        await this.loadPlayers(currentLanguage);
+        await this.loadImageMapping();
         this.renderAvailablePlayers();
         this.setupDragAndDrop();
         this.setupEventListeners();
         this.initializeSchoolStats();
         this.initializeBonds();
         this.setupRotationButton();
-
-        // Mostrar estadísticas de imágenes en la consola
-        this.logImageStats();
-
-        // Optimizar SEO
-        this.optimizeSEO();
     }
 
-    async loadPlayers(): Promise<void> {
+    async loadPlayers(language: string = 'es'): Promise<void> {
         try {
-            const response = await fetch('./haikyu_fly_high_full_v3.json');
+            // Choose JSON file based on language
+            const jsonFile =
+                language === 'en'
+                    ? './haikyu_fly_high_full_v3_en.json'
+                    : './haikyu_fly_high_full_v3.json';
+            console.log(`Loading players from: ${jsonFile}`);
+
+            const response = await fetch(jsonFile);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
             const data: GameData = await response.json();
-            this.players = data.characters;
+            this.players = data.characters || [];
             this.bonds = data.bonds || [];
             console.log(
-                `Loaded ${this.players.length} players and ${this.bonds.length} bonds`
+                `Loaded ${this.players.length} players and ${this.bonds.length} bonds (Language: ${language})`
+            );
+            console.log(
+                'Sample bonds:',
+                this.bonds
+                    .slice(0, 3)
+                    .map((b) => ({ name: b.name, participants: b.participants }))
             );
         } catch (error) {
-            console.error('Error loading players:', error);
+            console.warn('Error loading players, using fallback:', (error as Error).message);
             // Fallback data if JSON fails to load
             this.players = this.getFallbackPlayers();
             this.bonds = [];
         }
+    }
+
+    async loadImageMapping(): Promise<void> {
+        await this.imageManager.loadImageMapping();
     }
 
     private getFallbackPlayers(): Player[] {
@@ -142,6 +156,89 @@ export class HaikyuTeamBuilder {
         ];
     }
 
+    private formatBonusText(bonusValue: string): string {
+        console.log('formatBonusText called with:', bonusValue);
+
+        if (!bonusValue || typeof bonusValue !== 'string') {
+            console.log('returning early - invalid input');
+            return bonusValue || '';
+        }
+
+        // Handle common special values
+        if (bonusValue === 'Activado' || bonusValue === 'Eliminado') {
+            return bonusValue;
+        }
+
+        // Handle multipliers like "x180%", "x265%", etc.
+        const multiplierMatch = bonusValue.match(/^x(\d+(?:\.\d+)?)%$/);
+        if (multiplierMatch) {
+            const value = multiplierMatch[1];
+            const result = `×${value}%`;
+            console.log('Multiplier match found:', value, '-> result:', result);
+            return result;
+        }
+
+        // Handle cases like "+5 +1%", "+7 +2%", etc. (with space between numbers and percentage)
+        const complexMatch = bonusValue.match(/^(\+?\d+)\s+(\+?\d+%)$/);
+        if (complexMatch) {
+            let [, points, percentage] = complexMatch;
+            console.log('Complex match found:', points, percentage);
+
+            // Ensure both values have the '+' symbol
+            if (!points.startsWith('+') && !points.startsWith('-')) {
+                points = '+' + points;
+            }
+            if (!percentage.startsWith('+') && !percentage.startsWith('-')) {
+                percentage = '+' + percentage;
+            }
+
+            const result = `${points} ${
+                (window as any).languageManager ? (window as any).languageManager.t('points') : 'puntos'
+            } ${percentage} ${
+                (window as any).languageManager
+                    ? (window as any).languageManager.t('additional')
+                    : 'adicional'
+            }`;
+            console.log('Complex result:', result);
+            return result;
+        }
+
+        // Handle simple percentages like "6%", "10%", etc.
+        const percentageMatch = bonusValue.match(/^(\+?-?\d+(?:\.\d+)?)%$/);
+        if (percentageMatch) {
+            const value = percentageMatch[1];
+            let result = value;
+            if (!value.startsWith('+') && !value.startsWith('-')) {
+                result = '+' + value;
+            }
+            result += '%';
+            console.log('Percentage match found:', value, '-> result:', result);
+            return result;
+        }
+
+        // Handle simple numbers like "6", "10", etc.
+        const numberMatch = bonusValue.match(/^(\+?-?\d+(?:\.\d+)?)$/);
+        if (numberMatch) {
+            const value = numberMatch[1];
+            let result = value;
+            if (!value.startsWith('+') && !value.startsWith('-')) {
+                result = '+' + value;
+            }
+            console.log('Number match found:', value, '-> result:', result);
+            return result;
+        }
+
+        // If it already has '+' or '-', return as is
+        if (bonusValue.startsWith('+') || bonusValue.startsWith('-')) {
+            console.log('Already has sign, returning as is:', bonusValue);
+            return bonusValue;
+        }
+
+        // If no pattern matches, return the original value
+        console.log('No match, returning original:', bonusValue);
+        return bonusValue;
+    }
+
     renderAvailablePlayers(): void {
         const playerGrid = document.querySelector('.player-grid') as HTMLElement;
         if (!playerGrid) return;
@@ -190,6 +287,20 @@ export class HaikyuTeamBuilder {
     }
 
     private getPositionName(position: PlayerPosition): string {
+        const languageManager = (window as any).languageManager;
+        
+        if (languageManager) {
+            const translationMap: { [key in PlayerPosition]: string } = {
+                L: languageManager.t('libero'),
+                MB: languageManager.t('middleBlocker'),
+                WS: languageManager.t('wingSpiker'),
+                OP: languageManager.t('opposite'),
+                S: languageManager.t('setter'),
+            };
+            return translationMap[position] || position;
+        }
+        
+        // Fallback to English if no language manager
         const names: { [key in PlayerPosition]: string } = {
             L: 'Libero',
             MB: 'Middle Blocker',
@@ -662,10 +773,11 @@ export class HaikyuTeamBuilder {
                 this.placePlayerInPosition(player, positionElement);
             }
         } else {
-            alert(
-                `No hay posiciones disponibles para ${player.name
-                } (${this.getPositionName(player.position)})`
-            );
+            const languageManager = (window as any).languageManager;
+            const message = languageManager 
+                ? `${languageManager.t('noAvailablePositions')} ${player.name} (${this.getPositionName(player.position)})`
+                : `No available positions for ${player.name} (${this.getPositionName(player.position)})`;
+            alert(message);
         }
     }
 
@@ -687,7 +799,7 @@ export class HaikyuTeamBuilder {
         return schoolCount;
     }
 
-    private updateSchoolStats(): void {
+    public updateSchoolStats(): void {
         const schoolStats = document.getElementById('schoolStats') as HTMLElement;
         if (!schoolStats) return;
 
@@ -704,8 +816,9 @@ export class HaikyuTeamBuilder {
 
         // If no players in team, show empty state
         if (allSchools.length === 0) {
+            const languageManager = (window as any).languageManager;
             schoolStats.innerHTML =
-                '<div class="no-players">No hay jugadores seleccionados</div>';
+                `<div class="no-players">${languageManager ? languageManager.t('noPlayersSelected') : 'No players selected'}</div>`;
             return;
         }
 
@@ -735,7 +848,7 @@ export class HaikyuTeamBuilder {
         this.updateBonds();
     }
 
-    private updateBonds(): void {
+    public updateBonds(): void {
         const bondsSection = document.getElementById('bondsSection') as HTMLElement;
         if (!bondsSection) return;
 
@@ -745,8 +858,9 @@ export class HaikyuTeamBuilder {
             .map((player) => player!.id);
 
         if (currentPlayerIds.length === 0) {
+            const languageManager = (window as any).languageManager;
             bondsSection.innerHTML =
-                '<div class="no-players">No hay jugadores seleccionados</div>';
+                `<div class="no-players">${languageManager ? languageManager.t('noPlayersSelected') : 'No players selected'}</div>`;
             return;
         }
 
@@ -796,8 +910,9 @@ export class HaikyuTeamBuilder {
             });
 
         if (relevantBonds.length === 0) {
+            const languageManager = (window as any).languageManager;
             bondsSection.innerHTML =
-                '<div class="no-players">No hay vínculos disponibles</div>';
+                `<div class="no-players">${languageManager ? languageManager.t('noBondsAvailable') : 'No bonds available'}</div>`;
             return;
         }
 
@@ -846,7 +961,7 @@ export class HaikyuTeamBuilder {
         bondsSection.innerHTML = bondItems;
     }
 
-    toggleBondDetails(headerElement: HTMLElement): void {
+    public toggleBondDetails(headerElement: HTMLElement): void {
         const bondItem = headerElement.closest('.bond-item') as HTMLElement;
         const details = bondItem.querySelector('.bond-details') as HTMLElement;
         const icon = headerElement.querySelector('.expand-icon') as HTMLElement;
@@ -874,18 +989,24 @@ export class HaikyuTeamBuilder {
     }
 
     private generateBondEffectHTML(bond: Bond): string {
+        const languageManager = (window as any).languageManager;
+        
+        let effectsHTML = '';
+        
         if (bond.is_link_skill) {
-            // Kizuna Skill - show general effect
-            return `<div class="bond-effect kizuna-skill">
-        <div class="effect-type">🔗 Habilidad Kizuna</div>
-        <div class="effect-description">${bond.effect_summary || 'Efecto especial'
+            // Kizuna Skill - show general effect first
+            effectsHTML += `<div class="bond-effect kizuna-skill">
+        <div class="effect-type">${languageManager ? languageManager.t('kizunaSkillType') : '🔗 Kizuna Skill'}</div>
+        <div class="effect-description">${bond.effect_summary || (languageManager ? languageManager.t('specialEffect') : 'Special effect')
                 }</div>
       </div>`;
-        } else if (bond.effects_by_character) {
+        }
+        
+        if (bond.effects_by_character) {
             // Attribute bond - show effects by character and levels
-            let effectsHTML = '<div class="bond-effect attribute-bond">';
+            effectsHTML += '<div class="bond-effect attribute-bond">';
             effectsHTML +=
-                '<div class="effect-type">📈 Ventaja de atributos de vínculo</div>';
+                `<div class="effect-type">📈 ${languageManager ? languageManager.t('attributeBondAdvantage') : 'Attribute Bond Advantage'}</div>`;
 
             bond.effects_by_character.forEach((characterEffect) => {
                 const player = this.players.find(
@@ -894,35 +1015,67 @@ export class HaikyuTeamBuilder {
                 const playerName = player
                     ? player.name
                     : `ID: ${characterEffect.character_id}`;
+                const playerSchool = player ? player.school : '';
 
-                effectsHTML += `<div class="character-effect">
-          <div class="character-name">Desbloquea la bonificación: <span class="player-highlight">${playerName.toUpperCase()}</span></div>`;
+                effectsHTML += `<div class="character-effect-container">
+          <div class="character-header">
+            <img src="assets/images/characters/${player?.id}.png" alt="${playerName}" class="character-effect-image" onerror="this.style.display='none'">
+            <div class="character-info">
+              <div class="character-name">${playerName}</div>
+              <div class="character-school">${playerSchool}</div>
+            </div>
+          </div>`;
 
                 characterEffect.bonuses.forEach((bonus) => {
-                    effectsHTML += `<div class="bonus-levels">`;
+                    const attributeKey = this.getAttributeKey(bonus.attribute);
+                    const attributeName = languageManager ? languageManager.t(attributeKey) : bonus.attribute;
+                    
+                    effectsHTML += `<div class="bonus-container">
+            <div class="bonus-attribute">${attributeName}</div>
+            <div class="level-selector">`;
+                    
                     bonus.levels.forEach((level, index) => {
                         const levelNum = index + 1;
                         const isCurrentLevel = index === 0; // Por defecto mostramos nivel 1
-                        effectsHTML += `<div class="level ${isCurrentLevel ? 'current-level' : ''
-                            }">
-              Nv. ${levelNum}: ${bonus.attribute}${level}
-            </div>`;
+                        effectsHTML += `<button class="level-btn ${isCurrentLevel ? 'active' : ''}" data-level="${levelNum}" onclick="this.parentElement.parentElement.querySelector('.effect-value').textContent='${bonus.attribute}${level}'; this.parentElement.querySelectorAll('.level-btn').forEach(btn => btn.classList.remove('active')); this.classList.add('active');">Lv${levelNum}</button>`;
                     });
-                    effectsHTML += `</div>`;
+                    
+                    effectsHTML += `</div>
+            <div class="current-effect">
+              <div class="effect-value">${bonus.attribute}${bonus.levels[0]}</div>
+            </div>
+          </div>`;
                 });
 
                 effectsHTML += `</div>`;
             });
 
             effectsHTML += '</div>';
-            return effectsHTML;
-        } else {
-            // Fallback for other types
-            return `<div class="bond-effect">
-        <div class="effect-description">${bond.effect_summary || 'Efecto no especificado'
+        }
+        
+        // If neither kizuna skill nor character effects, show fallback
+        if (!bond.is_link_skill && !bond.effects_by_character) {
+            effectsHTML = `<div class="bond-effect">
+        <div class="effect-description">${bond.effect_summary || (languageManager ? languageManager.t('effectNotSpecified') : 'Effect not specified')
                 }</div>
       </div>`;
         }
+        
+        return effectsHTML;
+    }
+
+    private getAttributeKey(attribute: string): string {
+        // Convert attribute symbols to translation keys
+        const attributeMap: { [key: string]: string } = {
+            'Serve+': 'serve',
+            'Set+': 'set',
+            'Block+': 'block',
+            'Receive+': 'receive',
+            'Attack+': 'attack',
+            'Defense+': 'defense'
+        };
+        
+        return attributeMap[attribute] || 'block'; // Default to block if not found
     }
 
     private updateTeamStats(): void {
