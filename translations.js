@@ -29,6 +29,11 @@ const translations = {
     selectPlayerFor: 'Select',
     forThisPosition: 'for this position',
 
+    // Sorting
+    sortBy: 'Sort by:',
+    sortByName: 'Name',
+    sortByRarity: 'Rarity',
+
     // Rotation
     rotateTooltip: 'Rotate players clockwise',
 
@@ -136,6 +141,11 @@ const translations = {
     // Position Selector
     selectPlayerFor: 'Seleccionar',
     forThisPosition: 'para esta posición',
+
+    // Sorting
+    sortBy: 'Ordenar por:',
+    sortByName: 'Nombre',
+    sortByRarity: 'Rareza',
 
     // Rotation
     rotateTooltip: 'Rotar jugadores en sentido horario',
@@ -317,6 +327,15 @@ class LanguageManager {
     document.querySelector('#powerLabel').textContent = t.power;
     document.querySelector('#selectPlayerBtn').textContent = t.selectPlayer;
     document.querySelector('.bonds-section-title').textContent = t.playerBonds;
+
+    // Update sorting controls
+    const sortLabel = document.querySelector('#sortLabel');
+    const sortBySelect = document.querySelector('#sortBy');
+    if (sortLabel) sortLabel.textContent = t.sortBy;
+    if (sortBySelect) {
+      sortBySelect.options[0].text = t.sortByName;
+      sortBySelect.options[1].text = t.sortByRarity;
+    }
 
     // Update rotation button tooltip
     document

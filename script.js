@@ -23,6 +23,8 @@ class HaikyuTeamBuilder {
     this.dragSuccess = false;
     this.isDragging = false; // Track if a drag operation is in progress
     this.dragStartTime = 0; // Track when drag started
+    this.currentSortBy = 'name'; // Default sorting by name
+    this.rarityOrder = ['SP', 'UR', 'SSR', 'SR', 'R', 'N']; // Rarity priority order
     this.init();
   }
 
@@ -39,6 +41,7 @@ class HaikyuTeamBuilder {
     this.setupDragAndDrop();
     this.setupEventListeners();
     this.setupPositionSelector(); // Add position selector setup
+    this.setupSortingControls(); // Add sorting controls setup
     this.initializeSchoolStats();
     this.initializeBonds();
     this.setupRotationButton();
@@ -255,8 +258,11 @@ class HaikyuTeamBuilder {
     const playerGrid = document.querySelector('.player-grid');
     if (!playerGrid) return;
 
-    // Group players by position for better organization
-    const playersByPosition = this.groupPlayersByPosition();
+    // Get sorted players
+    const sortedPlayers = this.getSortedPlayers();
+    
+    // Group sorted players by position for better organization
+    const playersByPosition = this.groupPlayersByPosition(sortedPlayers);
 
     playerGrid.innerHTML = '';
 
@@ -288,9 +294,10 @@ class HaikyuTeamBuilder {
     });
   }
 
-  groupPlayersByPosition() {
+  groupPlayersByPosition(players = null) {
+    const playersToGroup = players || this.players;
     const grouped = {};
-    this.players.forEach((player) => {
+    playersToGroup.forEach((player) => {
       const pos = player.position;
       if (!grouped[pos]) grouped[pos] = [];
       grouped[pos].push(player);
@@ -1629,11 +1636,14 @@ class HaikyuTeamBuilder {
         !this.usedPlayerIds.has(player.id)
     );
 
+    // Sort compatible players using current sort method
+    const sortedCompatiblePlayers = this.sortPlayers(compatiblePlayers);
+
     // Clear previous content
     positionPlayersList.innerHTML = '';
 
     // Add compatible players
-    compatiblePlayers.forEach((player) => {
+    sortedCompatiblePlayers.forEach((player) => {
       const playerCard = this.createPositionPlayerCard(player);
       positionPlayersList.appendChild(playerCard);
     });
@@ -1695,6 +1705,76 @@ class HaikyuTeamBuilder {
         this.hidePositionSelector();
       }
     }
+  }
+
+  // Sorting Methods
+  setupSortingControls() {
+    const sortBySelect = document.getElementById('sortBy');
+    if (sortBySelect) {
+      sortBySelect.addEventListener('change', (e) => {
+        this.currentSortBy = e.target.value;
+        this.renderAvailablePlayers();
+        // Re-render position selector if active
+        if (this.positionSelectorActive && this.selectedPosition) {
+          const positionElement = document.querySelector(`.${this.selectedPosition}`);
+          this.showPositionSelector(this.selectedPosition, positionElement);
+        }
+      });
+    }
+  }
+
+  getSortedPlayers() {
+    const players = [...this.players]; // Create a copy to avoid mutating original array
+    return this.sortPlayers(players);
+  }
+
+  sortPlayers(players) {
+    switch (this.currentSortBy) {
+      case 'rarity':
+        return this.sortByRarity([...players]);
+      case 'name':
+      default:
+        return this.sortByName([...players]);
+    }
+  }
+
+  sortByName(players) {
+    return players.sort((a, b) => {
+      return a.name.localeCompare(b.name, undefined, { sensitivity: 'base' });
+    });
+  }
+
+  sortByRarity(players) {
+    return players.sort((a, b) => {
+      // Get rarity from player data, fallback to 'N' if not found
+      const rarityA = this.getPlayerRarity(a);
+      const rarityB = this.getPlayerRarity(b);
+      
+      const indexA = this.rarityOrder.indexOf(rarityA);
+      const indexB = this.rarityOrder.indexOf(rarityB);
+      
+      // If rarity not found in order, put it at the end
+      const finalIndexA = indexA === -1 ? this.rarityOrder.length : indexA;
+      const finalIndexB = indexB === -1 ? this.rarityOrder.length : indexB;
+      
+      // If same rarity, sort by name
+      if (finalIndexA === finalIndexB) {
+        return a.name.localeCompare(b.name, undefined, { sensitivity: 'base' });
+      }
+      
+      return finalIndexA - finalIndexB;
+    });
+  }
+
+  getPlayerRarity(player) {
+    // Try to extract rarity from different possible fields
+    if (player.rarity) return player.rarity;
+    if (player.level) return player.level;
+    if (player.grade) return player.grade;
+    
+    // Try to extract from name or other fields if needed
+    // This might need adjustment based on your data structure
+    return 'N'; // Default fallback
   }
 }
 
