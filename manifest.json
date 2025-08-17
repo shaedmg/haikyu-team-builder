@@ -15,7 +15,7 @@
 
   "icons": [
     {
-      "src": "assets/images/icon-192x192.svg",
+      "src": "assets/images/icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png",
       "purpose": "any"

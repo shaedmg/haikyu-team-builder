@@ -1521,4 +1521,3 @@ document.addEventListener('DOMContentLoaded', () => {
   // Then initialize team builder
   window.teamBuilder = new HaikyuTeamBuilder();
 });
-

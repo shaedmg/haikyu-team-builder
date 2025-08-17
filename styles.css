@@ -17,8 +17,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* Improved user experience */
-  scroll-behavior: smooth;
 }
 
 /* Header */
