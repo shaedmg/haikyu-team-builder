@@ -19,6 +19,8 @@ class HaikyuTeamBuilder {
     this.draggedPlayer = null;
     this.draggedFromTeam = false;
     this.dragSuccess = false;
+    this.selectedPosition = null; // Current selected position for quick assignment
+    this.selectedPositionElement = null; // DOM element of selected position
     this.init();
   }
 
@@ -608,6 +610,12 @@ class HaikyuTeamBuilder {
                 }</div>
             </div>
         `;
+
+    // Add click handler for position selection
+    playerSlot.addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.selectPosition(positionElement, positionClass);
+    });
   }
 
   getPositionNumber(positionClass) {
@@ -643,6 +651,122 @@ class HaikyuTeamBuilder {
       // Update school statistics and bonds
       this.updateTeamStats();
     }
+  }
+
+  // Position Selection Functions
+  selectPosition(positionElement, positionClass) {
+    // Clear previous selection
+    this.clearPositionSelection();
+    
+    // Set current selection
+    this.selectedPosition = positionClass;
+    this.selectedPositionElement = positionElement;
+    
+    // Add visual feedback
+    positionElement.classList.add('selected');
+    
+    // Show filtered players for this position
+    this.showFilteredPlayers(positionClass);
+  }
+
+  clearPositionSelection() {
+    if (this.selectedPositionElement) {
+      this.selectedPositionElement.classList.remove('selected');
+    }
+    this.selectedPosition = null;
+    this.selectedPositionElement = null;
+    this.hidePositionSelector();
+  }
+
+  showFilteredPlayers(positionClass) {
+    const requiredPosition = this.positionMappings[positionClass];
+    const positionSelector = document.getElementById('positionSelector');
+    const filteredPlayersContainer = document.getElementById('filteredPlayers');
+    const selectorTitle = document.getElementById('positionSelectorTitle');
+    
+    // Get position names in Spanish
+    const positionNames = {
+      L: 'Líbero',
+      MB: 'Bloqueador Central',
+      WS: 'Atacante',
+      OP: 'Opuesto',
+      S: 'Armador',
+    };
+    
+    // Update title
+    selectorTitle.textContent = `Selecciona un ${positionNames[requiredPosition] || requiredPosition}`;
+    
+    // Filter available players for this position
+    const availablePlayers = this.players.filter(player => {
+      return player.position === requiredPosition && !this.usedPlayerIds.has(player.id);
+    });
+
+    // Clear previous content
+    filteredPlayersContainer.innerHTML = '';
+
+    if (availablePlayers.length === 0) {
+      filteredPlayersContainer.innerHTML = `
+        <div style="text-align: center; padding: 40px; color: rgba(255,255,255,0.7);">
+          <p>No hay jugadores disponibles para esta posición</p>
+        </div>
+      `;
+    } else {
+      // Create player cards
+      availablePlayers.forEach(player => {
+        const playerCard = this.createFilteredPlayerCard(player);
+        filteredPlayersContainer.appendChild(playerCard);
+      });
+    }
+
+    // Show the selector
+    positionSelector.style.display = 'block';
+    
+    // Scroll to the selector
+    positionSelector.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  createFilteredPlayerCard(player) {
+    const card = document.createElement('div');
+    card.className = 'filtered-player-card';
+    
+    const imageUrl = this.getPlayerImageUrl(player);
+    
+    card.innerHTML = `
+      <img src="${imageUrl}" alt="${player.name}" onerror="this.src='./assets/images/characters/default.png'">
+      <div class="player-name">${player.name}</div>
+      <div class="player-details">${player.school || 'Unknown'}</div>
+      <div class="player-power">⚡ ${player.power || 'N/A'}</div>
+    `;
+    
+    // Add click handler
+    card.addEventListener('click', () => {
+      this.assignPlayerToSelectedPosition(player);
+    });
+    
+    return card;
+  }
+
+  assignPlayerToSelectedPosition(player) {
+    if (!this.selectedPosition || !this.selectedPositionElement) return;
+    
+    // Assign player to position
+    this.currentTeam[this.selectedPosition] = player;
+    this.usedPlayerIds.add(player.id);
+    
+    // Render player in position
+    this.renderPlayerInPosition(this.selectedPositionElement, player, this.selectedPosition);
+    
+    // Update statistics and bonds
+    this.updateTeamStats();
+    this.renderAvailablePlayers();
+    
+    // Clear selection and hide selector
+    this.clearPositionSelection();
+  }
+
+  hidePositionSelector() {
+    const positionSelector = document.getElementById('positionSelector');
+    positionSelector.style.display = 'none';
   }
 
   showPlayerModal(player) {
@@ -722,6 +846,35 @@ class HaikyuTeamBuilder {
         modal.style.display = 'none';
       }
     };
+
+    // Position Selector events
+    const closeSelectorBtn = document.getElementById('closeSelectorBtn');
+    const positionSelector = document.getElementById('positionSelector');
+
+    if (closeSelectorBtn) {
+      closeSelectorBtn.onclick = () => {
+        this.clearPositionSelection();
+      };
+    }
+
+    // Close selector when clicking outside
+    document.addEventListener('click', (event) => {
+      if (positionSelector.style.display === 'block') {
+        const isClickInsideSelector = positionSelector.contains(event.target);
+        const isClickOnPosition = event.target.closest('.position');
+        
+        if (!isClickInsideSelector && !isClickOnPosition) {
+          this.clearPositionSelection();
+        }
+      }
+    });
+
+    // Close selector with Escape key
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && positionSelector.style.display === 'block') {
+        this.clearPositionSelection();
+      }
+    });
 
     // No need for global tooltip tracking anymore
   }
