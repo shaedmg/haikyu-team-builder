@@ -1259,7 +1259,7 @@ body {
 
 .position-player-card {
   flex: 0 0 auto;
-  width: 80px;
+  width: 80px; /* Match right panel width exactly */
   height: 120px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
@@ -1304,7 +1304,7 @@ body {
   }
   
   .position-player-card {
-    width: 70px;
+    width: 70px; /* Slightly smaller on mobile but maintaining proportion */
     height: 100px;
   }
   
