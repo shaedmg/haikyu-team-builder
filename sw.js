@@ -9,10 +9,8 @@ const CORE_CACHE_RESOURCES = [
   '/',
   '/index.html',
   '/styles.css',
-  '/src/script.js',
+  '/dist/init.js',
   '/manifest.json',
-  '/haikyu_fly_high_full_v3.json',
-  '/image-mapping.json',
 ];
 
 // Recursos de imágenes para cachear

@@ -29,7 +29,7 @@ export class LanguageManager {
         languageContainer.className = 'language-selector';
 
         languageContainer.innerHTML = `
-      <label for="languageSelect">${this.translations[this.currentLanguage].language}</label>
+      <label for="languageSelect">${this.translations[this.currentLanguage]?.language || 'Language'}</label>
       <select id="languageSelect">
         <option value="en" ${this.currentLanguage === 'en' ? 'selected' : ''}>English</option>
         <option value="es" ${this.currentLanguage === 'es' ? 'selected' : ''}>Español</option>
@@ -78,6 +78,10 @@ export class LanguageManager {
 
     private applyLanguage(lang: Language): void {
         const t = this.translations[lang];
+        if (!t) {
+            console.error(`No translations found for language: ${lang}`);
+            return;
+        }
 
         // Update page title
         const titleMeta = document.querySelector('title');
@@ -234,7 +238,13 @@ export class LanguageManager {
     }
 
     public t(key: keyof TranslationStrings): string | { [schoolName: string]: string } {
-        const value = this.translations[this.currentLanguage][key];
+        const translations = this.translations[this.currentLanguage];
+        if (!translations) {
+            console.error(`No translations found for current language: ${this.currentLanguage}`);
+            return key as string;
+        }
+        
+        const value = translations[key];
         if (typeof value === 'object') {
             return value;
         }
@@ -254,6 +264,10 @@ export class LanguageManager {
     public translateAttribute(attribute: string): string {
         // Get the current language translations
         const t = this.translations[this.currentLanguage];
+        if (!t) {
+            console.error(`No translations found for current language: ${this.currentLanguage}`);
+            return attribute; // Return original if no translations
+        }
 
         // Clean the attribute string by removing extra context in parentheses
         let cleanAttribute = attribute;
@@ -263,12 +277,12 @@ export class LanguageManager {
 
         // Try to find exact match first
         if (t.attributes[cleanAttribute]) {
-            return t.attributes[cleanAttribute];
+            return t.attributes[cleanAttribute] || attribute;
         }
 
         // Try to find match with original attribute
         if (t.attributes[attribute]) {
-            return t.attributes[attribute];
+            return t.attributes[attribute] || attribute;
         }
 
         // Try partial matching for more complex attributes

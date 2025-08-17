@@ -1,21 +1,13 @@
 import {
     Character,
-    BaseCharacter,
     Bond,
-    SimpleBond,
-    BondsData,
-    GameData,
-    ImageMapping,
     CurrentTeam,
-    SchoolStats,
     Language,
     SortBy,
     Rarity,
-    CharactersData,
     Position,
     DragState,
-    PositionMapping,
-    HaikyuTeamBuilderConfig
+    PositionMapping
 } from './types/index.js';
 import { charactersData } from './characters.js';
 import { bondsData } from './bonds.js';
@@ -23,7 +15,6 @@ import { bondsData } from './bonds.js';
 export class HaikyuTeamBuilder {
     private players: Character[] = [];
     private bonds: Bond[] = [];
-    private imageMapping: ImageMapping = {};
     private currentTeam: CurrentTeam = {};
     private selectedPlayer: Character | null = null;
     private selectedPosition: string | null = null;
@@ -33,7 +24,7 @@ export class HaikyuTeamBuilder {
     private dragState: DragState;
     private currentSortBy: SortBy = 'rarity'; // Default sort by rarity
     private rarityOrder: Rarity[] = ['SP', 'UR', 'SSR', 'SR', 'R', 'N'];
-    private draggedFromPosition?: string;
+    private draggedFromPosition: string | undefined = undefined;
 
     constructor() {
         this.currentSortBy = 'rarity'; // Changed default sort to rarity
@@ -85,7 +76,7 @@ export class HaikyuTeamBuilder {
             console.log('Using imported charactersData and bondsData');
 
             // Convert base characters to characters with names already included
-            this.players = Object.values(charactersData.characters).map((baseChar: BaseCharacter) => ({
+            this.players = Object.values(charactersData.characters).map((baseChar: Character) => ({
                 ...baseChar,
                 name: baseChar.name // Name is now included directly
             }) as Character);
@@ -156,14 +147,15 @@ export class HaikyuTeamBuilder {
         // Handle cases like "+5 +1%", "+7 +2%", etc. (with space between numbers and percentage)
         const complexMatch = bonusValue.match(/^(\+?\d+)\s+(\+?\d+%)$/);
         if (complexMatch) {
-            let [, points, percentage] = complexMatch;
+            let points = complexMatch[1];
+            let percentage = complexMatch[2];
             console.log('Complex match found:', points, percentage);
 
             // Ensure both values have the '+' symbol
-            if (!points.startsWith('+') && !points.startsWith('-')) {
+            if (points && !points.startsWith('+') && !points.startsWith('-')) {
                 points = '+' + points;
             }
-            if (!percentage.startsWith('+') && !percentage.startsWith('-')) {
+            if (percentage && !percentage.startsWith('+') && !percentage.startsWith('-')) {
                 percentage = '+' + percentage;
             }
 
@@ -180,6 +172,8 @@ export class HaikyuTeamBuilder {
         const percentageMatch = bonusValue.match(/^(\+?-?\d+(?:\.\d+)?)%$/);
         if (percentageMatch) {
             const value = percentageMatch[1];
+            if (!value) return bonusValue; // Fallback si no hay valor
+            
             let result = value;
             if (!value.startsWith('+') && !value.startsWith('-')) {
                 result = '+' + value;
@@ -193,6 +187,8 @@ export class HaikyuTeamBuilder {
         const numberMatch = bonusValue.match(/^(\+?-?\d+(?:\.\d+)?)$/);
         if (numberMatch) {
             const value = numberMatch[1];
+            if (!value) return bonusValue; // Fallback si no hay valor
+            
             let result = value;
             if (!value.startsWith('+') && !value.startsWith('-')) {
                 result = '+' + value;
@@ -548,7 +544,7 @@ export class HaikyuTeamBuilder {
                         }
 
                         if (Array.isArray(levelsArray) && levelsArray.length > 0) {
-                            levelsArray.forEach((level: string, index: number) => {
+                            levelsArray.forEach((_level: string, index: number) => {
                                 const levelNum = index + 1;
                                 const isActive = index === 0; // Por defecto nivel 1 activo
                                 const escapedBondName = bondName.replace(/'/g, "\\'");
@@ -810,7 +806,7 @@ export class HaikyuTeamBuilder {
             element.style.opacity = '0.5';
         });
 
-        element.addEventListener('dragend', (e) => {
+        element.addEventListener('dragend', (_e) => {
             element.style.opacity = '1';
             this.clearHighlights();
             this.dragState.draggedPlayer = null;
@@ -847,7 +843,7 @@ export class HaikyuTeamBuilder {
                 }
             });
 
-            posElement.addEventListener('dragleave', (e) => {
+            posElement.addEventListener('dragleave', (_e) => {
                 posElement.style.backgroundColor = '';
                 posElement.style.transform = '';
             });
@@ -870,13 +866,13 @@ export class HaikyuTeamBuilder {
         });
 
         // Highlight valid positions when dragging starts
-        document.addEventListener('dragstart', (e) => {
+        document.addEventListener('dragstart', (_e) => {
             if (this.dragState.draggedPlayer) {
                 this.highlightValidPositions(this.dragState.draggedPlayer);
             }
         });
 
-        document.addEventListener('dragend', (e) => {
+        document.addEventListener('dragend', (_e) => {
             this.clearHighlights();
         });
     }
@@ -1026,7 +1022,7 @@ export class HaikyuTeamBuilder {
             playerCard.style.opacity = '0.5';
         });
 
-        playerCard.addEventListener('dragend', (e) => {
+        playerCard.addEventListener('dragend', (_e) => {
             playerCard.style.opacity = '1';
             this.clearHighlights();
 
@@ -1080,6 +1076,8 @@ export class HaikyuTeamBuilder {
         if (!playerSlot) return;
 
         const requiredPosition = this.positionMappings[positionClass];
+        if (!requiredPosition) return; // Si no hay posición válida, salir
+        
         const positionNames = {
             L: 'L',
             MB: 'MB',
@@ -1241,8 +1239,10 @@ export class HaikyuTeamBuilder {
         });
     }
 
-    private showPositionSelector(positionClass: string, positionElement: HTMLElement): void {
+    private showPositionSelector(positionClass: string, _positionElement: HTMLElement): void {
         const requiredPosition = this.positionMappings[positionClass];
+        if (!requiredPosition) return; // Si no hay posición válida, salir
+        
         const positionSelector = document.getElementById('positionSelector');
         const positionPlayersList = document.getElementById('positionPlayersList');
         const positionSelectorTitle = document.getElementById('positionSelectorTitle');
@@ -1413,7 +1413,10 @@ export class HaikyuTeamBuilder {
             // Save the current player in that position
             positionContents[pos] = this.currentTeam[pos] || null;
             // Save the current position mapping
-            positionMappings[pos] = this.positionMappings[pos];
+            const mapping = this.positionMappings[pos];
+            if (mapping) {
+                positionMappings[pos] = mapping;
+            }
         });
 
         console.log('Position contents before rotating:', positionContents);
@@ -1436,7 +1439,9 @@ export class HaikyuTeamBuilder {
             rotationSequence.forEach((pos, index) => {
                 const nextIndex = (index + 1) % rotationSequence.length;
                 const nextPos = rotationSequence[nextIndex];
-                newPositionMappings[nextPos] = positionMappings[pos];
+                if (nextPos && positionMappings[pos]) {
+                    newPositionMappings[nextPos] = positionMappings[pos];
+                }
             });
 
             // Rotate position contents (players)
@@ -1444,7 +1449,9 @@ export class HaikyuTeamBuilder {
             rotationSequence.forEach((pos, index) => {
                 const nextIndex = (index + 1) % rotationSequence.length;
                 const nextPos = rotationSequence[nextIndex];
-                newPositionContents[nextPos] = positionContents[pos];
+                if (nextPos) {
+                    newPositionContents[nextPos] = positionContents[pos] ?? null;
+                }
             });
 
             // Update internal mappings
@@ -1502,6 +1509,8 @@ export class HaikyuTeamBuilder {
         rotationSequence.forEach((pos, index) => {
             const nextIndex = (index + 1) % rotationSequence.length;
             const nextPos = rotationSequence[nextIndex];
+            
+            if (!nextPos) return; // Si nextPos es undefined, saltar
 
             const currentPos = positions[pos];
             const targetPos = positions[nextPos];

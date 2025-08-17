@@ -79,21 +79,6 @@ export interface Bond {
     missingCount?: number;
 }
 
-// Simplified bond interface for the application (after conversion)
-export interface SimpleBond {
-    id: number;
-    name: string;
-    participants: number[];
-    type?: 'link_skill' | 'kizuna_skill';
-    effect?: string;
-    detailed_effects?: BondEffect[];
-}
-
-export interface BondEffect {
-    character_id: number;
-    effects: string[];
-}
-
 // Data structures
 export interface CharactersData {
     characters: Record<number, BaseCharacter>;
@@ -101,15 +86,6 @@ export interface CharactersData {
 
 export interface BondsData {
     bonds: Bond[];
-}
-
-export interface GameData {
-    characters: Character[];
-    bonds: SimpleBond[];
-}
-
-export interface ImageMapping {
-    [characterId: string]: string;
 }
 
 export interface TeamPosition {
@@ -220,11 +196,4 @@ export interface DragState {
 
 export interface PositionMapping {
     [positionKey: string]: Position;
-}
-
-export interface HaikyuTeamBuilderConfig {
-    defaultLanguage: Language;
-    rarityOrder: Rarity[];
-    positionMappings: PositionMapping;
-    dragThreshold: number;
 }

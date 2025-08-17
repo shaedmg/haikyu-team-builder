@@ -4,8 +4,8 @@
 import { LanguageManager } from './LanguageManager.js';
 import { HaikyuTeamBuilder } from './HaikyuTeamBuilder.js';
 
-// First try to import from TypeScript modules if available
-async function initializeFromModules(): Promise<boolean> {
+// Initialize the application with TypeScript modules
+async function initializeApp(): Promise<void> {
   try {
     window.languageManager = new LanguageManager();
     const teamBuilder = new HaikyuTeamBuilder();
@@ -14,43 +14,9 @@ async function initializeFromModules(): Promise<boolean> {
     // Store instance for global access
     (window as any).teamBuilderInstance = teamBuilder;
     
-    console.log('Initialized from TypeScript modules');
-    return true;
+    console.log('Application initialized successfully');
   } catch (error) {
-    console.log('Failed to initialize from modules:', error);
-    return false;
-  }
-}
-
-// Fallback to global classes if modules fail
-function initializeFromGlobals(): boolean {
-  const LanguageManagerGlobal = (window as any).LanguageManager;
-  const HaikyuTeamBuilderGlobal = (window as any).HaikyuTeamBuilder;
-  
-  if (LanguageManagerGlobal && HaikyuTeamBuilderGlobal) {
-    window.languageManager = new LanguageManagerGlobal();
-    const teamBuilder = new HaikyuTeamBuilderGlobal();
-    window.teamBuilder = teamBuilder;
-    
-    // Store instance for global access
-    (window as any).teamBuilderInstance = teamBuilder;
-    
-    console.log('Initialized from global classes');
-    return true;
-  }
-  return false;
-}
-
-// Main initialization function
-async function initializeApp(): Promise<void> {
-  const moduleSuccess = await initializeFromModules();
-  
-  if (!moduleSuccess) {
-    const globalSuccess = initializeFromGlobals();
-    
-    if (!globalSuccess) {
-      console.error('Failed to initialize application: no valid classes found');
-    }
+    console.error('Failed to initialize application:', error);
   }
 }
 
