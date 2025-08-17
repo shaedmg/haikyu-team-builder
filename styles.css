@@ -1233,7 +1233,7 @@ body {
 
 .position-players-list {
   display: flex;
-  gap: 8px; /* Reduced gap for tighter spacing */
+  gap: 10px; /* Slightly increased gap for better spacing with larger cards */
   overflow-x: auto;
   padding: 10px 0;
   scroll-behavior: smooth;
@@ -1259,7 +1259,7 @@ body {
 
 .position-player-card {
   flex: 0 0 auto;
-  width: 80px; /* Match right panel width exactly */
+  width: 95px; /* Increased to better match visual size of right panel cards */
   height: 120px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
@@ -1304,7 +1304,7 @@ body {
   }
   
   .position-player-card {
-    width: 70px; /* Slightly smaller on mobile but maintaining proportion */
+    width: 80px; /* Proportionally smaller on mobile */
     height: 100px;
   }
   
