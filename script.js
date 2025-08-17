@@ -260,48 +260,62 @@ class HaikyuTeamBuilder {
 
     // Get sorted players
     const sortedPlayers = this.getSortedPlayers();
-    
+
     // Group sorted players by position for better organization
     const playersByPosition = this.groupPlayersByPosition(sortedPlayers);
 
     playerGrid.innerHTML = '';
 
-    // Render players grouped by position
-    Object.keys(playersByPosition).forEach((position) => {
-      const positionHeader = document.createElement('div');
-      positionHeader.className = 'position-header';
-      positionHeader.style.cssText = `
-                width: 100%; 
-                grid-column: 1 / -1; 
-                margin: 10px 0 5px 0; 
-                padding: 5px 10px; 
-                background: rgba(255,255,255,0.1); 
-                border-radius: 10px; 
-                text-align: center;
-                font-size: 0.9rem;
-                font-weight: bold;
-            `;
-      positionHeader.innerHTML = `${this.getPositionName(position)}`;
-      playerGrid.appendChild(positionHeader);
+    // Define fixed order for position categories
+    const fixedPositionOrder = ['MB', 'WS', 'S', 'OP', 'L'];
 
-      playersByPosition[position].forEach((player) => {
-        // Only show players that are not already in the team
-        if (!this.usedPlayerIds.has(player.id)) {
-          const playerElement = this.createAvailablePlayerElement(player);
-          playerGrid.appendChild(playerElement);
-        }
-      });
+    // Render players grouped by position in fixed order
+    fixedPositionOrder.forEach((position) => {
+      if (playersByPosition[position] && playersByPosition[position].length > 0) {
+        const positionHeader = document.createElement('div');
+        positionHeader.className = 'position-header';
+        positionHeader.style.cssText = `
+                  width: 100%; 
+                  grid-column: 1 / -1; 
+                  margin: 10px 0 5px 0; 
+                  padding: 5px 10px; 
+                  background: rgba(255,255,255,0.1); 
+                  border-radius: 10px; 
+                  text-align: center;
+                  font-size: 0.9rem;
+                  font-weight: bold;
+              `;
+        positionHeader.innerHTML = `${this.getPositionName(position)}`;
+        playerGrid.appendChild(positionHeader);
+
+        playersByPosition[position].forEach((player) => {
+          // Only show players that are not already in the team
+          if (!this.usedPlayerIds.has(player.id)) {
+            const playerElement = this.createAvailablePlayerElement(player);
+            playerGrid.appendChild(playerElement);
+          }
+        });
+      }
     });
   }
 
   groupPlayersByPosition(players = null) {
     const playersToGroup = players || this.players;
     const grouped = {};
+    
+    // Initialize all position groups to maintain order
+    ['MB', 'WS', 'S', 'OP', 'L'].forEach(pos => {
+      grouped[pos] = [];
+    });
+    
+    // Group players while preserving the input order (which is already sorted)
     playersToGroup.forEach((player) => {
       const pos = player.position;
-      if (!grouped[pos]) grouped[pos] = [];
-      grouped[pos].push(player);
+      if (grouped[pos]) {
+        grouped[pos].push(player);
+      }
     });
+    
     return grouped;
   }
 
@@ -1629,21 +1643,19 @@ class HaikyuTeamBuilder {
     };
     positionSelectorTitle.textContent = `${t.selectPlayerFor} ${positionNames[requiredPosition]} ${t.forThisPosition}`;
 
-    // Filter players for this position
-    const compatiblePlayers = this.players.filter(
+    // Filter players for this position from the already sorted list
+    const sortedPlayers = this.getSortedPlayers();
+    const compatiblePlayers = sortedPlayers.filter(
       (player) =>
         player.position === requiredPosition &&
         !this.usedPlayerIds.has(player.id)
     );
 
-    // Sort compatible players using current sort method
-    const sortedCompatiblePlayers = this.sortPlayers(compatiblePlayers);
-
     // Clear previous content
     positionPlayersList.innerHTML = '';
 
-    // Add compatible players
-    sortedCompatiblePlayers.forEach((player) => {
+    // Add compatible players (already sorted from getSortedPlayers)
+    compatiblePlayers.forEach((player) => {
       const playerCard = this.createPositionPlayerCard(player);
       positionPlayersList.appendChild(playerCard);
     });
@@ -1716,7 +1728,9 @@ class HaikyuTeamBuilder {
         this.renderAvailablePlayers();
         // Re-render position selector if active
         if (this.positionSelectorActive && this.selectedPosition) {
-          const positionElement = document.querySelector(`.${this.selectedPosition}`);
+          const positionElement = document.querySelector(
+            `.${this.selectedPosition}`
+          );
           this.showPositionSelector(this.selectedPosition, positionElement);
         }
       });
@@ -1749,19 +1763,19 @@ class HaikyuTeamBuilder {
       // Get rarity from player data, fallback to 'N' if not found
       const rarityA = this.getPlayerRarity(a);
       const rarityB = this.getPlayerRarity(b);
-      
+
       const indexA = this.rarityOrder.indexOf(rarityA);
       const indexB = this.rarityOrder.indexOf(rarityB);
-      
+
       // If rarity not found in order, put it at the end
       const finalIndexA = indexA === -1 ? this.rarityOrder.length : indexA;
       const finalIndexB = indexB === -1 ? this.rarityOrder.length : indexB;
-      
+
       // If same rarity, sort by name
       if (finalIndexA === finalIndexB) {
         return a.name.localeCompare(b.name, undefined, { sensitivity: 'base' });
       }
-      
+
       return finalIndexA - finalIndexB;
     });
   }
@@ -1771,7 +1785,7 @@ class HaikyuTeamBuilder {
     if (player.rarity) return player.rarity;
     if (player.level) return player.level;
     if (player.grade) return player.grade;
-    
+
     // Try to extract from name or other fields if needed
     // This might need adjustment based on your data structure
     return 'N'; // Default fallback

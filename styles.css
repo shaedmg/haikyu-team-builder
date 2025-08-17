@@ -946,7 +946,9 @@ body {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   max-height: 600px;
-  overflow-y: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .player-panel h2,
@@ -954,6 +956,7 @@ body {
   margin-bottom: 20px;
   text-align: center;
   font-size: 1.5rem;
+  flex-shrink: 0;
 }
 
 /* Sorting controls */
@@ -967,6 +970,7 @@ body {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
 }
 
 .sort-label {
@@ -1010,8 +1014,8 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   gap: 15px;
-  max-height: 500px;
   overflow-y: auto;
+  flex: 1;
 }
 
 .available-player {
