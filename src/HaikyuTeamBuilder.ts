@@ -17,6 +17,8 @@ import {
     PositionMapping,
     HaikyuTeamBuilderConfig
 } from './types/index.js';
+import { charactersData } from './characters.js';
+import { bondsData } from './bonds.js';
 
 export class HaikyuTeamBuilder {
     private players: Character[] = [];
@@ -79,19 +81,8 @@ export class HaikyuTeamBuilder {
         try {
             console.log(`Loading players with language: ${language}`);
 
-            // Load base character data
-            const charactersResponse = await fetch('./characters.json');
-            if (!charactersResponse.ok) {
-                throw new Error(`HTTP error loading characters! status: ${charactersResponse.status}`);
-            }
-            const charactersData: CharactersData = await charactersResponse.json();
-
-            // Load bonds data
-            const bondsResponse = await fetch('./bonds.json');
-            if (!bondsResponse.ok) {
-                throw new Error(`HTTP error loading bonds! status: ${bondsResponse.status}`);
-            }
-            const bondsData: BondsData = await bondsResponse.json();
+            // Use imported data instead of fetch
+            console.log('Using imported charactersData and bondsData');
 
             // Convert base characters to characters with names already included
             this.players = Object.values(charactersData.characters).map((baseChar: BaseCharacter) => ({
@@ -125,34 +116,9 @@ export class HaikyuTeamBuilder {
                     .map((b) => ({ name: b.name, participants: b.participants }))
             );
         } catch (error) {
-            console.warn('Error loading players, trying fallback:', (error as Error).message);
-            // Fallback to old format if new format fails
-            await this.loadPlayersLegacy(language);
-        }
-    }
-
-    private async loadPlayersLegacy(language: Language = 'es'): Promise<void> {
-        try {
-            // Fallback to old JSON structure
-            const jsonFile = language === 'en'
-                ? './haikyu_fly_high_full_v3_en.json'
-                : './haikyu_fly_high_full_v3.json';
-            console.log(`Loading players from legacy format: ${jsonFile}`);
-
-            const response = await fetch(jsonFile);
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            const data: GameData = await response.json();
-            this.players = data.characters || [];
-            // this.bonds = data.bonds || []; // Legacy format - not compatible with new Bond type
-            console.log(
-                `Loaded ${this.players.length} players from legacy format (bonds loaded separately)`
-            );
-        } catch (error) {
-            console.warn('Error loading legacy players, using fallback:', (error as Error).message);
-            // Final fallback data if everything fails
-            this.players = this.getFallbackPlayers();
+            console.error('Error loading players:', error);
+            // Initialize with empty data if import fails
+            this.players = [];
             this.bonds = [];
         }
     }
@@ -244,11 +210,6 @@ export class HaikyuTeamBuilder {
         // If no pattern matches, return original value
         console.log('No match, returning original:', bonusValue);
         return bonusValue;
-    }
-
-    private getFallbackPlayers(): Character[] {
-        return [
-        ];
     }
 
     private renderAvailablePlayers(): void {

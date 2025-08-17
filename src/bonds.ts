@@ -1,4 +1,6 @@
-{
+import { BondsData } from './types/index.js';
+
+export const bondsData: BondsData = {
   "bonds": [
     {
       "name": {
@@ -65,7 +67,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 1
     },
     {
       "name": {
@@ -154,7 +157,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 2
     },
     {
       "name": {
@@ -223,7 +227,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 3
     },
     {
       "name": {
@@ -290,7 +295,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 4
     },
     {
       "name": {
@@ -305,7 +311,8 @@
       "effect_summary": {
         "es": "Kageyama coloca para Hinata, quien realiza un ataque rápido con una potencia de 'Ataque Rápido' x 280%~340%. La 'Conciencia' de Hinata aumenta un 30% y su 'Potencia' aumenta según su 'Conciencia' (máximo 60%~100%). Este ataque no puede ser bloqueado. Al anotar, el tiempo de recarga de la habilidad se reinicia.",
         "en": "Kageyama coloca para Hinata, quien realiza un ataque rápido con una potencia de 'Ataque Rápido' x 280%~340%. La 'Conciencia' de Hinata aumenta un 30% y su 'Potencia' aumenta según su 'Conciencia' (máximo 60%~100%). Este ataque no puede ser bloqueado. Al anotar, el tiempo de recarga de la habilidad se reinicia."
-      }
+      },
+      "id": 5
     },
     {
       "name": {
@@ -372,7 +379,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 6
     },
     {
       "name": {
@@ -439,7 +447,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 7
     },
     {
       "name": {
@@ -506,7 +515,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 8
     },
     {
       "name": {
@@ -573,7 +583,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 9
     },
     {
       "name": {
@@ -640,7 +651,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 10
     },
     {
       "name": {
@@ -801,7 +813,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 11
     },
     {
       "name": {
@@ -868,7 +881,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 12
     },
     {
       "name": {
@@ -935,7 +949,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 13
     },
     {
       "name": {
@@ -1002,7 +1017,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 14
     },
     {
       "name": {
@@ -1042,7 +1058,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 15
     },
     {
       "name": {
@@ -1109,7 +1126,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 16
     },
     {
       "name": {
@@ -1204,7 +1222,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 17
     },
     {
       "name": {
@@ -1271,7 +1290,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 18
     },
     {
       "name": {
@@ -1338,7 +1358,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 19
     },
     {
       "name": {
@@ -1405,7 +1426,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 20
     },
     {
       "name": {
@@ -1467,7 +1489,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 21
     },
     {
       "name": {
@@ -1507,7 +1530,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 22
     },
     {
       "name": {
@@ -1602,7 +1626,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 23
     },
     {
       "name": {
@@ -1691,7 +1716,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 24
     },
     {
       "name": {
@@ -1758,7 +1784,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 25
     },
     {
       "name": {
@@ -1825,7 +1852,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 26
     },
     {
       "name": {
@@ -1892,7 +1920,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 27
     },
     {
       "name": {
@@ -1933,7 +1962,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 28
     },
     {
       "name": {
@@ -2000,7 +2030,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 29
     },
     {
       "name": {
@@ -2067,7 +2098,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 30
     },
     {
       "name": {
@@ -2134,7 +2166,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 31
     },
     {
       "name": {
@@ -2201,7 +2234,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 32
     },
     {
       "name": {
@@ -2241,7 +2275,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 33
     },
     {
       "name": {
@@ -2352,7 +2387,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 34
     },
     {
       "name": {
@@ -2392,7 +2428,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 35
     },
     {
       "name": {
@@ -2459,7 +2496,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 36
     },
     {
       "name": {
@@ -2499,7 +2537,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 37
     },
     {
       "name": {
@@ -2566,7 +2605,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 38
     },
     {
       "name": {
@@ -2633,7 +2673,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 39
     },
     {
       "name": {
@@ -2700,7 +2741,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 40
     },
     {
       "name": {
@@ -2767,7 +2809,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 41
     },
     {
       "name": {
@@ -2807,7 +2850,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 42
     },
     {
       "name": {
@@ -2875,7 +2919,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 43
     },
     {
       "name": {
@@ -2992,7 +3037,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 44
     },
     {
       "name": {
@@ -3032,7 +3078,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 45
     },
     {
       "name": {
@@ -3099,7 +3146,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 46
     },
     {
       "name": {
@@ -3139,7 +3187,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 47
     },
     {
       "name": {
@@ -3206,7 +3255,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 48
     },
     {
       "name": {
@@ -3246,7 +3296,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 49
     },
     {
       "name": {
@@ -3286,7 +3337,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 50
     },
     {
       "name": {
@@ -3381,7 +3433,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 51
     },
     {
       "name": {
@@ -3448,7 +3501,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 52
     },
     {
       "name": {
@@ -3515,7 +3569,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 53
     },
     {
       "name": {
@@ -3604,7 +3659,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 54
     },
     {
       "name": {
@@ -3728,7 +3784,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 55
     },
     {
       "name": {
@@ -3795,7 +3852,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 56
     },
     {
       "name": {
@@ -3862,7 +3920,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 57
     },
     {
       "name": {
@@ -3929,7 +3988,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 58
     },
     {
       "name": {
@@ -3996,7 +4056,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 59
     },
     {
       "name": {
@@ -4036,7 +4097,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 60
     },
     {
       "name": {
@@ -4103,7 +4165,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 61
     },
     {
       "name": {
@@ -4170,7 +4233,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 62
     },
     {
       "name": {
@@ -4237,7 +4301,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 63
     },
     {
       "name": {
@@ -4370,7 +4435,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 64
     },
     {
       "name": {
@@ -4439,7 +4505,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 65
     },
     {
       "name": {
@@ -4479,7 +4546,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 66
     },
     {
       "name": {
@@ -4519,7 +4587,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 67
     },
     {
       "name": {
@@ -4559,7 +4628,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 68
     },
     {
       "name": {
@@ -4683,7 +4753,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 69
     },
     {
       "name": {
@@ -4723,7 +4794,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 70
     },
     {
       "name": {
@@ -4763,7 +4835,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 71
     },
     {
       "name": {
@@ -4803,7 +4876,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 72
     },
     {
       "name": {
@@ -4870,7 +4944,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 73
     },
     {
       "name": {
@@ -4959,7 +5034,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 74
     },
     {
       "name": {
@@ -5001,15 +5077,30 @@
           ],
           "abilities": [
             {
-              "name": "Donpishari",
-              "description": "Al inicio del partido, gana acumulaciones de efecto 3 stacks. Por cada stack, la técnica mejora un +3%. Máximo 10 stacks.",
-              "levels": [
-                "+3%",
-                "+3.5%",
-                "+4%",
-                "+4.5%",
-                "+5%"
-              ]
+              "name": {
+                "es": "Donpishari",
+                "en": "Donpishari"
+              },
+              "description": {
+                "es": "Al inicio del partido, gana acumulaciones de efecto 3 stacks. Por cada stack, la técnica mejora un +3%. Máximo 10 stacks.",
+                "en": "Al inicio del partido, gana acumulaciones de efecto 3 stacks. Por cada stack, la técnica mejora un +3%. Máximo 10 stacks."
+              },
+              "levels": {
+                "es": [
+                  "+3%",
+                  "+3.5%",
+                  "+4%",
+                  "+4.5%",
+                  "+5%"
+                ],
+                "en": [
+                  "+3%",
+                  "+3.5%",
+                  "+4%",
+                  "+4.5%",
+                  "+5%"
+                ]
+              }
             }
           ]
         },
@@ -5041,11 +5132,22 @@
           ],
           "abilities": [
             {
-              "name": "Primer ataque rápido potenciado",
-              "description": "El primer ataque rápido de cada set aumenta su potencia de 'Ataque Rápido' en un 12%.",
-              "levels": [
-                "+12%"
-              ]
+              "name": {
+                "es": "Primer ataque rápido potenciado",
+                "en": "Primer ataque rápido potenciado"
+              },
+              "description": {
+                "es": "El primer ataque rápido de cada set aumenta su potencia de 'Ataque Rápido' en un 12%.",
+                "en": "El primer ataque rápido de cada set aumenta su potencia de 'Ataque Rápido' en un 12%."
+              },
+              "levels": {
+                "es": [
+                  "+12%"
+                ],
+                "en": [
+                  "+12%"
+                ]
+              }
             }
           ]
         },
@@ -5077,19 +5179,35 @@
           ],
           "abilities": [
             {
-              "name": "Certeza",
-              "description": "Al inicio del partido, gana efecto de certeza que mejora la estabilidad del equipo.",
-              "levels": [
-                "+2%",
-                "+2.5%",
-                "+3%",
-                "+3.5%",
-                "+4%"
-              ]
+              "name": {
+                "es": "Certeza",
+                "en": "Certeza"
+              },
+              "description": {
+                "es": "Al inicio del partido, gana efecto de certeza que mejora la estabilidad del equipo.",
+                "en": "Al inicio del partido, gana efecto de certeza que mejora la estabilidad del equipo."
+              },
+              "levels": {
+                "es": [
+                  "+2%",
+                  "+2.5%",
+                  "+3%",
+                  "+3.5%",
+                  "+4%"
+                ],
+                "en": [
+                  "+2%",
+                  "+2.5%",
+                  "+3%",
+                  "+3.5%",
+                  "+4%"
+                ]
+              }
             }
           ]
         }
-      ]
+      ],
+      "id": 75
     },
     {
       "name": {
@@ -5184,7 +5302,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 76
     },
     {
       "name": {
@@ -5251,7 +5370,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 77
     },
     {
       "name": {
@@ -5347,7 +5467,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 78
     },
     {
       "name": {
@@ -5362,7 +5483,8 @@
       "effect_summary": {
         "es": "Aumenta la 'Colocación' de Atsumu, el 'Remate Fuerte' de Sakusa, la 'Recepción' de Komori y el 'Remate Fuerte' de Hoshiumi según el nivel.",
         "en": "Aumenta la 'Colocación' de Atsumu, el 'Remate Fuerte' de Sakusa, la 'Recepción' de Komori y el 'Remate Fuerte' de Hoshiumi según el nivel."
-      }
+      },
+      "id": 79
     },
     {
       "name": {
@@ -5473,7 +5595,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 80
     },
     {
       "name": {
@@ -5540,7 +5663,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 81
     },
     {
       "name": {
@@ -5663,7 +5787,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 82
     }
   ]
-}
+};
