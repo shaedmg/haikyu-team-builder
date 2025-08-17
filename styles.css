@@ -888,6 +888,95 @@ body {
   padding: 10px 0;
 }
 
+/* Enhanced bond effect styles */
+.detailed-bond {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.bond-type {
+  background: rgba(135, 206, 235, 0.2);
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  border-left: 3px solid #87ceeb;
+}
+
+.bond-special-effect {
+  background: rgba(255, 193, 7, 0.1);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+.bond-special-effect p {
+  margin-top: 8px;
+  line-height: 1.4;
+  color: #fff3cd;
+  font-size: 0.85rem;
+}
+
+.character-effects {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 6px;
+  border-left: 3px solid transparent;
+}
+
+.character-effects.in-team {
+  background: rgba(76, 175, 80, 0.1);
+  border-left-color: #4caf50;
+}
+
+.character-effects.not-in-team {
+  background: rgba(158, 158, 158, 0.1);
+  border-left-color: #9e9e9e;
+  opacity: 0.7;
+}
+
+.character-effects h4 {
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.bonus-effect {
+  margin-bottom: 10px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.bonus-effect strong {
+  color: #87ceeb;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.85rem;
+}
+
+.bonus-levels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.level-value {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .effect-type {
   font-weight: bold;
   color: #87ceeb;
@@ -1208,27 +1297,86 @@ body {
   }
 }
 
-/* Scrollbar styling */
+/* Scrollbar styling - Unified for internal elements only */
+/* Vertical scrollbars for internal elements */
 .player-panel::-webkit-scrollbar,
-.player-grid::-webkit-scrollbar {
+.player-grid::-webkit-scrollbar,
+.position-players-list::-webkit-scrollbar,
+.school-panel::-webkit-scrollbar,
+.school-stats::-webkit-scrollbar,
+.bonds-section::-webkit-scrollbar,
+.bonds-list::-webkit-scrollbar,
+.effects-list::-webkit-scrollbar {
   width: 8px;
 }
 
 .player-panel::-webkit-scrollbar-track,
-.player-grid::-webkit-scrollbar-track {
+.player-grid::-webkit-scrollbar-track,
+.position-players-list::-webkit-scrollbar-track,
+.school-panel::-webkit-scrollbar-track,
+.school-stats::-webkit-scrollbar-track,
+.bonds-section::-webkit-scrollbar-track,
+.bonds-list::-webkit-scrollbar-track,
+.effects-list::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
 }
 
 .player-panel::-webkit-scrollbar-thumb,
-.player-grid::-webkit-scrollbar-thumb {
+.player-grid::-webkit-scrollbar-thumb,
+.position-players-list::-webkit-scrollbar-thumb,
+.school-panel::-webkit-scrollbar-thumb,
+.school-stats::-webkit-scrollbar-thumb,
+.bonds-section::-webkit-scrollbar-thumb,
+.bonds-list::-webkit-scrollbar-thumb,
+.effects-list::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
+  transition: background 0.3s ease;
 }
 
 .player-panel::-webkit-scrollbar-thumb:hover,
-.player-grid::-webkit-scrollbar-thumb:hover {
+.player-grid::-webkit-scrollbar-thumb:hover,
+.position-players-list::-webkit-scrollbar-thumb:hover,
+.school-panel::-webkit-scrollbar-thumb:hover,
+.school-stats::-webkit-scrollbar-thumb:hover,
+.bonds-section::-webkit-scrollbar-thumb:hover,
+.bonds-list::-webkit-scrollbar-thumb:hover,
+.effects-list::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.5);
+}
+
+/* Horizontal scrollbars for internal elements */
+.position-players-list::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+
+.position-players-list::-webkit-scrollbar-track:horizontal {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.position-players-list::-webkit-scrollbar-thumb:horizontal {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.position-players-list::-webkit-scrollbar-thumb:horizontal:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Firefox scrollbar styling for internal elements only */
+.player-panel,
+.player-grid,
+.position-players-list,
+.school-panel,
+.school-stats,
+.bonds-section,
+.bonds-list,
+.effects-list {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
 }
 
 /* Position Selector - Bottom Panel */
@@ -1295,23 +1443,7 @@ body {
   scroll-behavior: smooth;
 }
 
-.position-players-list::-webkit-scrollbar {
-  height: 6px;
-}
-
-.position-players-list::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
-}
-
-.position-players-list::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 3px;
-}
-
-.position-players-list::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.5);
-}
+/* The horizontal scrollbar styling is now handled by the global styles above */
 
 .position-player-card {
   flex: 0 0 auto;

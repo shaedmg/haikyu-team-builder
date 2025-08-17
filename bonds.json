@@ -1,0 +1,5669 @@
+{
+  "bonds": [
+    {
+      "name": {
+        "es": "Dúo de Raros",
+        "en": "Weird Duo"
+      },
+      "participants": [
+        1,
+        4
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 4,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Espíritu Competitivo (acumulación cuando Hinata usa súper)",
+                "en": "Competitive Spirit (stack when Hinata uses super)"
+              },
+              "levels": {
+                "es": [
+                  "1",
+                  "1",
+                  "1",
+                  "1",
+                  "1"
+                ],
+                "en": [
+                  "1",
+                  "1",
+                  "1",
+                  "1",
+                  "1"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 1,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Reacción (al usar habilidad de recepción con Espíritu Competitivo)",
+                "en": "Reaction (when using reception skill with Competitive Spirit)"
+              },
+              "levels": {
+                "es": [
+                  "+15%",
+                  "+15%",
+                  "+15%",
+                  "+15%",
+                  "+15%"
+                ],
+                "en": [
+                  "+15%",
+                  "+15%",
+                  "+15%",
+                  "+15%",
+                  "+15%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Contemplando los Cerezos en Flor",
+        "en": "Cherry Blossom Viewing"
+      },
+      "participants": [
+        1,
+        89
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 89,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Defensa sin Fisuras (acumulaciones iniciales)",
+                "en": "Flawless Defense (initial stacks)"
+              },
+              "levels": {
+                "es": [
+                  "3",
+                  "3",
+                  "3",
+                  "3",
+                  "3"
+                ],
+                "en": [
+                  "3",
+                  "3",
+                  "3",
+                  "3",
+                  "3"
+                ]
+              }
+            },
+            {
+              "attribute": {
+                "es": "Conciencia (por cada acumulación de Defensa sin Fisuras)",
+                "en": "Awareness (per Flawless Defense stack)"
+              },
+              "levels": {
+                "es": [
+                  "+0.8%",
+                  "+1%",
+                  "+1%",
+                  "+1%",
+                  "+1.2%"
+                ],
+                "en": [
+                  "+0.8%",
+                  "+1%",
+                  "+1%",
+                  "+1%",
+                  "+1.2%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 1,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Ataque Rápido (en buena jugada)",
+                "en": "Quick Attack (on good play)"
+              },
+              "levels": {
+                "es": [
+                  "+1%",
+                  "+1.25%",
+                  "+1.25%",
+                  "+1.5%",
+                  "+1.5%"
+                ],
+                "en": [
+                  "+1%",
+                  "+1.25%",
+                  "+1.25%",
+                  "+1.5%",
+                  "+1.5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Grupo de los 'Rojos' de Karasuno",
+        "en": "Grupo de los 'Rojos' de Karasuno"
+      },
+      "participants": [
+        1,
+        4,
+        12,
+        15
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 1,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recepción",
+                "en": "Reception"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 12,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Colocación",
+                "en": "Set"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Amistad Peculiar",
+        "en": "Amistad Peculiar"
+      },
+      "participants": [
+        1,
+        38
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 1,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Ataque Rápido",
+                "en": "Quick Attack"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 38,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo",
+                "en": "Block"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Dúo de Raros (SSR ver.)",
+        "en": "Dúo de Raros (SSR ver.)"
+      },
+      "participants": [
+        4,
+        2
+      ],
+      "is_link_skill": false,
+      "effect_summary": {
+        "es": "Kageyama coloca para Hinata, quien realiza un ataque rápido con una potencia de 'Ataque Rápido' x 280%~340%. La 'Conciencia' de Hinata aumenta un 30% y su 'Potencia' aumenta según su 'Conciencia' (máximo 60%~100%). Este ataque no puede ser bloqueado. Al anotar, el tiempo de recarga de la habilidad se reinicia.",
+        "en": "Kageyama coloca para Hinata, quien realiza un ataque rápido con una potencia de 'Ataque Rápido' x 280%~340%. La 'Conciencia' de Hinata aumenta un 30% y su 'Potencia' aumenta según su 'Conciencia' (máximo 60%~100%). Este ataque no puede ser bloqueado. Al anotar, el tiempo de recarga de la habilidad se reinicia."
+      }
+    },
+    {
+      "name": {
+        "es": "Amigos",
+        "en": "Amigos"
+      },
+      "participants": [
+        2,
+        90
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 2,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Ataque Rápido",
+                "en": "Quick Attack"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 90,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Colocación",
+                "en": "Set"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Aspirantes a As",
+        "en": "Aspirantes a As"
+      },
+      "participants": [
+        2,
+        94
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 2,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo",
+                "en": "Block"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 94,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Ataque Rápido",
+                "en": "Quick Attack"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Buenos Rivales",
+        "en": "Buenos Rivales"
+      },
+      "participants": [
+        2,
+        98
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 2,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recepción",
+                "en": "Reception"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 98,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Colocación",
+                "en": "Set"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Primer Dúo",
+        "en": "Primer Dúo"
+      },
+      "participants": [
+        5,
+        7
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 5,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Conciencia (al activar habilidad de ataque rápido)",
+                "en": "Conciencia (al activar habilidad de ataque rápido)"
+              },
+              "levels": {
+                "es": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ],
+                "en": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 7,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Conciencia (al activar habilidad de ataque rápido)",
+                "en": "Conciencia (al activar habilidad de ataque rápido)"
+              },
+              "levels": {
+                "es": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ],
+                "en": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Confianza en Formación",
+        "en": "Confianza en Formación"
+      },
+      "participants": [
+        5,
+        16
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 16,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recepción",
+                "en": "Reception"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 5,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Saque",
+                "en": "Serve"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Tercer Año de Karasuno",
+        "en": "Karasuno Third Years"
+      },
+      "participants": [
+        6,
+        10,
+        9
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 6,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Stamina de habilidades fuertes/ataques (reducción)",
+                "en": "Stamina de habilidades fuertes/ataques (reducción)"
+              },
+              "levels": {
+                "es": [
+                  "-10%",
+                  "-10%",
+                  "-10%",
+                  "-10%",
+                  "-10%"
+                ],
+                "en": [
+                  "-10%",
+                  "-10%",
+                  "-10%",
+                  "-10%",
+                  "-10%"
+                ]
+              }
+            },
+            {
+              "attribute": {
+                "es": "Técnica de Ataque (al atacar)",
+                "en": "Técnica de Ataque (al atacar)"
+              },
+              "levels": {
+                "es": [
+                  "+6%",
+                  "+7%",
+                  "+8%",
+                  "+9%",
+                  "+10%"
+                ],
+                "en": [
+                  "+6%",
+                  "+7%",
+                  "+8%",
+                  "+9%",
+                  "+10%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 10,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Stamina de habilidades fuertes/ataques (reducción)",
+                "en": "Stamina de habilidades fuertes/ataques (reducción)"
+              },
+              "levels": {
+                "es": [
+                  "-10%",
+                  "-10%",
+                  "-10%",
+                  "-10%",
+                  "-10%"
+                ],
+                "en": [
+                  "-10%",
+                  "-10%",
+                  "-10%",
+                  "-10%",
+                  "-10%"
+                ]
+              }
+            },
+            {
+              "attribute": {
+                "es": "Técnica de Ataque (al atacar)",
+                "en": "Técnica de Ataque (al atacar)"
+              },
+              "levels": {
+                "es": [
+                  "+6%",
+                  "+7%",
+                  "+8%",
+                  "+9%",
+                  "+10%"
+                ],
+                "en": [
+                  "+6%",
+                  "+7%",
+                  "+8%",
+                  "+9%",
+                  "+10%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 9,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Stamina de habilidades fuertes/ataques (reducción)",
+                "en": "Stamina de habilidades fuertes/ataques (reducción)"
+              },
+              "levels": {
+                "es": [
+                  "-10%",
+                  "-10%",
+                  "-10%",
+                  "-10%",
+                  "-10%"
+                ],
+                "en": [
+                  "-10%",
+                  "-10%",
+                  "-10%",
+                  "-10%",
+                  "-10%"
+                ]
+              }
+            },
+            {
+              "attribute": {
+                "es": "Técnica de Ataque (al atacar)",
+                "en": "Técnica de Ataque (al atacar)"
+              },
+              "levels": {
+                "es": [
+                  "+6%",
+                  "+7%",
+                  "+8%",
+                  "+9%",
+                  "+10%"
+                ],
+                "en": [
+                  "+6%",
+                  "+7%",
+                  "+8%",
+                  "+9%",
+                  "+10%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "La Base de Karasuno",
+        "en": "Karasuno's Foundation"
+      },
+      "participants": [
+        6,
+        22
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 6,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Moral del equipo (cuando recepción es PERFECT)",
+                "en": "Moral del equipo (cuando recepción es PERFECT)"
+              },
+              "levels": {
+                "es": [
+                  "+3%",
+                  "+3%",
+                  "+4%",
+                  "+4%",
+                  "+5%"
+                ],
+                "en": [
+                  "+3%",
+                  "+3%",
+                  "+4%",
+                  "+4%",
+                  "+5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 22,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Moral del equipo (cuando recepción es PERFECT)",
+                "en": "Moral del equipo (cuando recepción es PERFECT)"
+              },
+              "levels": {
+                "es": [
+                  "+3%",
+                  "+3%",
+                  "+4%",
+                  "+4%",
+                  "+5%"
+                ],
+                "en": [
+                  "+3%",
+                  "+3%",
+                  "+4%",
+                  "+4%",
+                  "+5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Detrás de las Sonrisas",
+        "en": "Behind the Smiles"
+      },
+      "participants": [
+        6,
+        92
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 6,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recepción",
+                "en": "Reception"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 92,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recepción",
+                "en": "Reception"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "'Guardián' y 'As'",
+        "en": "'Guardian' and 'Ace'"
+      },
+      "participants": [
+        10,
+        13
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 10,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Técnica de Ataque",
+                "en": "Attack Technique"
+              },
+              "levels": {
+                "es": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ],
+                "en": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 13,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Técnica de Defensa",
+                "en": "Defense Technique"
+              },
+              "levels": {
+                "es": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ],
+                "en": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Cañón y Muro de Hierro",
+        "en": "Cannon and Iron Wall"
+      },
+      "participants": [
+        10,
+        39
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 10,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Club de Fans de Kiyoko-san",
+        "en": "Kiyoko-san Fan Club"
+      },
+      "participants": [
+        13,
+        15
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 13,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Moral del equipo (al anotar)",
+                "en": "Moral del equipo (al anotar)"
+              },
+              "levels": {
+                "es": [
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10"
+                ],
+                "en": [
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 15,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Moral del equipo (al anotar)",
+                "en": "Moral del equipo (al anotar)"
+              },
+              "levels": {
+                "es": [
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10"
+                ],
+                "en": [
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Segundo Año de Karasuno",
+        "en": "Karasuno Second Years"
+      },
+      "participants": [
+        15,
+        13,
+        22
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 22,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 13,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Colocación",
+                "en": "Set"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 15,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "¡Amigo!",
+        "en": "Friend!"
+      },
+      "participants": [
+        15,
+        95
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 15,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 95,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "'Escudo' y 'Lanza'",
+        "en": "'Shield' and 'Spear'"
+      },
+      "participants": [
+        18,
+        20
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 18,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo",
+                "en": "Block"
+              },
+              "levels": {
+                "es": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ],
+                "en": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 20,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Saque",
+                "en": "Serve"
+              },
+              "levels": {
+                "es": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ],
+                "en": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Maestro y Discípulo",
+        "en": "Teacher and Student"
+      },
+      "participants": [
+        18,
+        92
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 18,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo",
+                "en": "Block"
+              },
+              "levels": {
+                "es": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ],
+                "en": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 92,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo",
+                "en": "Block"
+              },
+              "levels": {
+                "es": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ],
+                "en": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Los Genios de Karasuno",
+        "en": "Karasuno's Geniuses"
+      },
+      "participants": [
+        8,
+        12
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 12,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recibir (condicionado a movimiento especial)",
+                "en": "Recibir (condicionado a movimiento especial)"
+              },
+              "levels": {
+                "es": [
+                  "+5%",
+                  "+7%",
+                  "+9%",
+                  "+11%",
+                  "+13%"
+                ],
+                "en": [
+                  "+5%",
+                  "+7%",
+                  "+9%",
+                  "+11%",
+                  "+13%"
+                ]
+              }
+            },
+            {
+              "attribute": {
+                "es": "Reacción",
+                "en": "Reaction"
+              },
+              "levels": {
+                "es": [
+                  "+5%",
+                  "+5%",
+                  "+5%",
+                  "+5%",
+                  "+5%"
+                ],
+                "en": [
+                  "+5%",
+                  "+5%",
+                  "+5%",
+                  "+5%",
+                  "+5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Colocadores de Karasuno",
+        "en": "Karasuno Setters"
+      },
+      "participants": [
+        8,
+        4
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 8,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Colocación",
+                "en": "Set"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Tercer Año de Karasuno (SP ver.)",
+        "en": "Karasuno Third Years (SP ver.)"
+      },
+      "participants": [
+        8,
+        6,
+        10
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 8,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo",
+                "en": "Block"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 6,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recepción",
+                "en": "Reception"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 10,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Sol y Luna",
+        "en": "Sun and Moon"
+      },
+      "participants": [
+        1,
+        17
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 1,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Conciencia de miembros del equipo (durante colocación)",
+                "en": "Conciencia de miembros del equipo (durante colocación)"
+              },
+              "levels": {
+                "es": [
+                  "+10%",
+                  "+15%",
+                  "+20%",
+                  "+25%",
+                  "+30%"
+                ],
+                "en": [
+                  "+10%",
+                  "+15%",
+                  "+20%",
+                  "+25%",
+                  "+30%"
+                ]
+              }
+            },
+            {
+              "attribute": {
+                "es": "Cooldown de 'Vuela Alto' reducido (cuando ataque rápido es nice play)",
+                "en": "Cooldown de 'Vuela Alto' reducido (cuando ataque rápido es nice play)"
+              },
+              "levels": {
+                "es": [
+                  "activo",
+                  "activo",
+                  "activo",
+                  "activo",
+                  "activo"
+                ],
+                "en": [
+                  "activo",
+                  "activo",
+                  "activo",
+                  "activo",
+                  "activo"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 17,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Conciencia (basada en la Conciencia de Hinata)",
+                "en": "Conciencia (basada en la Conciencia de Hinata)"
+              },
+              "levels": {
+                "es": [
+                  "+10%",
+                  "+15%",
+                  "+20%",
+                  "+25%",
+                  "+30%"
+                ],
+                "en": [
+                  "+10%",
+                  "+15%",
+                  "+20%",
+                  "+25%",
+                  "+30%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "El Momento de 'Engancharse' al Voleibol",
+        "en": "The Moment of 'Getting Hooked' on Volleyball"
+      },
+      "participants": [
+        17,
+        61
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 61,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 17,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Ataque Rápido",
+                "en": "Quick Attack"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "'Coraje' y 'Espíritu Competitivo'",
+        "en": "'Courage' and 'Competitive Spirit'"
+      },
+      "participants": [
+        89,
+        95
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 89,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Colocación",
+                "en": "Set"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 95,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recepción",
+                "en": "Reception"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "'Cerebro' y 'Torre de Control'",
+        "en": "'Brain' and 'Control Tower'"
+      },
+      "participants": [
+        91,
+        90
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 91,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Toss para ataque rápido de Kuroo",
+                "en": "Toss para ataque rápido de Kuroo"
+              },
+              "levels": {
+                "es": [
+                  "disponible",
+                  "disponible",
+                  "disponible",
+                  "disponible",
+                  "disponible"
+                ],
+                "en": [
+                  "disponible",
+                  "disponible",
+                  "disponible",
+                  "disponible",
+                  "disponible"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 90,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Ataque Rápido (potencia)",
+                "en": "Ataque Rápido (potencia)"
+              },
+              "levels": {
+                "es": [
+                  "+265%",
+                  "+280%",
+                  "+295%",
+                  "+310%",
+                  "+325%"
+                ],
+                "en": [
+                  "+265%",
+                  "+280%",
+                  "+295%",
+                  "+310%",
+                  "+325%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Senpais Confiables",
+        "en": "Reliable Senpais"
+      },
+      "participants": [
+        91,
+        93,
+        96
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 91,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Ataque Rápido",
+                "en": "Quick Attack"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "'Núcleo' y 'Torre de Control'",
+        "en": "'Core' and 'Control Tower'"
+      },
+      "participants": [
+        92,
+        90
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 90,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo",
+                "en": "Block"
+              },
+              "levels": {
+                "es": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ],
+                "en": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 92,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Colocación",
+                "en": "Set"
+              },
+              "levels": {
+                "es": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ],
+                "en": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Tipos Similares",
+        "en": "Similar Types"
+      },
+      "participants": [
+        92,
+        7
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 7,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recepción",
+                "en": "Reception"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 92,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo",
+                "en": "Block"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Guía Educativa de 'Protección'",
+        "en": "'Protection' Educational Guide"
+      },
+      "participants": [
+        93,
+        94
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 93,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recepción",
+                "en": "Reception"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 94,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Ataque Rápido",
+                "en": "Quick Attack"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Guardianes del Equipo",
+        "en": "Team Guardians"
+      },
+      "participants": [
+        93,
+        13
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 13,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recepción",
+                "en": "Reception"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 93,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recepción",
+                "en": "Reception"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Oponente 'Inconquistable'",
+        "en": "'Unconquerable' Opponent"
+      },
+      "participants": [
+        94,
+        90
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 94,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo",
+                "en": "Block"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Respiración Acompasada",
+        "en": "Synchronized Breathing"
+      },
+      "participants": [
+        26,
+        28
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 26,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Colocación especial para Iwaizumi",
+                "en": "Colocación especial para Iwaizumi"
+              },
+              "levels": {
+                "es": [
+                  "disponible",
+                  "disponible",
+                  "disponible",
+                  "disponible",
+                  "disponible"
+                ],
+                "en": [
+                  "disponible",
+                  "disponible",
+                  "disponible",
+                  "disponible",
+                  "disponible"
+                ]
+              }
+            },
+            {
+              "attribute": {
+                "es": "Ritmo de Ataque (acumulaciones por combo)",
+                "en": "Ritmo de Ataque (acumulaciones por combo)"
+              },
+              "levels": {
+                "es": [
+                  "2",
+                  "2",
+                  "2",
+                  "2",
+                  "2"
+                ],
+                "en": [
+                  "2",
+                  "2",
+                  "2",
+                  "2",
+                  "2"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 28,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate (con colocación de Oikawa)",
+                "en": "Remate (con colocación de Oikawa)"
+              },
+              "levels": {
+                "es": [
+                  "+255%",
+                  "+275%",
+                  "+295%",
+                  "+315%",
+                  "+315%"
+                ],
+                "en": [
+                  "+255%",
+                  "+275%",
+                  "+295%",
+                  "+315%",
+                  "+315%"
+                ]
+              }
+            },
+            {
+              "attribute": {
+                "es": "Conciencia del equipo (por acumulación de Ritmo de Ataque)",
+                "en": "Conciencia del equipo (por acumulación de Ritmo de Ataque)"
+              },
+              "levels": {
+                "es": [
+                  "+1%",
+                  "+1%",
+                  "+1%",
+                  "+1%",
+                  "+1%"
+                ],
+                "en": [
+                  "+1%",
+                  "+1%",
+                  "+1%",
+                  "+1%",
+                  "+1%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Rivales Predestinados",
+        "en": "Destined Rivals"
+      },
+      "participants": [
+        26,
+        53
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 26,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Colocación",
+                "en": "Set"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "'Rey' y 'Gran Rey'",
+        "en": "'King' and 'Great King'"
+      },
+      "participants": [
+        4,
+        26
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 4,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Saque",
+                "en": "Serve"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 26,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Saque",
+                "en": "Serve"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Hacia Nuevas Alturas",
+        "en": "Towards New Heights"
+      },
+      "participants": [
+        26,
+        34
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 26,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Colocación",
+                "en": "Set"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Confianza Despiadada",
+        "en": "Ruthless Trust"
+      },
+      "participants": [
+        26,
+        36
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 26,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo",
+                "en": "Block"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 36,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Compañero de Confianza",
+        "en": "Trusted Partner"
+      },
+      "participants": [
+        27,
+        29
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 27,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Conciencia",
+                "en": "Awareness"
+              },
+              "levels": {
+                "es": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ],
+                "en": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 29,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Conciencia",
+                "en": "Awareness"
+              },
+              "levels": {
+                "es": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ],
+                "en": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Sociedad de Lobos",
+        "en": "Wolf Pack"
+      },
+      "participants": [
+        28,
+        36
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 28,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ],
+                "en": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 36,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ],
+                "en": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Honestidad y Calma",
+        "en": "Honesty and Calm"
+      },
+      "participants": [
+        35,
+        34
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 35,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Ataque Rápido",
+                "en": "Quick Attack"
+              },
+              "levels": {
+                "es": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ],
+                "en": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 34,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ],
+                "en": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Pasión Oculta",
+        "en": "Hidden Passion"
+      },
+      "participants": [
+        36,
+        32
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 36,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recepción",
+                "en": "Reception"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Segundo Año de Aoba Johsai",
+        "en": "Aoba Johsai Second Years"
+      },
+      "participants": [
+        36,
+        32,
+        33
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 33,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recepción",
+                "en": "Reception"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 32,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recepción",
+                "en": "Reception"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Baño en el Mar",
+        "en": "Sea Bathing"
+      },
+      "participants": [
+        38,
+        61,
+        63
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 38,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Reacción (en bloqueo de 2/3 durante moral de equipo)",
+                "en": "Reaction (in 2/3 block during team morale)"
+              },
+              "levels": {
+                "es": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ],
+                "en": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ]
+              }
+            },
+            {
+              "attribute": {
+                "es": "Moral del equipo (al inicio del rally)",
+                "en": "Moral del equipo (al inicio del rally)"
+              },
+              "levels": {
+                "es": [
+                  "+20",
+                  "+20",
+                  "+20",
+                  "+20",
+                  "+20"
+                ],
+                "en": [
+                  "+20",
+                  "+20",
+                  "+20",
+                  "+20",
+                  "+20"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 61,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Reacción (en bloqueo de 2/3 durante moral de equipo)",
+                "en": "Reaction (in 2/3 block during team morale)"
+              },
+              "levels": {
+                "es": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ],
+                "en": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 63,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Reacción (en bloqueo de 2/3 durante moral de equipo)",
+                "en": "Reaction (in 2/3 block during team morale)"
+              },
+              "levels": {
+                "es": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ],
+                "en": [
+                  "6%",
+                  "7%",
+                  "8%",
+                  "9%",
+                  "10%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Taciturno y Lengua Afilada",
+        "en": "Taciturn and Sharp Tongue"
+      },
+      "participants": [
+        38,
+        41
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 38,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo",
+                "en": "Block"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Taciturno y Lengua Afilada (SSR ver.)",
+        "en": "Taciturn and Sharp Tongue (SSR ver.)"
+      },
+      "participants": [
+        39,
+        41
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 39,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo de dos (potencia combinada)",
+                "en": "Double Block (combined power)"
+              },
+              "levels": {
+                "es": [
+                  "x180%",
+                  "x200%",
+                  "x220%",
+                  "x230%",
+                  "x240%"
+                ],
+                "en": [
+                  "x180%",
+                  "x200%",
+                  "x220%",
+                  "x230%",
+                  "x240%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 41,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Ira al rematador oponente",
+                "en": "Anger towards opposing spiker"
+              },
+              "levels": {
+                "es": [
+                  "Activado",
+                  "Activado",
+                  "Activado",
+                  "Activado",
+                  "Activado"
+                ],
+                "en": [
+                  "Activado",
+                  "Activado",
+                  "Activado",
+                  "Activado",
+                  "Activado"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Amistad Peculiar (SSR ver.)",
+        "en": "Peculiar Friendship (SSR ver.)"
+      },
+      "participants": [
+        39,
+        2
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 39,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo",
+                "en": "Block"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Nuevo Capitán y Gran Novato",
+        "en": "New Captain and Great Rookie"
+      },
+      "participants": [
+        41,
+        43
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 41,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo de línea delantera (equipo)",
+                "en": "Front Line Block (team)"
+              },
+              "levels": {
+                "es": [
+                  "2%",
+                  "2.5%",
+                  "3%",
+                  "3.5%",
+                  "4%"
+                ],
+                "en": [
+                  "2%",
+                  "2.5%",
+                  "3%",
+                  "3.5%",
+                  "4%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 43,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo de línea delantera (equipo)",
+                "en": "Front Line Block (team)"
+              },
+              "levels": {
+                "es": [
+                  "2%",
+                  "2.5%",
+                  "3%",
+                  "3.5%",
+                  "4%"
+                ],
+                "en": [
+                  "2%",
+                  "2.5%",
+                  "3%",
+                  "3.5%",
+                  "4%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Antiguo y Nuevo Capitán de Date Tech",
+        "en": "Former and New Captain of Date Tech"
+      },
+      "participants": [
+        41,
+        47
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 41,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Colocadores de Date Tech",
+        "en": "Date Tech Setters"
+      },
+      "participants": [
+        43,
+        47
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 43,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Colocación",
+                "en": "Set"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Tercer Año de Date Tech",
+        "en": "Date Tech Third Years"
+      },
+      "participants": [
+        48,
+        47,
+        46
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 48,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Moral del equipo (al activar bloqueo)",
+                "en": "Team Morale (when activating block)"
+              },
+              "levels": {
+                "es": [
+                  "3%",
+                  "3%",
+                  "4%",
+                  "4%",
+                  "5%"
+                ],
+                "en": [
+                  "3%",
+                  "3%",
+                  "4%",
+                  "4%",
+                  "5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 47,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Moral del equipo (al activar bloqueo)",
+                "en": "Team Morale (when activating block)"
+              },
+              "levels": {
+                "es": [
+                  "3%",
+                  "3%",
+                  "4%",
+                  "4%",
+                  "5%"
+                ],
+                "en": [
+                  "3%",
+                  "3%",
+                  "4%",
+                  "4%",
+                  "5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 46,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Moral del equipo (al activar bloqueo)",
+                "en": "Team Morale (when activating block)"
+              },
+              "levels": {
+                "es": [
+                  "3%",
+                  "3%",
+                  "4%",
+                  "4%",
+                  "5%"
+                ],
+                "en": [
+                  "3%",
+                  "3%",
+                  "4%",
+                  "4%",
+                  "5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Rematadores de Date Tech",
+        "en": "Date Tech Spikers"
+      },
+      "participants": [
+        48,
+        50
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 48,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "2%",
+                  "2.5%",
+                  "3%",
+                  "3.5%",
+                  "4%"
+                ],
+                "en": [
+                  "2%",
+                  "2.5%",
+                  "3%",
+                  "3.5%",
+                  "4%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 50,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo",
+                "en": "Block"
+              },
+              "levels": {
+                "es": [
+                  "2%",
+                  "2.5%",
+                  "3%",
+                  "3.5%",
+                  "4%"
+                ],
+                "en": [
+                  "2%",
+                  "2.5%",
+                  "3%",
+                  "3.5%",
+                  "4%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Amigos para Siempre",
+        "en": "Friends Forever"
+      },
+      "participants": [
+        53,
+        54
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 53,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Técnica de Ataque",
+                "en": "Attack Technique"
+              },
+              "levels": {
+                "es": [
+                  "3%",
+                  "3.5%",
+                  "4%",
+                  "4.5%",
+                  "5%"
+                ],
+                "en": [
+                  "3%",
+                  "3.5%",
+                  "4%",
+                  "4.5%",
+                  "5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 54,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Técnica de Defensa",
+                "en": "Defense Technique"
+              },
+              "levels": {
+                "es": [
+                  "3%",
+                  "3.5%",
+                  "4%",
+                  "4.5%",
+                  "5%"
+                ],
+                "en": [
+                  "3%",
+                  "3.5%",
+                  "4%",
+                  "4.5%",
+                  "5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "'Campeón Absoluto' y Colocador Sólido",
+        "en": "'Absolute Champion' and Solid Setter"
+      },
+      "participants": [
+        53,
+        56
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 53,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate (con colocación de Shirabu)",
+                "en": "Spike (with Shirabu's set)"
+              },
+              "levels": {
+                "es": [
+                  "x260%",
+                  "x280%",
+                  "x300%",
+                  "x310%",
+                  "x320%"
+                ],
+                "en": [
+                  "x260%",
+                  "x280%",
+                  "x300%",
+                  "x310%",
+                  "x320%"
+                ]
+              }
+            },
+            {
+              "attribute": {
+                "es": "Potencia (en combo con Shirabu)",
+                "en": "Power (in combo with Shirabu)"
+              },
+              "levels": {
+                "es": [
+                  "+10%",
+                  "+10%",
+                  "+10%",
+                  "+10%",
+                  "+10%"
+                ],
+                "en": [
+                  "+10%",
+                  "+10%",
+                  "+10%",
+                  "+10%",
+                  "+10%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 56,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Colocación (para combo con Ushijima)",
+                "en": "Set (for combo with Ushijima)"
+              },
+              "levels": {
+                "es": [
+                  "Activado",
+                  "Activado",
+                  "Activado",
+                  "Activado",
+                  "Activado"
+                ],
+                "en": [
+                  "Activado",
+                  "Activado",
+                  "Activado",
+                  "Activado",
+                  "Activado"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Tercer Año de Shiratorizawa",
+        "en": "Shiratorizawa Third Years"
+      },
+      "participants": [
+        53,
+        54,
+        57,
+        58,
+        60
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 54,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo",
+                "en": "Block"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 57,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Saque",
+                "en": "Serve"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 58,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 60,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recepción",
+                "en": "Reception"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Del Gran As al As",
+        "en": "From Great Ace to Ace"
+      },
+      "participants": [
+        53,
+        55
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 53,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 55,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recepción",
+                "en": "Reception"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "'Ushiwaka' y 'Benkei'",
+        "en": "'Ushiwaka' and 'Benkei'"
+      },
+      "participants": [
+        53,
+        58
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 53,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo",
+                "en": "Block"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 58,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recepción",
+                "en": "Reception"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Bloqueadores Centrales de Shiratorizawa",
+        "en": "Shiratorizawa Middle Blockers"
+      },
+      "participants": [
+        54,
+        59
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 54,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo de línea delantera (equipo)",
+                "en": "Front Line Block (team)"
+              },
+              "levels": {
+                "es": [
+                  "5%",
+                  "5.5%",
+                  "6%",
+                  "6.5%",
+                  "7%"
+                ],
+                "en": [
+                  "5%",
+                  "5.5%",
+                  "6%",
+                  "6.5%",
+                  "7%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 59,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo de línea delantera (equipo)",
+                "en": "Front Line Block (team)"
+              },
+              "levels": {
+                "es": [
+                  "5%",
+                  "5.5%",
+                  "6%",
+                  "6.5%",
+                  "7%"
+                ],
+                "en": [
+                  "5%",
+                  "5.5%",
+                  "6%",
+                  "6.5%",
+                  "7%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Expectativa del Senpai",
+        "en": "Senpai's Expectations"
+      },
+      "participants": [
+        54,
+        55
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 54,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Ataque Rápido",
+                "en": "Quick Attack"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 55,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Adivinanza vs. Sistema",
+        "en": "Guess vs. System"
+      },
+      "participants": [
+        54,
+        18
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 54,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo",
+                "en": "Block"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Rematadores de Shiratorizawa",
+        "en": "Shiratorizawa Spikers"
+      },
+      "participants": [
+        55,
+        58
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 55,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate del equipo",
+                "en": "Team Spike"
+              },
+              "levels": {
+                "es": [
+                  "4%",
+                  "4.5%",
+                  "5%",
+                  "5.5%",
+                  "6%"
+                ],
+                "en": [
+                  "4%",
+                  "4.5%",
+                  "5%",
+                  "5.5%",
+                  "6%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 58,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate del equipo",
+                "en": "Team Spike"
+              },
+              "levels": {
+                "es": [
+                  "4%",
+                  "4.5%",
+                  "5%",
+                  "5.5%",
+                  "6%"
+                ],
+                "en": [
+                  "4%",
+                  "4.5%",
+                  "5%",
+                  "5.5%",
+                  "6%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Segundo Año de Shiratorizawa",
+        "en": "Shiratorizawa Second Years"
+      },
+      "participants": [
+        56,
+        59
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 56,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Colocación",
+                "en": "Set"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 59,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Ataque Rápido",
+                "en": "Quick Attack"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Colocadores de Diferentes Tipos",
+        "en": "Different Type Setters"
+      },
+      "participants": [
+        56,
+        57
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 56,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Saque",
+                "en": "Serve"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 57,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Colocación",
+                "en": "Set"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "As Milagroso y Colocador Atento",
+        "en": "Miraculous Ace and Attentive Setter"
+      },
+      "participants": [
+        62,
+        64
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 62,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Modo Depresivo",
+                "en": "Depressive Mode"
+              },
+              "levels": {
+                "es": [
+                  "Eliminado",
+                  "Eliminado",
+                  "Eliminado",
+                  "Eliminado",
+                  "Eliminado"
+                ],
+                "en": [
+                  "Eliminado",
+                  "Eliminado",
+                  "Eliminado",
+                  "Eliminado",
+                  "Eliminado"
+                ]
+              }
+            },
+            {
+              "attribute": {
+                "es": "Remate (con colocación de Akaashi)",
+                "en": "Spike (with Akaashi's set)"
+              },
+              "levels": {
+                "es": [
+                  "x265%",
+                  "x285%",
+                  "x305%",
+                  "x315%",
+                  "x325%"
+                ],
+                "en": [
+                  "x265%",
+                  "x285%",
+                  "x305%",
+                  "x315%",
+                  "x325%"
+                ]
+              }
+            },
+            {
+              "attribute": {
+                "es": "Remate (bonus adicional)",
+                "en": "Spike (additional bonus)"
+              },
+              "levels": {
+                "es": [
+                  "+20%",
+                  "+20%",
+                  "+20%",
+                  "+20%",
+                  "+20%"
+                ],
+                "en": [
+                  "+20%",
+                  "+20%",
+                  "+20%",
+                  "+20%",
+                  "+20%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 64,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Colocación (para combo con Bokuto)",
+                "en": "Set (for combo with Bokuto)"
+              },
+              "levels": {
+                "es": [
+                  "Activado",
+                  "Activado",
+                  "Activado",
+                  "Activado",
+                  "Activado"
+                ],
+                "en": [
+                  "Activado",
+                  "Activado",
+                  "Activado",
+                  "Activado",
+                  "Activado"
+                ]
+              }
+            },
+            {
+              "attribute": {
+                "es": "Moral del equipo",
+                "en": "Team Morale"
+              },
+              "levels": {
+                "es": [
+                  "+15",
+                  "+15",
+                  "+15",
+                  "+15",
+                  "+15"
+                ],
+                "en": [
+                  "+15",
+                  "+15",
+                  "+15",
+                  "+15",
+                  "+15"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Compañeros de Práctica de Tokio",
+        "en": "Tokyo Practice Partners"
+      },
+      "participants": [
+        62,
+        64,
+        91,
+        18
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 62,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Saque",
+                "en": "Serve"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 64,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Colocación",
+                "en": "Set"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Primer Discípulo",
+        "en": "First Disciple"
+      },
+      "participants": [
+        62,
+        2
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 62,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Enganchados al Voleibol",
+        "en": "Hooked on Volleyball"
+      },
+      "participants": [
+        62,
+        65
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 62,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recepción",
+                "en": "Reception"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Compañeros de Práctica de Tokio (Habilidad)",
+        "en": "Tokyo Practice Partners (Skill)"
+      },
+      "participants": [
+        62,
+        66
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 66,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Saque",
+                "en": "Serve"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Tercer Año de Fukurōdani",
+        "en": "Fukurōdani Third Years"
+      },
+      "participants": [
+        62,
+        65,
+        69,
+        67,
+        66
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 69,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo",
+                "en": "Block"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 66,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 65,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recepción",
+                "en": "Reception"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 67,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recepción",
+                "en": "Reception"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Bloqueadores Centrales de Fukurōdani",
+        "en": "Fukurōdani Middle Blockers"
+      },
+      "participants": [
+        69,
+        68
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 69,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Ataque Rápido",
+                "en": "Quick Attack"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "La Importancia de una 'Base'",
+        "en": "The Importance of a 'Foundation'"
+      },
+      "participants": [
+        70,
+        6
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 70,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Bloqueo",
+                "en": "Block"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Dos de Alta Tensión",
+        "en": "Two High-Tension"
+      },
+      "participants": [
+        70,
+        71
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 70,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Rematadores de Jōzenji",
+        "en": "Jōzenji Spikers"
+      },
+      "participants": [
+        70,
+        73
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 70,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recepción",
+                "en": "Reception"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 73,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Los Gemelos Más Fuertes de la Preparatoria",
+        "en": "The Strongest Twins in High School"
+      },
+      "participants": [
+        77,
+        78
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 77,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Colocación (para ataque rápido tempo negativo)",
+                "en": "Colocación (para ataque rápido tempo negativo)"
+              },
+              "levels": {
+                "es": [
+                  "Activado",
+                  "Activado",
+                  "Activado",
+                  "Activado",
+                  "Activado"
+                ],
+                "en": [
+                  "Activado",
+                  "Activado",
+                  "Activado",
+                  "Activado",
+                  "Activado"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 78,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Ataque Rápido (tempo negativo, no bloqueabLe)",
+                "en": "Ataque Rápido (tempo negativo, no bloqueabLe)"
+              },
+              "levels": {
+                "es": [
+                  "Activado",
+                  "Activado",
+                  "Activado",
+                  "Activado",
+                  "Activado"
+                ],
+                "en": [
+                  "Activado",
+                  "Activado",
+                  "Activado",
+                  "Activado",
+                  "Activado"
+                ]
+              }
+            },
+            {
+              "attribute": {
+                "es": "Técnica de Ataque (hasta que uno deje cancha)",
+                "en": "Técnica de Ataque (hasta que uno deje cancha)"
+              },
+              "levels": {
+                "es": [
+                  "+15%",
+                  "+15%",
+                  "+15%",
+                  "+15%",
+                  "+15%"
+                ],
+                "en": [
+                  "+15%",
+                  "+15%",
+                  "+15%",
+                  "+15%",
+                  "+15%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Cerebro y Eje",
+        "en": "Brain and Axis"
+      },
+      "participants": [
+        77,
+        78,
+        79
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 77,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Técnica de colocación",
+                "en": "Técnica de colocación"
+              },
+              "levels": {
+                "es": [
+                  "+3%",
+                  "+3.5%",
+                  "+4%",
+                  "+4.5%",
+                  "+5%"
+                ],
+                "en": [
+                  "+3%",
+                  "+3.5%",
+                  "+4%",
+                  "+4.5%",
+                  "+5%"
+                ]
+              }
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Donpishari",
+              "description": "Al inicio del partido, gana acumulaciones de efecto 3 stacks. Por cada stack, la técnica mejora un +3%. Máximo 10 stacks.",
+              "levels": [
+                "+3%",
+                "+3.5%",
+                "+4%",
+                "+4.5%",
+                "+5%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 78,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Ataque Rápido",
+                "en": "Quick Attack"
+              },
+              "levels": {
+                "es": [
+                  "+3%",
+                  "+3.5%",
+                  "+4%",
+                  "+4.5%",
+                  "+5%"
+                ],
+                "en": [
+                  "+3%",
+                  "+3.5%",
+                  "+4%",
+                  "+4.5%",
+                  "+5%"
+                ]
+              }
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Primer ataque rápido potenciado",
+              "description": "El primer ataque rápido de cada set aumenta su potencia de 'Ataque Rápido' en un 12%.",
+              "levels": [
+                "+12%"
+              ]
+            }
+          ]
+        },
+        {
+          "character_id": 79,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Parámetros de líder",
+                "en": "Parámetros de líder"
+              },
+              "levels": {
+                "es": [
+                  "+3%",
+                  "+3.5%",
+                  "+4%",
+                  "+4.5%",
+                  "+5%"
+                ],
+                "en": [
+                  "+3%",
+                  "+3.5%",
+                  "+4%",
+                  "+4.5%",
+                  "+5%"
+                ]
+              }
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Certeza",
+              "description": "Al inicio del partido, gana efecto de certeza que mejora la estabilidad del equipo.",
+              "levels": [
+                "+2%",
+                "+2.5%",
+                "+3%",
+                "+3.5%",
+                "+4%"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Amigos de la Clase de Voleibol",
+        "en": "Amigos de la Clase de Voleibol"
+      },
+      "participants": [
+        77,
+        78,
+        81
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 77,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Saque",
+                "en": "Serve"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 78,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Ataque Rápido",
+                "en": "Quick Attack"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 81,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Compañeros Colocadores del Campamento Juvenil",
+        "en": "Compañeros Colocadores del Campamento Juvenil"
+      },
+      "participants": [
+        4,
+        77
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 4,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Colocación",
+                "en": "Set"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 77,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Colocación",
+                "en": "Set"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Segundo Año de Inarizaki",
+        "en": "Segundo Año de Inarizaki"
+      },
+      "participants": [
+        77,
+        78,
+        80,
+        83
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 80,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Ataque Rápido",
+                "en": "Quick Attack"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 83,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Remate",
+                "en": "Spike"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 78,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Ataque Rápido",
+                "en": "Quick Attack"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Compañeros del Campamento Intensivo Juvenil de Japón",
+        "en": "Compañeros del Campamento Intensivo Juvenil de Japón"
+      },
+      "participants": [
+        77,
+        87
+      ],
+      "is_link_skill": false,
+      "effect_summary": {
+        "es": "Aumenta la 'Colocación' de Atsumu, el 'Remate Fuerte' de Sakusa, la 'Recepción' de Komori y el 'Remate Fuerte' de Hoshiumi según el nivel.",
+        "en": "Aumenta la 'Colocación' de Atsumu, el 'Remate Fuerte' de Sakusa, la 'Recepción' de Komori y el 'Remate Fuerte' de Hoshiumi según el nivel."
+      }
+    },
+    {
+      "name": {
+        "es": "Amigos de la Infancia que Jugaron en Secundaria y Preparatoria",
+        "en": "Amigos de la Infancia que Jugaron en Secundaria y Preparatoria"
+      },
+      "participants": [
+        87,
+        88
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 87,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Parámetro principal",
+                "en": "Parámetro principal"
+              },
+              "levels": {
+                "es": [
+                  "+6%",
+                  "+7%",
+                  "+8%",
+                  "+9%",
+                  "+10%"
+                ],
+                "en": [
+                  "+6%",
+                  "+7%",
+                  "+8%",
+                  "+9%",
+                  "+10%"
+                ]
+              }
+            },
+            {
+              "attribute": {
+                "es": "Bloqueo",
+                "en": "Block"
+              },
+              "levels": {
+                "es": [
+                  "+6%",
+                  "+7%",
+                  "+8%",
+                  "+9%",
+                  "+10%"
+                ],
+                "en": [
+                  "+6%",
+                  "+7%",
+                  "+8%",
+                  "+9%",
+                  "+10%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 88,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "All-Rounder (efecto al inicio del partido)",
+                "en": "All-Rounder (efecto al inicio del partido)"
+              },
+              "levels": {
+                "es": [
+                  "1 stack",
+                  "1 stack",
+                  "1 stack",
+                  "1 stack",
+                  "1 stack"
+                ],
+                "en": [
+                  "1 stack",
+                  "1 stack",
+                  "1 stack",
+                  "1 stack",
+                  "1 stack"
+                ]
+              }
+            },
+            {
+              "attribute": {
+                "es": "Bloqueo sólido (efecto al inicio del partido)",
+                "en": "Bloqueo sólido (efecto al inicio del partido)"
+              },
+              "levels": {
+                "es": [
+                  "1 stack",
+                  "1 stack",
+                  "1 stack",
+                  "1 stack",
+                  "1 stack"
+                ],
+                "en": [
+                  "1 stack",
+                  "1 stack",
+                  "1 stack",
+                  "1 stack",
+                  "1 stack"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Un atacante de primer nivel y un libero de primer nivel",
+        "en": "Un atacante de primer nivel y un libero de primer nivel"
+      },
+      "participants": [
+        101,
+        102
+      ],
+      "is_link_skill": true,
+      "effects_by_character": [
+        {
+          "character_id": 101,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Golpe Poderoso",
+                "en": "Golpe Poderoso"
+              },
+              "levels": {
+                "es": [
+                  "10%",
+                  "12.5%",
+                  "15%",
+                  "17.5%",
+                  "20%"
+                ],
+                "en": [
+                  "10%",
+                  "12.5%",
+                  "15%",
+                  "17.5%",
+                  "20%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 102,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recibir",
+                "en": "Recibir"
+              },
+              "levels": {
+                "es": [
+                  "10%",
+                  "12.5%",
+                  "15%",
+                  "17.5%",
+                  "20%"
+                ],
+                "en": [
+                  "10%",
+                  "12.5%",
+                  "15%",
+                  "17.5%",
+                  "20%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Compañeros de equipo en el campamento de entrenamiento juvenil de todo Japón (Kizuna)",
+        "en": "Compañeros de equipo en el campamento de entrenamiento juvenil de todo Japón (Kizuna)"
+      },
+      "participants": [
+        77,
+        101,
+        102,
+        87
+      ],
+      "is_link_skill": false,
+      "effects_by_character": [
+        {
+          "character_id": 77,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Lanzamiento",
+                "en": "Lanzamiento"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 101,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Golpe Poderoso",
+                "en": "Golpe Poderoso"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 102,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Recibir",
+                "en": "Recibir"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "character_id": 87,
+          "bonuses": [
+            {
+              "attribute": {
+                "es": "Golpe Poderoso",
+                "en": "Golpe Poderoso"
+              },
+              "levels": {
+                "es": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ],
+                "en": [
+                  "+5 +1%",
+                  "+7 +2%",
+                  "+9 +3%",
+                  "+12 +4%",
+                  "+15 +5%"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
