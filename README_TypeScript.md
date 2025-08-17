@@ -1,6 +1,10 @@
 # Haikyu Flight High Team Builder - TypeScript Version
 
-Interactive team builder for Haikyu!! volleyball positions inspired by the anime/manga, now built with TypeScript for better type safety and maintainability.
+🏐 **Interactive volleyball team builder for Haikyu Flight High characters with TypeScript support!**
+
+## 🚀 Recent Migration to TypeScript
+
+This project has been completely migrated from JavaScript to TypeScript with modern architecture and type safety.
 
 ## 🏐 Features
 

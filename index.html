@@ -491,7 +491,7 @@
             >
             <select id="sortBy" class="sort-dropdown">
               <option value="name">Nombre</option>
-              <option value="rarity">Rareza</option>
+              <option value="rarity" selected>Rareza</option>
             </select>
           </div>
 
@@ -579,10 +579,12 @@
       </div>
     </div>
 
-    <script src="translations.js"></script>
-    <script type="module" src="script.js"></script>
+    <!-- TypeScript compiled modules -->
+    <script type="module" src="dist/init.js"></script>
 
-    <!-- <script type="module" src="dist/main.js"></script> -->
+    <!-- Fallback for old JavaScript files (commented out) -->
+    <!-- <script src="translations.js"></script> -->
+    <!-- <script type="module" src="script.js"></script> -->
 
     <!-- Service Worker Registration -->
     <script>

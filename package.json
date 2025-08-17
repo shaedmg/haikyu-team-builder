@@ -1,8 +1,8 @@
 {
   "name": "haikyu-flight-high-team-builder",
   "version": "1.0.0",
-  "description": "Interactive team builder for Haikyu!! volleyball positions inspired by the anime/manga",
-  "main": "index.html",
+  "description": "Interactive team builder for Haikyu!! volleyball positions inspired by the anime/manga, built with TypeScript for modern development experience",
+  "main": "dist/init.js",
   "scripts": {
     "start": "npm run build && npx serve .",
     "serve": "npx serve .",
