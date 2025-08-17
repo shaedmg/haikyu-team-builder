@@ -594,9 +594,7 @@ class HaikyuTeamBuilder {
       // Only open selector if no recent drag operation and position selector not already active
       if (!this.isDragging && timeSinceDrag > 200 && !this.positionSelectorActive) {
         e.stopPropagation();
-        // Remove the current player first
-        this.removePlayerFromPosition(positionElement);
-        // Then show the position selector
+        // DON'T remove the current player, just show the selector for replacement
         const positionClass = positionElement.className
           .split(' ')
           .find((cls) => cls.startsWith('position-') && this.positionMappings[cls]);
