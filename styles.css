@@ -676,7 +676,9 @@ body {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   margin-right: 20px;
-  max-height: calc(100vh - 200px); /* Reduce height to make space for position selector */
+  max-height: calc(
+    100vh - 200px
+  ); /* Reduce height to make space for position selector */
   overflow-y: auto;
 }
 
@@ -1297,17 +1299,17 @@ body {
   .position-selector {
     max-height: 60vh;
   }
-  
+
   .position-selector-content {
     max-height: calc(60vh - 80px);
     padding: 10px 15px;
   }
-  
+
   .position-player-card {
     width: 80px; /* Proportionally smaller on mobile */
     height: 100px;
   }
-  
+
   .position-players-list {
     gap: 6px;
   }

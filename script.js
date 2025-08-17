@@ -579,7 +579,7 @@ class HaikyuTeamBuilder {
       this.draggedPlayer = null;
       this.draggedFromTeam = false;
       this.dragSuccess = false;
-      
+
       // Reset drag state after a short delay to allow click event to detect it
       setTimeout(() => {
         this.isDragging = false;
@@ -590,14 +590,20 @@ class HaikyuTeamBuilder {
     // Add click event to open position selector (only if not dragging)
     playerSlot.addEventListener('click', (e) => {
       const timeSinceDrag = Date.now() - this.dragStartTime;
-      
+
       // Only open selector if no recent drag operation and position selector not already active
-      if (!this.isDragging && timeSinceDrag > 200 && !this.positionSelectorActive) {
+      if (
+        !this.isDragging &&
+        timeSinceDrag > 200 &&
+        !this.positionSelectorActive
+      ) {
         e.stopPropagation();
         // DON'T remove the current player, just show the selector for replacement
         const positionClass = positionElement.className
           .split(' ')
-          .find((cls) => cls.startsWith('position-') && this.positionMappings[cls]);
+          .find(
+            (cls) => cls.startsWith('position-') && this.positionMappings[cls]
+          );
         if (positionClass) {
           this.showPositionSelector(positionClass, positionElement);
         }
@@ -755,7 +761,7 @@ class HaikyuTeamBuilder {
         .find(
           (cls) => cls.startsWith('position-') && this.positionMappings[cls]
         );
-      
+
       if (positionClass) {
         position.addEventListener('click', (e) => {
           // Only show position selector if position is empty
@@ -1561,7 +1567,7 @@ class HaikyuTeamBuilder {
   setupPositionSelector() {
     const positionSelector = document.getElementById('positionSelector');
     const closeBtn = document.getElementById('positionSelectorClose');
-    
+
     // Close button event
     if (closeBtn) {
       closeBtn.addEventListener('click', () => {
@@ -1578,9 +1584,11 @@ class HaikyuTeamBuilder {
 
     // Close when clicking outside
     document.addEventListener('click', (e) => {
-      if (this.positionSelectorActive && 
-          !positionSelector.contains(e.target) && 
-          !e.target.closest('.position')) {
+      if (
+        this.positionSelectorActive &&
+        !positionSelector.contains(e.target) &&
+        !e.target.closest('.position')
+      ) {
         this.hidePositionSelector();
       }
     });
@@ -1590,41 +1598,46 @@ class HaikyuTeamBuilder {
     const requiredPosition = this.positionMappings[positionClass];
     const positionSelector = document.getElementById('positionSelector');
     const positionPlayersList = document.getElementById('positionPlayersList');
-    const positionSelectorTitle = document.getElementById('positionSelectorTitle');
-    
+    const positionSelectorTitle = document.getElementById(
+      'positionSelectorTitle'
+    );
+
     // Store selected position
     this.selectedPosition = positionClass;
     this.positionSelectorActive = true;
-    
+
     // Get current language and translations
-    const currentLanguage = window.languageManager ? window.languageManager.getCurrentLanguage() : 'es';
+    const currentLanguage = window.languageManager
+      ? window.languageManager.getCurrentLanguage()
+      : 'es';
     const t = translations[currentLanguage];
-    
+
     // Update title with translation
     const positionNames = {
-      'OP': t.opposite,
-      'WS': t.wingSpiker, 
-      'MB': t.middleBlocker,
-      'S': t.setter,
-      'L': t.libero
+      OP: t.opposite,
+      WS: t.wingSpiker,
+      MB: t.middleBlocker,
+      S: t.setter,
+      L: t.libero,
     };
     positionSelectorTitle.textContent = `${t.selectPlayerFor} ${positionNames[requiredPosition]} ${t.forThisPosition}`;
-    
+
     // Filter players for this position
-    const compatiblePlayers = this.players.filter(player => 
-      player.position === requiredPosition && 
-      !this.usedPlayerIds.has(player.id)
+    const compatiblePlayers = this.players.filter(
+      (player) =>
+        player.position === requiredPosition &&
+        !this.usedPlayerIds.has(player.id)
     );
-    
+
     // Clear previous content
     positionPlayersList.innerHTML = '';
-    
+
     // Add compatible players
-    compatiblePlayers.forEach(player => {
+    compatiblePlayers.forEach((player) => {
       const playerCard = this.createPositionPlayerCard(player);
       positionPlayersList.appendChild(playerCard);
     });
-    
+
     // Show selector with animation
     document.body.classList.add('position-selector-active');
     positionSelector.classList.add('active');
@@ -1633,10 +1646,10 @@ class HaikyuTeamBuilder {
 
   hidePositionSelector() {
     const positionSelector = document.getElementById('positionSelector');
-    
+
     this.selectedPosition = null;
     this.positionSelectorActive = false;
-    
+
     // Hide with animation
     document.body.classList.remove('position-selector-active');
     positionSelector.classList.remove('active');
@@ -1649,18 +1662,18 @@ class HaikyuTeamBuilder {
     playerCard.setAttribute('role', 'button');
     playerCard.setAttribute('tabindex', '0');
     playerCard.setAttribute('title', player.name); // Tooltip for name
-    
+
     const imageUrl = this.getPlayerImageUrl(player);
-    
+
     playerCard.innerHTML = `
       <img src="${imageUrl}" alt="${player.name}" loading="lazy" />
     `;
-    
+
     // Click event to select player
     playerCard.addEventListener('click', () => {
       this.selectPlayerFromPositionSelector(player);
     });
-    
+
     // Keyboard support
     playerCard.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
@@ -1668,13 +1681,15 @@ class HaikyuTeamBuilder {
         this.selectPlayerFromPositionSelector(player);
       }
     });
-    
+
     return playerCard;
   }
 
   selectPlayerFromPositionSelector(player) {
     if (this.selectedPosition) {
-      const positionElement = document.querySelector(`.${this.selectedPosition}`);
+      const positionElement = document.querySelector(
+        `.${this.selectedPosition}`
+      );
       if (positionElement) {
         this.placePlayerInPosition(player, positionElement);
         this.hidePositionSelector();

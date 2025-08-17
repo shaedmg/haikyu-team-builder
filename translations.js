@@ -28,7 +28,7 @@ const translations = {
     // Position Selector
     selectPlayerFor: 'Select',
     forThisPosition: 'for this position',
-    
+
     // Rotation
     rotateTooltip: 'Rotate players clockwise',
 
@@ -324,10 +324,16 @@ class LanguageManager {
       .setAttribute('title', t.rotateTooltip);
 
     // Update position selector close button
-    const positionSelectorClose = document.querySelector('#positionSelectorClose');
+    const positionSelectorClose = document.querySelector(
+      '#positionSelectorClose'
+    );
     if (positionSelectorClose) {
-      positionSelectorClose.setAttribute('aria-label', 
-        lang === 'en' ? 'Close position selector' : 'Cerrar selector de posición');
+      positionSelectorClose.setAttribute(
+        'aria-label',
+        lang === 'en'
+          ? 'Close position selector'
+          : 'Cerrar selector de posición'
+      );
     }
 
     // Update language selector label
