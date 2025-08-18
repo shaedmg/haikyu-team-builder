@@ -23,12 +23,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/username/haikyu-team-builder.git"
+    "url": "https://github.com/shaedmg/haikyu-team-builder.git"
   },
   "bugs": {
-    "url": "https://github.com/username/haikyu-team-builder/issues"
+    "url": "https://github.com/shaedmg/haikyu-team-builder/issues"
   },
-  "homepage": "https://github.com/username/haikyu-team-builder#readme",
+  "homepage": "https://shaedmg.github.io/haikyu-team-builder/",
   "devDependencies": {
     "serve": "^14.0.0",
     "typescript": "^5.3.0",

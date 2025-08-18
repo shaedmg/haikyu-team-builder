@@ -1,0 +1,57 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [master, main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: TypeScript build
+        run: npm run build
+
+      - name: Prepare deploy folder
+        run: |
+          mkdir build
+          cp -R index.html styles.css manifest.json sw.js robots.txt sitemap.xml build/ 2>/dev/null || true
+          cp -R assets build/assets
+          cp -R dist build/dist
+          cp -R haikyu_fly_high_full_v3.json image-mapping.json build/ 2>/dev/null || true
+          # Update SW version with commit hash for cache busting
+          sed -i "s/const CACHE_VERSION = '[^']*'/const CACHE_VERSION = '${GITHUB_SHA:0:8}'/" sw.js || true
+          sed -i "s/const CACHE_NAME = 'haikyu-team-builder-v[^']*'/const CACHE_NAME = 'haikyu-team-builder-v${GITHUB_SHA:0:8}'/" sw.js || true
+          cp sw.js build/sw.js
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4

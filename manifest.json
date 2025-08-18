@@ -2,8 +2,8 @@
   "name": "Haikyu Flight High Team Builder - Create Perfect Volleyball Teams",
   "short_name": "Haikyu Team Builder",
   "description": "🏐 Build your ultimate Haikyu Flight High volleyball team! Interactive team creator with character bonds, school synergies and real-time statistics. Free online tool for anime fans.",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
   "theme_color": "#667eea",
@@ -11,7 +11,15 @@
   "categories": ["games", "sports", "entertainment", "productivity"],
   "lang": "en",
   "dir": "ltr",
-  "keywords": ["haikyu", "flight high", "team builder", "volleyball", "anime", "character bonds", "sports game"],
+  "keywords": [
+    "haikyu",
+    "flight high",
+    "team builder",
+    "volleyball",
+    "anime",
+    "character bonds",
+    "sports game"
+  ],
 
   "icons": [
     {
@@ -86,7 +94,7 @@
       "name": "Crear Equipo",
       "short_name": "Crear",
       "description": "Crear un nuevo equipo de voleibol",
-      "url": "/#create-team",
+      "url": "./#create-team",
       "icons": [
         {
           "src": "assets/images/shortcut-create.png",
@@ -98,7 +106,7 @@
       "name": "Ver Personajes",
       "short_name": "Personajes",
       "description": "Explorar todos los personajes disponibles",
-      "url": "/#characters",
+      "url": "./#characters",
       "icons": [
         {
           "src": "assets/images/shortcut-characters.png",
@@ -114,12 +122,12 @@
   "protocol_handlers": [
     {
       "protocol": "web+haikyu",
-      "url": "/#share=%s"
+      "url": "./#share=%s"
     }
   ],
 
   "share_target": {
-    "action": "/#share",
+    "action": "./#share",
     "method": "GET",
     "params": {
       "title": "title",

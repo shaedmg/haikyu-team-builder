@@ -6,19 +6,19 @@ const CACHE_VERSION = '1.0.0';
 
 // Recursos críticos para cachear
 const CORE_CACHE_RESOURCES = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/dist/init.js',
-  '/manifest.json',
+  './',
+  './index.html',
+  './styles.css',
+  './dist/init.js',
+  './manifest.json',
 ];
 
 // Recursos de imágenes para cachear
 const IMAGE_CACHE_RESOURCES = [
-  '/assets/images/characters/',
-  '/assets/images/favicon.svg',
-  '/assets/images/icon-192x192.png',
-  '/assets/images/icon-512x512.png',
+  './assets/images/characters/',
+  './assets/images/favicon.svg',
+  './assets/images/icon-192x192.png',
+  './assets/images/icon-512x512.png',
 ];
 
 // Recursos externos para cachear
@@ -171,8 +171,8 @@ self.addEventListener('push', (event) => {
 
   const options = {
     body: event.data ? event.data.text() : 'Nueva actualización disponible!',
-    icon: '/assets/images/icon-192x192.png',
-    badge: '/assets/images/icon-72x72.png',
+    icon: './assets/images/icon-192x192.png',
+    badge: './assets/images/icon-72x72.png',
     vibrate: [200, 100, 200],
     data: {
       dateOfArrival: Date.now(),
@@ -182,12 +182,12 @@ self.addEventListener('push', (event) => {
       {
         action: 'explore',
         title: 'Ver cambios',
-        icon: '/assets/images/icon-explore.png',
+        icon: './assets/images/icon-explore.png',
       },
       {
         action: 'close',
         title: 'Cerrar',
-        icon: '/assets/images/icon-close.png',
+        icon: './assets/images/icon-close.png',
       },
     ],
   };

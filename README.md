@@ -26,6 +26,34 @@ Un team builder interactivo inspirado en el anime/manga Haikyu!! que permite cre
 5. **Remover jugador**: Haz clic en un jugador ya asignado para removerlo
 6. **Equipo completo**: Cuando tengas todas las posiciones llenas, verás una notificación
 
+## Deploy (GitHub Pages)
+
+This project is configured with a GitHub Actions workflow (`.github/workflows/deploy.yml`). On every push to `master` or `main` it will:
+
+1. Install dependencies (npm ci)
+2. Compile TypeScript (`npm run build` -> outputs to `dist/`)
+3. Copy static files (html, css, assets, json data, service worker, manifest) into a temporary `build/` folder
+4. Inject the short commit SHA into `sw.js` (updates `CACHE_VERSION` and `CACHE_NAME`) to force clients to fetch the new service worker and avoid stale caches
+5. Publish the artifact to GitHub Pages
+
+After the first successful run, enable Pages in the repository settings (Deploy from GitHub Actions). Subsequent pushes auto-update the site.
+
+### Cache Busting
+
+The service worker version strings are replaced with the current commit hash (first 8 chars). Any deployment invalidates previous caches because the cache name changes. If you also want to force reload of `init.js`, you can add a query param in `index.html` like `dist/init.js?v=__BUILD_HASH__` via a sed step in the workflow.
+
+### Local Testing of SW
+
+Run `npm start` then open DevTools > Application > Service Workers. After modifying `sw.js`, reload with "Update on reload" enabled to bypass stale caches.
+
+### Private vs Public Repository
+
+GitHub Pages supports private repos only on paid plans. For a free public site, make the repository public. If you need to keep source private, consider deploying to Netlify/Vercel instead.
+
+### Custom Domain
+
+If you add a custom domain, create a `CNAME` file with the domain name at the project root and commit it. Update canonical/meta tags to reflect the new domain.
+
 ## 📁 Estructura del proyecto
 
 ```
