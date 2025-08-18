@@ -4,6 +4,7 @@ import {
     Translations
 } from './types/index.js';
 import { translations } from './translations.js';
+import { debug } from './utils/debug.js';
 
 export class LanguageManager {
     private currentLanguage: Language;
@@ -59,8 +60,8 @@ export class LanguageManager {
 
         // Reload data with appropriate language JSON
         if (window.teamBuilder) {
-            console.log('=== LANGUAGE CHANGE: Reloading data ===');
-            console.log('New language:', lang);
+            debug('=== LANGUAGE CHANGE: Reloading data ===');
+            debug('New language:', lang);
 
             // Reload the JSON data for the new language
             window.teamBuilder?.loadPlayers(lang)
@@ -68,7 +69,7 @@ export class LanguageManager {
                     // Update the UI with new data
                     window.teamBuilder?.updateBonds();
                     window.teamBuilder?.updateSchoolStats();
-                    console.log('=== Data reloaded successfully ===');
+                    debug('=== Data reloaded successfully ===');
                 })
                 .catch((error: Error) => {
                     console.error('Error reloading data:', error);
@@ -243,7 +244,7 @@ export class LanguageManager {
             console.error(`No translations found for current language: ${this.currentLanguage}`);
             return key as string;
         }
-        
+
         const value = translations[key];
         if (typeof value === 'object') {
             return value;

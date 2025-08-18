@@ -6,7 +6,6 @@ export type Language = 'es' | 'en';
 export type SortBy = 'name' | 'rarity';
 
 // Re-export enhanced interfaces
-export * from './interfaces.js';
 
 // Base character data (now includes name directly)
 export interface BaseCharacter {

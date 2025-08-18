@@ -3,6 +3,7 @@
 
 import { LanguageManager } from './LanguageManager.js';
 import { HaikyuTeamBuilder } from './HaikyuTeamBuilder.js';
+import { debug } from './utils/debug.js';
 
 // Initialize the application with TypeScript modules
 async function initializeApp(): Promise<void> {
@@ -14,7 +15,7 @@ async function initializeApp(): Promise<void> {
     // Store instance for global access
     (window as any).teamBuilderInstance = teamBuilder;
 
-    console.log('Application initialized successfully with refactored architecture');
+    debug('Application initialized successfully with refactored architecture');
   } catch (error) {
     console.error('Failed to initialize application:', error);
   }

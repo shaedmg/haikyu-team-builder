@@ -5,6 +5,24 @@
   box-sizing: border-box;
 }
 
+/* Accessibility focus styles */
+:focus-visible {
+  outline: 3px solid #ffb347;
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+.player-card.filled:focus-visible,
+.available-player:focus-visible,
+.position-player-card:focus-visible,
+#rotationButton:focus-visible {
+  outline: 3px solid #ffb347;
+  outline-offset: 3px;
+}
+
+.position-selector[role='dialog'] {
+  outline: none;
+}
 body {
   font-family: 'Arial', sans-serif;
   background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);

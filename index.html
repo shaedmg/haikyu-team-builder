@@ -507,13 +507,21 @@
       </main>
 
       <!-- Position selector - appears at bottom when position is clicked -->
-      <div class="position-selector" id="positionSelector" aria-hidden="true">
+      <div
+        class="position-selector"
+        id="positionSelector"
+        aria-hidden="true"
+        role="dialog"
+        aria-modal="false"
+        aria-labelledby="positionSelectorTitle"
+      >
         <div class="position-selector-header">
           <h3 id="positionSelectorTitle">Seleccionar jugador para posición</h3>
           <button
             class="position-selector-close"
             id="positionSelectorClose"
             aria-label="Cerrar selector de posición"
+            type="button"
           >
             ×
           </button>
@@ -592,8 +600,13 @@
         window.addEventListener('load', () => {
           navigator.serviceWorker
             .register('/sw.js')
-            .then((registration) => console.log('SW registered'))
-            .catch((error) => console.log('SW registration failed'));
+            .then(() => {
+              if (window.DEBUG) console.log('[DEBUG] SW registered');
+            })
+            .catch((error) => {
+              if (window.DEBUG)
+                console.log('[DEBUG] SW registration failed', error);
+            });
         });
       }
     </script>

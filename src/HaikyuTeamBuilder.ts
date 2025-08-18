@@ -11,33 +11,36 @@ import {
 } from './types/index.js';
 import { charactersData } from './characters.js';
 import { bondsData } from './bonds.js';
+import { createPlayerCard } from './components/PlayerCard.js';
+import { createSelectablePlayerCard } from './components/SelectablePlayerCard.js';
+import { POSITION_MAPPINGS, RARITY_ORDER, POSITION_LABELS } from './config/constants.js';
+import { getPositionLabel } from './utils/i18n.js';
+import { addPlayerToTeam, removePlayerEverywhere, removePlayerFromTeam } from './services/teamState.js';
+import { computeSchoolComposition } from './services/teamStats.js';
+import { computeBondStatuses } from './services/bondsStats.js';
+import { generateBondEffectHTML } from './ui/bondsRenderer.js';
+import { rotatePlayersClockwise } from './ui/rotationAnimation.js';
+import { setupPositionSelector, showPositionSelector, hidePositionSelector, PositionSelectorContext } from './ui/positionSelector.js';
+import { addDragListeners as addExternalDragListeners, setupDragAndDrop as setupCourtDragAndDrop, clearHighlights } from './ui/dragAndDrop.js';
+import { debug } from './utils/debug.js';
+import { formatBonusText, getInitialBonusLevel } from './utils/formatters.js';
 
 export class HaikyuTeamBuilder {
     private players: Character[] = [];
     private bonds: Bond[] = [];
     private currentTeam: CurrentTeam = {};
-    private selectedPlayer: Character | null = null;
-    private selectedPosition: string | null = null;
-    private positionSelectorActive: boolean = false;
+    private selectedPlayer: Character | null = null; // Position selector state now managed in positionSelectorCtx
     private usedPlayerIds: Set<number> = new Set();
     private positionMappings: PositionMapping;
     private dragState: DragState;
     private currentSortBy: SortBy = 'rarity'; // Default sort by rarity
-    private rarityOrder: Rarity[] = ['SP', 'UR', 'SSR', 'SR', 'R', 'N'];
+    private rarityOrder: Rarity[] = RARITY_ORDER;
     private draggedFromPosition: string | undefined = undefined;
 
     constructor() {
         this.currentSortBy = 'rarity'; // Changed default sort to rarity
 
-        this.positionMappings = {
-            'position-1': 'OP', // Back left - Opposite (SERVING POSITION)
-            'position-5': 'WS', // Back right - Wing Spiker
-            'position-6': 'MB', // Back center - Middle Blocker
-            'position-3': 'MB', // Front center - Middle Blocker
-            'position-4': 'WS', // Front left - Wing Spiker
-            'position-2': 'S',  // Front right - Setter
-            'position-libero': 'L', // Libero
-        };
+        this.positionMappings = POSITION_MAPPINGS;
 
         this.dragState = {
             draggedPlayer: null,
@@ -55,13 +58,13 @@ export class HaikyuTeamBuilder {
         const currentLanguage = window.languageManager
             ? window.languageManager.getCurrentLanguage()
             : 'es';
-        console.log('Initializing with language:', currentLanguage);
+        debug('Initializing with language:', currentLanguage);
 
         await this.loadPlayers(currentLanguage);
         this.renderAvailablePlayers();
-        this.setupDragAndDrop();
+        this.setupDragAndDrop(); // now delegates to extracted module
         this.setupEventListeners();
-        this.setupPositionSelector();
+        this.initializePositionSelector();
         this.setupSortingControls();
         this.initializeSchoolStats();
         this.initializeBonds();
@@ -70,18 +73,18 @@ export class HaikyuTeamBuilder {
 
     public async loadPlayers(language: Language = 'es'): Promise<void> {
         try {
-            console.log(`Loading players with language: ${language}`);
+            debug(`Loading players with language: ${language}`);
 
             // Use imported data instead of fetch
-            console.log('Using imported charactersData and bondsData');
+            debug('Using imported charactersData and bondsData');
 
             // Convert base characters to characters with names already included
             this.players = Object.values(charactersData.characters).map((baseChar: Character) => ({
                 ...baseChar,
                 name: baseChar.name // Name is now included directly
             }) as Character);
-            console.log({ players: this.players })
-            console.log({ characters: charactersData.characters })
+            debug('Players loaded count:', this.players.length);
+            debug('Characters keys sample:', Object.keys(charactersData.characters).slice(0, 5));
             // Convert bonds to simple format (use language-specific names)
             this.bonds = bondsData.bonds.map(bond => ({
                 id: bond.id,
@@ -97,15 +100,8 @@ export class HaikyuTeamBuilder {
                 missingCount: bond.participants.length
             } as Bond));
 
-            console.log(
-                `Loaded ${this.players.length} players and ${this.bonds.length} bonds (Language: ${language})`
-            );
-            console.log(
-                'Sample bonds:',
-                this.bonds
-                    .slice(0, 3)
-                    .map((b) => ({ name: b.name, participants: b.participants }))
-            );
+            debug(`Loaded players: ${this.players.length} bonds: ${this.bonds.length} (lang=${language})`);
+            debug('Sample bonds:', this.bonds.slice(0, 3).map(b => ({ name: b.name, participants: b.participants })));
         } catch (error) {
             console.error('Error loading players:', error);
             // Initialize with empty data if import fails
@@ -122,95 +118,15 @@ export class HaikyuTeamBuilder {
         );
     }
 
-    private formatBonusText(bonusValue: string): string {
-        console.log('formatBonusText called with:', bonusValue);
-
-        if (!bonusValue || typeof bonusValue !== 'string') {
-            console.log('returning early - invalid input');
-            return bonusValue || '';
-        }
-
-        // Handle special common values
-        if (bonusValue === 'Activado' || bonusValue === 'Eliminado') {
-            return bonusValue;
-        }
-
-        // Handle multipliers like "x180%", "x265%", etc.
-        const multiplierMatch = bonusValue.match(/^x(\d+(?:\.\d+)?)%$/);
-        if (multiplierMatch) {
-            const value = multiplierMatch[1];
-            const result = `×${value}%`;
-            console.log('Multiplier match found:', value, '-> result:', result);
-            return result;
-        }
-
-        // Handle cases like "+5 +1%", "+7 +2%", etc. (with space between numbers and percentage)
-        const complexMatch = bonusValue.match(/^(\+?\d+)\s+(\+?\d+%)$/);
-        if (complexMatch) {
-            let points = complexMatch[1];
-            let percentage = complexMatch[2];
-            console.log('Complex match found:', points, percentage);
-
-            // Ensure both values have the '+' symbol
-            if (points && !points.startsWith('+') && !points.startsWith('-')) {
-                points = '+' + points;
-            }
-            if (percentage && !percentage.startsWith('+') && !percentage.startsWith('-')) {
-                percentage = '+' + percentage;
-            }
-
-            const result = `${points} ${window.languageManager ? 'puntos' : 'puntos'
-                } ${percentage} ${window.languageManager
-                    ? 'adicional'
-                    : 'adicional'
-                }`;
-            console.log('Complex result:', result);
-            return result;
-        }
-
-        // Handle simple percentages like "6%", "10%", etc.
-        const percentageMatch = bonusValue.match(/^(\+?-?\d+(?:\.\d+)?)%$/);
-        if (percentageMatch) {
-            const value = percentageMatch[1];
-            if (!value) return bonusValue; // Fallback si no hay valor
-            
-            let result = value;
-            if (!value.startsWith('+') && !value.startsWith('-')) {
-                result = '+' + value;
-            }
-            result += '%';
-            console.log('Percentage match found:', value, '-> result:', result);
-            return result;
-        }
-
-        // Handle simple numbers like "6", "10", etc.
-        const numberMatch = bonusValue.match(/^(\+?-?\d+(?:\.\d+)?)$/);
-        if (numberMatch) {
-            const value = numberMatch[1];
-            if (!value) return bonusValue; // Fallback si no hay valor
-            
-            let result = value;
-            if (!value.startsWith('+') && !value.startsWith('-')) {
-                result = '+' + value;
-            }
-            console.log('Number match found:', value, '-> result:', result);
-            return result;
-        }
-
-        // If it already has '+' or '-', return as is
-        if (bonusValue.startsWith('+') || bonusValue.startsWith('-')) {
-            console.log('Already has sign, returning as is:', bonusValue);
-            return bonusValue;
-        }
-
-        // If no pattern matches, return original value
-        console.log('No match, returning original:', bonusValue);
-        return bonusValue;
-    }
+    private formatBonusText(bonusValue: string): string { return formatBonusText(bonusValue); }
 
     private renderAvailablePlayers(): void {
         const playerGrid = document.querySelector('.player-grid') as HTMLElement;
         if (!playerGrid) return;
+
+        // Accessibility roles
+        playerGrid.setAttribute('role', 'list');
+        playerGrid.setAttribute('aria-label', 'Available players');
 
         // Get sorted players
         const sortedPlayers = this.getSortedPlayers();
@@ -246,6 +162,8 @@ export class HaikyuTeamBuilder {
                     // Only show players that are not already in the team
                     if (!this.usedPlayerIds.has(player.id)) {
                         const playerElement = this.createAvailablePlayerElement(player);
+                        playerElement.setAttribute('role', 'listitem');
+                        playerElement.setAttribute('aria-label', `${player.name} (${player.position})`);
                         playerGrid.appendChild(playerElement);
                     }
                 });
@@ -295,16 +213,7 @@ export class HaikyuTeamBuilder {
         return grouped;
     }
 
-    private getPositionName(position: Position): string {
-        const names = {
-            L: 'Libero',
-            MB: 'Middle Blocker',
-            WS: 'Wing Spiker',
-            OP: 'Opposite',
-            S: 'Setter',
-        };
-        return names[position] || position;
-    }
+    private getPositionName(position: Position): string { return getPositionLabel(position); }
 
     // Export for global use
     public updateBonds(): void {
@@ -331,62 +240,17 @@ export class HaikyuTeamBuilder {
                 }</div>`;
             return;
         }
-
-        // Filter and evaluate bonds with sorting data
-        console.log('=== DEBUGGING BONDS ===');
-        console.log('Current team player IDs:', currentPlayerIds);
-        console.log('Total bonds available:', this.bonds.length);
-
-        const relevantBonds = this.bonds
-            .filter((bond) => {
-                // Show bonds that have at least one participant in the current team
-                if (!bond.participants || bond.participants.length === 0) {
-                    return false;
-                }
-
-                // Show if at least one participant is in the team
-                const hasParticipantInTeam = bond.participants.some((participantId) =>
-                    currentPlayerIds.includes(participantId)
-                );
-
-                return hasParticipantInTeam;
-            })
-            .map((bond) => {
-                // Add sorting information to each bond
-                const presentParticipants = bond.participants.filter((participantId) =>
-                    currentPlayerIds.includes(participantId)
-                );
-                const requiredCount = bond.participants.length;
-                const currentCount = presentParticipants.length;
-                const isActive = currentCount >= requiredCount;
-                const missingCount = requiredCount - currentCount;
-
-                return {
-                    ...bond,
-                    currentCount,
-                    requiredCount,
-                    isActive,
-                    missingCount,
-                };
-            })
+        const computed = computeBondStatuses(this.currentTeam, this.bonds);
+        const relevantBonds = computed.filter(b => b.currentCount > 0)
             .sort((a, b) => {
-                // First sort by active status (active bonds first)
                 if (a.isActive && !b.isActive) return -1;
                 if (!a.isActive && b.isActive) return 1;
-
-                // Then sort by current count (more current players first)
-                if (a.currentCount !== b.currentCount) {
-                    return b.currentCount - a.currentCount; // Descending order
-                }
-
-                // Finally sort alphabetically by name
-                const currentLanguage = window.languageManager ? window.languageManager.getCurrentLanguage() : 'es';
-                const aName = typeof a.name === 'object' ? (a.name as any)[currentLanguage] || (a.name as any).es : a.name;
-                const bName = typeof b.name === 'object' ? (b.name as any)[currentLanguage] || (b.name as any).es : b.name;
+                if (a.currentCount !== b.currentCount) return b.currentCount - a.currentCount;
+                const lang = window.languageManager ? window.languageManager.getCurrentLanguage() : 'es';
+                const aName = typeof a.name === 'object' ? (a.name as any)[lang] || (a.name as any).es : a.name;
+                const bName = typeof b.name === 'object' ? (b.name as any)[lang] || (b.name as any).es : b.name;
                 return aName.localeCompare(bName);
             });
-
-        console.log('Relevant bonds after filtering:', relevantBonds.length);
 
         if (relevantBonds.length === 0) {
             bondsSection.innerHTML = `<div class="no-players">${window.languageManager
@@ -419,7 +283,12 @@ export class HaikyuTeamBuilder {
             </div>
           </div>
           <div class="bond-details" style="display: none;">
-            ${this.generateBondEffectHTML(bond, currentPlayerIds)}
+                 ${generateBondEffectHTML(bond, currentPlayerIds, {
+                        players: this.players,
+                        getPlayerImageUrl: this.getPlayerImageUrl.bind(this),
+                        formatBonusText: this.formatBonusText.bind(this),
+                        getInitialBonusLevel: this.getInitialBonusLevel.bind(this)
+                    })}
           </div>
         </div>
       `;
@@ -429,203 +298,11 @@ export class HaikyuTeamBuilder {
         bondsSection.innerHTML = bondItems;
     }
 
-    private generateBondEffectHTML(bond: any, currentPlayerIds: number[] = []): string {
-        console.log('=== generateBondEffectHTML called ===');
-        console.log('Bond name:', bond.name);
-        console.log('Bond object keys:', Object.keys(bond));
-        console.log('Bond is_link_skill:', bond.is_link_skill);
 
-        const currentLanguage = window.languageManager ? window.languageManager.getCurrentLanguage() : 'es';
-        const bondName = typeof bond.name === 'object' ? (bond.name as any)[currentLanguage] || (bond.name as any).es : bond.name;
-
-        // Si no tiene effects_by_character, mostrar mensaje
-        if (!bond.effects_by_character || bond.effects_by_character.length === 0) {
-            console.log('Bond sin effects_by_character:', bondName);
-            const t = window.languageManager
-                ? window.languageManager.t.bind(window.languageManager)
-                : (key: string) => {
-                    const fallbacks: { [key: string]: string } = {
-                        noDetailedEffects: 'Vínculo sin efectos detallados:',
-                        bondType: 'Tipo:',
-                        linkSkill: 'Link Skill',
-                        kizunaSkill: 'Kizuna Skill',
-                    };
-                    return fallbacks[key] || key;
-                };
-
-            return `<div class="bond-effect simple-bond">
-                <p>${t('noDetailedEffects')} ${bondName}</p>
-                <p>${t('bondType')} ${bond.is_link_skill ? t('linkSkill') : t('kizunaSkill')}</p>
-            </div>`;
-        }
-
-        // Priorizar effects_by_character si existe, incluso para kizuna_skills
-        if (bond.effects_by_character && bond.effects_by_character.length > 0) {
-            // Attribute bond - show effects by character and levels
-            let effectsHTML = '<div class="bond-effect attribute-bond">';
-            effectsHTML += '<div class="bond-participants-horizontal">';
-
-            bond.participants.forEach((participantId: number) => {
-                const player = this.players.find((p) => p.id === participantId);
-                const isInTeam = currentPlayerIds.includes(participantId);
-                const playerImageUrl = player ? this.getPlayerImageUrl(player) : '';
-                const borderClass = isInTeam ? 'participant-in-team' : 'participant-missing';
-
-                console.log(`Processing participant ${participantId}:`, {
-                    playerFound: !!player,
-                    isInTeam: isInTeam,
-                    currentPlayerIdsLength: currentPlayerIds.length,
-                });
-
-                if (playerImageUrl) {
-                    effectsHTML += `<img src="${playerImageUrl}" alt="${player ? player.name : participantId
-                        }" class="participant-image ${borderClass}" title="${player ? player.name : `ID: ${participantId}`
-                        }">`;
-                }
-            });
-
-            effectsHTML += '</div>'; // Luego mostrar las bonificaciones por personaje
-
-            // Primero mostrar la lista de personajes participantes (formato horizontal simple)
-            effectsHTML += '<div class="bonifications-section">';
-            const t = window.languageManager
-                ? window.languageManager.t.bind(window.languageManager)
-                : (key: string) => {
-                    const fallbacks: { [key: string]: string } = {
-                        effectsPerCharacter: 'Efectos por Personaje:',
-                    };
-                    return fallbacks[key] || key;
-                };
-
-            effectsHTML += `<h4 class="bonifications-title">${t('effectsPerCharacter')}</h4>`;
-
-            bond.effects_by_character.forEach((characterEffect: any) => {
-                const player = this.players.find((p) => p.id === characterEffect.character_id);
-                const playerName = player ? player.name : `ID: ${characterEffect.character_id}`;
-                const playerImageUrl = player ? this.getPlayerImageUrl(player) : null;
-
-                effectsHTML += `<div class="character-effect-container">
-                    <div class="character-header">
-                        ${playerImageUrl ? `<img src="${playerImageUrl}" alt="${playerName}" class="character-effect-image">` : ''}
-                        <div class="character-info">
-                            <div class="character-name">${playerName}</div>
-                            <div class="character-school">${player ? player.school : ''}</div>
-                        </div>
-                    </div>`;
-
-                characterEffect.bonuses.forEach((bonus: any, bonusIndex: number) => {
-                    console.log(`Processing bonus ${bonusIndex} for character ${characterEffect.character_id}:`, bonus);
-                    console.log('Bonus levels:', bonus.levels);
-                    console.log('Bonus levels length:', bonus.levels ? bonus.levels.length : 'undefined');
-                    console.log('First level value:', bonus.levels && bonus.levels.length > 0 ? bonus.levels[0] : 'N/A');
-
-                    // Get attribute name and translate it
-                    const rawAttributeName = typeof bonus.attribute === 'object'
-                        ? (bonus.attribute[currentLanguage] || bonus.attribute.es || bonus.attribute)
-                        : bonus.attribute;
-                    const attributeName = window.languageManager ? window.languageManager.translateAttribute(rawAttributeName) : rawAttributeName;
-
-                    effectsHTML += `<div class="bonus-container">
-                        <div class="bonus-attribute">${attributeName}</div>
-                        <div class="level-selector" data-character-id="${characterEffect.character_id}" data-attribute="${rawAttributeName}">`;
-
-                    // Crear botones para cada nivel
-                    if (bonus.levels) {
-                        const currentLanguage = window.languageManager?.getCurrentLanguage() || 'es';
-                        let levelsArray;
-
-                        // Handle both old format (array) and new format (object with language keys)
-                        if (Array.isArray(bonus.levels)) {
-                            // Old format
-                            levelsArray = bonus.levels;
-                        } else if (typeof bonus.levels === 'object') {
-                            // New multilingual format
-                            levelsArray = bonus.levels[currentLanguage] || bonus.levels.es || bonus.levels;
-                        }
-
-                        if (Array.isArray(levelsArray) && levelsArray.length > 0) {
-                            levelsArray.forEach((_level: string, index: number) => {
-                                const levelNum = index + 1;
-                                const isActive = index === 0; // Por defecto nivel 1 activo
-                                const escapedBondName = bondName.replace(/'/g, "\\'");
-                                effectsHTML += `<button class="level-btn ${isActive ? 'active' : ''}" 
-                                    data-level="${levelNum}" 
-                                    onclick="window.teamBuilder.setBondLevel('${escapedBondName}', ${characterEffect.character_id}, '${rawAttributeName}', ${levelNum})">
-                                    Lv.${levelNum}
-                                </button>`;
-                            });
-                        } else {
-                            const noLevelsText = window.languageManager ? window.languageManager.t('noLevelsAvailable') : 'Sin niveles disponibles';
-                            effectsHTML += `<span class="no-levels">${noLevelsText}</span>`;
-                        }
-                    } else {
-                        const noLevelsText = window.languageManager ? window.languageManager.t('noLevelsAvailable') : 'Sin niveles disponibles';
-                        effectsHTML += `<span class="no-levels">${noLevelsText}</span>`;
-                    }
-
-                    effectsHTML += `</div>
-                        <div class="current-effect">
-                            <span class="effect-value" data-character-id="${characterEffect.character_id}" data-attribute="${rawAttributeName}">${this.formatBonusText(
-                        this.getInitialBonusLevel(bonus)
-                    )}</span>
-                        </div>
-                    </div>`;
-                });
-
-                effectsHTML += `</div>`;
-            });
-
-            effectsHTML += '</div></div>'; // Cerrar bonifications-section y bond-effect
-            console.log('Generated HTML length:', effectsHTML.length);
-            console.log('HTML preview:', effectsHTML.substring(0, 200) + '...');
-            return effectsHTML;
-        } else if (bond.is_link_skill) {
-            // Kizuna Skill - show general effect
-            const t = window.languageManager
-                ? window.languageManager.t.bind(window.languageManager)
-                : (key: string) => {
-                    const fallbacks: { [key: string]: string } = {
-                        kizunaSkillType: '🔗 Habilidad Kizuna',
-                        specialEffect: 'Efecto especial',
-                    };
-                    return fallbacks[key] || key;
-                };
-
-            const effectDescription = bond.effect_summary && bond.effect_summary[currentLanguage]
-                ? bond.effect_summary[currentLanguage]
-                : bond.effect_summary && bond.effect_summary.es
-                    ? bond.effect_summary.es
-                    : t('specialEffect');
-
-            return `<div class="bond-effect kizuna-skill">
-                <div class="effect-type">${t('kizunaSkillType')}</div>
-                <div class="effect-description">${effectDescription}</div>
-            </div>`;
-        }
-
-        return '<div class="bond-effect">Tipo de bond no reconocido</div>';
-    }
-
-    private getInitialBonusLevel(bonus: any): string {
-        if (!bonus.levels) return 'N/A';
-
-        const currentLanguage = window.languageManager?.getCurrentLanguage() || 'es';
-
-        // Handle both old format (array) and new format (object with language keys)
-        if (Array.isArray(bonus.levels)) {
-            // Old format
-            return bonus.levels.length > 0 ? bonus.levels[0] : 'N/A';
-        } else if (typeof bonus.levels === 'object') {
-            // New multilingual format
-            const levelsArray = bonus.levels[currentLanguage] || bonus.levels.es || bonus.levels;
-            return Array.isArray(levelsArray) && levelsArray.length > 0 ? levelsArray[0] : 'N/A';
-        }
-
-        return 'N/A';
-    }
+    private getInitialBonusLevel(bonus: any): string { return getInitialBonusLevel(bonus); }
 
     public setBondLevel(bondName: string, characterId: number, attribute: string, level: number): void {
-        console.log('setBondLevel called:', bondName, characterId, attribute, level);
+        debug('setBondLevel:', bondName, characterId, attribute, level);
 
         // Unescapar el nombre del bond para la comparación
         const unescapedBondName = bondName.replace(/\\'/g, "'");
@@ -755,177 +432,67 @@ export class HaikyuTeamBuilder {
             return;
         }
 
-        // Create school items
-        const schoolItems = allSchools
+        // Sort schools by: 1) active buff (>=4 players) first, 2) player count desc, 3) alphabetical
+        const sortedSchools = [...allSchools].sort((a, b) => {
+            const aCount = schoolComposition[a] || 0;
+            const bCount = schoolComposition[b] || 0;
+            const aActive = aCount >= 4;
+            const bActive = bCount >= 4;
+            if (aActive && !bActive) return -1;
+            if (!aActive && bActive) return 1;
+            if (aCount !== bCount) return bCount - aCount;
+            return a.localeCompare(b);
+        });
+
+        // Create school items from sorted list
+        const schoolItems = sortedSchools
             .map((school) => {
                 const count = schoolComposition[school] || 0;
                 const isBuffActive = count >= 4;
-
                 return `
-        <div class="school-item ${isBuffActive ? 'buff-active' : ''}">
-          <span class="school-name">${school}</span>
-          <div class="school-status">
-            <span class="school-count ${count >= 4 ? 'complete' : ''
-                    }">${count}/4</span>
-          </div>
-        </div>
-      `;
+                <div class="school-item ${isBuffActive ? 'buff-active' : ''}">
+                    <span class="school-name">${school}</span>
+                    <div class="school-status">
+                        <span class="school-count ${count >= 4 ? 'complete' : ''}">${count}/4</span>
+                    </div>
+                </div>
+            `;
             })
             .join('');
 
         schoolStats.innerHTML = schoolItems;
     }
 
-    // Placeholder methods that will be implemented
     private createAvailablePlayerElement(player: Character): HTMLElement {
-        const playerDiv = document.createElement('div');
-        playerDiv.className = 'available-player';
-        playerDiv.draggable = true;
-        playerDiv.dataset.playerId = player.id.toString();
-        playerDiv.dataset.position = player.position;
-
         const imageUrl = this.getPlayerImageUrl(player);
-
-        playerDiv.innerHTML = `
-      <div class="player-image" style="background-image: url('${imageUrl}')"></div>
-      <div class="player-name">${player.name}</div>
-      <div class="position-tag">${player.position}</div>
-    `;
-
-        this.addDragListeners(playerDiv, player);
-        return playerDiv;
+        const el = createPlayerCard(player, imageUrl, { variant: 'available', draggable: true });
+        this.addDragListeners(el, player);
+        return el;
     }
 
     private addDragListeners(element: HTMLElement, player: Character): void {
-        element.addEventListener('dragstart', (e) => {
-            this.dragState.draggedPlayer = player;
-            this.dragState.draggedFromTeam = false;
-            this.dragState.dragSuccess = false;
-            e.dataTransfer!.effectAllowed = 'move';
-            e.dataTransfer!.setData('text/plain', player.id.toString());
-            element.style.opacity = '0.5';
-        });
-
-        element.addEventListener('dragend', (_e) => {
-            element.style.opacity = '1';
-            this.clearHighlights();
-            this.dragState.draggedPlayer = null;
-            this.dragState.draggedFromTeam = false;
-            this.dragState.dragSuccess = false;
-        });
-
-        element.addEventListener('click', () => {
-            // this.showPlayerModal(player); // Disabled temporarily
+        addExternalDragListeners(element, player, {
+            dragState: this.dragState,
+            positionMappings: this.positionMappings,
+            getCurrentTeam: () => this.currentTeam,
+            placePlayerInPosition: this.placePlayerInPosition.bind(this),
+            getDraggedFromPosition: () => this.draggedFromPosition,
+            setDraggedFromPosition: (pos?: string) => { this.draggedFromPosition = pos; }
         });
     }
 
     private setupDragAndDrop(): void {
-        const courtPositions = document.querySelectorAll('.position');
-
-        courtPositions.forEach((position) => {
-            const posElement = position as HTMLElement;
-
-            posElement.addEventListener('dragover', (e) => {
-                e.preventDefault();
-                e.dataTransfer!.dropEffect = 'move';
-
-                // Check if position is valid for dragged player (allow replacement)
-                if (
-                    this.dragState.draggedPlayer &&
-                    this.isValidPosition(this.dragState.draggedPlayer, posElement.className) &&
-                    !this.isDuplicatePlayer(this.dragState.draggedPlayer, posElement)
-                ) {
-                    posElement.style.backgroundColor = 'rgba(76, 175, 80, 0.5)';
-                    posElement.style.transform = 'scale(1.02)';
-                } else {
-                    posElement.style.backgroundColor = '';
-                    posElement.style.transform = '';
-                }
-            });
-
-            posElement.addEventListener('dragleave', (_e) => {
-                posElement.style.backgroundColor = '';
-                posElement.style.transform = '';
-            });
-
-            posElement.addEventListener('drop', (e) => {
-                e.preventDefault();
-                posElement.style.backgroundColor = '';
-                posElement.style.transform = '';
-
-                if (
-                    this.dragState.draggedPlayer &&
-                    this.isValidPosition(this.dragState.draggedPlayer, posElement.className) &&
-                    !this.isDuplicatePlayer(this.dragState.draggedPlayer, posElement)
-                ) {
-                    this.dragState.dragSuccess = true;
-                    this.placePlayerInPosition(this.dragState.draggedPlayer, posElement);
-                    this.clearHighlights();
-                }
-            });
-        });
-
-        // Highlight valid positions when dragging starts
-        document.addEventListener('dragstart', (_e) => {
-            if (this.dragState.draggedPlayer) {
-                this.highlightValidPositions(this.dragState.draggedPlayer);
-            }
-        });
-
-        document.addEventListener('dragend', (_e) => {
-            this.clearHighlights();
+        setupCourtDragAndDrop({
+            dragState: this.dragState,
+            positionMappings: this.positionMappings,
+            getCurrentTeam: () => this.currentTeam,
+            placePlayerInPosition: this.placePlayerInPosition.bind(this),
+            getDraggedFromPosition: () => this.draggedFromPosition,
+            setDraggedFromPosition: (pos?: string) => { this.draggedFromPosition = pos; }
         });
     }
 
-    private isValidPosition(player: Character, positionClasses: string): boolean {
-        const positionClass = positionClasses
-            .split(' ')
-            .find((cls) => cls.startsWith('position-') && this.positionMappings[cls]);
-
-        if (!positionClass) return false;
-
-        const requiredPosition = this.positionMappings[positionClass];
-        return player.position === requiredPosition;
-    }
-
-    private isDuplicatePlayer(draggedPlayer: Character, targetPosition: HTMLElement): boolean {
-        // Get the position class of the target
-        const targetPositionClass = targetPosition.className
-            .split(' ')
-            .find((cls) => cls.startsWith('position-') && this.positionMappings[cls]);
-
-        // If dragging from team, allow swaps between same position types
-        if (this.dragState.draggedFromTeam && this.draggedFromPosition) {
-            const sourcePositionType = this.positionMappings[this.draggedFromPosition];
-            const targetPositionType = this.positionMappings[targetPositionClass!];
-
-            // Allow movement between same position types (e.g., MB to MB)
-            if (sourcePositionType === targetPositionType) {
-                return false;
-            }
-        }
-
-        // Check if the same player (same ID) is already in another position
-        return Object.entries(this.currentTeam).some(([pos, player]) => {
-            return (
-                player && player.id === draggedPlayer.id && pos !== targetPositionClass
-            );
-        });
-    }
-
-    private highlightValidPositions(player: Character): void {
-        const courtPositions = document.querySelectorAll('.position');
-        courtPositions.forEach((position) => {
-            const posElement = position as HTMLElement;
-            if (
-                this.isValidPosition(player, posElement.className) &&
-                !this.isDuplicatePlayer(player, posElement)
-            ) {
-                posElement.style.backgroundColor = 'rgba(76, 175, 80, 0.3)';
-                posElement.style.border = '3px solid #4CAF50';
-            }
-        });
-    }
+    // highlightValidPositions extracted to dragAndDrop module
 
     private placePlayerInPosition(player: Character, positionElement: HTMLElement): void {
         const positionClass = positionElement.className
@@ -934,76 +501,80 @@ export class HaikyuTeamBuilder {
 
         if (!positionClass) return;
 
-        // Check if there's already a player in this position for swapping
-        const existingPlayer = this.currentTeam[positionClass];
-
-        // Remove player from current position if exists
-        this.removePlayerFromAllPositions(player.id);
-
-        // Add player to new position
-        this.currentTeam[positionClass] = player;
-        this.usedPlayerIds.add(player.id);
-        this.renderPlayerInPosition(player, positionElement);
-
-        // If there was an existing player and this is a position swap
-        if (
-            existingPlayer &&
-            this.dragState.draggedFromTeam &&
-            this.positionMappings[this.draggedFromPosition!] ===
-            this.positionMappings[positionClass]
-        ) {
-            // Place the existing player in the dragged player's original position
-            this.currentTeam[this.draggedFromPosition!] = existingPlayer;
-            const originalPositionEl = document.querySelector(
-                `.${this.draggedFromPosition}`
-            ) as HTMLElement;
-            if (originalPositionEl) {
-                this.renderPlayerInPosition(existingPlayer, originalPositionEl);
-            }
-        } else if (existingPlayer) {
-            // If not a valid swap, remove the existing player from used list
-            this.usedPlayerIds.delete(existingPlayer.id);
-        }
-
-        // Update the available players list and team stats
-        this.renderAvailablePlayers();
-        this.updateTeamStats();
-
-        console.log(`Placed ${player.name} in ${positionClass}`);
-    }
-
-    private removePlayerFromAllPositions(playerId: number): void {
-        Object.keys(this.currentTeam).forEach((pos) => {
-            if (this.currentTeam[pos] && this.currentTeam[pos]!.id === playerId) {
-                this.usedPlayerIds.delete(playerId);
-                delete this.currentTeam[pos];
-                // Clear the visual representation
-                const positionEl = document.querySelector(`.${pos}`) as HTMLElement;
-                if (positionEl) {
-                    this.renderEmptyPosition(positionEl, pos);
-                }
+        // Remove player from any previous slot
+        this.currentTeam = removePlayerEverywhere(this.currentTeam, player.id);
+        this.usedPlayerIds.forEach(id => {
+            if (!Object.values(this.currentTeam).some(p => p && p.id === id)) {
+                this.usedPlayerIds.delete(id);
             }
         });
 
-        // Update available players and school statistics
+        // Keep reference to origin before we potentially overwrite draggedFromPosition in swap logic
+        const originPosition = this.dragState.draggedFromTeam ? this.draggedFromPosition : undefined;
+
+        const existingPlayer = this.currentTeam[positionClass];
+        const { team: updatedTeam } = addPlayerToTeam(this.currentTeam, positionClass, player);
+        this.currentTeam = updatedTeam;
+        this.usedPlayerIds.add(player.id);
+        this.renderPlayerInPosition(player, positionElement);
+
+        if (
+            existingPlayer &&
+            this.dragState.draggedFromTeam &&
+            this.draggedFromPosition &&
+            this.positionMappings[this.draggedFromPosition] === this.positionMappings[positionClass]
+        ) {
+            this.currentTeam[this.draggedFromPosition] = existingPlayer;
+            const originalPosEl = document.querySelector(`.${this.draggedFromPosition}`) as HTMLElement;
+            if (originalPosEl) {
+                this.renderPlayerInPosition(existingPlayer, originalPosEl);
+            }
+        } else if (existingPlayer) {
+            this.usedPlayerIds.delete(existingPlayer.id);
+        }
+
+        this.renderAvailablePlayers();
+        this.updateTeamStats();
+
+        // If it was a simple move (not a swap) from another court slot, clear the origin slot's UI
+        if (originPosition && originPosition !== positionClass) {
+            const originEl = document.querySelector(`.${originPosition}`) as HTMLElement | null;
+            if (originEl && !this.currentTeam[originPosition]) {
+                this.renderEmptyPosition(originEl, originPosition);
+            }
+        }
+    }
+
+    private removePlayerFromAllPositions(playerId: number): void {
+        this.currentTeam = removePlayerEverywhere(this.currentTeam, playerId);
+        this.usedPlayerIds.delete(playerId);
+        const positions = document.querySelectorAll('.position');
+        positions.forEach(posEl => {
+            const positionClass = posEl.className.split(' ').find(cls => cls.startsWith('position-') && this.positionMappings[cls]);
+            if (positionClass) {
+                const p = this.currentTeam[positionClass];
+                if (p) {
+                    this.renderPlayerInPosition(p, posEl as HTMLElement);
+                } else {
+                    this.renderEmptyPosition(posEl as HTMLElement, positionClass);
+                }
+            }
+        });
         this.renderAvailablePlayers();
         this.updateSchoolStats();
     }
+
 
     private renderPlayerInPosition(player: Character, positionElement: HTMLElement): void {
         const playerSlot = positionElement.querySelector('.player-slot') as HTMLElement;
         if (!playerSlot) return;
 
         const imageUrl = this.getPlayerImageUrl(player);
-        playerSlot.innerHTML = `
-      <div class="player-card filled" data-player-id="${player.id}" draggable="true">
-        <div class="player-image" style="background-image: url('${imageUrl}')"></div>
-        <div class="player-name">${player.name}</div>
-        <div class="position-tag">${player.position}</div>
-      </div>
-    `;
+        const card = createPlayerCard(player, imageUrl, { variant: 'court', draggable: true });
+        playerSlot.innerHTML = '';
+        playerSlot.appendChild(card);
 
-        const playerCard = playerSlot.querySelector('.player-card') as HTMLElement;
+        const playerCard = card as HTMLElement;
 
         // Add drag event listeners for players in positions
         playerCard.addEventListener('dragstart', (e) => {
@@ -1049,8 +620,7 @@ export class HaikyuTeamBuilder {
             // Only open selector if no recent drag operation and position selector not already active
             if (
                 !this.dragState.isDragging &&
-                timeSinceDrag > 200 &&
-                !this.positionSelectorActive
+                timeSinceDrag > 200
             ) {
                 e.stopPropagation();
                 const positionClass = positionElement.className
@@ -1059,7 +629,7 @@ export class HaikyuTeamBuilder {
                         (cls) => cls.startsWith('position-') && this.positionMappings[cls]
                     );
                 if (positionClass) {
-                    this.showPositionSelector(positionClass, positionElement);
+                    showPositionSelector(this.positionSelectorCtx, positionClass, positionElement);
                 }
             }
         });
@@ -1077,14 +647,9 @@ export class HaikyuTeamBuilder {
 
         const requiredPosition = this.positionMappings[positionClass];
         if (!requiredPosition) return; // Si no hay posición válida, salir
-        
-        const positionNames = {
-            L: 'L',
-            MB: 'MB',
-            WS: 'WS',
-            OP: 'OP',
-            S: 'S',
-        };
+
+        // Use centralized labels for position placeholders
+        const positionNames = POSITION_LABELS;
 
         playerSlot.innerHTML = `
       <div class="player-card empty ${requiredPosition === 'L' ? 'libero' : ''
@@ -1103,18 +668,11 @@ export class HaikyuTeamBuilder {
         if (!positionClass) return;
 
         if (this.currentTeam[positionClass]) {
-            const removedPlayer = this.currentTeam[positionClass];
-
-            // Remove from team and from used players set
-            delete this.currentTeam[positionClass];
-            this.usedPlayerIds.delete(removedPlayer!.id);
-
+            const { team: updatedTeam, removed } = removePlayerFromTeam(this.currentTeam, positionClass);
+            this.currentTeam = updatedTeam;
+            if (removed) this.usedPlayerIds.delete(removed.id);
             this.renderEmptyPosition(positionElement, positionClass);
-
-            // Re-render available players to show the removed player again
             this.renderAvailablePlayers();
-
-            // Update school statistics and bonds
             this.updateTeamStats();
         }
     }
@@ -1174,7 +732,7 @@ export class HaikyuTeamBuilder {
                     // Only show position selector if position is empty
                     if (!this.currentTeam[positionClass]) {
                         e.stopPropagation();
-                        this.showPositionSelector(positionClass, posElement);
+                        showPositionSelector(this.positionSelectorCtx, positionClass, posElement);
                     }
                 });
             }
@@ -1207,148 +765,38 @@ export class HaikyuTeamBuilder {
         }
     }
 
-    private setupPositionSelector(): void {
-        const positionSelector = document.getElementById('positionSelector');
-        const closeBtn = document.getElementById('positionSelectorClose');
+    private positionSelectorCtx: PositionSelectorContext = new PositionSelectorContext({
+        positionMappings: {} as any,
+        usedPlayerIds: this.usedPlayerIds,
+        getSortedPlayers: this.getSortedPlayers.bind(this),
+        createPositionPlayerCard: (player: Character) => {
+            const imageUrl = this.getPlayerImageUrl(player);
+            return createSelectablePlayerCard(player, imageUrl, (p) => this.selectPlayerFromPositionSelector(p));
+        },
+        placePlayerInPosition: this.placePlayerInPosition.bind(this),
+        onClose: () => { /* hook for future cleanup */ }
+    });
 
-        // Close button event
-        if (closeBtn) {
-            closeBtn.addEventListener('click', () => {
-                this.hidePositionSelector();
-            });
-        }
-
-        // Close on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && this.positionSelectorActive) {
-                this.hidePositionSelector();
-            }
-        });
-
-        // Close when clicking outside
-        document.addEventListener('click', (e) => {
-            const target = e.target as HTMLElement;
-            if (
-                this.positionSelectorActive &&
-                positionSelector &&
-                !positionSelector.contains(target) &&
-                !target.closest('.position')
-            ) {
-                this.hidePositionSelector();
-            }
-        });
-    }
-
-    private showPositionSelector(positionClass: string, _positionElement: HTMLElement): void {
-        const requiredPosition = this.positionMappings[positionClass];
-        if (!requiredPosition) return; // Si no hay posición válida, salir
-        
-        const positionSelector = document.getElementById('positionSelector');
-        const positionPlayersList = document.getElementById('positionPlayersList');
-        const positionSelectorTitle = document.getElementById('positionSelectorTitle');
-
-        // Store selected position
-        this.selectedPosition = positionClass;
-        this.positionSelectorActive = true;
-
-        // Get current language
-        const currentLanguage = window.languageManager
-            ? window.languageManager.getCurrentLanguage()
-            : 'es';
-
-        // Update title
-        const positionNames = {
-            OP: 'Opposite',
-            WS: 'Wing Spiker',
-            MB: 'Middle Blocker',
-            S: 'Setter',
-            L: 'Libero',
-        };
-
-        if (positionSelectorTitle) {
-            const selectText = currentLanguage === 'en' ? 'Select' : 'Seleccionar';
-            const forText = currentLanguage === 'en' ? 'for this position' : 'para esta posición';
-            positionSelectorTitle.textContent = `${selectText} ${positionNames[requiredPosition]} ${forText}`;
-        }
-
-        // Filter players for this position from the already sorted list
-        const sortedPlayers = this.getSortedPlayers();
-        const compatiblePlayers = sortedPlayers.filter(
-            (player) =>
-                player.position === requiredPosition &&
-                !this.usedPlayerIds.has(player.id)
-        );
-
-        // Clear previous content
-        if (positionPlayersList) {
-            positionPlayersList.innerHTML = '';
-
-            // Add compatible players
-            compatiblePlayers.forEach((player) => {
-                const playerCard = this.createPositionPlayerCard(player);
-                positionPlayersList.appendChild(playerCard);
-            });
-        }
-
-        // Show selector with animation
-        document.body.classList.add('position-selector-active');
-        if (positionSelector) {
-            positionSelector.classList.add('active');
-            positionSelector.setAttribute('aria-hidden', 'false');
-        }
+    private initializePositionSelector(): void {
+        // Link context to actual mappings
+        this.positionSelectorCtx.positionMappings = this.positionMappings as any;
+        setupPositionSelector(this.positionSelectorCtx);
     }
 
     private hidePositionSelector(): void {
-        const positionSelector = document.getElementById('positionSelector');
-
-        this.selectedPosition = null;
-        this.positionSelectorActive = false;
-
-        // Hide with animation
-        document.body.classList.remove('position-selector-active');
-        if (positionSelector) {
-            positionSelector.classList.remove('active');
-            positionSelector.setAttribute('aria-hidden', 'true');
-        }
+        hidePositionSelector(this.positionSelectorCtx);
     }
 
-    private createPositionPlayerCard(player: Character): HTMLElement {
-        const playerCard = document.createElement('div');
-        playerCard.className = 'position-player-card';
-        playerCard.setAttribute('role', 'button');
-        playerCard.setAttribute('tabindex', '0');
-        playerCard.setAttribute('title', player.name);
-
-        const imageUrl = this.getPlayerImageUrl(player);
-
-        playerCard.innerHTML = `
-      <img src="${imageUrl}" alt="${player.name}" loading="lazy" />
-    `;
-
-        // Click event to select player
-        playerCard.addEventListener('click', () => {
-            this.selectPlayerFromPositionSelector(player);
-        });
-
-        // Keyboard support
-        playerCard.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                this.selectPlayerFromPositionSelector(player);
-            }
-        });
-
-        return playerCard;
-    }
+    // createPositionPlayerCard extracted to components/SelectablePlayerCard.ts
 
     private selectPlayerFromPositionSelector(player: Character): void {
-        if (this.selectedPosition) {
+        if (this.positionSelectorCtx.selectedPosition) {
             const positionElement = document.querySelector(
-                `.${this.selectedPosition}`
+                `.${this.positionSelectorCtx.selectedPosition}`
             ) as HTMLElement;
             if (positionElement) {
                 this.placePlayerInPosition(player, positionElement);
-                this.hidePositionSelector();
+                hidePositionSelector(this.positionSelectorCtx);
             }
         }
     }
@@ -1361,11 +809,11 @@ export class HaikyuTeamBuilder {
                 this.currentSortBy = target.value as SortBy;
                 this.renderAvailablePlayers();
                 // Re-render position selector if active
-                if (this.positionSelectorActive && this.selectedPosition) {
+                if (this.positionSelectorCtx.positionSelectorActive && this.positionSelectorCtx.selectedPosition) {
                     const positionElement = document.querySelector(
-                        `.${this.selectedPosition}`
+                        `.${this.positionSelectorCtx.selectedPosition}`
                     ) as HTMLElement;
-                    this.showPositionSelector(this.selectedPosition, positionElement);
+                    showPositionSelector(this.positionSelectorCtx, this.positionSelectorCtx.selectedPosition, positionElement);
                 }
             });
         }
@@ -1381,175 +829,30 @@ export class HaikyuTeamBuilder {
 
     private setupRotationButton(): void {
         const rotationButton = document.getElementById('rotationButton');
-        console.log('Rotation button found:', rotationButton);
+        debug('Rotation button found:', !!rotationButton);
         if (rotationButton) {
+            rotationButton.setAttribute('role', 'button');
+            rotationButton.setAttribute('tabindex', '0');
+            rotationButton.setAttribute('aria-label', window.languageManager ? (window.languageManager.t('rotateTooltip') as string) : 'Rotate players');
             rotationButton.addEventListener('click', () => {
-                console.log('Rotation button clicked');
-                this.rotatePlayersClockwise();
+                debug('Rotation button clicked');
+                rotatePlayersClockwise({
+                    currentTeam: this.currentTeam,
+                    positionMappings: this.positionMappings,
+                    renderPlayerInPosition: this.renderPlayerInPosition.bind(this),
+                    renderEmptyPosition: this.renderEmptyPosition.bind(this),
+                    updateTeamStats: this.updateTeamStats.bind(this)
+                });
+            });
+            rotationButton.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    (rotationButton as HTMLElement).click();
+                }
             });
         } else {
             console.error('Rotation button not found');
         }
-    }
-
-    private rotatePlayersClockwise(): void {
-        console.log('=== STARTING POSITION ROTATION ===');
-
-        // Define the clockwise rotation sequence of positions
-        const rotationSequence = [
-            'position-1', // OP
-            'position-6', // MB
-            'position-5', // WS
-            'position-2', // S
-            'position-3', // MB
-            'position-4', // WS
-        ];
-
-        // Get the complete content of each position (player + labels)
-        const positionContents: { [key: string]: Character | null } = {};
-        const positionMappings: { [key: string]: Position } = {};
-
-        rotationSequence.forEach((pos) => {
-            // Save the current player in that position
-            positionContents[pos] = this.currentTeam[pos] || null;
-            // Save the current position mapping
-            const mapping = this.positionMappings[pos];
-            if (mapping) {
-                positionMappings[pos] = mapping;
-            }
-        });
-
-        console.log('Position contents before rotating:', positionContents);
-
-        // Button animation
-        const rotationButton = document.getElementById('rotationButton');
-        if (rotationButton) {
-            rotationButton.classList.add('rotating');
-            setTimeout(() => {
-                rotationButton.classList.remove('rotating');
-            }, 600);
-        }
-
-        // Create movement animations
-        this.animatePositionMovement(rotationSequence, () => {
-            // Callback executed when animations finish
-
-            // Rotate position mappings
-            const newPositionMappings: { [key: string]: Position } = {};
-            rotationSequence.forEach((pos, index) => {
-                const nextIndex = (index + 1) % rotationSequence.length;
-                const nextPos = rotationSequence[nextIndex];
-                if (nextPos && positionMappings[pos]) {
-                    newPositionMappings[nextPos] = positionMappings[pos];
-                }
-            });
-
-            // Rotate position contents (players)
-            const newPositionContents: { [key: string]: Character | null } = {};
-            rotationSequence.forEach((pos, index) => {
-                const nextIndex = (index + 1) % rotationSequence.length;
-                const nextPos = rotationSequence[nextIndex];
-                if (nextPos) {
-                    newPositionContents[nextPos] = positionContents[pos] ?? null;
-                }
-            });
-
-            // Update internal mappings
-            Object.assign(this.positionMappings, newPositionMappings);
-
-            // Clear current team
-            rotationSequence.forEach((pos) => {
-                delete this.currentTeam[pos];
-            });
-
-            // Apply new content
-            Object.assign(this.currentTeam, newPositionContents);
-
-            // Render all positions with their new content
-            rotationSequence.forEach((pos) => {
-                const positionElement = document.querySelector(`.${pos}`) as HTMLElement;
-                if (positionElement) {
-                    if (this.currentTeam[pos]) {
-                        // There's a player, render them
-                        this.renderPlayerInPosition(this.currentTeam[pos]!, positionElement);
-                    } else {
-                        // No player, render empty position with new label
-                        this.renderEmptyPosition(positionElement, pos);
-                    }
-                }
-            });
-
-            // Update school statistics and bonds
-            this.updateTeamStats();
-
-            console.log('=== ROTATION COMPLETED ===');
-            console.log('New mappings:', this.positionMappings);
-            console.log('New team state:', this.currentTeam);
-        });
-    }
-
-    private animatePositionMovement(rotationSequence: string[], callback: () => void): void {
-        // Get current positions of each element
-        const positions: { [key: string]: { x: number; y: number } } = {};
-        rotationSequence.forEach((pos) => {
-            const element = document.querySelector(`.${pos}`) as HTMLElement;
-            if (element) {
-                const rect = element.getBoundingClientRect();
-                positions[pos] = { x: rect.left, y: rect.top };
-            }
-        });
-
-        // Calculate target positions (next in sequence)
-        const animations: Array<{
-            element: HTMLElement;
-            deltaX: number;
-            deltaY: number;
-        }> = [];
-
-        rotationSequence.forEach((pos, index) => {
-            const nextIndex = (index + 1) % rotationSequence.length;
-            const nextPos = rotationSequence[nextIndex];
-            
-            if (!nextPos) return; // Si nextPos es undefined, saltar
-
-            const currentPos = positions[pos];
-            const targetPos = positions[nextPos];
-
-            if (currentPos && targetPos) {
-                const deltaX = targetPos.x - currentPos.x;
-                const deltaY = targetPos.y - currentPos.y;
-
-                const element = document.querySelector(`.${pos}`) as HTMLElement;
-                if (element) {
-                    animations.push({
-                        element,
-                        deltaX,
-                        deltaY,
-                    });
-                }
-            }
-        });
-
-        // Apply animations
-        animations.forEach(({ element, deltaX, deltaY }) => {
-            if (element) {
-                element.style.transition = 'transform 0.8s ease-in-out';
-                element.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
-                element.style.zIndex = '1000';
-            }
-        });
-
-        // After animation, clean styles and execute callback
-        setTimeout(() => {
-            animations.forEach(({ element }) => {
-                if (element) {
-                    element.style.transition = '';
-                    element.style.transform = '';
-                    element.style.zIndex = '';
-                }
-            });
-            callback();
-        }, 800);
     }
 
     public updateTeamStats(): void {
@@ -1558,27 +861,10 @@ export class HaikyuTeamBuilder {
     }
 
     private getSchoolComposition(): { [school: string]: number } {
-        const schoolCount: { [school: string]: number } = {};
-
-        // Count players in current team by school
-        Object.values(this.currentTeam).forEach((player) => {
-            if (player && player.school) {
-                schoolCount[player.school] = (schoolCount[player.school] || 0) + 1;
-            }
-        });
-
-        return schoolCount;
+        return computeSchoolComposition(this.currentTeam);
     }
 
-    private clearHighlights(): void {
-        const courtPositions = document.querySelectorAll('.position');
-        courtPositions.forEach((position) => {
-            const posElement = position as HTMLElement;
-            posElement.style.backgroundColor = '';
-            posElement.style.border = '';
-            posElement.style.transform = '';
-        });
-    }
+    private clearHighlights(): void { clearHighlights(); }
 }
 
 // Export for global use
