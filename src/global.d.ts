@@ -1,13 +1,20 @@
 // Global type declarations for Haikyu Team Builder
 
-import { HaikyuTeamBuilder } from './HaikyuTeamBuilder';
+import { HaikyuTeamBuilder as OriginalHaikyuTeamBuilder } from './HaikyuTeamBuilder';
+import { HaikyuTeamBuilder as RefactoredHaikyuTeamBuilder } from './HaikyuTeamBuilderRefactored';
+import { LanguageManager } from './LanguageManager';
+
+// Global type declarations for Haikyu Team Builder
+
+import { HaikyuTeamBuilder as OriginalHaikyuTeamBuilder } from './HaikyuTeamBuilder';
+import { HaikyuTeamBuilder as RefactoredHaikyuTeamBuilder } from './HaikyuTeamBuilderRefactored';
 import { LanguageManager } from './LanguageManager';
 
 declare global {
   interface Window {
-    teamBuilder?: HaikyuTeamBuilder;
+    teamBuilder?: OriginalHaikyuTeamBuilder;
     languageManager?: LanguageManager;
-    HaikyuTeamBuilder?: typeof HaikyuTeamBuilder;
+    HaikyuTeamBuilder?: typeof OriginalHaikyuTeamBuilder;
     LanguageManager?: typeof LanguageManager;
   }
 
@@ -18,4 +25,4 @@ declare global {
   }
 }
 
-export {};
+export { };

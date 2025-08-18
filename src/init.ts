@@ -10,11 +10,11 @@ async function initializeApp(): Promise<void> {
     window.languageManager = new LanguageManager();
     const teamBuilder = new HaikyuTeamBuilder();
     window.teamBuilder = teamBuilder;
-    
+
     // Store instance for global access
     (window as any).teamBuilderInstance = teamBuilder;
-    
-    console.log('Application initialized successfully');
+
+    console.log('Application initialized successfully with refactored architecture');
   } catch (error) {
     console.error('Failed to initialize application:', error);
   }
