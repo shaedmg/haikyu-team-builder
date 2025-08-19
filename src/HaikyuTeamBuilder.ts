@@ -1,3 +1,24 @@
+/**
+ * Haikyu!! Flight High Team Builder
+ * 
+ * This application demonstrates the power of vibe coding methodology - a modern approach
+ * to software development that emphasizes creative flow, iterative architecture, and
+ * emergent design patterns. The modular structure, TypeScript implementation, and
+ * component-based architecture emerged organically through collaborative AI-assisted
+ * development sessions.
+ * 
+ * Vibe coding principles demonstrated:
+ * - Organic architecture evolution
+ * - Continuous feedback loops
+ * - Modular component design
+ * - Performance optimization through iteration
+ * - Clean code emergence without over-engineering
+ * 
+ * @author Angelo
+ * @methodology Vibe Coding
+ * @framework Vanilla TypeScript + Web Components
+ */
+
 import {
     Character,
     Bond,

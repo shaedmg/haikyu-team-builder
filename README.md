@@ -118,10 +118,43 @@ Los estilos principales están en `styles.css`. Puedes modificar:
   - Flexbox y Grid Layout
   - Gradientes y efectos visuales
   - Animaciones CSS
-- **JavaScript ES6+** - Funcionalidad
+- **TypeScript** - Desarrollo tipado y modular
   - Event listeners
   - LocalStorage para persistencia
   - DOM manipulation
+  - Arquitectura orientada a componentes
+
+## 🤖 Desarrollo con Vibe Coding
+
+Este proyecto fue desarrollado utilizando **metodologías de vibe coding**, una innovadora aproximación al desarrollo de software que combina la intuición creativa con prácticas de programación estructuradas. 
+
+### ¿Qué es Vibe Coding?
+
+El vibe coding representa una evolución en las metodologías de desarrollo que enfatiza:
+
+- **Flujo creativo continuo**: Desarrollo iterativo basado en la inspiración y el momentum del proyecto
+- **Arquitectura emergente**: Permitir que la estructura del código evolucione orgánicamente según las necesidades
+- **Feedback inmediato**: Ciclos cortos de desarrollo, prueba y refinamiento
+- **Contexto compartido**: Colaboración fluida entre desarrollador y herramientas de IA
+
+### Implementación en este proyecto
+
+Este team builder de Haikyu!! demuestra los principios del vibe coding a través de:
+
+- **Desarrollo modular e iterativo**: Cada componente (drag & drop, validación de posiciones, sistema de bonds) fue desarrollado de forma independiente y luego integrado
+- **Tipado dinámico con TypeScript**: Estructura de código que se adapta y evoluciona manteniendo la robustez
+- **Arquitectura responsive**: El sistema responde y se adapta a diferentes casos de uso sin sobrefederación
+- **Optimización progresiva**: Mejoras de rendimiento y UX implementadas según el flujo de desarrollo
+
+### Resultados técnicos
+
+La metodología vibe coding permitió:
+- ⚡ **Desarrollo acelerado**: Prototipo funcional en sesiones de desarrollo fluido
+- 🎯 **Calidad emergente**: Arquitectura limpia resultado del desarrollo orgánico
+- 🔄 **Iteración eficiente**: Capacidad de pivotear y mejorar funcionalidades en tiempo real
+- 🧩 **Modularidad natural**: Componentes bien definidos sin sobre-arquitectura inicial
+
+Este proyecto sirve como **caso de estudio** para demostrar que el vibe coding puede producir aplicaciones web robustas, mantenibles y de alta calidad, mientras mantiene la agilidad y creatividad en el proceso de desarrollo.
 
 ## 📱 Compatibilidad
 
