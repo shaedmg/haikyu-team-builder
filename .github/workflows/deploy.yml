@@ -45,8 +45,6 @@ jobs:
           cp sw.js build/sw.js
           # Simple minify CSS (remove comments + whitespace)
           sed -i ':a;N;$!ba;s/\n/ /g;s/  */ /g;s:/\*[^*]*\*\(/\*[^*]*\*\)*\*/::g' build/styles.css || true
-          # Minify JS in dist (basic): remove newlines and extra spaces
-          for f in build/dist/*.js; do sed -i ':a;N;$!ba;s/\n/ /g;s/  */ /g' "$f"; done
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
