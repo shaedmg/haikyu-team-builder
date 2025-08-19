@@ -5541,7 +5541,7 @@ export const bondsData: BondsData = {
         91,
         18
       ],
-      "is_link_skill": true,
+      "is_link_skill": false,
       "rich_text": {
         "template": {
           "es": "El [Saque] de Sarukui Yamato aumenta en [Bonus].",

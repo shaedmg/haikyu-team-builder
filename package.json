@@ -1,7 +1,7 @@
 {
   "name": "haikyu-flight-high-team-builder",
   "version": "1.0.0",
-  "description": "Interactive team builder for Haikyu!! volleyball positions inspired by the anime/manga, built with TypeScript using vibe coding methodology for modern development experience",
+  "description": "Interactive team builder for Haikyu!! volleyball positions inspired by the anime/manga, built with TypeScript as experimental test case for vibe coding methodology research",
   "main": "dist/init.js",
   "scripts": {
     "start": "npm run build && npx serve .",
@@ -18,9 +18,11 @@
     "anime",
     "interactive",
     "game",
-    "vibe-coding",
+    "vibe-coding-experiment",
     "typescript",
-    "ai-assisted-development"
+    "ai-assisted-development",
+    "research-project",
+    "proof-of-concept"
   ],
   "author": "Angelo",
   "license": "MIT",

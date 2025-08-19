@@ -124,37 +124,55 @@ Los estilos principales están en `styles.css`. Puedes modificar:
   - DOM manipulation
   - Arquitectura orientada a componentes
 
-## 🤖 Desarrollo con Vibe Coding
+## 🤖 Desarrollo con Vibe Coding - Experimento Técnico
 
-Este proyecto fue desarrollado utilizando **metodologías de vibe coding**, una innovadora aproximación al desarrollo de software que combina la intuición creativa con prácticas de programación estructuradas. 
+**⚠️ NOTA IMPORTANTE: Esta es una prueba experimental de metodologías de vibe coding. Los resultados presentados forman parte de un estudio de caso y no representan una metodología de desarrollo establecida o recomendada para entornos de producción.**
 
-### ¿Qué es Vibe Coding?
+Este proyecto fue desarrollado como **experimento técnico** utilizando **metodologías de vibe coding**, una aproximación experimental al desarrollo de software que combina la intuición creativa con prácticas de programación estructuradas.
 
-El vibe coding representa una evolución en las metodologías de desarrollo que enfatiza:
+### ¿Qué es Vibe Coding? (Metodología Experimental)
+
+El vibe coding es una **metodología en fase de investigación** que estamos probando para evaluar su viabilidad. Los principios experimentales incluyen:
 
 - **Flujo creativo continuo**: Desarrollo iterativo basado en la inspiración y el momentum del proyecto
 - **Arquitectura emergente**: Permitir que la estructura del código evolucione orgánicamente según las necesidades
 - **Feedback inmediato**: Ciclos cortos de desarrollo, prueba y refinamiento
 - **Contexto compartido**: Colaboración fluida entre desarrollador y herramientas de IA
 
-### Implementación en este proyecto
+### Implementación Experimental en este Proyecto
 
-Este team builder de Haikyu!! demuestra los principios del vibe coding a través de:
+Este team builder de Haikyu!! sirve como **caso de prueba** para los principios del vibe coding:
 
-- **Desarrollo modular e iterativo**: Cada componente (drag & drop, validación de posiciones, sistema de bonds) fue desarrollado de forma independiente y luego integrado
-- **Tipado dinámico con TypeScript**: Estructura de código que se adapta y evoluciona manteniendo la robustez
-- **Arquitectura responsive**: El sistema responde y se adapta a diferentes casos de uso sin sobrefederación
-- **Optimización progresiva**: Mejoras de rendimiento y UX implementadas según el flujo de desarrollo
+- **Desarrollo modular e iterativo**: Cada componente fue desarrollado de forma independiente como experimento
+- **Tipado dinámico con TypeScript**: Estructura de código que se adapta durante el proceso experimental
+- **Arquitectura responsive**: El sistema responde a diferentes casos de uso (resultados del experimento)
+- **Optimización progresiva**: Mejoras implementadas según el flujo experimental
 
-### Resultados técnicos
+### Resultados del Experimento
 
-La metodología vibe coding permitió:
-- ⚡ **Desarrollo acelerado**: Prototipo funcional en sesiones de desarrollo fluido
-- 🎯 **Calidad emergente**: Arquitectura limpia resultado del desarrollo orgánico
-- 🔄 **Iteración eficiente**: Capacidad de pivotear y mejorar funcionalidades en tiempo real
-- 🧩 **Modularidad natural**: Componentes bien definidos sin sobre-arquitectura inicial
+**✅ Aspectos exitosos observados:**
+- ⚡ **Desarrollo acelerado**: Prototipo funcional en sesiones experimentales
+- 🎯 **Calidad emergente**: Arquitectura resultante del desarrollo orgánico
+- 🔄 **Iteración eficiente**: Capacidad de pivotear durante el experimento
+- 🧩 **Modularidad natural**: Componentes bien definidos surgieron naturalmente
 
-Este proyecto sirve como **caso de estudio** para demostrar que el vibe coding puede producir aplicaciones web robustas, mantenibles y de alta calidad, mientras mantiene la agilidad y creatividad en el proceso de desarrollo.
+**⚠️ Limitaciones y áreas de mejora identificadas:**
+- 📚 **Documentación**: Los procesos requieren mejor documentación sistemática
+- 🔄 **Repetibilidad**: La metodología necesita mayor estructura para ser repetible
+- 👥 **Escalabilidad**: Falta validar efectividad en equipos más grandes
+- 📊 **Métricas**: Se requieren mejores indicadores de progreso y calidad
+- 🛠️ **Herramientas**: Necesidad de herramientas específicas para soportar la metodología
+
+### Conclusiones del Experimento
+
+Este proyecto sirve como **prueba de concepto inicial** que sugiere potencial en el vibe coding, pero también revela que:
+
+1. **Se requiere más investigación** para establecer mejores prácticas
+2. **Los procesos necesitan refinamiento** para ser aplicables en producción
+3. **La metodología muestra promesa** pero no está lista para adopción general
+4. **Se necesitan más casos de estudio** para validar los resultados
+
+**Disclaimer:** Este es un proyecto experimental. Los resultados y metodologías presentadas están en fase de investigación y no deben considerarse como estándares establecidos de la industria.
 
 ## 📱 Compatibilidad
 
