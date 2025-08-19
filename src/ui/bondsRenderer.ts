@@ -25,6 +25,40 @@ export function generateBondEffectHTML(
     const currentLanguage = window.languageManager ? window.languageManager.getCurrentLanguage() : 'es';
     const bondName = typeof bond.name === 'object' ? (bond.name as any)[currentLanguage] || (bond.name as any).es : bond.name;
 
+    // Rich text unified description path
+    // @ts-ignore
+    if ((bond as any).rich_text) {
+        const rich = (bond as any).rich_text;
+        const template = rich.template[currentLanguage] || rich.template.es;
+        const maxLevels: number = rich.maxLevels || 5;
+        // Prepare level buttons only once (shared across variables)
+        let html = '<div class="bond-effect rich-text-bond">';
+        html += '<div class="bond-participants-horizontal">';
+        bond.participants.forEach((participantId: number) => {
+            const player = players.find(p => p.id === participantId);
+            const isInTeam = currentPlayerIds.includes(participantId);
+            const playerImageUrl = player ? getPlayerImageUrl(player) : '';
+            const borderClass = isInTeam ? 'participant-in-team' : 'participant-missing';
+            if (playerImageUrl) {
+                html += `<img src="${playerImageUrl}" alt="${player ? player.name : participantId}" class="participant-image ${borderClass}" title="${player ? player.name : `ID: ${participantId}`}">`;
+            }
+        });
+        html += '</div>';
+        html += '<div class="rich-text-body">';
+        // Level selector
+        html += `<div class="level-selector" data-rich-bond-id="${(bond as any).id}">`;
+        for (let i = 1; i <= maxLevels; i++) {
+            html += `<button class="level-btn ${i === 1 ? 'active' : ''}" data-level="${i}" onclick="window.teamBuilder.setRichBondLevel(${(bond as any).id}, ${i})">Lv.${i}</button>`;
+        }
+        html += '</div>';
+        // Placeholder replaced text container
+        const initialLevel = 1;
+        const processed = processRichTextTemplate(template, rich.variables, currentLanguage, initialLevel);
+        html += `<div class="rich-text-description" id="rich-bond-desc-${(bond as any).id}">${processed}</div>`;
+        html += '</div></div>';
+        return html;
+    }
+
     if (!bond.effects_by_character || bond.effects_by_character.length === 0) {
         const t = window.languageManager
             ? window.languageManager.t.bind(window.languageManager)
@@ -144,4 +178,17 @@ export function generateBondEffectHTML(
     </div>`;
     }
     return '<div class="bond-effect">Tipo de bond no reconocido</div>';
+}
+
+// Helper to process template replacing [Var] tokens with level-specific values and highlighting
+function processRichTextTemplate(template: string, variables: any[], lang: string, level: number): string {
+    return template.replace(/\[(.+?)\]/g, (_m, varName: string) => {
+        const variable = variables.find((v: any) => v.name.toLowerCase() === varName.toLowerCase());
+        if (!variable) return varName; // unknown
+        let values = variable.levels;
+        let arr = Array.isArray(values) ? values : (values[lang] || values.es || []);
+        if (!Array.isArray(arr) || arr.length === 0) return varName;
+        const value = arr[Math.min(level - 1, arr.length - 1)];
+        return `<span class="rich-var" data-var="${varName}" data-level="${level}">${value}</span>`;
+    });
 }

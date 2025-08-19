@@ -79,6 +79,7 @@ export interface Bond {
     requiredCount?: number;
     isActive?: boolean;
     missingCount?: number;
+    rich_text?: BondRichTextData; // new unified rich text description format
 }
 
 // Data structures
@@ -88,6 +89,24 @@ export interface CharactersData {
 
 export interface BondsData {
     bonds: Bond[];
+}
+
+// Rich text bond support
+export interface BondRichTextVariableLevels {
+    es?: string[];
+    en?: string[];
+    [lang: string]: any;
+}
+
+export interface BondRichTextVariable {
+    name: string; // placeholder without brackets e.g. Bloqueo
+    levels: BondRichTextVariableLevels; // per language arrays of values per level
+}
+
+export interface BondRichTextData {
+    template: { es: string; en: string;[lang: string]: string }; // e.g. "El [Bloqueo] de ... aumenta ({{porcentaje}})."
+    variables: BondRichTextVariable[]; // variables to substitute inside template using [Name] or {{name}}
+    maxLevels: number; // number of levels supported (1..5)
 }
 
 export interface TeamPosition {

@@ -68,7 +68,15 @@ export const bondsData: BondsData = {
           ]
         }
       ],
-      "id": 1
+      "id": 1,
+      "rich_text": {
+        "template": {
+          "es": "Cuando un miembro aliado activa una habilidad de recepción, se consume 1 acumulación del efecto [Espíritu Competitivo] y los [Reflejos] del miembro que recibe aumentan un 6%. Cuando se activa la habilidad de recepción de Hinata Shoyo (Hanami) y se consume un efecto de [Espíritu Competitivo], los [Reflejos] de Hinata Shoyo (Hanami) aumentan un 9% adicional, y Kageyama Tobio obtiene 1 acumulación del efecto [Espíritu Competitivo]. Cuando se activa el movimiento especial de Hinata Shoyo (Hanami), Kageyama Tobio obtiene 1 acumulación del efecto [Espíritu Competitivo].",
+          "en": "When an ally member's receive skill is activated, consumes 1 stack of [Competitive Spirit] effect, and the receiving member's [Reflexes] increase by 6%. When Hinata Shoyo (Hanami)'s receive skill is activated and a [Competitive Spirit] effect is consumed, Hinata Shoyo (Hanami)'s [Reflexes] further increase by 9%, and Kageyama Tobio gains 1 stack of [Competitive Spirit] effect. When Hinata Shoyo (Hanami)'s special move is activated, Kageyama Tobio gains 1 stack of [Competitive Spirit] effect."
+        },
+        "variables": [],
+        "maxLevels": 1
+      }
     },
     {
       "name": {
@@ -158,7 +166,88 @@ export const bondsData: BondsData = {
           ]
         }
       ],
-      "id": 2
+      "id": 2,
+      "rich_text": {
+        "template": {
+          "es": "Al comienzo del partido, Kozume Kenma (Hanami) obtiene 3 acumulaciones del efecto [Defensa sin fisuras], y el número máximo de acumulaciones del efecto [Defensa sin fisuras] aumenta a [AcumulacionesMax]. Por cada acumulación del efecto [Defensa sin fisuras], la [Percepcion] de Kozume Kenma (Hanami) aumenta en [BonusPercepcion], y si la jugada de Hinata Shoyo (Hanami) es una buena jugada, su [Ataque rapido] aumenta en [BonusAtaqueRapido].",
+          "en": "At the start of the match, Kozume Kenma (Hanami) gains 3 stacks of the [Gapless Defense] effect, and the maximum number of stacks for the [Gapless Defense] effect increases to [MaxStacks]. For each stack of the [Gapless Defense] effect, Kozume Kenma (Hanami)'s [Perception] increases by [PerceptionBonus], and if Hinata Shoyo (Hanami)'s play is a nice play, his [Quick Attack] increases by [QuickAttackBonus]."
+        },
+        "variables": [
+          {
+            "name": "AcumulacionesMax",
+            "levels": {
+              "es": [
+                "13",
+                "13",
+                "14",
+                "14",
+                "15"
+              ]
+            }
+          },
+          {
+            "name": "MaxStacks",
+            "levels": {
+              "en": [
+                "13",
+                "13",
+                "14",
+                "14",
+                "15"
+              ]
+            }
+          },
+          {
+            "name": "BonusPercepcion",
+            "levels": {
+              "es": [
+                "0.8%",
+                "1%",
+                "1%",
+                "1%",
+                "1.2%"
+              ]
+            }
+          },
+          {
+            "name": "PerceptionBonus",
+            "levels": {
+              "en": [
+                "0.8%",
+                "1%",
+                "1%",
+                "1%",
+                "1.2%"
+              ]
+            }
+          },
+          {
+            "name": "BonusAtaqueRapido",
+            "levels": {
+              "es": [
+                "1%",
+                "1.25%",
+                "1.25%",
+                "1.5%",
+                "1.5%"
+              ]
+            }
+          },
+          {
+            "name": "QuickAttackBonus",
+            "levels": {
+              "en": [
+                "1%",
+                "1.25%",
+                "1.25%",
+                "1.5%",
+                "1.5%"
+              ]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
     },
     {
       "name": {
@@ -296,21 +385,125 @@ export const bondsData: BondsData = {
           ]
         }
       ],
+      "rich_text": {
+        "template": {
+          "es": "Una relación de amistad que nace entre personas con personalidades muy diferentes. Aunque sean distintos, se complementan perfectamente.\n\n• Ataque Rápido: [quick_attack]\n• Bloqueo: [block]",
+          "en": "A friendship relationship born between people with very different personalities. Even though they are different, they complement each other perfectly.\n\n• Quick Attack: [quick_attack]\n• Block: [block]"
+        },
+        "variables": [
+          {
+            "name": "quick_attack",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          },
+          {
+            "name": "block",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      },
       "id": 4
     },
     {
       "name": {
         "es": "Dúo de Raros (SSR ver.)",
-        "en": "Dúo de Raros (SSR ver.)"
+        "en": "Weird Duo (SSR ver.)"
       },
       "participants": [
         4,
         2
       ],
-      "is_link_skill": false,
+      "is_link_skill": true,
       "effect_summary": {
         "es": "Kageyama coloca para Hinata, quien realiza un ataque rápido con una potencia de 'Ataque Rápido' x 280%~340%. La 'Conciencia' de Hinata aumenta un 30% y su 'Potencia' aumenta según su 'Conciencia' (máximo 60%~100%). Este ataque no puede ser bloqueado. Al anotar, el tiempo de recarga de la habilidad se reinicia.",
         "en": "Kageyama coloca para Hinata, quien realiza un ataque rápido con una potencia de 'Ataque Rápido' x 280%~340%. La 'Conciencia' de Hinata aumenta un 30% y su 'Potencia' aumenta según su 'Conciencia' (máximo 60%~100%). Este ataque no puede ser bloqueado. Al anotar, el tiempo de recarga de la habilidad se reinicia."
+      },
+      "rich_text": {
+        "template": {
+          "es": "Kageyama Tobio coloca el balón, y Hinata Shoyo realiza un ataque rápido de raros con una potencia de [Ataque rapido] x [Multiplicador]. En esta jugada, la [Percepcion] de Hinata Shoyo aumenta un 30%, y su [Fuerza] aumenta en [Percepcion] x [MultiplicadorFuerza] (hasta un máximo de [BonusMaxFuerza]). Esta jugada no puede ser bloqueada. Cuando un aliado anota, el enfriamiento de <Dúo de raros> se reinicia. Si el efecto [Espíritu Competitivo] se consume cuando se activa <Dúo de raros>, Kageyama Tobio obtiene 1 acumulación del efecto [Espíritu Competitivo].",
+          "en": "Kageyama Tobio sets the ball, and Hinata Shoyo performs a freak quick attack with a power of [Quick Attack] x [Multiplier]. In this play, Hinata Shoyo's [Perception] increases by 30%, and his [Strength] increases by [Perception] x [StrengthMultiplier] (up to a maximum of [MaxStrengthBonus]). This play cannot be blocked. When an ally scores, the cooldown for <Freak Duo> is reset. If the [Competitive Spirit] effect is consumed when <Freak Duo> is activated, Kageyama Tobio gains 1 stack of the [Competitive Spirit] effect."
+        },
+        "variables": [
+          {
+            "name": "Multiplicador",
+            "levels": {
+              "es": [
+                "280%",
+                "295%",
+                "310%",
+                "325%",
+                "340%"
+              ]
+            }
+          },
+          {
+            "name": "Multiplier",
+            "levels": {
+              "en": [
+                "280%",
+                "295%",
+                "310%",
+                "325%",
+                "340%"
+              ]
+            }
+          },
+          {
+            "name": "MultiplicadorFuerza",
+            "levels": {
+              "es": [
+                "30%",
+                "35%",
+                "40%",
+                "45%",
+                "50%"
+              ]
+            }
+          },
+          {
+            "name": "StrengthMultiplier",
+            "levels": {
+              "en": [
+                "30%",
+                "35%",
+                "40%",
+                "45%",
+                "50%"
+              ]
+            }
+          },
+          {
+            "name": "BonusMaxFuerza",
+            "levels": {
+              "es": [
+                "60%",
+                "70%",
+                "80%",
+                "90%",
+                "100%"
+              ]
+            }
+          },
+          {
+            "name": "MaxStrengthBonus",
+            "levels": {
+              "en": [
+                "60%",
+                "70%",
+                "80%",
+                "90%",
+                "100%"
+              ]
+            }
+          }
+        ],
+        "maxLevels": 5
       },
       "id": 5
     },
@@ -380,6 +573,29 @@ export const bondsData: BondsData = {
           ]
         }
       ],
+      "rich_text": {
+        "template": {
+          "es": "Una amistad sincera que se desarrolla a través del voleibol. Las diferencias se dejan de lado para formar una relación basada en el respeto mutuo.\n\n• Ataque Rápido: [Quick_attack]\n• Colocación: [Set]",
+          "en": "A sincere friendship that develops through volleyball. Differences are set aside to form a relationship based on mutual respect.\n\n• Quick Attack: [Quick_attack]\n• Set: [Set]"
+        },
+        "variables": [
+          {
+            "name": "quick_attack",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          },
+          {
+            "name": "set",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      },
       "id": 6
     },
     {
@@ -448,6 +664,29 @@ export const bondsData: BondsData = {
           ]
         }
       ],
+      "rich_text": {
+        "template": {
+          "es": "Dos jóvenes jugadores con el sueño de convertirse en ases de sus respectivos equipos. La rivalidad los impulsa a mejorar constantemente.\n\n• Bloqueo: [Block]\n• Ataque Rápido: [Quick_attack]",
+          "en": "Two young players with the dream of becoming aces of their respective teams. Rivalry drives them to constantly improve.\n\n• Block: [Block]\n• Quick Attack: [Quick_attack]"
+        },
+        "variables": [
+          {
+            "name": "block",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          },
+          {
+            "name": "quick_attack",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      },
       "id": 7
     },
     {
@@ -516,18 +755,52 @@ export const bondsData: BondsData = {
           ]
         }
       ],
+      "rich_text": {
+        "template": {
+          "es": "Una rivalidad sana que los impulsa mutuamente a mejorar. A pesar de competir, mantienen el respeto y la admiración mutua.\n\n• Recepción: [Reception]\n• Colocación: [Set]",
+          "en": "A healthy rivalry that mutually drives them to improve. Despite competing, they maintain mutual respect and admiration.\n\n• Reception: [Reception]\n• Set: [Set]"
+        },
+        "variables": [
+          {
+            "name": "reception",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          },
+          {
+            "name": "set",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      },
       "id": 8
     },
     {
       "name": {
         "es": "Primer Dúo",
-        "en": "Primer Dúo"
+        "en": "First Combination"
       },
       "participants": [
         5,
         7
       ],
       "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "Cuando se activa una habilidad de ataque rápido, la [Percepcion] del miembro correspondiente aumenta en [Porcentaje].",
+          "en": "When a quick attack skill is activated, the corresponding member's [Perception] increases by [Percent]."
+        },
+        "variables": [
+          { "name": "Porcentaje", "levels": { "es": ["6%", "7%", "8%", "9%", "10%"], "en": ["6%", "7%", "8%", "9%", "10%"] } },
+          { "name": "Percent", "levels": { "en": ["6%", "7%", "8%", "9%", "10%"] } }
+        ],
+        "maxLevels": 5
+      },
       "effects_by_character": [
         {
           "character_id": 5,
@@ -652,6 +925,29 @@ export const bondsData: BondsData = {
           ]
         }
       ],
+      "rich_text": {
+        "template": {
+          "es": "La confianza se construye gradualmente durante el entrenamiento. A través de la práctica constante, aprenden a confiar en las habilidades del otro.\n\n• Recepción: [Reception]\n• Saque: [Serve]",
+          "en": "Trust is gradually built during training. Through constant practice, they learn to trust each other's abilities.\n\n• Reception: [Reception]\n• Serve: [Serve]"
+        },
+        "variables": [
+          {
+            "name": "reception",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          },
+          {
+            "name": "serve",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      },
       "id": 10
     },
     {
@@ -665,6 +961,17 @@ export const bondsData: BondsData = {
         9
       ],
       "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "El consumo de resistencia para las habilidades de ataque poderoso y ataque rápido se reduce en un 10%. Al realizar un ataque poderoso, la [Tecnica ofensiva] del miembro correspondiente aumenta en [Porcentaje].",
+          "en": "Stamina consumption for powerful attack and quick attack skills is reduced by 10%. When performing a powerful attack, the corresponding member's [Offensive Technique] increases by [Percent]."
+        },
+        "variables": [
+          { "name": "Porcentaje", "levels": { "es": ["6%", "7%", "8%", "9%", "10%"], "en": ["6%", "7%", "8%", "9%", "10%"] } },
+          { "name": "Percent", "levels": { "en": ["6%", "7%", "8%", "9%", "10%"] } }
+        ],
+        "maxLevels": 5
+      },
       "effects_by_character": [
         {
           "character_id": 6,
@@ -882,7 +1189,47 @@ export const bondsData: BondsData = {
           ]
         }
       ],
-      "id": 12
+      "id": 12,
+      "rich_text": {
+        "template": {
+          "es": "Si el resultado de una recepción es PERFECTO, la moral del equipo aumenta en [Porcentaje].",
+          "en": "If the result of a reception is PERFECT, team morale increases by [Percent]."
+        },
+        "variables": [
+          {
+            "name": "Porcentaje",
+            "levels": {
+              "es": [
+                "3%",
+                "3%",
+                "4%",
+                "4%",
+                "5%"
+              ],
+              "en": [
+                "3%",
+                "3%",
+                "4%",
+                "4%",
+                "5%"
+              ]
+            }
+          },
+          {
+            "name": "Percent",
+            "levels": {
+              "en": [
+                "3%",
+                "3%",
+                "4%",
+                "4%",
+                "5%"
+              ]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
     },
     {
       "name": {
@@ -950,6 +1297,22 @@ export const bondsData: BondsData = {
           ]
         }
       ],
+      "rich_text": {
+        "template": {
+          "es": "Dos personas que, aunque aparenten estar siempre alegres, guardan en su interior preocupaciones y responsabilidades que pocos conocen.\n\n• Recepción: [Reception]",
+          "en": "Two people who, although they appear to be always happy, keep inside concerns and responsibilities that few know about.\n\n• Reception: [Reception]"
+        },
+        "variables": [
+          {
+            "name": "reception",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      },
       "id": 13
     },
     {
@@ -962,6 +1325,17 @@ export const bondsData: BondsData = {
         13
       ],
       "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "Cuando Nishinoya Yu o Azumane Asahi activan una habilidad, su propia [Tecnica ofensiva] y [Tecnica defensiva] aumentan en [Porcentaje].",
+          "en": "When Nishinoya Yu or Azumane Asahi activates a skill, their own [Offensive Technique] and [Defensive Technique] increase by [Percent]."
+        },
+        "variables": [
+          { "name": "Porcentaje", "levels": { "es": ["6%", "7%", "8%", "9%", "10%"], "en": ["6%", "7%", "8%", "9%", "10%"] } },
+          { "name": "Percent", "levels": { "en": ["6%", "7%", "8%", "9%", "10%"] } }
+        ],
+        "maxLevels": 5
+      },
       "effects_by_character": [
         {
           "character_id": 10,
@@ -1059,6 +1433,22 @@ export const bondsData: BondsData = {
           ]
         }
       ],
+      "rich_text": {
+        "template": {
+          "es": "Una combinación imparable: la potencia de fuego del cañón y la defensa impenetrable del muro de hierro.\n\n• Remate: [Spike]",
+          "en": "An unstoppable combination: the cannon's firepower and the iron wall's impenetrable defense.\n\n• Spike: [Spike]"
+        },
+        "variables": [
+          {
+            "name": "spike",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      },
       "id": 15
     },
     {
@@ -1071,6 +1461,17 @@ export const bondsData: BondsData = {
         15
       ],
       "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "Cuando se anota un punto, la moral del equipo aumenta en [Cantidad].",
+          "en": "When a point is scored, team morale increases by [Amount]."
+        },
+        "variables": [
+          { "name": "Cantidad", "levels": { "es": ["6", "7", "8", "9", "10"], "en": ["6", "7", "8", "9", "10"] } },
+          { "name": "Amount", "levels": { "en": ["6", "7", "8", "9", "10"] } }
+        ],
+        "maxLevels": 5
+      },
       "effects_by_character": [
         {
           "character_id": 13,
@@ -1223,6 +1624,29 @@ export const bondsData: BondsData = {
           ]
         }
       ],
+      "rich_text": {
+        "template": {
+          "es": "Los estudiantes de segundo año que forman el núcleo del equipo. Han superado la etapa de novatos y ahora lidean con responsabilidad.\n\n• Remate: [Spike]\n• Colocación: [Set]",
+          "en": "Second-year students who form the core of the team. They have overcome the novice stage and now lead with responsibility.\n\n• Spike: [Spike]\n• Set: [Set]"
+        },
+        "variables": [
+          {
+            "name": "spike",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          },
+          {
+            "name": "set",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      },
       "id": 17
     },
     {
@@ -1291,6 +1715,22 @@ export const bondsData: BondsData = {
           ]
         }
       ],
+      "rich_text": {
+        "template": {
+          "es": "Una exclamación de alegría que marca el inicio de una amistad verdadera. La emoción compartida fortalece su vínculo en la cancha.\n\n• Remate: [Spike]",
+          "en": "An exclamation of joy that marks the beginning of a true friendship. Shared emotion strengthens their bond on the court.\n\n• Spike: [Spike]"
+        },
+        "variables": [
+          {
+            "name": "spike",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      },
       "id": 18
     },
     {
@@ -1303,6 +1743,19 @@ export const bondsData: BondsData = {
         20
       ],
       "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "El [Bloqueo] de Tsukishima Kei y el [Saque] de Yamaguchi Tadashi aumentan en [Porcentaje].",
+          "en": "Tsukishima Kei's [Block] and Tadashi Yamaguchi's [Serve] increase by [Percent]."
+        },
+        "variables": [
+          { "name": "Bloqueo", "levels": { "es": ["Bloqueo"], "en": ["Block"] } },
+          { "name": "Saque", "levels": { "es": ["Saque"], "en": ["Serve"] } },
+          { "name": "Porcentaje", "levels": { "es": ["6%", "7%", "8%", "9%", "10%"], "en": ["6%", "7%", "8%", "9%", "10%"] } },
+          { "name": "Percent", "levels": { "en": ["6%", "7%", "8%", "9%", "10%"] } }
+        ],
+        "maxLevels": 5
+      },
       "effects_by_character": [
         {
           "character_id": 18,
@@ -1427,6 +1880,22 @@ export const bondsData: BondsData = {
           ]
         }
       ],
+      "rich_text": {
+        "template": {
+          "es": "Los más experimentados transmiten conocimientos técnicos a los aprendices, que con el tiempo dominarán el oficio.\n\n• Bloqueo: [Block]",
+          "en": "The most experienced transmit technical knowledge to apprentices, who will master the craft over time.\n\n• Block: [Block]"
+        },
+        "variables": [
+          {
+            "name": "block",
+            "levels": {
+              "es": ["6%", "7%", "8%", "9%", "10%"],
+              "en": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      },
       "id": 20
     },
     {
@@ -1490,7 +1959,64 @@ export const bondsData: BondsData = {
           ]
         }
       ],
-      "id": 21
+      "id": 21,
+      "rich_text": {
+        "template": {
+          "es": "Los [Reflejos] de Nishinoya Yu (Después de clases) aumentan en [BonusReflejos]. Si Sugawara Koshi (Después de clases) está en la cancha y la resistencia de Nishinoya Yu (Después de clases) es inferior a 80, los [Reflejos] de Nishinoya Yu (Después de clases) aumentan adicionalmente en [BonusAdicionalReflejos].",
+          "en": "Nishinoya Yu (After School)'s [Reflexes] increase by [ReflexesBonus]. If Sugawara Koshi (After School) is on the court and Nishinoya Yu (After School)'s stamina is less than 80, Nishinoya Yu (After School)'s [Reflexes] further increase by [AdditionalReflexesBonus]."
+        },
+        "variables": [
+          {
+            "name": "BonusReflejos",
+            "levels": {
+              "es": [
+                "5%",
+                "7.5%",
+                "7.5%",
+                "7.5%",
+                "10%"
+              ]
+            }
+          },
+          {
+            "name": "ReflexesBonus",
+            "levels": {
+              "en": [
+                "5%",
+                "7.5%",
+                "7.5%",
+                "7.5%",
+                "10%"
+              ]
+            }
+          },
+          {
+            "name": "BonusAdicionalReflejos",
+            "levels": {
+              "es": [
+                "5%",
+                "5%",
+                "7.5%",
+                "10%",
+                "10%"
+              ]
+            }
+          },
+          {
+            "name": "AdditionalReflexesBonus",
+            "levels": {
+              "en": [
+                "5%",
+                "5%",
+                "7.5%",
+                "10%",
+                "10%"
+              ]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
     },
     {
       "name": {
@@ -1531,6 +2057,22 @@ export const bondsData: BondsData = {
           ]
         }
       ],
+      "rich_text": {
+        "template": {
+          "es": "Los especialistas en colocación que dirigen el ritmo del juego. Su precisión y visión de campo determinan el éxito de los ataques.\n\n• Colocación: [set]",
+          "en": "The setting specialists who direct the pace of the game. Their precision and court vision determine the success of attacks.\n\n• Set: [set]"
+        },
+        "variables": [
+          {
+            "name": "set",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      },
       "id": 22
     },
     {
@@ -1627,6 +2169,36 @@ export const bondsData: BondsData = {
           ]
         }
       ],
+      "rich_text": {
+        "template": {
+          "es": "Los estudiantes más experimentados del equipo que han llegado a su último año. Su liderazgo y sabiduría guían a los más jóvenes.\n\n• Bloqueo: [Block]\n• Recepción: [Reception]\n• Remate: [Spike]",
+          "en": "The most experienced students on the team who have reached their final year. Their leadership and wisdom guide the younger ones.\n\n• Block: [Block]\n• Reception: [Reception]\n• Spike: [Spike]"
+        },
+        "variables": [
+          {
+            "name": "block",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          },
+          {
+            "name": "reception",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          },
+          {
+            "name": "spike",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      },
       "id": 23
     },
     {
@@ -1717,7 +2289,40 @@ export const bondsData: BondsData = {
           ]
         }
       ],
-      "id": 24
+      "id": 24,
+      "rich_text": {
+        "template": {
+          "es": "Cuando un miembro aliado coloca, su [Percepcion] aumenta en [Porcentaje]. Este efecto dura hasta que el balón cruza la red dos veces. Si el ataque rápido de Hinata Shoyo (Hanami) se convierte en una buena jugada, el enfriamiento de <Saltar Alto> se reduce en 2 cruces de red, y la [Percepcion] de Tsukishima Kei (Festival de Fuegos Artificiales) aumenta un 50% de la [Percepcion] de Hinata Shoyo (Hanami), hasta un máximo del 50%. Este efecto dura hasta que el balón cruza la red 4 veces.",
+          "en": "When an ally member tosses, their [Perception] increases by [Percent]. This effect lasts until the ball crosses the net twice. If Hinata Shoyo (Hanami)'s quick attack becomes a nice play, the cooldown of <Jump High> is reduced by 2 net crosses, and Tsukishima Kei (Fireworks Festival)'s [Perception] increases by 50% of Hinata Shoyo (Hanami)'s [Perception], up to a maximum of 50%. This effect lasts until the ball crosses the net 4 times."
+        },
+        "variables": [
+          {
+            "name": "Porcentaje",
+            "levels": {
+              "es": [
+                "10%",
+                "15%",
+                "20%",
+                "25%",
+                "30%"
+              ]
+            }
+          },
+          {
+            "name": "Percent",
+            "levels": {
+              "en": [
+                "10%",
+                "15%",
+                "20%",
+                "25%",
+                "30%"
+              ]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
     },
     {
       "name": {
@@ -1785,6 +2390,29 @@ export const bondsData: BondsData = {
           ]
         }
       ],
+      "rich_text": {
+        "template": {
+          "es": "El momento exacto en que alguien se enamora del voleibol. Esa pasión instantánea que los une y los motiva a seguir mejorando.\n\n• Remate: [Spike]\n• Ataque Rápido: [Quick_attack]",
+          "en": "The exact moment someone falls in love with volleyball. That instant passion that unites them and motivates them to keep improving.\n\n• Spike: [Spike]\n• Quick Attack: [Quick_attack]"
+        },
+        "variables": [
+          {
+            "name": "spike",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          },
+          {
+            "name": "quick_attack",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      },
       "id": 25
     },
     {
@@ -1853,6 +2481,29 @@ export const bondsData: BondsData = {
           ]
         }
       ],
+      "rich_text": {
+        "template": {
+          "es": "Una combinación poderosa de valor para enfrentar cualquier desafío y la determinación de nunca rendirse. Juntos son imparables.\n\n• Colocación: [Set]\n• Recepción: [Reception]",
+          "en": "A powerful combination of courage to face any challenge and the determination to never give up. Together they are unstoppable.\n\n• Set: [Set]\n• Reception: [Reception]"
+        },
+        "variables": [
+          {
+            "name": "set",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          },
+          {
+            "name": "reception",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      },
       "id": 26
     },
     {
@@ -1921,7 +2572,40 @@ export const bondsData: BondsData = {
           ]
         }
       ],
-      "id": 27
+      "id": 27,
+      "rich_text": {
+        "template": {
+          "es": "Kozume Kenma coloca el balón, y Kuroo Tetsuro realiza un ataque rápido con una potencia de [Ataque rapido] x [Multiplicador].",
+          "en": "Kozume Kenma sets the ball, and Kuroo Tetsuro performs a quick attack with a power of [Quick Attack] x [Multiplier]."
+        },
+        "variables": [
+          {
+            "name": "Multiplicador",
+            "levels": {
+              "es": [
+                "265%",
+                "280%",
+                "295%",
+                "310%",
+                "325%"
+              ]
+            }
+          },
+          {
+            "name": "Multiplier",
+            "levels": {
+              "en": [
+                "265%",
+                "280%",
+                "295%",
+                "310%",
+                "325%"
+              ]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
     },
     {
       "name": {
@@ -2031,7 +2715,69 @@ export const bondsData: BondsData = {
           ]
         }
       ],
-      "id": 29
+      "id": 29,
+      "rich_text": {
+        "template": {
+          "es": "La [Colocacion] de Kozume Kenma (Práctica) y el [Bloqueo] de Kuroo Tetsuro (Práctica) aumentan en [Porcentaje].",
+          "en": "Kozume Kenma (Practice)'s [Toss] and Kuroo Tetsuro (Practice)'s [Block] increase by [Percent]."
+        },
+        "variables": [
+          {
+            "name": "Colocacion",
+            "levels": {
+              "es": [
+                "Colocacion"
+              ],
+              "en": [
+                "Toss"
+              ]
+            }
+          },
+          {
+            "name": "Bloqueo",
+            "levels": {
+              "es": [
+                "Bloqueo"
+              ],
+              "en": [
+                "Block"
+              ]
+            }
+          },
+          {
+            "name": "Porcentaje",
+            "levels": {
+              "es": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ],
+              "en": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          },
+          {
+            "name": "Percent",
+            "levels": {
+              "en": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
     },
     {
       "name": {
@@ -2099,6 +2845,29 @@ export const bondsData: BondsData = {
           ]
         }
       ],
+      "rich_text": {
+        "template": {
+          "es": "Dos personas con personalidades y características similares que se entienden intuitivamente. Su comprensión mutua los fortalece.\n\n• Recepción: [Reception]\n• Bloqueo: [Block]",
+          "en": "Two people with similar personalities and characteristics who understand each other intuitively. Their mutual understanding strengthens them.\n\n• Reception: [Reception]\n• Block: [Block]"
+        },
+        "variables": [
+          {
+            "name": "reception",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          },
+          {
+            "name": "block",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      },
       "id": 30
     },
     {
@@ -2111,6 +2880,16 @@ export const bondsData: BondsData = {
         94
       ],
       "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "La [Recepcion] de Yaku Morisuke y el [Ataque rapido] de Haiba Lev aumentan en [Bonus].",
+          "en": "Yaku Morisuke's [Reception] and Haiba Lev's [Quick Attack] increase by [Bonus]."
+        },
+        "variables": [
+          { "name": "Bonus", "levels": { "es": ["+1%+5", "+2%+7", "+3%+9", "+4%+12", "+5%+15"], "en": ["+1%+5", "+2%+7", "+3%+9", "+4%+12", "+5%+15"] } }
+        ],
+        "maxLevels": 5
+      },
       "effects_by_character": [
         {
           "character_id": 93,
@@ -2235,6 +3014,22 @@ export const bondsData: BondsData = {
           ]
         }
       ],
+      "rich_text": {
+        "template": {
+          "es": "Los dos equipos de voleibol definen a estos dos como especialistas defensivos. Forman una dupla que protege al equipo como los guardianes de un castillo.\n\n• Recepción: [Reception]",
+          "en": "Both volleyball teams define these two as defensive specialists. They form a duo that protects the team like castle guardians.\n\n• Reception: [Reception]"
+        },
+        "variables": [
+          {
+            "name": "reception",
+            "levels": {
+              "es": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"],
+              "en": ["+5 +1%", "+7 +2%", "+9 +3%", "+12 +4%", "+15 +5%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      },
       "id": 32
     },
     {
@@ -2288,6 +3083,17 @@ export const bondsData: BondsData = {
         28
       ],
       "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "Oikawa Toru coloca el balón, e Iwaizumi Hajime realiza un ataque poderoso con una potencia de [Ataque poderoso] x [Multiplicador]. Gana 2 acumulaciones del efecto [Ritmo de Ataque]. Por cada acumulación de [Ritmo de Ataque], la [Percepcion] de los miembros en la cancha aliada aumenta un 1%. Máximo 10 acumulaciones.",
+          "en": "Oikawa Toru sets the ball, and Iwaizumi Hajime performs a powerful attack with a power of [Powerful Attack] x [Multiplier]. Gain 2 stacks of the [Attack Rhythm] effect. For each stack of [Attack Rhythm], the [Perception] of members on the ally court increases by 1%. Maximum 10 stacks."
+        },
+        "variables": [
+          { "name": "Multiplicador", "levels": { "es": ["255%", "270%", "285%", "300%", "315%"] } },
+          { "name": "Multiplier", "levels": { "en": ["255%", "270%", "285%", "300%", "315%"] } }
+        ],
+        "maxLevels": 5
+      },
       "effects_by_character": [
         {
           "character_id": 26,
@@ -2674,6 +3480,17 @@ export const bondsData: BondsData = {
           ]
         }
       ],
+      "rich_text": {
+        "template": {
+          "es": "La [Percepcion] de Oikawa Toru (SSR) e Iwaizumi Hajime (SR) aumenta en [Porcentaje].",
+          "en": "Oikawa Toru (SSR) and Iwaizumi Hajime (SR)'s [Perception] increases by [Percent]."
+        },
+        "variables": [
+          { "name": "Porcentaje", "levels": { "es": ["6%", "7%", "8%", "9%", "10%"], "en": ["6%", "7%", "8%", "9%", "10%"] } },
+          { "name": "Percent", "levels": { "en": ["6%", "7%", "8%", "9%", "10%"] } }
+        ],
+        "maxLevels": 5
+      },
       "id": 39
     },
     {
@@ -2742,7 +3559,58 @@ export const bondsData: BondsData = {
           ]
         }
       ],
-      "id": 40
+      "id": 40,
+      "rich_text": {
+        "template": {
+          "es": "El [Ataque poderoso] de Iwaizumi Hajime y el [Ataque poderoso] de Kyotani Kentaro aumentan en [Porcentaje].",
+          "en": "Iwaizumi Hajime's [Powerful Attack] and Kyotani Kentaro's [Powerful Attack] increase by [Percent]."
+        },
+        "variables": [
+          {
+            "name": "Ataque poderoso",
+            "levels": {
+              "es": [
+                "Ataque poderoso"
+              ],
+              "en": [
+                "Powerful Attack"
+              ]
+            }
+          },
+          {
+            "name": "Porcentaje",
+            "levels": {
+              "es": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ],
+              "en": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          },
+          {
+            "name": "Percent",
+            "levels": {
+              "en": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
     },
     {
       "name": {
@@ -2753,7 +3621,7 @@ export const bondsData: BondsData = {
         35,
         34
       ],
-      "is_link_skill": false,
+      "is_link_skill": true,
       "effects_by_character": [
         {
           "character_id": 35,
@@ -2810,7 +3678,69 @@ export const bondsData: BondsData = {
           ]
         }
       ],
-      "id": 41
+      "id": 41,
+      "rich_text": {
+        "template": {
+          "es": "El [Ataque rapido] de Kindaichi Yutaro (SR) y el [Ataque poderoso] de Kunimi Akira (SR) aumentan en [Porcentaje].",
+          "en": "Kindaichi Yutaro (SR)'s [Quick Attack] and Kunimi Akira (SR)'s [Powerful Attack] increase by [Percent]."
+        },
+        "variables": [
+          {
+            "name": "Ataque rapido",
+            "levels": {
+              "es": [
+                "Ataque rapido"
+              ],
+              "en": [
+                "Quick Attack"
+              ]
+            }
+          },
+          {
+            "name": "Ataque poderoso",
+            "levels": {
+              "es": [
+                "Ataque poderoso"
+              ],
+              "en": [
+                "Powerful Attack"
+              ]
+            }
+          },
+          {
+            "name": "Porcentaje",
+            "levels": {
+              "es": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ],
+              "en": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          },
+          {
+            "name": "Percent",
+            "levels": {
+              "en": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
     },
     {
       "name": {
@@ -3038,7 +3968,47 @@ export const bondsData: BondsData = {
           ]
         }
       ],
-      "id": 44
+      "id": 44,
+      "rich_text": {
+        "template": {
+          "es": "Mientras la moral del equipo aliado está despierta, al activarse un bloqueo de 2 o 3 personas, los [Reflejos] de los miembros que participan en el bloqueo aumentan en [Porcentaje]. Este efecto dura hasta que el balón cruza la red dos veces. Al comienzo de un rally, la moral del equipo aliado aumenta en 20.",
+          "en": "While an ally's team morale is awakened, upon activation of a 2 or 3-person block, the [Reflexes] of the members participating in the block increase by [Percent]. This effect lasts until the ball crosses the net twice. At the start of a rally, ally team morale increases by 20."
+        },
+        "variables": [
+          {
+            "name": "Porcentaje",
+            "levels": {
+              "es": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ],
+              "en": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          },
+          {
+            "name": "Percent",
+            "levels": {
+              "en": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
     },
     {
       "name": {
@@ -3049,7 +4019,7 @@ export const bondsData: BondsData = {
         38,
         41
       ],
-      "is_link_skill": true,
+      "is_link_skill": false,
       "effects_by_character": [
         {
           "character_id": 38,
@@ -3082,10 +4052,6 @@ export const bondsData: BondsData = {
       "id": 45
     },
     {
-      "name": {
-        "es": "Taciturno y Lengua Afilada (SSR ver.)",
-        "en": "Taciturn and Sharp Tongue (SSR ver.)"
-      },
       "participants": [
         39,
         41
@@ -3147,6 +4113,18 @@ export const bondsData: BondsData = {
           ]
         }
       ],
+      "name": { "es": "Taciturnidad y Sarcasmo", "en": "Taciturnity and Sarcasm" },
+      "rich_text": {
+        "template": {
+          "es": "Aone Takanobu y Futakuchi Kenji participan en un bloqueo de 2 personas con una potencia de [Bloqueo] de Aone Takanobu x [Multiplicador]. Inflige el perjuicio [Ira] al miembro oponente que remató (ataque poderoso/ataque rápido) ([Ataque poderoso/Ataque rapido] disminuye un 10%).",
+          "en": "Aone Takanobu and Futakuchi Kenji participate in a 2-person block with a power of Aone Takanobu's [Block] x [Multiplier]. Inflicts the [Anger] debuff on the opponent member who spiked (powerful attack/quick attack) ([Powerful Attack/Quick Attack] decreases by 10%)."
+        },
+        "variables": [
+          { "name": "Multiplicador", "levels": { "es": ["180%", "195%", "210%", "225%", "240%"] } },
+          { "name": "Multiplier", "levels": { "en": ["180%", "195%", "210%", "225%", "240%"] } }
+        ],
+        "maxLevels": 5
+      },
       "id": 46
     },
     {
@@ -3256,7 +4234,47 @@ export const bondsData: BondsData = {
           ]
         }
       ],
-      "id": 48
+      "id": 48,
+      "rich_text": {
+        "template": {
+          "es": "El [Bloqueo] de la fila delantera aumenta en [Porcentaje].",
+          "en": "The front row's [Block] increases by [Percent]."
+        },
+        "variables": [
+          {
+            "name": "Porcentaje",
+            "levels": {
+              "es": [
+                "2%",
+                "2.5%",
+                "3%",
+                "3.5%",
+                "4%"
+              ],
+              "en": [
+                "2%",
+                "2.5%",
+                "3%",
+                "3.5%",
+                "4%"
+              ]
+            }
+          },
+          {
+            "name": "Percent",
+            "levels": {
+              "en": [
+                "2%",
+                "2.5%",
+                "3%",
+                "3.5%",
+                "4%"
+              ]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
     },
     {
       "name": {
@@ -3341,9 +4359,17 @@ export const bondsData: BondsData = {
       "id": 50
     },
     {
-      "name": {
-        "es": "Tercer Año de Date Tech",
-        "en": "Date Tech Third Years"
+      "name": { "es": "3º año de Date Tech", "en": "Date Tech 3rd Years" },
+      "rich_text": {
+        "template": {
+          "es": "Cuando se activa una habilidad de bloqueo, la moral del equipo aumenta en [Porcentaje].",
+          "en": "When a block skill is activated, team morale increases by [Percent]."
+        },
+        "variables": [
+          { "name": "Porcentaje", "levels": { "es": ["3%", "3%", "4%", "4%", "5%"], "en": ["3%", "3%", "4%", "4%", "5%"] } },
+          { "name": "Percent", "levels": { "en": ["3%", "3%", "4%", "4%", "5%"] } }
+        ],
+        "maxLevels": 5
       },
       "participants": [
         48,
@@ -3445,7 +4471,19 @@ export const bondsData: BondsData = {
         48,
         50
       ],
-      "is_link_skill": false,
+      "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "El [Ataque poderoso] de Sasaya Takehito y el [Bloqueo] de Obara Yutaka aumentan en [Bonus].",
+          "en": "Sasaya Takehito's [Powerful Attack] and Obara Yutaka's [Block] increase by [Bonus]."
+        },
+        "variables": [
+          { "name": "Ataque poderoso", "levels": { "es": ["Ataque poderoso"], "en": ["Powerful Attack"] } },
+          { "name": "Bloqueo", "levels": { "es": ["Bloqueo"], "en": ["Block"] } },
+          { "name": "Bonus", "levels": { "es": ["2%", "2.5%", "3%", "3.5%", "+4%"], "en": ["2%", "2.5%", "3%", "3.5%", "+4%"] } }
+        ],
+        "maxLevels": 5
+      },
       "effects_by_character": [
         {
           "character_id": 48,
@@ -3505,9 +4543,19 @@ export const bondsData: BondsData = {
       "id": 52
     },
     {
-      "name": {
-        "es": "Amigos para Siempre",
-        "en": "Friends Forever"
+      "name": { "es": "Mejores Amigos' de por vida", "en": "Lifelong 'Best Friends'" },
+      "rich_text": {
+        "template": {
+          "es": "La [Tecnica ofensiva] de Ushijima Wakatoshi y la [Tecnica defensiva] de Tendo Satori aumentan en [Porcentaje].",
+          "en": "Ushijima Wakatoshi's [Offensive Technique] and Tendo Satori's [Defensive Technique] increase by [Percent]."
+        },
+        "variables": [
+          { "name": "Tecnica ofensiva", "levels": { "es": ["Tecnica ofensiva"], "en": ["Offensive Technique"] } },
+          { "name": "Tecnica defensiva", "levels": { "es": ["Tecnica defensiva"], "en": ["Defensive Technique"] } },
+          { "name": "Porcentaje", "levels": { "es": ["3%", "3.5%", "4%", "4.5%", "5%"], "en": ["3%", "3.5%", "4%", "4.5%", "5%"] } },
+          { "name": "Percent", "levels": { "en": ["3%", "3.5%", "4%", "4.5%", "5%"] } }
+        ],
+        "maxLevels": 5
       },
       "participants": [
         53,
@@ -3576,6 +4624,17 @@ export const bondsData: BondsData = {
       "name": {
         "es": "'Campeón Absoluto' y Colocador Sólido",
         "en": "'Absolute Champion' and Solid Setter"
+      },
+      "rich_text": {
+        "template": {
+          "es": "Shirabu Kenjiro coloca el balón, y Ushijima Wakatoshi realiza un ataque poderoso con una potencia de [Ataque poderoso] x [Multiplicador]. En este ataque poderoso, la [Fuerza] de Ushijima Wakatoshi aumenta un 10%.",
+          "en": "Shirabu Kenjiro sets the ball, and Ushijima Wakatoshi performs a powerful attack with a power of [Powerful Attack] x [Multiplier]. In this powerful attack, Ushijima Wakatoshi's [Strength] increases by 10%."
+        },
+        "variables": [
+          { "name": "Multiplicador", "levels": { "es": ["260%", "275%", "290%", "305%", "320%"] } },
+          { "name": "Multiplier", "levels": { "en": ["260%", "275%", "290%", "305%", "320%"] } }
+        ],
+        "maxLevels": 5
       },
       "participants": [
         53,
@@ -3933,6 +4992,17 @@ export const bondsData: BondsData = {
         59
       ],
       "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "El [Bloqueo] de la fila delantera aliada aumenta en [Porcentaje].",
+          "en": "The ally front row's [Block] increases by [Percent]."
+        },
+        "variables": [
+          { "name": "Porcentaje", "levels": { "es": ["5%", "5.5%", "6%", "6.5%", "7%"], "en": ["5%", "5.5%", "6%", "6.5%", "7%"] } },
+          { "name": "Percent", "levels": { "en": ["5%", "5.5%", "6%", "6.5%", "7%"] } }
+        ],
+        "maxLevels": 5
+      },
       "effects_by_character": [
         {
           "character_id": 54,
@@ -4110,6 +5180,17 @@ export const bondsData: BondsData = {
         58
       ],
       "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "El [Ataque poderoso] de los miembros aliados aumenta en [Porcentaje].",
+          "en": "Ally members' [Powerful Attack] increases by [Percent]."
+        },
+        "variables": [
+          { "name": "Porcentaje", "levels": { "es": ["4%", "4.5%", "5%", "5.5%", "6%"], "en": ["4%", "4.5%", "5%", "5.5%", "6%"] } },
+          { "name": "Percent", "levels": { "en": ["4%", "4.5%", "5%", "5.5%", "6%"] } }
+        ],
+        "maxLevels": 5
+      },
       "effects_by_character": [
         {
           "character_id": 55,
@@ -4314,6 +5395,17 @@ export const bondsData: BondsData = {
         64
       ],
       "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "Bokuto Koutarou pierde el efecto [Modo desanimado]. Akaashi Keiji coloca el balón, y Bokuto Koutarou realiza un ataque poderoso con una potencia de [Ataque poderoso] x [Multiplicador]. Con este ataque poderoso, el [Ataque poderoso] de Bokuto Koutarou aumenta un 20%, y la moral del equipo aliado aumenta en 15.",
+          "en": "Bokuto Koutarou loses the [Dejected Mode] effect. Akaashi Keiji sets the ball, and Bokuto Koutarou performs a powerful attack with a power of [Powerful Attack] x [Multiplier]. With this powerful attack, Bokuto Koutarou's [Powerful Attack] increases by 20%, and ally team morale increases by 15."
+        },
+        "variables": [
+          { "name": "Multiplicador", "levels": { "es": ["265%", "280%", "295%", "310%", "325%"] } },
+          { "name": "Multiplier", "levels": { "en": ["265%", "280%", "295%", "310%", "325%"] } }
+        ],
+        "maxLevels": 5
+      },
       "effects_by_character": [
         {
           "character_id": 62,
@@ -4450,6 +5542,16 @@ export const bondsData: BondsData = {
         18
       ],
       "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "El [Saque] de Sarukui Yamato aumenta en [Bonus].",
+          "en": "Sarukui Yamato's [Serve] increases by [Bonus]."
+        },
+        "variables": [
+          { "name": "Bonus", "levels": { "es": ["+1%+5", "+2%+7", "+3%+9", "+4%+12", "+5%+15"], "en": ["+1%+5", "+2%+7", "+3%+9", "+4%+12", "+5%+15"] } }
+        ],
+        "maxLevels": 5
+      },
       "effects_by_character": [
         {
           "character_id": 62,
@@ -5035,12 +6137,58 @@ export const bondsData: BondsData = {
           ]
         }
       ],
-      "id": 74
+      "id": 74,
+      "rich_text": {
+        "template": {
+          "es": "Miya Atsumu coloca el balón, y Miya Osamu realiza un ataque rápido gemelo de tempo negativo con una potencia de [Ataque rapido] x [Multiplicador]. La [Tecnica ofensiva] de Miya Osamu aumenta un 15%. Este efecto persiste hasta que Miya Atsumu o Miya Osamu salgan de la cancha. Esta jugada no puede ser bloqueada.",
+          "en": "Miya Atsumu sets the ball, and Miya Osamu performs a minus-tempo twin quick attack with a power of [Quick Attack] x [Multiplier]. Miya Osamu's [Offensive Technique] increases by 15%. This effect persists until either Miya Atsumu or Miya Osamu leaves the court. This play cannot be blocked."
+        },
+        "variables": [
+          {
+            "name": "Multiplicador",
+            "levels": {
+              "es": [
+                "265%",
+                "280%",
+                "295%",
+                "310%",
+                "325%"
+              ]
+            }
+          },
+          {
+            "name": "Multiplier",
+            "levels": {
+              "en": [
+                "265%",
+                "280%",
+                "295%",
+                "310%",
+                "325%"
+              ]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
     },
     {
       "name": {
         "es": "Cerebro y Eje",
         "en": "Brain and Axis"
+      },
+      "rich_text": {
+        "template": {
+          "es": "La [Tecnica ofensiva] de Miya Osamu aumenta en [Porcentaje1], y el parámetro principal de Kita Shinsuke aumenta en [Porcentaje2]. Al comienzo del partido, Miya Atsumu obtiene 3 acumulaciones del efecto [Perfectamente Claro]. Por cada acumulación, la [Colocacion] aumenta un 2%. Máx. 10 acumulaciones. Kita Shinsuke obtiene 1 acumulación del efecto [Acción Confiable]. Por cada acumulación, la [Recepcion] aumenta un 2%. Máx. 3 acumulaciones. La potencia del primer ataque rápido de Miya Osamu en cada set aumenta en [Ataque rapido] x 12%.",
+          "en": "Miya Osamu's [Offensive Technique] increases by [Percent1], and Kita Shinsuke's main parameter increases by [Percent2]. At the start of the match, Miya Atsumu gains 3 stacks of the [Perfectly Clear] effect. For each stack, [Toss] increases by 2%. Max 10 stacks. Kita Shinsuke gains 1 stack of the [Reliable Action] effect. For each stack, [Reception] increases by 2%. Max 3 stacks. The power of Miya Osamu's first quick attack in each set increases by [Quick Attack] x 12%."
+        },
+        "variables": [
+          { "name": "Porcentaje1", "levels": { "es": ["3%", "3.5%", "4%", "4.5%", "5%"] } },
+          { "name": "Percent1", "levels": { "en": ["3%", "3.5%", "4%", "4.5%", "5%"] } },
+          { "name": "Porcentaje2", "levels": { "es": ["3%", "3.5%", "4%", "4.5%", "5%"] } },
+          { "name": "Percent2", "levels": { "en": ["3%", "3.5%", "4%", "4.5%", "5%"] } }
+        ],
+        "maxLevels": 5
       },
       "participants": [
         77,
@@ -5489,13 +6637,26 @@ export const bondsData: BondsData = {
     {
       "name": {
         "es": "Amigos de la Infancia que Jugaron en Secundaria y Preparatoria",
-        "en": "Amigos de la Infancia que Jugaron en Secundaria y Preparatoria"
+        "en": "Best Friends from Middle and High School"
       },
       "participants": [
         87,
         88
       ],
       "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "El parámetro principal de Hoshiumi Korai aumenta en [Porcentaje1], y el [Bloqueo] de la fila delantera aliada aumenta en [Porcentaje2]. Al comienzo del partido, Hoshiumi Korai obtiene 1 acumulación del efecto [Todoterreno], y Hirugami Sachiro obtiene 1 acumulación del efecto [Bloqueo Sólido].",
+          "en": "Hoshiumi Korai's main parameter increases by [Percent1], and the ally front row's [Block] increases by [Percent2]. At the start of the match, Hoshiumi Korai gains 1 stack of the [All-Rounder] effect, and Hirugami Sachiro gains 1 stack of the [Solid Block] effect."
+        },
+        "variables": [
+          { "name": "Porcentaje1", "levels": { "es": ["6%", "7%", "8%", "9%", "10%"] } },
+          { "name": "Percent1", "levels": { "en": ["6%", "7%", "8%", "9%", "10%"] } },
+          { "name": "Porcentaje2", "levels": { "es": ["6%", "7%", "8%", "9%", "10%"] } },
+          { "name": "Percent2", "levels": { "en": ["6%", "7%", "8%", "9%", "10%"] } }
+        ],
+        "maxLevels": 5
+      },
       "effects_by_character": [
         {
           "character_id": 87,
@@ -5601,13 +6762,26 @@ export const bondsData: BondsData = {
     {
       "name": {
         "es": "Un atacante de primer nivel y un libero de primer nivel",
-        "en": "Un atacante de primer nivel y un libero de primer nivel"
+        "en": "Top Spiker and Top-Class Libero"
       },
       "participants": [
         101,
         102
       ],
       "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "El [Ataque poderoso] de Sakusa Kiyoomi y la [Recepcion] de Komori Motoya aumentan en [Porcentaje]. La potencia de recepción de los miembros aliados aumenta en [Recepcion] x 20%.",
+          "en": "Sakusa Kiyoomi's [Powerful Attack] and Komori Motoya's [Reception] increase by [Percent]. Ally members' reception power increases by [Reception] x 20%."
+        },
+        "variables": [
+          { "name": "Ataque poderoso", "levels": { "es": ["Ataque poderoso"], "en": ["Powerful Attack"] } },
+          { "name": "Recepcion", "levels": { "es": ["Recepcion"], "en": ["Reception"] } },
+          { "name": "Porcentaje", "levels": { "es": ["10%", "12.5%", "15%", "17.5%", "20%"], "en": ["10%", "12.5%", "15%", "17.5%", "20%"] } },
+          { "name": "Percent", "levels": { "en": ["10%", "12.5%", "15%", "17.5%", "20%"] } }
+        ],
+        "maxLevels": 5
+      },
       "effects_by_character": [
         {
           "character_id": 101,
@@ -5789,6 +6963,168 @@ export const bondsData: BondsData = {
         }
       ],
       "id": 82
+    },
+    {
+      "name": {
+        "es": "Los genios de Karasuno",
+        "en": "Karasuno's Geniuses"
+      },
+      "participants": [
+        4,
+        12
+      ],
+      "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "La [Recepcion] de Nishinoya Yu (Después de clases) aumenta en [BonusRecepcion], y sus [Reflejos] aumentan un 5%. Cuando se activa el movimiento especial de Nishinoya Yu (Después de clases), Kageyama Tobio obtiene 1 acumulación del efecto [Espíritu Competitivo]. Si este movimiento especial se convierte en una buena jugada, la potencia del primer remate aliado (ataque poderoso/ataque rápido) después de que ocurra esta jugada aumenta en [Ataque poderoso/Ataque rapido] x 20% del miembro que remata.",
+          "en": "Nishinoya Yu (After School)'s [Reception] increases by [ReceptionBonus], and his [Reflexes] increase by 5%. When Nishinoya Yu (After School)'s special move is activated, Kageyama Tobio gains 1 stack of the [Competitive Spirit] effect. If this special move becomes a nice play, the power of the first ally spike (powerful attack/quick attack) after this play occurs increases by the spiking member's [Powerful Attack/Quick Attack] x 20%."
+        },
+        "variables": [
+          {
+            "name": "BonusRecepcion",
+            "levels": {
+              "es": [
+                "5%",
+                "7%",
+                "9%",
+                "11%",
+                "13%"
+              ]
+            }
+          },
+          {
+            "name": "ReceptionBonus",
+            "levels": {
+              "en": [
+                "5%",
+                "7%",
+                "9%",
+                "11%",
+                "13%"
+              ]
+            }
+          }
+        ],
+        "maxLevels": 5
+      },
+      "id": 83
+    },
+    {
+      "name": {
+        "es": "Mejores Amigos' de por vida",
+        "en": "Lifelong 'Best Friends'"
+      },
+      "participants": [
+        53,
+        58
+      ],
+      "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "El [Bloqueo] de Ushijima Wakatoshi y la [Recepcion] de Ohira Reon aumentan en [Bonus].",
+          "en": "Ushijima Wakatoshi's [Block] and Ohira Reon's [Reception] increase by [Bonus]."
+        },
+        "variables": [
+          {
+            "name": "Bloqueo",
+            "levels": {
+              "es": [
+                "Bloqueo"
+              ]
+            }
+          },
+          {
+            "name": "Block",
+            "levels": {
+              "en": [
+                "Block"
+              ]
+            }
+          },
+          {
+            "name": "Recepcion",
+            "levels": {
+              "es": [
+                "Recepcion"
+              ]
+            }
+          },
+          {
+            "name": "Reception",
+            "levels": {
+              "en": [
+                "Reception"
+              ]
+            }
+          },
+          {
+            "name": "Bonus",
+            "levels": {
+              "es": [
+                "+1%+5",
+                "+2%+7",
+                "+3%+9",
+                "+4%+12",
+                "+5%+15"
+              ],
+              "en": [
+                "+1%+5",
+                "+2%+7",
+                "+3%+9",
+                "+4%+12",
+                "+5%+15"
+              ]
+            }
+          }
+        ],
+        "maxLevels": 5
+      },
+      "id": 84
+    },
+    {
+      "name": {
+        "es": "Colocador Milagroso y Colocador Considerado",
+        "en": "Miracle Setter and Considerate Setter"
+      },
+      "participants": [
+        61,
+        63
+      ],
+      "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "La [Colocacion] de Akaashi Keiji (Baño en el Mar) aumenta en [Porcentaje]. Mientras la moral del equipo aliado está despierta, el [Ataque poderoso] de Bokuto Koutarou (Baño en el Mar) aumenta un 18%, y la [Colocacion] de Akaashi Keiji (Baño en el Mar) aumenta un 5% adicional.",
+          "en": "Akaashi Keiji (Sea Bathing)'s [Toss] increases by [Percent]. While an ally's team morale is awakened, Bokuto Koutarou (Sea Bathing)'s [Powerful Attack] increases by 18%, and Akaashi Keiji (Sea Bathing)'s [Toss] further increases by 5%."
+        },
+        "variables": [
+          {
+            "name": "Porcentaje",
+            "levels": {
+              "es": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          },
+          {
+            "name": "Percent",
+            "levels": {
+              "en": [
+                "6%",
+                "7%",
+                "8%",
+                "9%",
+                "10%"
+              ]
+            }
+          }
+        ],
+        "maxLevels": 5
+      },
+      "id": 85
     }
   ]
 };

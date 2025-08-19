@@ -24,7 +24,8 @@ button:focus-visible,
   outline: none;
 }
 body {
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
   min-height: 100vh;
   color: white;
@@ -806,17 +807,37 @@ body {
   gap: 12px;
 }
 
- .expand-icon {
+.expand-icon {
   font-size: 0.8rem;
   color: #9c27b0;
   transition: transform 0.25s ease;
   display: inline-block;
   transform: rotate(-90deg); /* Closed state: arrow points right */
- }
+}
 
 /* Open state */
 .bond-item.expanded .expand-icon {
   transform: rotate(0deg); /* Arrow points down */
+}
+
+/* Rich text bond styles */
+.rich-text-bond {
+  margin-top: 12px;
+}
+.rich-text-bond .level-selector {
+  margin: 8px 0 12px 0;
+}
+.rich-text-description {
+  font-size: 0.85rem;
+  line-height: 1.35rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.rich-text-description .rich-var {
+  color: #ffb300; /* highlight color */
+  font-weight: 600;
 }
 
 .bond-details {

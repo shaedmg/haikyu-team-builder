@@ -86,19 +86,31 @@ export class HaikyuTeamBuilder {
             debug('Players loaded count:', this.players.length);
             debug('Characters keys sample:', Object.keys(charactersData.characters).slice(0, 5));
             // Convert bonds to simple format (use language-specific names)
-            this.bonds = bondsData.bonds.map(bond => ({
-                id: bond.id,
-                name: bond.name, // Keep as multilingual object for proper handling
-                participants: bond.participants,
-                is_link_skill: bond.is_link_skill,
-                effects_by_character: bond.effects_by_character, // Keep original structure
-                effect_summary: bond.effect_summary,
-                type: bond.is_link_skill ? 'link_skill' : 'kizuna_skill',
-                currentCount: 0,
-                requiredCount: bond.participants.length,
-                isActive: false,
-                missingCount: bond.participants.length
-            } as Bond));
+            // Filter to show only link skills (is_link_skill: true)
+            this.bonds = bondsData.bonds
+                .filter(bond => bond.is_link_skill === true)
+                .map(bond => {
+                    // If bond already has rich_text keep it, otherwise attempt auto-generation
+                    const hasRich = (bond as any).rich_text;
+                    let autoRich: any = hasRich ? (bond as any).rich_text : null;
+                    if (!hasRich && bond.effects_by_character && bond.effects_by_character.length > 0) {
+                        autoRich = this.generateRichTextFromEffects(bond, language);
+                    }
+                    return ({
+                        id: bond.id,
+                        name: bond.name,
+                        participants: bond.participants,
+                        is_link_skill: bond.is_link_skill,
+                        effects_by_character: hasRich ? undefined : bond.effects_by_character, // hide original if converted
+                        effect_summary: bond.effect_summary,
+                        rich_text: autoRich,
+                        type: bond.is_link_skill ? 'link_skill' : 'kizuna_skill',
+                        currentCount: 0,
+                        requiredCount: bond.participants.length,
+                        isActive: false,
+                        missingCount: bond.participants.length
+                    } as Bond);
+                });
 
             debug(`Loaded players: ${this.players.length} bonds: ${this.bonds.length} (lang=${language})`);
             debug('Sample bonds:', this.bonds.slice(0, 3).map(b => ({ name: b.name, participants: b.participants })));
@@ -107,6 +119,50 @@ export class HaikyuTeamBuilder {
             // Initialize with empty data if import fails
             this.players = [];
             this.bonds = [];
+        }
+    }
+
+    // Auto-migrate structured per-character bonuses into a single rich text description
+    private generateRichTextFromEffects(bond: any, lang: string) {
+        try {
+            const language = lang || 'es';
+            const partsES: string[] = [];
+            const partsEN: string[] = [];
+            const variables: any[] = [];
+            let maxLevels = 1;
+            let varCounter = 1;
+
+            (bond.effects_by_character || []).forEach((charEffect: any) => {
+                charEffect.bonuses.forEach((bonus: any) => {
+                    // Determine level arrays
+                    let levelsES: string[] = [];
+                    let levelsEN: string[] = [];
+                    if (bonus.levels) {
+                        if (Array.isArray(bonus.levels)) {
+                            levelsES = levelsEN = bonus.levels;
+                        } else {
+                            levelsES = bonus.levels.es || bonus.levels[language] || [];
+                            levelsEN = bonus.levels.en || bonus.levels[language] || levelsES;
+                        }
+                    }
+                    maxLevels = Math.max(maxLevels, levelsES.length, levelsEN.length);
+                    const varName = `Var${varCounter++}`;
+                    variables.push({ name: varName, levels: { es: levelsES, en: levelsEN } });
+
+                    const attrES = typeof bonus.attribute === 'object' ? (bonus.attribute.es || bonus.attribute.en) : bonus.attribute;
+                    const attrEN = typeof bonus.attribute === 'object' ? (bonus.attribute.en || bonus.attribute.es) : bonus.attribute;
+                    // Ideally map character id to name, but names may not be loaded yet; keep attribute only
+                    partsES.push(`${attrES}: [${varName}]`);
+                    partsEN.push(`${attrEN}: [${varName}]`);
+                });
+            });
+
+            const templateES = partsES.join(' • ');
+            const templateEN = partsEN.join(' • ');
+            return { template: { es: templateES, en: templateEN }, variables, maxLevels };
+        } catch (e) {
+            console.warn('Failed to auto-generate rich text for bond', bond.id, e);
+            return null;
         }
     }
 
@@ -378,6 +434,40 @@ export class HaikyuTeamBuilder {
                 }
             }
         });
+    }
+
+    // Rich text bond level setter
+    public setRichBondLevel(bondId: number, level: number): void {
+        try {
+            const bond = this.bonds.find(b => (b as any).id === bondId);
+            if (!bond || !(bond as any).rich_text) return;
+            const rich = (bond as any).rich_text;
+            const lang = window.languageManager ? window.languageManager.getCurrentLanguage() : 'es';
+            const template = rich.template[lang] || rich.template.es;
+            const descEl = document.getElementById(`rich-bond-desc-${bondId}`);
+            if (!descEl) return;
+            // Recompute description using helper from renderer (attached to window?)
+            // Duplicated lightweight processor to avoid cross-module import cycles
+            const processed = template.replace(/\[(.+?)\]/g, (_m: string, varName: string) => {
+                const variable = rich.variables.find((v: any) => v.name.toLowerCase() === varName.toLowerCase());
+                if (!variable) return varName;
+                const values = variable.levels;
+                let arr = Array.isArray(values) ? values : (values[lang] || values.es || []);
+                if (!Array.isArray(arr) || arr.length === 0) return varName;
+                const value = arr[Math.min(level - 1, arr.length - 1)];
+                return `<span class=\"rich-var\" data-var=\"${varName}\" data-level=\"${level}\">${value}</span>`;
+            });
+            descEl.innerHTML = processed;
+            // Update active button
+            const container = document.querySelector(`[data-rich-bond-id='${bondId}']`);
+            if (container) {
+                container.querySelectorAll('.level-btn').forEach(btn => {
+                    btn.classList.toggle('active', (btn as HTMLElement).dataset.level === String(level));
+                });
+            }
+        } catch (e) {
+            console.error('Error updating rich bond level', e);
+        }
     }
 
     public toggleBondDetails(headerElement: HTMLElement): void {
