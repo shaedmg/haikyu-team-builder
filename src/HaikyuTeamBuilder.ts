@@ -7,10 +7,12 @@ import {
     Rarity,
     Position,
     DragState,
-    PositionMapping
+    PositionMapping,
+    SchoolBond
 } from './types/index.js';
 import { charactersData } from './characters.js';
 import { bondsData } from './bonds.js';
+import { schoolBondsData } from './schoolBonds.js';
 import { createPlayerCard } from './components/PlayerCard.js';
 import { createSelectablePlayerCard } from './components/SelectablePlayerCard.js';
 import { POSITION_MAPPINGS, RARITY_ORDER, POSITION_LABELS } from './config/constants.js';
@@ -28,6 +30,7 @@ import { formatBonusText, getInitialBonusLevel } from './utils/formatters.js';
 export class HaikyuTeamBuilder {
     private players: Character[] = [];
     private bonds: Bond[] = [];
+    private schoolBonds: SchoolBond[] = [];
     private currentTeam: CurrentTeam = {};
     private selectedPlayer: Character | null = null; // Position selector state now managed in positionSelectorCtx
     private usedPlayerIds: Set<number> = new Set();
@@ -112,13 +115,18 @@ export class HaikyuTeamBuilder {
                     } as Bond);
                 });
 
-            debug(`Loaded players: ${this.players.length} bonds: ${this.bonds.length} (lang=${language})`);
+            // Load school bonds
+            this.schoolBonds = schoolBondsData.school_bonds;
+
+            debug(`Loaded players: ${this.players.length} bonds: ${this.bonds.length} school bonds: ${this.schoolBonds.length} (lang=${language})`);
             debug('Sample bonds:', this.bonds.slice(0, 3).map(b => ({ name: b.name, participants: b.participants })));
+            debug('School bonds:', this.schoolBonds.map(sb => ({ school: sb.school, name: sb.name })));
         } catch (error) {
             console.error('Error loading players:', error);
             // Initialize with empty data if import fails
             this.players = [];
             this.bonds = [];
+            this.schoolBonds = [];
         }
     }
 
@@ -273,10 +281,11 @@ export class HaikyuTeamBuilder {
     // Export for global use
     public updateBonds(): void {
         this.renderBonds();
+        this.renderSchoolBonds();
     }
 
     public updateSchoolStats(): void {
-        this.renderSchoolStats();
+        this.renderSchoolBonds();
     }
 
     private renderBonds(): void {
@@ -351,6 +360,89 @@ export class HaikyuTeamBuilder {
             .join('');
 
         bondsSection.innerHTML = bondItems;
+    }
+
+    private renderSchoolBonds(): void {
+        const schoolStats = document.getElementById('schoolStats');
+        if (!schoolStats) return;
+
+        // Get current team composition by school
+        const schoolComposition = computeSchoolComposition(this.currentTeam);
+        const currentLanguage = window.languageManager ? window.languageManager.getCurrentLanguage() : 'es';
+
+        // Filter to only show school bonds that have at least 1 player (like normal bonds)
+        const relevantSchoolBonds = this.schoolBonds.filter(schoolBond => {
+            const schoolCount = schoolComposition[schoolBond.school] || 0;
+            return schoolCount > 0; // Only show if there's at least 1 player from this school
+        });
+
+        if (relevantSchoolBonds.length === 0) {
+            schoolStats.innerHTML = `<div class="no-players">${window.languageManager
+                ? (window.languageManager.t('noBondsAvailable') as string)
+                : 'No hay vínculos de escuela disponibles'
+                }</div>`;
+            return;
+        }
+
+        const schoolBondItems = relevantSchoolBonds.map(schoolBond => {
+            const schoolCount = schoolComposition[schoolBond.school] || 0;
+            // Use only the school name, not the full bond name
+            const schoolName = schoolBond.school;
+
+            // Bond is active only when it has exactly 4 players from the school
+            const isActive = schoolCount >= 4;
+
+            // Generate just the effect text without level selectors or participant images
+            const effectText = schoolBond.rich_text ? this.generateSchoolBondEffectText(schoolBond.rich_text, currentLanguage) : '';
+
+            return `
+                <div class="bond-item ${isActive ? 'active' : 'inactive'}" data-bond-id="school-${schoolBond.school}">
+                    <div class="bond-header" onclick="teamBuilder.toggleBondDetails(this)">
+                        <div class="bond-name">${schoolName}</div>
+                        <div class="bond-controls">
+                            <span class="bond-count ${isActive ? 'complete' : ''}">${schoolCount}/4</span>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="bond-details" style="display: none;">
+                        ${effectText}
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        schoolStats.innerHTML = schoolBondItems;
+    }
+
+    private generateSchoolBondEffectText(richText: any, language: string): string {
+        if (!richText || !richText.template) return '';
+
+        const template = richText.template[language] || richText.template.es || '';
+
+        // Use the same rich text processing as normal bonds
+        const processedText = this.processRichTextTemplate(template, richText.variables || [], language, 1);
+
+        // Use the same structure as normal bonds with rich-text-body and rich-text-description
+        return `
+            <div class="bond-effect rich-text-bond">
+                <div class="rich-text-body">
+                    <div class="rich-text-description">${processedText}</div>
+                </div>
+            </div>
+        `;
+    }
+
+    // Helper method to process rich text templates (same as in bondsRenderer.ts)
+    private processRichTextTemplate(template: string, variables: any[], lang: string, level: number): string {
+        return template.replace(/\[(.+?)\]/g, (_m, varName: string) => {
+            const variable = variables.find((v: any) => v.name.toLowerCase() === varName.toLowerCase());
+            if (!variable) return varName; // unknown
+            let values = variable.levels;
+            let arr = Array.isArray(values) ? values : (values[lang] || values.es || []);
+            if (!Array.isArray(arr) || arr.length === 0) return varName;
+            const value = arr[Math.min(level - 1, arr.length - 1)];
+            return `<span class="rich-var" data-var="${varName}" data-level="${level}">${value}</span>`;
+        });
     }
 
 

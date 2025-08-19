@@ -218,3 +218,19 @@ export interface DragState {
 export interface PositionMapping {
     [positionKey: string]: Position;
 }
+
+// School bond interfaces
+export interface SchoolBond {
+    id: number;
+    school: string;
+    school_jp: string;
+    name: {
+        es: string;
+        en: string;
+    };
+    rich_text: BondRichTextData;
+}
+
+export interface SchoolBondsData {
+    school_bonds: SchoolBond[];
+}
