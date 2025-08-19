@@ -81,7 +81,10 @@
     <!-- Security headers like CSP/referrer should be set at server level; meta CSP removed to avoid blocking external fonts -->
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://shaedmg.github.io/haikyu-team-builder/" />
+    <link
+      rel="canonical"
+      href="https://shaedmg.github.io/haikyu-team-builder/"
+    />
 
     <!-- Hreflang for international SEO -->
     <link
@@ -113,11 +116,7 @@
     <!-- DNS Prefetch for performance -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
     <link rel="dns-prefetch" href="//shaedmg.github.io" />
-    <link
-      rel="preconnect"
-      href="https://shaedmg.github.io"
-      crossorigin
-    />
+    <link rel="preconnect" href="https://shaedmg.github.io" crossorigin />
     <!-- Preconnect common external origins (add fonts.gstatic if fonts used) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -606,18 +605,24 @@
 
     <!-- TypeScript compiled modules -->
     <script type="module" src="dist/init.js"></script>
-    
+
     <!-- Debug script to verify loading -->
     <script>
       console.log('HTML loaded, waiting for modules...');
       window.addEventListener('load', () => {
         console.log('Window loaded');
         setTimeout(() => {
-          console.log('teamBuilder instance:', window.teamBuilder || window.teamBuilderInstance);
+          console.log(
+            'teamBuilder instance:',
+            window.teamBuilder || window.teamBuilderInstance
+          );
           console.log('languageManager instance:', window.languageManager);
           const playerGrid = document.getElementById('playerGrid');
           console.log('Player grid element:', playerGrid);
-          console.log('Player grid children:', playerGrid ? playerGrid.children.length : 'N/A');
+          console.log(
+            'Player grid children:',
+            playerGrid ? playerGrid.children.length : 'N/A'
+          );
         }, 1000);
       });
     </script>
@@ -662,14 +667,36 @@
     -->
 
     <!-- Credits and Contact Footer -->
-    <footer style="position: fixed; bottom: 10px; right: 15px; background: rgba(0,0,0,0.7); color: white; padding: 8px 12px; border-radius: 6px; font-size: 11px; font-family: Arial, sans-serif; line-height: 1.4; z-index: 9999; max-width: 280px;">
-      <div style="text-align: center;">
-        <div style="margin-bottom: 4px;">
-          <strong>🏐 Developed by</strong> <span style="color: #4CAF50; font-weight: bold;">Shaedmg</span>
+    <footer
+      style="
+        position: fixed;
+        bottom: 10px;
+        right: 15px;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 11px;
+        font-family: Arial, sans-serif;
+        line-height: 1.4;
+        z-index: 9999;
+        max-width: 280px;
+      "
+    >
+      <div style="text-align: center">
+        <div style="margin-bottom: 4px">
+          <strong>🏐 Developed by</strong>
+          <span style="color: #4caf50; font-weight: bold">Shaedmg</span>
         </div>
-        <div style="font-size: 10px; opacity: 0.9;">
-          <span style="color: #FFD700;">📧 Report bugs or suggest improvements:</span><br>
-          <a href="mailto:shaedhfh@gmail.com" style="color: #87CEEB; text-decoration: none;">shaedhfh@gmail.com</a>
+        <div style="font-size: 10px; opacity: 0.9">
+          <span style="color: #ffd700"
+            >📧 Report bugs or suggest improvements:</span
+          ><br />
+          <a
+            href="mailto:shaedhfh@gmail.com"
+            style="color: #87ceeb; text-decoration: none"
+            >shaedhfh@gmail.com</a
+          >
         </div>
       </div>
     </footer>
