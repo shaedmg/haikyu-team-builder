@@ -37,11 +37,16 @@ jobs:
           cp -R index.html styles.css manifest.json sw.js robots.txt sitemap.xml build/ 2>/dev/null || true
           cp -R assets build/assets
           cp -R dist build/dist
-          cp -R haikyu_fly_high_full_v3.json image-mapping.json build/ 2>/dev/null || true
           # Update SW version with commit hash for cache busting
           sed -i "s/const CACHE_VERSION = '[^']*'/const CACHE_VERSION = '${GITHUB_SHA:0:8}'/" sw.js || true
           sed -i "s/const CACHE_NAME = 'haikyu-team-builder-v[^']*'/const CACHE_NAME = 'haikyu-team-builder-v${GITHUB_SHA:0:8}'/" sw.js || true
           cp sw.js build/sw.js
+          # Simple minify CSS (remove comments + whitespace)
+          sed -i ':a;N;$!ba;s/\n/ /g;s/  */ /g;s:/\*[^*]*\*\(/\*[^*]*\*\)*\*/::g' build/styles.css || true
+          # Inject build hash into init.js query param placeholder
+          sed -i "s/__BUILD_HASH__/${GITHUB_SHA:0:8}/" build/index.html || true
+          # Minify JS in dist (basic): remove newlines and extra spaces
+          for f in build/dist/*.js; do sed -i ':a;N;$!ba;s/\n/ /g;s/  */ /g' "$f"; done
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

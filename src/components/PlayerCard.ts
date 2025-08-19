@@ -26,9 +26,10 @@ export function createPlayerCard(player: Character, imageUrl: string, opts: Play
         if (draggable) div.draggable = true;
         div.dataset.playerId = player.id.toString();
         div.dataset.position = player.position;
-        // Markup must match existing implementation exactly
         div.innerHTML = `
-      <div class="player-image" style="background-image: url('${imageUrl}')" aria-label="${player.name}"></div>
+      <div class="player-image-wrapper" style="width:80px;height:100px;overflow:hidden;">
+        <img class="player-image" src="${imageUrl}" alt="${player.name}" loading="lazy" decoding="async" width="80" height="100" />
+      </div>
       <div class="player-name">${player.name}</div>
       <div class="position-tag" aria-label="${player.position}">${player.position}</div>
     `;
@@ -41,7 +42,9 @@ export function createPlayerCard(player: Character, imageUrl: string, opts: Play
         if (draggable) wrapper.draggable = true;
         wrapper.dataset.playerId = player.id.toString();
         wrapper.innerHTML = `
-      <div class="player-image" style="background-image: url('${imageUrl}')" aria-label="${player.name}"></div>
+      <div class="player-image-wrapper" style="width:90px;height:120px;overflow:hidden;">
+        <img class="player-image" src="${imageUrl}" alt="${player.name}" loading="lazy" decoding="async" width="90" height="120" />
+      </div>
       ${showName ? `<div class="player-name">${player.name}</div>` : ''}
       <div class="position-tag" aria-label="${player.position}">${player.position}</div>
     `;
@@ -55,7 +58,7 @@ export function createPlayerCard(player: Character, imageUrl: string, opts: Play
     sel.setAttribute('tabindex', '0');
     sel.setAttribute('title', player.name);
     sel.innerHTML = `
-    <img src="${imageUrl}" alt="${player.name}" loading="lazy" decoding="async" />
+    <img class="player-image" src="${imageUrl}" alt="${player.name}" loading="lazy" decoding="async" width="95" height="120" style="width:95px;height:120px;object-fit:cover;" />
   `;
     return sel;
 }

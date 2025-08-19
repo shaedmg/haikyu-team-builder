@@ -16,6 +16,7 @@ async function initializeApp(): Promise<void> {
     (window as any).teamBuilderInstance = teamBuilder;
 
     debug('Application initialized successfully with refactored architecture');
+
   } catch (error) {
     console.error('Failed to initialize application:', error);
   }

@@ -30,6 +30,11 @@ export function isDuplicatePlayer(
     }
 
     return Object.entries(team).some(([pos, player]) => {
-        return player && player.id === draggedPlayer.id && pos !== targetPositionClass;
+        if (!player) return false;
+        if (pos === targetPositionClass) return false; // mismo slot no es duplicado
+        // Bloquear si ya existe otra variante con el mismo nombre (id distinto) en otro slot.
+        if (player.name === draggedPlayer.name && player.id !== draggedPlayer.id) return true;
+        // Si es la misma variante (mismo id) en otro slot, NO bloquear (permitir moverla)
+        return false;
     });
 }

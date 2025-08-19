@@ -88,6 +88,7 @@ export function showPositionSelector(ctx: PositionSelectorContext, positionClass
     document.body.classList.add('position-selector-active');
     if (positionSelector) {
         positionSelector.classList.add('active');
+        positionSelector.removeAttribute('hidden');
         positionSelector.setAttribute('aria-hidden', 'false');
         positionSelector.setAttribute('aria-modal', 'true');
         // Focus management
@@ -118,10 +119,12 @@ export function hidePositionSelector(ctx: PositionSelectorContext): void {
     document.body.classList.remove('position-selector-active');
     if (positionSelector) {
         positionSelector.classList.remove('active');
-        positionSelector.setAttribute('aria-hidden', 'true');
-        positionSelector.setAttribute('aria-modal', 'false');
+        // Move focus back before hiding from accessibility tree
         const prev = (positionSelector as any)._previousFocus as HTMLElement | undefined;
         if (prev) setTimeout(() => prev.focus(), 0);
+        positionSelector.setAttribute('aria-hidden', 'true');
+        positionSelector.setAttribute('aria-modal', 'false');
+        positionSelector.setAttribute('hidden', 'true');
     }
     ctx.close();
 }

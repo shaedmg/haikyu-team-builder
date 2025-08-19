@@ -1,6 +1,7 @@
 // Service Worker para Haikyu Team Builder
 // Versión: 1.0.0
 
+// Nota: CACHE_VERSION será reemplazado en CI con el hash corto del commit
 const CACHE_NAME = 'haikyu-team-builder-v1.0.0';
 const CACHE_VERSION = '1.0.0';
 
@@ -108,6 +109,7 @@ self.addEventListener('activate', (event) => {
       self.clients.claim(),
     ]).then(() => {
       console.log('[SW] Service Worker activated and ready');
+      // No forzamos refresco ni notificamos; las pestañas abiertas seguirán con la versión previa hasta recargar.
     })
   );
 });

@@ -159,7 +159,6 @@ export class HaikyuTeamBuilder {
                 playerGrid.appendChild(positionHeader);
 
                 playersByPosition[position].forEach((player) => {
-                    // Only show players that are not already in the team
                     if (!this.usedPlayerIds.has(player.id)) {
                         const playerElement = this.createAvailablePlayerElement(player);
                         playerElement.setAttribute('role', 'listitem');
@@ -501,7 +500,13 @@ export class HaikyuTeamBuilder {
 
         if (!positionClass) return;
 
-        // Remove player from any previous slot
+        // Detect si existe otra variante (mismo nombre diferente id) en otro slot distinto al target
+        const existingDifferentVariant = Object.entries(this.currentTeam).find(([pos, p]) => p && p.name === player.name && p.id !== player.id && pos !== positionClass);
+        if (existingDifferentVariant) {
+            // Bloquear reemplazos cruzados entre posiciones con distinta variante
+            return;
+        }
+        // Remover misma variante (por id) de su slot actual para permitir moverla
         this.currentTeam = removePlayerEverywhere(this.currentTeam, player.id);
         this.usedPlayerIds.forEach(id => {
             if (!Object.values(this.currentTeam).some(p => p && p.id === id)) {
