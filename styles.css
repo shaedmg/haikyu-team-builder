@@ -806,10 +806,17 @@ body {
   gap: 12px;
 }
 
-.expand-icon {
+ .expand-icon {
   font-size: 0.8rem;
   color: #9c27b0;
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
+  display: inline-block;
+  transform: rotate(-90deg); /* Closed state: arrow points right */
+ }
+
+/* Open state */
+.bond-item.expanded .expand-icon {
+  transform: rotate(0deg); /* Arrow points down */
 }
 
 .bond-details {

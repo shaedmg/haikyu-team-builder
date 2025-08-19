@@ -278,7 +278,7 @@ export class HaikyuTeamBuilder {
             <div class="bond-controls">
               <span class="bond-count ${isActive ? 'complete' : ''
                     }">${currentCount}/${requiredCount}</span>
-              <span class="expand-icon">▶</span>
+              <span class="expand-icon">▼</span>
             </div>
           </div>
           <div class="bond-details" style="display: none;">
@@ -383,27 +383,23 @@ export class HaikyuTeamBuilder {
     public toggleBondDetails(headerElement: HTMLElement): void {
         const bondItem = headerElement.closest('.bond-item') as HTMLElement;
         const details = bondItem.querySelector('.bond-details') as HTMLElement;
-        const icon = headerElement.querySelector('.expand-icon') as HTMLElement;
 
         // Close other open bond details
-        document.querySelectorAll('.bond-details').forEach((detail) => {
-            const detailEl = detail as HTMLElement;
-            if (detailEl !== details) {
-                detailEl.style.display = 'none';
-                const otherIcon = detailEl
-                    .closest('.bond-item')
-                    ?.querySelector('.expand-icon') as HTMLElement;
-                if (otherIcon) otherIcon.textContent = '▶';
+        document.querySelectorAll('.bond-item.expanded').forEach((openItem) => {
+            if (openItem !== bondItem) {
+                openItem.classList.remove('expanded');
+                const openDetails = openItem.querySelector('.bond-details') as HTMLElement;
+                if (openDetails) openDetails.style.display = 'none';
             }
         });
 
-        // Toggle current bond details
-        if (details.style.display === 'none') {
-            details.style.display = 'block';
-            icon.textContent = '▼';
-        } else {
+        const isExpanded = bondItem.classList.contains('expanded');
+        if (isExpanded) {
+            bondItem.classList.remove('expanded');
             details.style.display = 'none';
-            icon.textContent = '▶';
+        } else {
+            bondItem.classList.add('expanded');
+            details.style.display = 'block';
         }
     }
 
