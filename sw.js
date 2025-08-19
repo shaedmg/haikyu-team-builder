@@ -78,29 +78,21 @@ const ROUTE_CACHE_CONFIG = [
 
 // Event: Install
 self.addEventListener('install', (event) => {
-  console.log('[SW] Installing Service Worker version:', CACHE_VERSION);
-
   event.waitUntil(
     caches
       .open(CACHE_NAME)
       .then((cache) => {
-        console.log('[SW] Caching core resources');
         return cache.addAll(urlsToCache);
       })
       .then(() => {
-        console.log('[SW] Core resources cached successfully');
         return self.skipWaiting(); // Activar inmediatamente
       })
-      .catch((error) => {
-        console.error('[SW] Failed to cache core resources:', error);
-      })
+      .catch((error) => {})
   );
 });
 
 // Event: Activate
 self.addEventListener('activate', (event) => {
-  console.log('[SW] Activating Service Worker version:', CACHE_VERSION);
-
   event.waitUntil(
     Promise.all([
       // Limpiar caches antiguos
@@ -108,7 +100,6 @@ self.addEventListener('activate', (event) => {
       // Tomar control de todas las páginas inmediatamente
       self.clients.claim(),
     ]).then(() => {
-      console.log('[SW] Service Worker activated and ready');
       // No forzamos refresco ni notificamos; las pestañas abiertas seguirán con la versión previa hasta recargar.
     })
   );
@@ -132,8 +123,6 @@ self.addEventListener('fetch', (event) => {
 
 // Event: Message (comunicación con la app)
 self.addEventListener('message', (event) => {
-  console.log('[SW] Message received:', event.data);
-
   if (event.data && event.data.type) {
     switch (event.data.type) {
       case 'SKIP_WAITING':
@@ -160,8 +149,6 @@ self.addEventListener('message', (event) => {
 
 // Event: Sync (background sync)
 self.addEventListener('sync', (event) => {
-  console.log('[SW] Background sync:', event.tag);
-
   if (event.tag === 'team-data-sync') {
     event.waitUntil(syncTeamData());
   }
@@ -169,8 +156,6 @@ self.addEventListener('sync', (event) => {
 
 // Event: Push (notificaciones push)
 self.addEventListener('push', (event) => {
-  console.log('[SW] Push message received');
-
   const options = {
     body: event.data ? event.data.text() : 'Nueva actualización disponible!',
     vibrate: [200, 100, 200],
@@ -259,7 +244,6 @@ async function networkFirst(request, cacheName) {
     cache.put(request, networkResponse.clone());
     return networkResponse;
   } catch (error) {
-    console.log('[SW] Network failed, trying cache:', error);
     const cachedResponse = await caches.match(request);
 
     if (cachedResponse) {
@@ -282,9 +266,7 @@ async function staleWhileRevalidate(request, cacheName) {
       cache.then((c) => c.put(request, networkResponse.clone()));
       return networkResponse;
     })
-    .catch((error) => {
-      console.log('[SW] Network update failed:', error);
-    });
+    .catch((error) => {});
 
   return cachedResponse || networkResponsePromise;
 }
@@ -297,8 +279,6 @@ async function cleanupOldCaches() {
   const oldCaches = cacheNames.filter(
     (name) => name !== CACHE_NAME && name.startsWith('haikyu-team-builder-')
   );
-
-  console.log('[SW] Cleaning up old caches:', oldCaches);
 
   return Promise.all(oldCaches.map((cacheName) => caches.delete(cacheName)));
 }
@@ -332,7 +312,6 @@ async function getCacheInfo() {
  */
 async function clearAllCaches() {
   const cacheNames = await caches.keys();
-  console.log('[SW] Clearing all caches');
 
   return Promise.all(cacheNames.map((cacheName) => caches.delete(cacheName)));
 }
@@ -341,8 +320,6 @@ async function clearAllCaches() {
  * Precarga imágenes en el cache
  */
 async function preloadImages(imageUrls) {
-  console.log('[SW] Preloading images:', imageUrls);
-
   const cache = await caches.open('images');
   const requests = imageUrls.map((url) => new Request(url));
 
@@ -364,13 +341,10 @@ async function preloadImages(imageUrls) {
  * Sincroniza datos del equipo en background
  */
 async function syncTeamData() {
-  console.log('[SW] Syncing team data in background');
-
   try {
     // Aquí podrías sincronizar datos con un servidor
     // Por ahora, solo simulamos la sincronización
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log('[SW] Team data sync completed');
   } catch (error) {
     console.error('[SW] Team data sync failed:', error);
   }
@@ -378,10 +352,5 @@ async function syncTeamData() {
 
 // Utilidades de debugging
 function logCacheStatus() {
-  getCacheInfo().then((info) => {
-    console.log('[SW] Cache Status:', info);
-  });
+  getCacheInfo().then((info) => {});
 }
-
-// Log inicial
-console.log('[SW] Service Worker script loaded, version:', CACHE_VERSION);

@@ -48,7 +48,6 @@ import { generateBondEffectHTML } from './ui/bondsRenderer.js';
 import { rotatePlayersClockwise } from './ui/rotationAnimation.js';
 import { setupPositionSelector, showPositionSelector, hidePositionSelector, PositionSelectorContext } from './ui/positionSelector.js';
 import { addDragListeners as addExternalDragListeners, setupDragAndDrop as setupCourtDragAndDrop, clearHighlights } from './ui/dragAndDrop.js';
-import { debug } from './utils/debug.js';
 import { formatBonusText, getInitialBonusLevel } from './utils/formatters.js';
 
 export class HaikyuTeamBuilder {
@@ -84,8 +83,7 @@ export class HaikyuTeamBuilder {
         // Get the current language from languageManager
         const currentLanguage = window.languageManager
             ? window.languageManager.getCurrentLanguage()
-            : 'es';
-        debug('Initializing with language:', currentLanguage);
+            : 'en';
 
         await this.loadPlayers(currentLanguage);
         this.renderAvailablePlayers();
@@ -98,20 +96,15 @@ export class HaikyuTeamBuilder {
         this.setupRotationButton();
     }
 
-    public async loadPlayers(language: Language = 'es'): Promise<void> {
+    public async loadPlayers(language: Language = 'en'): Promise<void> {
         try {
-            debug(`Loading players with language: ${language}`);
-
             // Use imported data instead of fetch
-            debug('Using imported charactersData and bondsData');
 
             // Convert base characters to characters with names already included
             this.players = Object.values(charactersData.characters).map((baseChar: Character) => ({
                 ...baseChar,
                 name: baseChar.name // Name is now included directly
             }) as Character);
-            debug('Players loaded count:', this.players.length);
-            debug('Characters keys sample:', Object.keys(charactersData.characters).slice(0, 5));
             // Convert bonds to simple format (use language-specific names)
             // Filter to show only link skills (is_link_skill: true)
             this.bonds = bondsData.bonds
@@ -141,10 +134,6 @@ export class HaikyuTeamBuilder {
 
             // Load school bonds
             this.schoolBonds = schoolBondsData.school_bonds;
-
-            debug(`Loaded players: ${this.players.length} bonds: ${this.bonds.length} school bonds: ${this.schoolBonds.length} (lang=${language})`);
-            debug('Sample bonds:', this.bonds.slice(0, 3).map(b => ({ name: b.name, participants: b.participants })));
-            debug('School bonds:', this.schoolBonds.map(sb => ({ school: sb.school, name: sb.name })));
         } catch (error) {
             console.error('Error loading players:', error);
             // Initialize with empty data if import fails
@@ -157,7 +146,7 @@ export class HaikyuTeamBuilder {
     // Auto-migrate structured per-character bonuses into a single rich text description
     private generateRichTextFromEffects(bond: any, lang: string) {
         try {
-            const language = lang || 'es';
+            const language = lang || 'en';
             const partsES: string[] = [];
             const partsEN: string[] = [];
             const variables: any[] = [];
@@ -334,7 +323,7 @@ export class HaikyuTeamBuilder {
                 if (a.isActive && !b.isActive) return -1;
                 if (!a.isActive && b.isActive) return 1;
                 if (a.currentCount !== b.currentCount) return b.currentCount - a.currentCount;
-                const lang = window.languageManager ? window.languageManager.getCurrentLanguage() : 'es';
+                const lang = window.languageManager ? window.languageManager.getCurrentLanguage() : 'en';
                 const aName = typeof a.name === 'object' ? (a.name as any)[lang] || (a.name as any).es : a.name;
                 const bName = typeof b.name === 'object' ? (b.name as any)[lang] || (b.name as any).es : b.name;
                 return aName.localeCompare(bName);
@@ -356,7 +345,7 @@ export class HaikyuTeamBuilder {
                 const requiredCount = bond.requiredCount;
 
                 // Get the correct name for the current language
-                const currentLanguage = window.languageManager ? window.languageManager.getCurrentLanguage() : 'es';
+                const currentLanguage = window.languageManager ? window.languageManager.getCurrentLanguage() : 'en';
                 const bondName = typeof bond.name === 'object' ? (bond.name as any)[currentLanguage] || (bond.name as any).es : bond.name;
 
                 return `
@@ -392,7 +381,7 @@ export class HaikyuTeamBuilder {
 
         // Get current team composition by school
         const schoolComposition = computeSchoolComposition(this.currentTeam);
-        const currentLanguage = window.languageManager ? window.languageManager.getCurrentLanguage() : 'es';
+        const currentLanguage = window.languageManager ? window.languageManager.getCurrentLanguage() : 'en';
 
         // Filter to only show school bonds that have at least 1 player (like normal bonds)
         const relevantSchoolBonds = this.schoolBonds.filter(schoolBond => {
@@ -473,8 +462,6 @@ export class HaikyuTeamBuilder {
     private getInitialBonusLevel(bonus: any): string { return getInitialBonusLevel(bonus); }
 
     public setBondLevel(bondName: string, characterId: number, attribute: string, level: number): void {
-        debug('setBondLevel:', bondName, characterId, attribute, level);
-
         // Unescapar el nombre del bond para la comparación
         const unescapedBondName = bondName.replace(/\\'/g, "'");
 
@@ -499,7 +486,7 @@ export class HaikyuTeamBuilder {
                     // Actualizar el efecto mostrado
                     const bond = this.bonds.find((b) => {
                         const bondNameText = typeof b.name === 'object'
-                            ? (b.name as any)[window.languageManager?.getCurrentLanguage() || 'es'] || (b.name as any).es
+                            ? (b.name as any)[window.languageManager?.getCurrentLanguage() || 'en'] || (b.name as any).es
                             : b.name;
                         return bondNameText?.includes(unescapedBondName) ||
                             unescapedBondName.includes(bondNameText) ||
@@ -514,7 +501,7 @@ export class HaikyuTeamBuilder {
                         if (characterEffect) {
                             const bonus = characterEffect.bonuses.find(
                                 (b: any) => {
-                                    const currentLanguage = window.languageManager?.getCurrentLanguage() || 'es';
+                                    const currentLanguage = window.languageManager?.getCurrentLanguage() || 'en';
                                     const bonusAttribute = typeof b.attribute === 'object'
                                         ? (b.attribute[currentLanguage] || b.attribute.es || b.attribute)
                                         : b.attribute;
@@ -523,7 +510,7 @@ export class HaikyuTeamBuilder {
                             );
                             if (bonus && bonus.levels) {
                                 // Handle both old format (array) and new format (object with language keys)
-                                const currentLanguage = window.languageManager?.getCurrentLanguage() || 'es';
+                                const currentLanguage = window.languageManager?.getCurrentLanguage() || 'en';
                                 let levelValue;
 
                                 if (Array.isArray(bonus.levels)) {
@@ -558,7 +545,7 @@ export class HaikyuTeamBuilder {
             const bond = this.bonds.find(b => (b as any).id === bondId);
             if (!bond || !(bond as any).rich_text) return;
             const rich = (bond as any).rich_text;
-            const lang = window.languageManager ? window.languageManager.getCurrentLanguage() : 'es';
+            const lang = window.languageManager ? window.languageManager.getCurrentLanguage() : 'en';
             const template = rich.template[lang] || rich.template.es;
             const descEl = document.getElementById(`rich-bond-desc-${bondId}`);
             if (!descEl) return;
@@ -1036,13 +1023,11 @@ export class HaikyuTeamBuilder {
 
     private setupRotationButton(): void {
         const rotationButton = document.getElementById('rotationButton');
-        debug('Rotation button found:', !!rotationButton);
         if (rotationButton) {
             rotationButton.setAttribute('role', 'button');
             rotationButton.setAttribute('tabindex', '0');
             rotationButton.setAttribute('aria-label', window.languageManager ? (window.languageManager.t('rotateTooltip') as string) : 'Rotate players');
             rotationButton.addEventListener('click', () => {
-                debug('Rotation button clicked');
                 rotatePlayersClockwise({
                     currentTeam: this.currentTeam,
                     positionMappings: this.positionMappings,

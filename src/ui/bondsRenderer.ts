@@ -22,7 +22,7 @@ export function generateBondEffectHTML(
     deps: BondRenderDeps
 ): string {
     const { players, getPlayerImageUrl, formatBonusText, getInitialBonusLevel } = deps;
-    const currentLanguage = window.languageManager ? window.languageManager.getCurrentLanguage() : 'es';
+    const currentLanguage = window.languageManager ? window.languageManager.getCurrentLanguage() : 'en';
     const bondName = typeof bond.name === 'object' ? (bond.name as any)[currentLanguage] || (bond.name as any).es : bond.name;
 
     // Rich text unified description path
@@ -126,7 +126,7 @@ export function generateBondEffectHTML(
           <div class="level-selector" data-character-id="${characterEffect.character_id}" data-attribute="${rawAttributeName}">`;
 
                 if (bonus.levels) {
-                    const lang = window.languageManager?.getCurrentLanguage() || 'es';
+                    const lang = window.languageManager?.getCurrentLanguage() || 'en';
                     let levelsArray;
                     if (Array.isArray(bonus.levels)) {
                         levelsArray = bonus.levels;

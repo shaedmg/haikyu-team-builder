@@ -4,16 +4,42 @@ import {
     Translations
 } from './types/index.js';
 import { translations } from './translations.js';
-import { debug } from './utils/debug.js';
 
 export class LanguageManager {
     private currentLanguage: Language;
     private translations: Translations;
 
     constructor() {
-        this.currentLanguage = (localStorage.getItem('haikyu-language') as Language) || 'en';
+        // Clear any existing language preference for testing
+        // localStorage.removeItem('haikyu-language'); // Uncomment this line to test fresh browser detection
+        this.currentLanguage = this.detectBrowserLanguage();
         this.translations = translations;
         this.init();
+    }
+
+    private detectBrowserLanguage(): Language {
+        // First check if there's a saved preference
+        const savedLanguage = localStorage.getItem('haikyu-language') as Language;
+        if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'es')) {
+            return savedLanguage;
+        }
+
+        // Get browser languages in order of preference
+        const browserLanguages = navigator.languages || [navigator.language];
+
+        // Check each browser language for supported languages
+        for (const lang of browserLanguages) {
+            const langCode = lang.toLowerCase().split('-')[0]; // Get just the language part (en from en-US)
+
+            if (langCode === 'es') {
+                return 'es';
+            } else if (langCode === 'en') {
+                return 'en';
+            }
+        }
+
+        // Default to English if no supported language found (including for Italian, French, etc.)
+        return 'en';
     }
 
     private init(): void {
@@ -60,16 +86,12 @@ export class LanguageManager {
 
         // Reload data with appropriate language JSON
         if (window.teamBuilder) {
-            debug('=== LANGUAGE CHANGE: Reloading data ===');
-            debug('New language:', lang);
-
             // Reload the JSON data for the new language
             window.teamBuilder?.loadPlayers(lang)
                 .then(() => {
                     // Update the UI with new data
                     window.teamBuilder?.updateBonds();
                     window.teamBuilder?.updateSchoolStats();
-                    debug('=== Data reloaded successfully ===');
                 })
                 .catch((error: Error) => {
                     console.error('Error reloading data:', error);

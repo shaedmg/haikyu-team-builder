@@ -1,6 +1,6 @@
 // Centralized debug logging utility
 // Toggle this flag to enable/disable verbose logs.
-export const DEBUG = false; // Set to false for production build.
+export const DEBUG = true; // Set to false for production build.
 
 export function debug(...args: any[]) {
     if (DEBUG) {

@@ -67,7 +67,7 @@ export function showPositionSelector(ctx: PositionSelectorContext, positionClass
     ctx.selectedPosition = positionClass;
     ctx.positionSelectorActive = true;
 
-    const currentLanguage = window.languageManager ? window.languageManager.getCurrentLanguage() : 'es';
+    const currentLanguage = window.languageManager ? window.languageManager.getCurrentLanguage() : 'en';
     const positionNames: Record<string, string> = { OP: 'Opposite', WS: 'Wing Spiker', MB: 'Middle Blocker', S: 'Setter', L: 'Libero' };
     if (positionSelectorTitle) {
         const selectText = currentLanguage === 'en' ? 'Select' : 'Seleccionar';

@@ -1,4 +1,3 @@
-import { debug } from './debug.js';
 import { Position } from '../types/index.js';
 
 // Positions remain in English always (no translation)
@@ -11,12 +10,12 @@ const POSITION_KEY_MAP: Record<Position, string> = {
 };
 
 export function t(key: string, fallback?: string): string {
-    const lang = window.languageManager?.getCurrentLanguage() || 'es';
+    const lang = window.languageManager?.getCurrentLanguage() || 'en';
     try {
         const value = window.languageManager?.t(key as any);
         if (typeof value === 'string') return value;
     } catch (e) {
-        debug('Missing translation key:', key);
+        // Translation key not found
     }
     return fallback || key;
 }

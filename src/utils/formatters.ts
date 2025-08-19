@@ -1,7 +1,4 @@
-import { debug } from './debug.js';
-
 export function formatBonusText(bonusValue: string): string {
-    debug('formatBonusText in:', bonusValue);
     if (!bonusValue || typeof bonusValue !== 'string') return bonusValue || '';
     if (bonusValue === 'Activado' || bonusValue === 'Eliminado') return bonusValue;
     const multiplierMatch = bonusValue.match(/^x(\d+(?:\.\d+)?)%$/);
@@ -12,7 +9,7 @@ export function formatBonusText(bonusValue: string): string {
         let percentage = complexMatch[2];
         if (!points.startsWith('+') && !points.startsWith('-')) points = '+' + points;
         if (!percentage.startsWith('+') && !percentage.startsWith('-')) percentage = '+' + percentage;
-        const lang = window.languageManager?.getCurrentLanguage() || 'es';
+        const lang = window.languageManager?.getCurrentLanguage() || 'en';
         const puntos = lang === 'en' ? 'points' : 'puntos';
         const adicional = lang === 'en' ? 'additional' : 'adicional';
         return `${points} ${puntos} ${percentage} ${adicional}`;
@@ -32,7 +29,7 @@ export function formatBonusText(bonusValue: string): string {
 
 export function getInitialBonusLevel(bonus: any): string {
     if (!bonus?.levels) return 'N/A';
-    const lang = window.languageManager?.getCurrentLanguage() || 'es';
+    const lang = window.languageManager?.getCurrentLanguage() || 'en';
     if (Array.isArray(bonus.levels)) return bonus.levels[0] || 'N/A';
     if (typeof bonus.levels === 'object') {
         const arr = bonus.levels[lang] || bonus.levels.es || bonus.levels;

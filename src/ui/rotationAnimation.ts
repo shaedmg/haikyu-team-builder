@@ -1,5 +1,4 @@
 import { Character, Position } from '../types/index.js';
-import { debug } from '../utils/debug.js';
 
 export type RotationContext = {
     currentTeam: { [key: string]: Character | null | undefined };
@@ -19,8 +18,6 @@ const ROTATION_SEQUENCE = [
 ];
 
 export function rotatePlayersClockwise(ctx: RotationContext): void {
-    debug('=== STARTING POSITION ROTATION ===');
-
     const positionContents: { [key: string]: Character | null } = {};
     const positionMappingsCopy: { [key: string]: Position } = {};
 
@@ -68,9 +65,6 @@ export function rotatePlayersClockwise(ctx: RotationContext): void {
         });
 
         ctx.updateTeamStats();
-        debug('=== ROTATION COMPLETED ===');
-        debug('New mappings:', ctx.positionMappings);
-        debug('New team state:', ctx.currentTeam);
     });
 }
 
