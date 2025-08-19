@@ -1555,3 +1555,32 @@ body {
     padding-bottom: 60vh;
   }
 }
+
+/* Developer Credits Footer Responsive */
+footer {
+  z-index: 9999 !important;
+}
+
+@media (max-width: 480px) {
+  footer {
+    position: fixed !important;
+    bottom: 5px !important;
+    right: 5px !important;
+    left: 5px !important;
+    max-width: none !important;
+    font-size: 10px !important;
+    padding: 6px 8px !important;
+    text-align: center !important;
+  }
+  
+  footer div {
+    margin-bottom: 2px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  footer {
+    font-size: 9px !important;
+    padding: 4px 6px !important;
+  }
+}
