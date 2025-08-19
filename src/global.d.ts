@@ -1,21 +1,16 @@
 // Global type declarations for Haikyu Team Builder
 
-import { HaikyuTeamBuilder as OriginalHaikyuTeamBuilder } from './HaikyuTeamBuilder';
-import { HaikyuTeamBuilder as RefactoredHaikyuTeamBuilder } from './HaikyuTeamBuilderRefactored';
-import { LanguageManager } from './LanguageManager';
-
-// Global type declarations for Haikyu Team Builder
-
-import { HaikyuTeamBuilder as OriginalHaikyuTeamBuilder } from './HaikyuTeamBuilder';
-import { HaikyuTeamBuilder as RefactoredHaikyuTeamBuilder } from './HaikyuTeamBuilderRefactored';
+import { HaikyuTeamBuilder } from './HaikyuTeamBuilder';
 import { LanguageManager } from './LanguageManager';
 
 declare global {
   interface Window {
-    teamBuilder?: OriginalHaikyuTeamBuilder;
+    teamBuilder?: HaikyuTeamBuilder;
+    teamBuilderInstance?: HaikyuTeamBuilder;
     languageManager?: LanguageManager;
-    HaikyuTeamBuilder?: typeof OriginalHaikyuTeamBuilder;
+    HaikyuTeamBuilder?: typeof HaikyuTeamBuilder;
     LanguageManager?: typeof LanguageManager;
+    DEBUG?: boolean;
   }
 
   // DOM element extensions

@@ -13,7 +13,10 @@
     />
     <meta name="author" content="Angelo" />
     <meta name="generator" content="Haikyu Flight High Team Builder v3.0" />
-    <meta name="methodology" content="Experimental test case for vibe coding methodology research - not established best practice" />
+    <meta
+      name="methodology"
+      content="Experimental test case for vibe coding methodology research - not established best practice"
+    />
     <meta name="application-name" content="Haikyu Flight High Team Builder" />
     <meta name="msapplication-TileColor" content="#667eea" />
     <meta name="msapplication-config" content="browserconfig.xml" />
@@ -611,10 +614,22 @@
     </div>
 
     <!-- TypeScript compiled modules -->
-    <script type="module" src="dist/init.js?v=__BUILD_HASH__"></script>
-    <!-- Preload critical JS -->
-    <link rel="preload" as="script" href="dist/init.js?v=__BUILD_HASH__" />
-    <script type="module" src="dist/init.js?v=__BUILD_HASH__"></script>
+    <script type="module" src="dist/init.js"></script>
+    
+    <!-- Debug script to verify loading -->
+    <script>
+      console.log('HTML loaded, waiting for modules...');
+      window.addEventListener('load', () => {
+        console.log('Window loaded');
+        setTimeout(() => {
+          console.log('teamBuilder instance:', window.teamBuilder || window.teamBuilderInstance);
+          console.log('languageManager instance:', window.languageManager);
+          const playerGrid = document.getElementById('playerGrid');
+          console.log('Player grid element:', playerGrid);
+          console.log('Player grid children:', playerGrid ? playerGrid.children.length : 'N/A');
+        }, 1000);
+      });
+    </script>
 
     <!-- Fallback for old JavaScript files (commented out) -->
     <!-- <script src="translations.js"></script> -->

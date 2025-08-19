@@ -151,12 +151,14 @@ Este team builder de Haikyu!! sirve como **caso de prueba** para los principios 
 ### Resultados del Experimento
 
 **✅ Aspectos exitosos observados:**
+
 - ⚡ **Desarrollo acelerado**: Prototipo funcional en sesiones experimentales
 - 🎯 **Calidad emergente**: Arquitectura resultante del desarrollo orgánico
 - 🔄 **Iteración eficiente**: Capacidad de pivotear durante el experimento
 - 🧩 **Modularidad natural**: Componentes bien definidos surgieron naturalmente
 
 **⚠️ Limitaciones y áreas de mejora identificadas:**
+
 - 📚 **Documentación**: Los procesos requieren mejor documentación sistemática
 - 🔄 **Repetibilidad**: La metodología necesita mayor estructura para ser repetible
 - 👥 **Escalabilidad**: Falta validar efectividad en equipos más grandes
