@@ -8,7 +8,7 @@
   "orientation": "portrait-primary",
   "theme_color": "#667eea",
   "background_color": "#1e3c72",
-  "categories": ["games", "sports", "entertainment", "productivity"],
+  "categories": ["games", "sports", "entertainment"],
   "lang": "en",
   "dir": "ltr",
   "keywords": [
@@ -42,76 +42,12 @@
     }
   ],
 
-  "screenshots": [
-    {
-      "src": "assets/images/screenshot-wide.jpg",
-      "sizes": "1280x720",
-      "type": "image/jpeg",
-      "form_factor": "wide",
-      "label": "Haikyu Team Builder - Vista del juego en escritorio"
-    },
-    {
-      "src": "assets/images/screenshot-narrow.jpg",
-      "sizes": "640x1136",
-      "type": "image/jpeg",
-      "form_factor": "narrow",
-      "label": "Haikyu Team Builder - Vista móvil"
-    }
-  ],
+  
 
-  "shortcuts": [
-    {
-      "name": "Crear Equipo",
-      "short_name": "Crear",
-      "description": "Crear un nuevo equipo de voleibol",
-      "url": "./#create-team",
-      "icons": [
-        {
-          "src": "assets/images/shortcut-create.png",
-          "sizes": "192x192"
-        }
-      ]
-    },
-    {
-      "name": "Ver Personajes",
-      "short_name": "Personajes",
-      "description": "Explorar todos los personajes disponibles",
-      "url": "./#characters",
-      "icons": [
-        {
-          "src": "assets/images/shortcut-characters.png",
-          "sizes": "192x192"
-        }
-      ]
-    }
-  ],
+  
 
   "related_applications": [],
-  "prefer_related_applications": false,
+  "prefer_related_applications": false
 
-  "protocol_handlers": [
-    {
-      "protocol": "web+haikyu",
-      "url": "./#share=%s"
-    }
-  ],
-
-  "share_target": {
-    "action": "./#share",
-    "method": "GET",
-    "enctype": "application/x-www-form-urlencoded",
-    "params": {
-      "title": "title",
-      "text": "text",
-      "url": "url"
-    }
-  },
-
-  "launch_handler": {
-    "client_mode": "focus-existing"
-  },
-
-  "edge_side_panel": {
-    "preferred_width": 400
-  }
+  
 }

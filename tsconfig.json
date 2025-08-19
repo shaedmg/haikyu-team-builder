@@ -10,13 +10,11 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "declaration": true,
-    "declarationMap": true,
+    
     "sourceMap": true,
     "removeComments": false,
     "noEmitOnError": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    
   },
   "include": ["src/**/*", "src/global.d.ts"],
   "exclude": ["node_modules", "dist"]

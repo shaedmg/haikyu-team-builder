@@ -173,25 +173,8 @@ self.addEventListener('push', (event) => {
 
   const options = {
     body: event.data ? event.data.text() : 'Nueva actualización disponible!',
-    icon: './assets/images/icon-192x192.png',
-    badge: './assets/images/icon-72x72.png',
     vibrate: [200, 100, 200],
-    data: {
-      dateOfArrival: Date.now(),
-      primaryKey: 1,
-    },
-    actions: [
-      {
-        action: 'explore',
-        title: 'Ver cambios',
-        icon: './assets/images/icon-explore.png',
-      },
-      {
-        action: 'close',
-        title: 'Cerrar',
-        icon: './assets/images/icon-close.png',
-      },
-    ],
+    data: { dateOfArrival: Date.now(), primaryKey: 1 },
   };
 
   event.waitUntil(
