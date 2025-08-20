@@ -2656,7 +2656,7 @@ export const bondsData: BondsData = {
       },
       "participants": [
         92,
-        90
+        103
       ],
       "is_link_skill": true,
       "effects_by_character": [
@@ -7125,6 +7125,267 @@ export const bondsData: BondsData = {
         "maxLevels": 5
       },
       "id": 85
+    },
+    {
+      "name": {
+        "es": "Dios Guardián y Estrella",
+        "en": "Guardian God and Star"
+      },
+      "id": 86,
+      "participants": [
+        14,
+        11
+      ],
+      "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "Cuando YU NISHINOYA (práctica) o ASAHI AZUMANE (práctica) usan una habilidad, su Técnica Ofensiva y su Técnica Defensiva aumentan en un [Bonus].",
+          "en": "When YU NISHINOYA (practice) or ASAHI AZUMANE (practice) use a skill, their Offensive Technique and Defensive Technique increase by [Bonus]."
+        },
+        "variables": [
+          {
+            "name": "Bonus",
+            "levels": {
+              "es": ["6%", "7%", "8%", "9%", "10%"],
+              "en": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
+    },
+    {
+      "name": {
+        "es": "Estudiante de segundo año de KARASUNO",
+        "en": "Second-Year Student of KARASUNO"
+      },
+      "id": 87,
+      "participants": [
+        14,
+        16,
+        23,
+      ],
+      "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "Aumenta en un [Bonus] el atributo Recepción de los jugadores de la fila trasera.",
+          "en": "Increases the Reception attribute of back row players by [Bonus]."
+        },
+        "variables": [
+          {
+            "name": "Bonus",
+            "levels": {
+              "es": ["6%", "7%", "8%", "9%", "10%"],
+              "en": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
+    },
+    {
+      "name": {
+        "es": "Pilares del último año de SEIJOH",
+        "en": "Final-Year Pillars of SEIJOH"
+      },
+      "id": 89,
+      "participants": [
+        30,
+        31
+      ],
+      "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "Aumenta el atributo Bloqueo de ISSEI MATSUKAWA en un [Bonus] y el atributo Recepción de TAKAHIRO HANAMAKI en un [Bonus].",
+          "en": "Increases the Block attribute of ISSEI MATSUKAWA by [Bonus] and the Reception attribute of TAKAHIRO HANAMAKI by [Bonus]."
+        },
+        "variables": [
+          {
+            "name": "Bonus",
+            "levels": {
+              "es": ["6%", "7%", "8%", "9%", "10%"],
+              "en": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
+    },
+    {
+      "name": {
+        "es": "Rematador Lateral de NEKOMA",
+        "en": "Side Spiker of NEKOMA"
+      },
+      "id": 90,
+      "participants": [
+        96,
+        97,
+        95
+      ],
+      "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "Aumenta en un [Bonus] los atributos Recepción y Ataque Poderoso de los jugadores presentes.",
+          "en": "Increases the Reception and Powerful Attack attributes of present players by [Bonus]."
+        },
+        "variables": [
+          {
+            "name": "Bonus",
+            "levels": {
+              "es": ["4%", "5%", "6%", "7%", "8%"],
+              "en": ["4%", "5%", "6%", "7%", "8%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
+    },
+    {
+      "name": {
+        "es": "El Silencioso y el Sarcástico",
+        "en": "The Silent and the Sarcastic"
+      },
+      "id": 91,
+      "participants": [
+        42,
+        40
+      ],
+      "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "TAKANOBU AONE y KENJI FUTAKUCHI ejecutan un Bloqueo Doble con un poder equivalente al [Power]% del atributo Bloqueo de AONE; aplica la desventaja «Enfurecer» al rematador rival (reduce los atributos Ataque Rápido/Poderoso en un [Debuff]).",
+          "en": "TAKANOBU AONE and KENJI FUTAKUCHI perform a Double Block with power equal to [Power]% of AONE's Block attribute; applies the «Enrage» debuff to the opposing spiker (reduces Rapid/Powerful Attack attributes by [Debuff])."
+        },
+        "variables": [
+          {
+            "name": "Power",
+            "levels": {
+              "es": ["180", "195", "210", "225", "240"],
+              "en": ["180", "195", "210", "225", "240"]
+            }
+          },
+          {
+            "name": "Debuff",
+            "levels": {
+              "es": ["10%", "10%", "10%", "10%", "10%"],
+              "en": ["10%", "10%", "10%", "10%", "10%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
+    },
+    {
+      "name": {
+        "es": "El Capitán Nuevo y el Novato Alto",
+        "en": "The New Captain and the Tall Rookie"
+      },
+      "id": 92,
+      "participants": [
+        41,
+        44
+      ],
+      "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "Aumenta en un [Bonus] el atributo Bloqueo de los jugadores de la fila delantera.",
+          "en": "Increases the Block attribute of front row players by [Bonus]."
+        },
+        "variables": [
+          {
+            "name": "Bonus",
+            "levels": {
+              "es": ["2%", "2.5%", "3%", "3.5%", "4%"],
+              "en": ["2%", "2.5%", "3%", "3.5%", "4%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
+    },
+    {
+      "name": {
+        "es": "Compañeros en la cancha",
+        "en": "Teammates on the Court"
+      },
+      "id": 93,
+      "participants": [
+        3,
+        5
+      ],
+      "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "Al usar habilidades de Remate Rápido, aumenta la Percepción de este jugador en un [Bonus].",
+          "en": "When using Quick Spike skills, this player's Perception increases by [Bonus]."
+        },
+        "variables": [
+          {
+            "name": "Bonus",
+            "levels": {
+              "es": ["6%", "7%", "8%", "9%", "10%"],
+              "en": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
+    },
+    {
+      "name": {
+        "es": "«Escudo» y «Lanza»",
+        "en": "\"Shield\" and \"Lance\""
+      },
+      "id": 94,
+      "participants": [
+        19,
+        21
+      ],
+      "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "Aumenta el atributo Bloqueo de KEI TSUKISHIMA (práctica) en un [Bonus] y el atributo Saque de TADASHI YAMAGUCHI (práctica) en un [Bonus].",
+          "en": "Increases KEI TSUKISHIMA's (practice) Block attribute by [Bonus] and TADASHI YAMAGUCHI's (practice) Serve attribute by [Bonus]."
+        },
+        "variables": [
+          {
+            "name": "Bonus",
+            "levels": {
+              "es": ["6%", "7%", "8%", "9%", "10%"],
+              "en": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
+    },
+    {
+      "name": {
+        "es": "Código del paquete",
+        "en": "Package Code"
+      },
+      "id": 95,
+      "participants": [
+        29,
+        37
+      ],
+      "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "Aumenta la Percepción de HAJIME IWAIZUMI (práctica) y KENTARO KYOTANI (práctica) en un [Bonus].",
+          "en": "Increases the Perception of HAJIME IWAIZUMI (practice) and KENTARO KYOTANI (practice) by [Bonus]."
+        },
+        "variables": [
+          {
+            "name": "Bonus",
+            "levels": {
+              "es": ["6%", "7%", "8%", "9%", "10%"],
+              "en": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
     }
   ]
 };

@@ -467,7 +467,7 @@ export const charactersData: CharactersData = {
         "43": {
             "id": 43,
             "school": "Date Tech",
-            "name": "Takanobu Obara",
+            "name": "Kanji Koganegawa",
             "name_jp": "黄金川貫至",
             "variant": null,
             "rarity": "SSR",
@@ -478,7 +478,7 @@ export const charactersData: CharactersData = {
         "44": {
             "id": 44,
             "school": "Date Tech",
-            "name": "Takanobu Obara",
+            "name": "Kanji Koganegawa",
             "name_jp": "黄金川貫至",
             "variant": "Practice",
             "rarity": "SR",
@@ -1039,7 +1039,7 @@ export const charactersData: CharactersData = {
         "95": {
             "id": 95,
             "school": "Nekoma",
-            "name": "Takeru Yamamoto",
+            "name": "Taketora Yamamoto",
             "name_jp": "山本猛虎",
             "variant": null,
             "rarity": "SR",
@@ -1122,6 +1122,17 @@ export const charactersData: CharactersData = {
             "rarity": "UR",
             "position": "L",
             "profile_image_url": "./assets/images/characters/102_Motoya_Komori.png",
+            "personal_page_url": null
+        },
+        "103": {
+            "id": 103,
+            "school": "Nekoma",
+            "name": "Kenma Kozume",
+            "name_jp": "孤爪研磨",
+            "variant": null,
+            "rarity": "SR",
+            "position": "S",
+            "profile_image_url": "./assets/images/characters/103_Kenma.png",
             "personal_page_url": null
         }
     }
