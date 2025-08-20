@@ -1,3 +1,272 @@
+/* School filter dropdown styles */
+.players-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.school-filter-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.school-filter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  color: #fff;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  min-width: 0;
+}
+.school-filter-btn:hover,
+.school-filter-btn.active {
+  background: rgba(102, 126, 234, 0.18);
+  border-color: #667eea;
+}
+.school-filter-icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+  pointer-events: none;
+}
+.school-filter-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #ffb347;
+  color: #222;
+  font-size: 0.8em;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 1px 6px;
+  min-width: 18px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+}
+
+.school-filter-dropdown {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  min-width: 220px;
+  background: rgba(30, 60, 114, 0.98);
+  border: 2px solid #667eea;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(30, 60, 114, 0.25);
+  z-index: 1001;
+  padding: 10px 0 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  animation: fadeIn 0.18s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.school-filter-dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px 8px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 6px;
+}
+.school-filter-dropdown-title {
+  font-size: 1.05em;
+  font-weight: 600;
+  color: #fff;
+}
+.school-filter-reset {
+  background: none;
+  border: none;
+  color: #ffb347;
+  font-size: 0.95em;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 2px 8px;
+  border-radius: 8px;
+  transition: background 0.15s;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.school-filter-reset:hover {
+  background: rgba(255, 179, 71, 0.12);
+}
+.school-filter-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 8px;
+  max-height: 220px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.school-filter-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1em;
+  transition: background 0.15s;
+}
+.school-filter-list li.selected {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  font-weight: bold;
+}
+.school-filter-list li:hover {
+  background: rgba(102, 126, 234, 0.13);
+}
+.school-filter-list input[type='checkbox'] {
+  accent-color: #667eea;
+  width: 16px;
+  height: 16px;
+  margin: 0 2px 0 0;
+}
+/* School Filter Button & Dropdown */
+.players-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.school-filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 22px;
+  padding: 7px 16px 7px 14px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  min-width: 90px;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.08);
+}
+.school-filter-btn:hover,
+.school-filter-btn.active {
+  background: rgba(102, 126, 234, 0.18);
+  border-color: #667eea;
+}
+.school-filter-btn-label {
+  margin-right: 2px;
+}
+.school-filter-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  background: #ffb347;
+  color: #222;
+  font-size: 0.95em;
+  font-weight: bold;
+  border-radius: 50%;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 0 6px;
+  box-shadow: 0 1px 4px rgba(255, 179, 71, 0.18);
+  display: inline-flex;
+  top: -5px;
+}
+.school-filter-icon {
+  margin-left: 2px;
+  transition: transform 0.2s;
+}
+
+/* Dropdown (to be implemented) */
+.school-filter-dropdown {
+  display: none;
+  position: absolute;
+  top: 110%;
+  right: 0;
+  min-width: 220px;
+  background: rgba(30, 60, 114, 0.98);
+  border: 2px solid #667eea;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.18);
+  z-index: 1001;
+  padding: 12px 0;
+  margin-top: 6px;
+}
+.school-filter-dropdown.open {
+  display: block;
+}
+.school-filter-dropdown-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 0;
+  max-height: 260px;
+  overflow-y: auto;
+}
+.school-filter-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 22px 8px 18px;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.school-filter-dropdown-item.selected {
+  background: #667eea;
+  color: #fff;
+  font-weight: bold;
+}
+.school-filter-dropdown-item:hover {
+  background: rgba(102, 126, 234, 0.18);
+}
+.school-filter-dropdown-reset {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffb347;
+  font-size: 0.98em;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 18px;
+  width: 100%;
+  text-align: left;
+  margin-top: 4px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.school-filter-dropdown-reset:hover {
+  background: rgba(255, 179, 71, 0.08);
+  color: #fff;
+}
 /* Reset and base styles */
 * {
   margin: 0;
@@ -1088,7 +1357,6 @@ body {
 
 .player-panel h2,
 .player-panel h3 {
-  margin-bottom: 20px;
   text-align: center;
   font-size: 1.5rem;
   flex-shrink: 0;

@@ -70,6 +70,9 @@ export const translations: Translations = {
             'Inarizaki': 'Inarizaki',
             'Itachiyama': 'Itachiyama'
         },
+        schoolFilter: 'Schools',
+        schoolFilterReset: 'Reset',
+        schoolFilterNone: 'No schools',
 
         // Other
         and: 'and',
@@ -196,6 +199,9 @@ export const translations: Translations = {
             'Inarizaki': 'Inarizaki',
             'Itachiyama': 'Itachiyama'
         },
+        schoolFilter: 'Escuelas',
+        schoolFilterReset: 'Restablecer',
+        schoolFilterNone: 'Sin escuelas',
 
         // Other
         and: 'y',

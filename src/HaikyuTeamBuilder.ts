@@ -64,6 +64,10 @@ export class HaikyuTeamBuilder {
     private draggedFromPosition: string | undefined = undefined;
     private searchTerm: string = '';
 
+    // School filter state
+    private selectedSchools: Set<string> = new Set();
+    private allSchools: string[] = [];
+
     constructor() {
         this.currentSortBy = 'rarity'; // Changed default sort to rarity
 
@@ -79,6 +83,7 @@ export class HaikyuTeamBuilder {
 
         this.init();
     }
+
 
     private async init(): Promise<void> {
         // Get the current language from languageManager
@@ -104,8 +109,10 @@ export class HaikyuTeamBuilder {
             // Convert base characters to characters with names already included
             this.players = Object.values(charactersData.characters).map((baseChar: Character) => ({
                 ...baseChar,
-                name: baseChar.name // Name is now included directly
+                name: baseChar.name
             }) as Character);
+            // Get all unique schools from characters
+            this.allSchools = Array.from(new Set(this.players.map(p => p.school))).sort();
             // Convert bonds to simple format (use language-specific names)
             // Filter to show only link skills (is_link_skill: true)
             this.bonds = bondsData.bonds
@@ -263,6 +270,9 @@ export class HaikyuTeamBuilder {
                 playerGrid.appendChild(section);
             }
         });
+
+        // Always re-render the school filter dropdown and re-attach listeners after player grid updates
+        this.renderSchoolFilterDropdown();
     }
 
     private getSortedPlayers(): Character[] {
@@ -288,16 +298,19 @@ export class HaikyuTeamBuilder {
     }
 
     private getFilteredPlayers(): Character[] {
-        const sortedPlayers = this.getSortedPlayers();
-
-        if (!this.searchTerm.trim()) {
-            return sortedPlayers;
+        let players = this.getSortedPlayers();
+        // Filtrar por escuelas si hay alguna seleccionada
+        if (this.selectedSchools.size > 0) {
+            players = players.filter(player => this.selectedSchools.has(player.school));
         }
-
-        const searchLower = this.normalizeText(this.searchTerm.toLowerCase().trim());
-        return sortedPlayers.filter(player =>
-            this.normalizeText(player.name.toLowerCase()).includes(searchLower)
-        );
+        // Filtrar por búsqueda
+        if (this.searchTerm.trim()) {
+            const searchLower = this.normalizeText(this.searchTerm.toLowerCase().trim());
+            players = players.filter(player =>
+                this.normalizeText(player.name.toLowerCase()).includes(searchLower)
+            );
+        }
+        return players;
     }
 
     private normalizeText(text: string): string {
@@ -830,7 +843,7 @@ export class HaikyuTeamBuilder {
 
         playerCard.addEventListener('dragend', (_e) => {
             playerCard.style.opacity = '1';
-            this.clearHighlights();
+            clearHighlights();
 
             // If drag was from team and not successful, remove from team
             if (this.dragState.draggedFromTeam && !this.dragState.dragSuccess) {
@@ -1025,6 +1038,31 @@ export class HaikyuTeamBuilder {
     private initializePositionSelector(): void {
         // Link context to actual mappings
         this.positionSelectorCtx.positionMappings = this.positionMappings as any;
+        // Filtrar también por escuelas seleccionadas
+        this.positionSelectorCtx.getSortedPlayers = () => {
+            let players = [...this.players];
+            if (this.selectedSchools.size > 0) {
+                players = players.filter(player => this.selectedSchools.has(player.school));
+            }
+            if (this.searchTerm.trim()) {
+                const searchLower = this.normalizeText(this.searchTerm.toLowerCase().trim());
+                players = players.filter(player =>
+                    this.normalizeText(player.name.toLowerCase()).includes(searchLower)
+                );
+            }
+            // Ordenar igual que el panel derecho
+            if (this.currentSortBy === 'name') {
+                players.sort((a, b) => a.name.localeCompare(b.name));
+            } else if (this.currentSortBy === 'rarity') {
+                players.sort((a, b) => {
+                    const rarityA = this.rarityOrder.indexOf(a.rarity);
+                    const rarityB = this.rarityOrder.indexOf(b.rarity);
+                    if (rarityA === rarityB) return a.name.localeCompare(b.name);
+                    return rarityA - rarityB;
+                });
+            }
+            return players;
+        };
         setupPositionSelector(this.positionSelectorCtx);
     }
 
@@ -1107,9 +1145,142 @@ export class HaikyuTeamBuilder {
         return computeSchoolComposition(this.currentTeam);
     }
 
-    private clearHighlights(): void { clearHighlights(); }
-}
 
+    public renderSchoolFilterDropdown(): void {
+        const btn = document.getElementById('schoolFilterButton');
+        const dropdown = document.getElementById('schoolFilterDropdown');
+        const badge = btn?.querySelector('.school-filter-badge') as HTMLElement;
+        const label = btn?.querySelector('.school-filter-btn-label') as HTMLElement;
+        const resetBtn = document.getElementById('schoolFilterReset');
+        const resetText = document.getElementById('schoolFilterResetText');
+        const title = document.getElementById('schoolFilterTitle');
+        const list = dropdown?.querySelector('.school-filter-list') as HTMLElement;
+        const lang = window.languageManager ? window.languageManager.getCurrentLanguage() : 'es';
+        const t = window.languageManager ? window.languageManager.t.bind(window.languageManager) : (k: string) => k;
+
+        // Set multilanguage labels
+        if (label) label.textContent = t('schoolFilter') as string;
+        if (title) title.textContent = t('schoolFilter') as string;
+        if (resetText) resetText.textContent = t('schoolFilterReset') as string;
+
+        // Render school options
+        if (list) {
+            list.innerHTML = '';
+            if (this.allSchools.length === 0) {
+                const li = document.createElement('li');
+                li.textContent = t('schoolFilterNone') as string;
+                li.style.opacity = '0.7';
+                list.appendChild(li);
+            } else {
+                this.allSchools.forEach(school => {
+                    const li = document.createElement('li');
+                    li.setAttribute('role', 'option');
+                    li.setAttribute('aria-selected', this.selectedSchools.has(school) ? 'true' : 'false');
+                    li.className = this.selectedSchools.has(school) ? 'selected' : '';
+                    // Checkbox
+                    const checkbox = document.createElement('input');
+                    checkbox.type = 'checkbox';
+                    checkbox.checked = this.selectedSchools.has(school);
+                    checkbox.tabIndex = -1;
+                    checkbox.ariaLabel = school;
+                    // School name (multilanguage)
+                    const schoolName = (t('schools') as any)[school] || school;
+                    const span = document.createElement('span');
+                    span.textContent = schoolName;
+                    li.appendChild(checkbox);
+                    li.appendChild(span);
+                    // Click handler
+                    li.onclick = (e) => {
+                        e.stopPropagation();
+                        if (this.selectedSchools.has(school)) {
+                            this.selectedSchools.delete(school);
+                        } else {
+                            this.selectedSchools.add(school);
+                        }
+                        this.renderAvailablePlayers();
+                        // Si el selector inferior está abierto, actualizarlo también
+                        if (this.positionSelectorCtx.positionSelectorActive && this.positionSelectorCtx.selectedPosition) {
+                            const positionElement = document.querySelector(`.${this.positionSelectorCtx.selectedPosition}`) as HTMLElement;
+                            if (positionElement) {
+                                showPositionSelector(this.positionSelectorCtx, this.positionSelectorCtx.selectedPosition, positionElement);
+                            }
+                        }
+                    };
+                    list.appendChild(li);
+                });
+            }
+        }
+        // Badge
+        if (badge) {
+            const count = this.selectedSchools.size;
+            badge.style.display = count > 0 ? 'inline-flex' : 'none';
+            badge.textContent = count > 0 ? String(count) : '';
+        }
+        // Asegura eventos activos tras cada render
+        this.setupSchoolFilterDropdown();
+    }
+
+    private setupSchoolFilterDropdown(): void {
+        const btn = document.getElementById('schoolFilterButton');
+        const dropdown = document.getElementById('schoolFilterDropdown');
+        const resetBtn = document.getElementById('schoolFilterReset');
+        // --- Evitar listeners duplicados ---
+        if (btn && dropdown) {
+            // Usar propiedades en el botón para guardar referencia a handlers
+            const clickHandler = (e: MouseEvent) => {
+                console.log('Filtro de escuelas: click detectado');
+                e.stopPropagation();
+                const expanded = btn.getAttribute('aria-expanded') === 'true';
+                if (expanded) {
+                    btn.setAttribute('aria-expanded', 'false');
+                    dropdown.style.display = 'none';
+                } else {
+                    btn.setAttribute('aria-expanded', 'true');
+                    dropdown.style.display = 'block';
+                    dropdown.focus();
+                }
+            };
+            // Solo agregar una vez
+            if (!(btn as any)._filterClickHandler) {
+                btn.addEventListener('click', clickHandler);
+                (btn as any)._filterClickHandler = clickHandler;
+            }
+
+            // --- Click fuera para cerrar ---
+            if (!(document as any)._schoolFilterOutsideHandler) {
+                const outsideHandler = (ev: MouseEvent) => {
+                    if (dropdown && btn && !dropdown.contains(ev.target as Node) && !btn.contains(ev.target as Node)) {
+                        btn.setAttribute('aria-expanded', 'false');
+                        dropdown.style.display = 'none';
+                    }
+                };
+                document.addEventListener('mousedown', outsideHandler);
+                (document as any)._schoolFilterOutsideHandler = outsideHandler;
+            }
+
+            // --- Escape para cerrar ---
+            if (!(dropdown as any)._schoolFilterEscapeHandler) {
+                const escapeHandler = (ev: KeyboardEvent) => {
+                    if (ev.key === 'Escape' && btn && dropdown) {
+                        btn.setAttribute('aria-expanded', 'false');
+                        dropdown.style.display = 'none';
+                    }
+                };
+                dropdown.addEventListener('keydown', escapeHandler);
+                (dropdown as any)._schoolFilterEscapeHandler = escapeHandler;
+            }
+        }
+        // Reset
+        if (resetBtn) {
+            resetBtn.onclick = (e: MouseEvent) => {
+                e.stopPropagation();
+                this.selectedSchools.clear();
+                this.renderAvailablePlayers();
+            };
+        }
+
+    }
+}
 // Export for global use
 (window as any).HaikyuTeamBuilder = HaikyuTeamBuilder;
 

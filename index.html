@@ -492,7 +492,64 @@
 
         <!-- Player selection panel -->
         <section class="player-panel" aria-labelledby="players-heading">
-          <h2 id="players-heading">Seleccionar Jugadores</h2>
+          <div class="players-header-row">
+            <h2 id="players-heading">Seleccionar Jugadores</h2>
+            <div class="school-filter-container">
+              <button
+                id="schoolFilterButton"
+                class="school-filter-btn"
+                type="button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-label="Filtrar por escuela"
+              >
+                <svg
+                  class="school-filter-icon"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <line x1="22" y1="6" x2="2" y2="6" />
+                  <line x1="18" y1="12" x2="6" y2="12" />
+                  <line x1="14" y1="18" x2="10" y2="18" />
+                </svg>
+                <span class="school-filter-badge" style="display: none"></span>
+              </button>
+              <div
+                id="schoolFilterDropdown"
+                class="school-filter-dropdown"
+                tabindex="-1"
+                role="listbox"
+                aria-multiselectable="true"
+                style="display: none"
+              >
+                <div class="school-filter-dropdown-header">
+                  <span
+                    class="school-filter-dropdown-title"
+                    id="schoolFilterTitle"
+                  ></span>
+                  <span
+                    id="schoolFilterReset"
+                    class="school-filter-reset"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Reset filters"
+                  >
+                    <span id="schoolFilterResetText"></span>
+                  </span>
+                </div>
+                <ul class="school-filter-list">
+                  <!-- Opciones de escuelas se insertarán dinámicamente -->
+                </ul>
+              </div>
+            </div>
+          </div>
 
           <!-- Search controls -->
           <div class="search-controls">

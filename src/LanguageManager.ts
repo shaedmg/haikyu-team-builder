@@ -92,6 +92,7 @@ export class LanguageManager {
                     // Update the UI with new data
                     window.teamBuilder?.updateBonds();
                     window.teamBuilder?.updateSchoolStats();
+                    window.teamBuilder?.renderSchoolFilterDropdown();
                 })
                 .catch((error: Error) => {
                     console.error('Error reloading data:', error);

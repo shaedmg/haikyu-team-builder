@@ -187,6 +187,9 @@ export interface TranslationStrings {
     schools: {
         [schoolName: string]: string;
     };
+    schoolFilter: string;
+    schoolFilterReset: string;
+    schoolFilterNone: string;
 
     // Other
     and: string;
