@@ -2,6 +2,8 @@ import { Translations } from './types/index.js';
 
 export const translations: Translations = {
     en: {
+        // Search/No results
+        noPlayersFound: 'No players found matching your search.',
         // Header
         title: '🏐 Haikyu Flight High Team Builder',
         subtitle: 'Create Perfect Volleyball Teams with Character Bonds & School Synergies',
@@ -33,6 +35,9 @@ export const translations: Translations = {
         sortBy: 'Sort by:',
         sortByName: 'Name',
         sortByRarity: 'Rarity',
+
+        // Search
+        searchPlayers: 'Search players...',
 
         // Rotation
         rotateTooltip: 'Rotate players clockwise',
@@ -123,6 +128,8 @@ export const translations: Translations = {
     },
 
     es: {
+        // Search/No results
+        noPlayersFound: 'No se encontraron jugadores que coincidan con la búsqueda.',
         // Header
         title: '🏐 Constructor de Equipos Haikyu Flight High',
         subtitle: 'Crea Equipos de Voleibol Perfectos con Vínculos de Personajes y Sinergias Escolares',
@@ -154,6 +161,9 @@ export const translations: Translations = {
         sortBy: 'Ordenar por:',
         sortByName: 'Nombre',
         sortByRarity: 'Rareza',
+
+        // Search
+        searchPlayers: 'Buscar personajes...',
 
         // Rotation
         rotateTooltip: 'Rotar jugadores en sentido horario',

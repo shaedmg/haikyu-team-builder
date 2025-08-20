@@ -62,6 +62,7 @@ export class HaikyuTeamBuilder {
     private currentSortBy: SortBy = 'rarity'; // Default sort by rarity
     private rarityOrder: Rarity[] = RARITY_ORDER;
     private draggedFromPosition: string | undefined = undefined;
+    private searchTerm: string = '';
 
     constructor() {
         this.currentSortBy = 'rarity'; // Changed default sort to rarity
@@ -205,44 +206,61 @@ export class HaikyuTeamBuilder {
         playerGrid.setAttribute('role', 'list');
         playerGrid.setAttribute('aria-label', 'Available players');
 
-        // Get sorted players
-        const sortedPlayers = this.getSortedPlayers();
-
-        // Group sorted players by position for better organization
-        const playersByPosition = this.groupPlayersByPosition(sortedPlayers);
-
+        // Get filtered and sorted players
+        const filteredPlayers = this.getFilteredPlayers();
         playerGrid.innerHTML = '';
+
+        if (filteredPlayers.length === 0) {
+            // Show no results message (multilanguage)
+            let msg = 'No players found.';
+            if (window.languageManager && typeof window.languageManager.t === 'function') {
+                msg = window.languageManager.t('noPlayersFound') as string;
+            }
+            const noResultsDiv = document.createElement('div');
+            noResultsDiv.className = 'no-players-found-message';
+            noResultsDiv.textContent = msg;
+            noResultsDiv.style.textAlign = 'center';
+            noResultsDiv.style.margin = '40px 0 0 0';
+            noResultsDiv.style.fontSize = '1.2rem';
+            noResultsDiv.style.opacity = '0.8';
+            playerGrid.appendChild(noResultsDiv);
+            return;
+        }
+
+        // Group filtered players by position for better organization
+        const playersByPosition = this.groupPlayersByPosition(filteredPlayers);
 
         // Define fixed order for position categories
         const fixedPositionOrder: Position[] = ['MB', 'WS', 'S', 'OP', 'L'];
 
-        // Render players grouped by position in fixed order
+        // Render players grouped by position in fixed order, each in its own section with a header and grid
         fixedPositionOrder.forEach((position) => {
             if (playersByPosition[position] && playersByPosition[position].length > 0) {
+                // Section wrapper for this position
+                const section = document.createElement('div');
+                section.className = 'player-position-section';
+
+                // Header for the position
                 const positionHeader = document.createElement('div');
                 positionHeader.className = 'position-header';
-                positionHeader.style.cssText = `
-          width: 100%; 
-          grid-column: 1 / -1; 
-          margin: 10px 0 5px 0; 
-          padding: 5px 10px; 
-          background: rgba(255,255,255,0.1); 
-          border-radius: 10px; 
-          text-align: center;
-          font-size: 0.9rem;
-          font-weight: bold;
-        `;
                 positionHeader.innerHTML = `${this.getPositionName(position)}`;
-                playerGrid.appendChild(positionHeader);
+                section.appendChild(positionHeader);
+
+                // Grid for the players of this position
+                const grid = document.createElement('div');
+                grid.className = 'player-position-grid';
 
                 playersByPosition[position].forEach((player) => {
                     if (!this.usedPlayerIds.has(player.id)) {
                         const playerElement = this.createAvailablePlayerElement(player);
                         playerElement.setAttribute('role', 'listitem');
                         playerElement.setAttribute('aria-label', `${player.name} (${player.position})`);
-                        playerGrid.appendChild(playerElement);
+                        grid.appendChild(playerElement);
                     }
                 });
+
+                section.appendChild(grid);
+                playerGrid.appendChild(section);
             }
         });
     }
@@ -267,6 +285,29 @@ export class HaikyuTeamBuilder {
         }
 
         return playersToSort;
+    }
+
+    private getFilteredPlayers(): Character[] {
+        const sortedPlayers = this.getSortedPlayers();
+
+        if (!this.searchTerm.trim()) {
+            return sortedPlayers;
+        }
+
+        const searchLower = this.normalizeText(this.searchTerm.toLowerCase().trim());
+        return sortedPlayers.filter(player =>
+            this.normalizeText(player.name.toLowerCase()).includes(searchLower)
+        );
+    }
+
+    private normalizeText(text: string): string {
+        // Normalizar texto removiendo tildes y caracteres especiales
+        return text
+            .normalize('NFD') // Descomponer caracteres acentuados
+            .replace(/[\u0300-\u036f]/g, '') // Remover diacríticos (tildes, acentos)
+            .replace(/[^\w\s]/g, '') // Remover símbolos y puntuación, mantener letras, números y espacios
+            .replace(/\s+/g, ' ') // Normalizar espacios múltiples
+            .trim();
     }
 
     private groupPlayersByPosition(players: Character[] = []): { [key: string]: Character[] } {
@@ -931,6 +972,16 @@ export class HaikyuTeamBuilder {
                 });
             }
         });
+
+        // Search input event
+        const searchInput = document.getElementById('searchInput') as HTMLInputElement;
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const target = e.target as HTMLInputElement;
+                this.searchTerm = target.value;
+                this.renderAvailablePlayers();
+            });
+        }
     }
 
     private autoPlacePlayer(player: Character): void {
@@ -962,7 +1013,7 @@ export class HaikyuTeamBuilder {
     private positionSelectorCtx: PositionSelectorContext = new PositionSelectorContext({
         positionMappings: {} as any,
         usedPlayerIds: this.usedPlayerIds,
-        getSortedPlayers: this.getSortedPlayers.bind(this),
+        getSortedPlayers: this.getFilteredPlayers.bind(this),
         createPositionPlayerCard: (player: Character) => {
             const imageUrl = this.getPlayerImageUrl(player);
             return createSelectablePlayerCard(player, imageUrl, (p) => this.selectPlayerFromPositionSelector(p));

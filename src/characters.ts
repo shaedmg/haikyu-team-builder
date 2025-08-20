@@ -395,7 +395,7 @@ export const charactersData: CharactersData = {
             "variant": null,
             "rarity": "SSR",
             "position": "OP",
-            "profile_image_url": "./assets/images/characters/37_Kentaro_Kyotani.png",
+            "profile_image_url": "./assets/images/characters/36_Kentaro_Kyotani.png",
             "personal_page_url": null
         },
         "37": {

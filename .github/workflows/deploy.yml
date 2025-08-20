@@ -36,6 +36,8 @@ jobs:
       - name: Prepare deploy folder
         run: |
           mkdir build
+          npm install --no-save
+          node update-html-cache-busting.js
           cp -R index.html styles.css manifest.json sw.js robots.txt sitemap.xml build/ 2>/dev/null || true
           cp -R assets build/assets
           cp -R dist build/dist

@@ -159,6 +159,10 @@ export interface TranslationStrings {
     sortByName: string;
     sortByRarity: string;
 
+    // Search
+    searchPlayers: string;
+    noPlayersFound: string;
+
     // Rotation
     rotateTooltip: string;
 

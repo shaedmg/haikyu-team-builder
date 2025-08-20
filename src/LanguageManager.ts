@@ -209,6 +209,7 @@ export class LanguageManager {
     private updateSortingControls(t: TranslationStrings): void {
         const sortLabel = document.querySelector('#sortLabel');
         const sortBySelect = document.querySelector('#sortBy') as HTMLSelectElement;
+        const searchInput = document.querySelector('#searchInput') as HTMLInputElement;
 
         if (sortLabel) sortLabel.textContent = t.sortBy;
 
@@ -216,6 +217,10 @@ export class LanguageManager {
             const options = sortBySelect.options;
             if (options[0]) options[0].text = t.sortByName;
             if (options[1]) options[1].text = t.sortByRarity;
+        }
+
+        if (searchInput) {
+            searchInput.placeholder = t.searchPlayers;
         }
     }
 

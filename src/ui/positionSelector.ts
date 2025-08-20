@@ -50,10 +50,42 @@ export function setupPositionSelector(ctx: PositionSelectorContext): void {
 
     document.addEventListener('click', (e) => {
         const target = e.target as HTMLElement;
-        if (ctx.positionSelectorActive && positionSelector && !positionSelector.contains(target) && !target.closest('.position')) {
+        // No cerrar si el foco está en el search input
+        if (
+            ctx.positionSelectorActive &&
+            positionSelector &&
+            !positionSelector.contains(target) &&
+            !target.closest('.position') &&
+            !(target.id === 'searchInput' || target.closest('#searchInput'))
+        ) {
             hidePositionSelector(ctx);
         }
     });
+
+    // Filtrado en el selector de posición según el input global
+    const searchInput = document.getElementById('searchInput') as HTMLInputElement;
+    if (searchInput) {
+        searchInput.addEventListener('input', () => {
+            if (!ctx.positionSelectorActive) return;
+            const positionSelector = document.getElementById('positionSelector');
+            const positionPlayersList = document.getElementById('positionPlayersList');
+            if (!positionSelector || !positionPlayersList) return;
+            const requiredPosition = ctx.selectedPosition ? ctx.positionMappings[ctx.selectedPosition] : undefined;
+            if (!requiredPosition) return;
+            const searchTerm = searchInput.value.trim().toLowerCase();
+            const sortedPlayers = ctx.getSortedPlayers();
+            const compatiblePlayers = sortedPlayers.filter(p =>
+                p.position === requiredPosition &&
+                !ctx.usedPlayerIds.has(p.id) &&
+                p.name.toLowerCase().includes(searchTerm)
+            );
+            positionPlayersList.innerHTML = '';
+            compatiblePlayers.forEach(player => {
+                const card = ctx.createPositionPlayerCard(player);
+                positionPlayersList.appendChild(card);
+            });
+        });
+    }
 }
 
 export function showPositionSelector(ctx: PositionSelectorContext, positionClass: string, _positionElement: HTMLElement): void {

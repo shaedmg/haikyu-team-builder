@@ -494,6 +494,30 @@
         <section class="player-panel" aria-labelledby="players-heading">
           <h2 id="players-heading">Seleccionar Jugadores</h2>
 
+          <!-- Search controls -->
+          <div class="search-controls">
+            <input
+              type="text"
+              id="searchInput"
+              class="search-input"
+              placeholder="Buscar personajes..."
+              aria-label="Buscar personajes por nombre"
+              style="
+                width: 100%;
+                padding: 10px 15px !important;
+                border: 2px solid rgba(255, 255, 255, 0.3) !important;
+                border-radius: 25px !important;
+                background: rgba(255, 255, 255, 0.1) !important;
+                color: white !important;
+                font-size: 14px !important;
+                transition: all 0.3s ease !important;
+                backdrop-filter: blur(10px) !important;
+                box-sizing: border-box !important;
+                font-family: inherit !important;
+              "
+            />
+          </div>
+
           <!-- Sorting controls -->
           <div class="sorting-controls">
             <label for="sortBy" class="sort-label" id="sortLabel"
@@ -548,59 +572,6 @@
       </div>
 
       <!-- Player info modal -->
-      <div
-        class="modal"
-        id="playerModal"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="modalPlayerName"
-        aria-hidden="true"
-      >
-        <div class="modal-content">
-          <button class="close" aria-label="Close player information modal">
-            &times;
-          </button>
-          <div class="player-details">
-            <div class="player-image">
-              <img
-                id="modalPlayerImage"
-                src=""
-                alt=""
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div class="player-info">
-              <h3 id="modalPlayerName"></h3>
-              <div class="player-stats">
-                <div class="stat">
-                  <span class="stat-label" id="heightLabel">Altura:</span>
-                  <span class="stat-value" id="modalPlayerHeight"></span>
-                </div>
-                <div class="stat">
-                  <span class="stat-label" id="positionLabel">Posición:</span>
-                  <span class="stat-value" id="modalPlayerPosition"></span>
-                </div>
-                <div class="stat">
-                  <span class="stat-label" id="powerLabel">Poder:</span>
-                  <span class="stat-value" id="modalPlayerPower"></span>
-                </div>
-              </div>
-              <button class="select-player-btn" id="selectPlayerBtn">
-                Seleccionar Jugador
-              </button>
-            </div>
-          </div>
-
-          <!-- Player bonds section -->
-          <div class="player-bonds-section">
-            <h4 class="bonds-section-title">Vínculos de este Personaje:</h4>
-            <div id="modalPlayerBonds" class="modal-bonds-container">
-              <!-- Los vínculos se cargarán aquí -->
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- TypeScript compiled modules -->
