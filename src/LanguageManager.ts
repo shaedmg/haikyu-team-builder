@@ -146,6 +146,17 @@ export class LanguageManager {
             schoolHeading.textContent = t.schoolBonds;
         }
 
+
+        // Update bonds panel button and overlay heading
+        const bondsPanelBtnLabel = document.getElementById('bondsPanelBtnLabel');
+        if (bondsPanelBtnLabel) {
+            bondsPanelBtnLabel.textContent = t.bonds;
+        }
+        const bondsPanelHeading = document.getElementById('bondsPanelHeading');
+        if (bondsPanelHeading) {
+            bondsPanelHeading.textContent = t.bonds;
+        }
+
         const bondsHeading = document.querySelectorAll('.school-panel h2')[1];
         if (bondsHeading) {
             bondsHeading.textContent = t.bonds;

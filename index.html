@@ -332,22 +332,40 @@
     </div>
 
     <div class="container">
+
       <header class="header" role="banner">
         <h1>🏐 Haikyu Flight High Team Builder</h1>
         <p class="header-subtitle">
           Create Perfect Volleyball Teams with Character Bonds & School
           Synergies
         </p>
+        <div class="header-controls-row">
+          <button id="bondsPanelBtn" class="bonds-panel-btn" type="button" aria-controls="bondsPanel" aria-expanded="false">
+            <span id="bondsPanelBtnLabel">Vínculos</span>
+          </button>
+          <div class="header-controls-center">
+            <div id="languageSelectorContainer"></div>
+          </div>
+        </div>
       </header>
 
       <main class="game-area" role="main">
-        <!-- School composition panel -->
+
+        <!-- Bonds Slide-out Panel (contains the school-panel for small screens) -->
+        <aside id="bondsPanel" class="bonds-panel-overlay" aria-labelledby="bondsPanelHeading" tabindex="-1">
+          <div class="bonds-panel-header">
+            <h2 id="bondsPanelHeading">Vínculos</h2>
+            <button id="closeBondsPanel" class="close-bonds-panel" aria-label="Cerrar vínculos">×</button>
+          </div>
+          <div id="bondsPanelContent"></div>
+        </aside>
+
+        <!-- School composition panel (single instance, moved by CSS) -->
         <section class="school-panel" aria-labelledby="school-heading">
           <h2 id="school-heading">Vínculo por Escuela</h2>
           <div class="school-stats" id="schoolStats" aria-live="polite">
             <!-- School counts will be dynamically populated here -->
           </div>
-
           <h2>Vínculos</h2>
           <div class="bonds-section" id="bondsSection" aria-live="polite">
             <!-- Bonds will be dynamically populated here -->
@@ -728,5 +746,6 @@
         </div>
       </div>
     </footer>
+    <script src="bonds-panel.js"></script>
   </body>
 </html>
