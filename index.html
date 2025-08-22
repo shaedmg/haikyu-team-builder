@@ -332,7 +332,6 @@
     </div>
 
     <div class="container">
-
       <header class="header" role="banner">
         <h1>🏐 Haikyu Flight High Team Builder</h1>
         <p class="header-subtitle">
@@ -340,7 +339,13 @@
           Synergies
         </p>
         <div class="header-controls-row">
-          <button id="bondsPanelBtn" class="bonds-panel-btn" type="button" aria-controls="bondsPanel" aria-expanded="false">
+          <button
+            id="bondsPanelBtn"
+            class="bonds-panel-btn"
+            type="button"
+            aria-controls="bondsPanel"
+            aria-expanded="false"
+          >
             <span id="bondsPanelBtnLabel">Vínculos</span>
           </button>
           <div class="header-controls-center">
@@ -350,12 +355,22 @@
       </header>
 
       <main class="game-area" role="main">
-
         <!-- Bonds Slide-out Panel (contains the school-panel for small screens) -->
-        <aside id="bondsPanel" class="bonds-panel-overlay" aria-labelledby="bondsPanelHeading" tabindex="-1">
+        <aside
+          id="bondsPanel"
+          class="bonds-panel-overlay"
+          aria-labelledby="bondsPanelHeading"
+          tabindex="-1"
+        >
           <div class="bonds-panel-header">
             <h2 id="bondsPanelHeading">Vínculos</h2>
-            <button id="closeBondsPanel" class="close-bonds-panel" aria-label="Cerrar vínculos">×</button>
+            <button
+              id="closeBondsPanel"
+              class="close-bonds-panel"
+              aria-label="Cerrar vínculos"
+            >
+              ×
+            </button>
           </div>
           <div id="bondsPanelContent"></div>
         </aside>
@@ -746,6 +761,5 @@
         </div>
       </div>
     </footer>
-    <script src="bonds-panel.js"></script>
   </body>
 </html>

@@ -38,6 +38,7 @@ import { charactersData } from './characters.js';
 import { bondsData } from './bonds.js';
 import { schoolBondsData } from './schoolBonds.js';
 import { createPlayerCard } from './components/PlayerCard.js';
+import { BondsPanel } from './components/BondsPanel.js';
 import { createSelectablePlayerCard } from './components/SelectablePlayerCard.js';
 import { POSITION_MAPPINGS, RARITY_ORDER, POSITION_LABELS } from './config/constants.js';
 import { getPositionLabel } from './utils/i18n.js';
@@ -68,6 +69,9 @@ export class HaikyuTeamBuilder {
     private selectedSchools: Set<string> = new Set();
     private allSchools: string[] = [];
 
+
+    private bondsPanel: BondsPanel;
+
     constructor() {
         this.currentSortBy = 'rarity'; // Changed default sort to rarity
 
@@ -80,6 +84,10 @@ export class HaikyuTeamBuilder {
             isDragging: false,
             dragStartTime: 0
         };
+
+        // Initialize the bonds panel component
+        this.bondsPanel = new BondsPanel();
+        this.bondsPanel.init();
 
         this.init();
     }
