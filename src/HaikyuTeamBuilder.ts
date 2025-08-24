@@ -612,10 +612,8 @@ export class HaikyuTeamBuilder {
             const rich = (bond as any).rich_text;
             const lang = window.languageManager ? window.languageManager.getCurrentLanguage() : 'en';
             const template = rich.template[lang] || rich.template.es;
-            const descEl = document.getElementById(`rich-bond-desc-${bondId}`);
-            if (!descEl) return;
-            // Recompute description using helper from renderer (attached to window?)
-            // Duplicated lightweight processor to avoid cross-module import cycles
+            // Actualiza todas las descripciones y botones en todos los paneles
+            const descEls = document.querySelectorAll(`#rich-bond-desc-${bondId}`);
             const processed = template.replace(/\[(.+?)\]/g, (_m: string, varName: string) => {
                 const variable = rich.variables.find((v: any) => v.name.toLowerCase() === varName.toLowerCase());
                 if (!variable) return varName;
@@ -625,14 +623,14 @@ export class HaikyuTeamBuilder {
                 const value = arr[Math.min(level - 1, arr.length - 1)];
                 return `<span class=\"rich-var\" data-var=\"${varName}\" data-level=\"${level}\">${value}</span>`;
             });
-            descEl.innerHTML = processed;
-            // Update active button
-            const container = document.querySelector(`[data-rich-bond-id='${bondId}']`);
-            if (container) {
+            descEls.forEach(descEl => { descEl.innerHTML = processed; });
+            // Update active button en todos los paneles
+            const containers = document.querySelectorAll(`[data-rich-bond-id='${bondId}']`);
+            containers.forEach(container => {
                 container.querySelectorAll('.level-btn').forEach(btn => {
                     btn.classList.toggle('active', (btn as HTMLElement).dataset.level === String(level));
                 });
-            }
+            });
         } catch (e) {
             console.error('Error updating rich bond level', e);
         }

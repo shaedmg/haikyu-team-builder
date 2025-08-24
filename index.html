@@ -755,22 +755,46 @@
         backdrop.addEventListener('click', closeDrawer);
       });
 
-      // Delegated event for bond level selectors (drawer and main panel)
-      document.addEventListener('click', function (e) {
-        const target = e.target;
-        if (
-          target &&
-          target.classList &&
-          target.classList.contains('level-btn')
-        ) {
-          // Simula el click como si fuera en el panel principal
-          if (window.teamBuilder) {
-            target.click();
-          } else if (window.teamBuilderInstance) {
-            target.click();
+      // Delegated event for bond level selectors (drawer y panel principal):
+      document.addEventListener(
+        'click',
+        function (e) {
+          const target = e.target;
+          if (
+            target &&
+            target.classList &&
+            target.classList.contains('level-btn')
+          ) {
+            const bondId = target.getAttribute('data-rich-bond-id');
+            const level = target.getAttribute('data-level');
+            console.log('[LvBtn Click]', {
+              bondId,
+              level,
+              hasTeamBuilder: !!window.teamBuilder,
+              hasSetRich:
+                window.teamBuilder &&
+                typeof window.teamBuilder.setRichBondLevel === 'function',
+              target,
+            });
+            if (
+              bondId &&
+              level &&
+              window.teamBuilder &&
+              typeof window.teamBuilder.setRichBondLevel === 'function'
+            ) {
+              e.preventDefault();
+              e.stopPropagation();
+              console.log('[LvBtn] Calling setRichBondLevel', bondId, level);
+              window.teamBuilder.setRichBondLevel(
+                Number(bondId),
+                Number(level)
+              );
+              return false;
+            }
           }
-        }
-      });
+        },
+        true
+      );
 
       // Cambia el texto del botón de vínculos según idioma
       function updateBondsButtonText() {

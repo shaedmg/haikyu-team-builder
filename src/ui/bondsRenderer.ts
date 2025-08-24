@@ -48,7 +48,7 @@ export function generateBondEffectHTML(
         // Level selector
         html += `<div class="level-selector" data-rich-bond-id="${(bond as any).id}">`;
         for (let i = 1; i <= maxLevels; i++) {
-            html += `<button class="level-btn ${i === 1 ? 'active' : ''}" data-level="${i}" onclick="window.teamBuilder.setRichBondLevel(${(bond as any).id}, ${i})">Lv.${i}</button>`;
+            html += `<button class="level-btn ${i === 1 ? 'active' : ''}" data-level="${i}" data-rich-bond-id="${(bond as any).id}" onclick="window.teamBuilder.setRichBondLevel(${(bond as any).id}, ${i})">Lv.${i}</button>`;
         }
         html += '</div>';
         // Placeholder replaced text container
