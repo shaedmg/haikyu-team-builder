@@ -55,13 +55,44 @@ export class LanguageManager {
         const languageContainer = document.createElement('div');
         languageContainer.className = 'language-selector';
 
+        // Create bonds button (move from static HTML)
+        const bondsBtn = document.getElementById('bondsDrawerBtn');
+        let bondsBtnClone: HTMLElement | null = null;
+        if (bondsBtn) {
+            bondsBtnClone = bondsBtn.cloneNode(true) as HTMLElement;
+            bondsBtn.style.display = 'none'; // Hide original
+            bondsBtnClone.id = 'bondsDrawerBtnInjected';
+            bondsBtnClone.classList.add('injected');
+        }
+
+        // Build language selector HTML
         languageContainer.innerHTML = `
-      <label for="languageSelect">${this.translations[this.currentLanguage]?.language || 'Language'}</label>
-      <select id="languageSelect">
-        <option value="en" ${this.currentLanguage === 'en' ? 'selected' : ''}>English</option>
-        <option value="es" ${this.currentLanguage === 'es' ? 'selected' : ''}>Español</option>
-      </select>
-    `;
+                <button
+          id="bondsDrawerBtn"
+          class="bonds-drawer-btn"
+          type="button"
+          aria-label="Mostrar vínculos"
+        >
+          Vínculos
+        </button>  
+        <label for="languageSelect">${this.translations[this.currentLanguage]?.language || 'Language'}</label>
+          <select id="languageSelect">
+            <option value="en" ${this.currentLanguage === 'en' ? 'selected' : ''}>English</option>
+            <option value="es" ${this.currentLanguage === 'es' ? 'selected' : ''}>Español</option>
+          </select>
+        `;
+
+        // Insert bonds button as first child if present
+        if (bondsBtnClone) {
+            bondsBtnClone.style.position = 'absolute';
+            bondsBtnClone.style.left = '0';
+            bondsBtnClone.style.top = '50%';
+            bondsBtnClone.style.transform = 'translateY(-50%)';
+            bondsBtnClone.style.margin = '0';
+            bondsBtnClone.style.zIndex = '2';
+            languageContainer.style.position = 'relative';
+            languageContainer.insertBefore(bondsBtnClone, languageContainer.firstChild);
+        }
 
         // Insert after the subtitle
         const subtitle = header.querySelector('.header-subtitle');
@@ -70,11 +101,22 @@ export class LanguageManager {
         }
 
         // Add event listener
-        const languageSelect = document.getElementById('languageSelect') as HTMLSelectElement;
+        const languageSelect = languageContainer.querySelector('#languageSelect') as HTMLSelectElement;
         if (languageSelect) {
             languageSelect.addEventListener('change', (e) => {
                 const target = e.target as HTMLSelectElement;
                 this.changeLanguage(target.value as Language);
+            });
+        }
+
+        // Add event listener for injected bonds button (open drawer)
+        if (bondsBtnClone) {
+            bondsBtnClone.addEventListener('click', () => {
+                const drawer = document.getElementById('bondsDrawer');
+                if (drawer) {
+                    drawer.setAttribute('aria-hidden', 'false');
+                    drawer.classList.add('open');
+                }
             });
         }
     }
