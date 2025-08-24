@@ -140,15 +140,32 @@ export class LanguageManager {
             headerSubtitle.textContent = t.subtitle;
         }
 
-        // Update section headings
+
+        // Update section headings (panel principal)
         const schoolHeading = document.querySelector('#school-heading');
         if (schoolHeading) {
             schoolHeading.textContent = t.schoolBonds;
         }
-
         const bondsHeading = document.querySelectorAll('.school-panel h2')[1];
         if (bondsHeading) {
             bondsHeading.textContent = t.bonds;
+        }
+
+        // Update drawer headers
+        const drawerSchoolHeading = document.getElementById('drawer-school-heading');
+        if (drawerSchoolHeading) {
+            drawerSchoolHeading.textContent = t.schoolBonds;
+        }
+        const drawerBondsHeading = document.getElementById('drawer-bonds-heading');
+        if (drawerBondsHeading) {
+            drawerBondsHeading.textContent = t.bonds;
+        }
+
+        // Update bonds drawer button
+        const bondsDrawerBtn = document.getElementById('bondsDrawerBtn');
+        if (bondsDrawerBtn) {
+            bondsDrawerBtn.textContent = t.bonds;
+            bondsDrawerBtn.setAttribute('aria-label', lang === 'en' ? 'Show bonds' : 'Mostrar vínculos');
         }
 
         const playersHeading = document.querySelector('#players-heading');
