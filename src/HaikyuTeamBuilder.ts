@@ -38,7 +38,6 @@ import { charactersData } from './characters.js';
 import { bondsData } from './bonds.js';
 import { schoolBondsData } from './schoolBonds.js';
 import { createPlayerCard } from './components/PlayerCard.js';
-import { BondsPanel } from './components/BondsPanel.js';
 import { createSelectablePlayerCard } from './components/SelectablePlayerCard.js';
 import { POSITION_MAPPINGS, RARITY_ORDER, POSITION_LABELS } from './config/constants.js';
 import { getPositionLabel } from './utils/i18n.js';
@@ -69,9 +68,6 @@ export class HaikyuTeamBuilder {
     private selectedSchools: Set<string> = new Set();
     private allSchools: string[] = [];
 
-
-    private bondsPanel: BondsPanel;
-
     constructor() {
         this.currentSortBy = 'rarity'; // Changed default sort to rarity
 
@@ -84,10 +80,6 @@ export class HaikyuTeamBuilder {
             isDragging: false,
             dragStartTime: 0
         };
-
-        // Initialize the bonds panel component
-        this.bondsPanel = new BondsPanel();
-        this.bondsPanel.init();
 
         this.init();
     }
@@ -354,6 +346,7 @@ export class HaikyuTeamBuilder {
     private getPositionName(position: Position): string { return getPositionLabel(position); }
 
     // Export for global use
+
     public updateBonds(): void {
         this.renderBonds();
         this.renderSchoolBonds();
@@ -365,128 +358,138 @@ export class HaikyuTeamBuilder {
 
     private renderBonds(): void {
         const bondsSection = document.getElementById('bondsSection');
-        if (!bondsSection) return;
+        const drawerBondsSection = document.getElementById('drawerBondsSection');
+        // Helper to render to a given element
+        const render = (el: HTMLElement | null) => {
+            if (!el) return;
+            // Get current team player IDs
+            const currentPlayerIds = Object.values(this.currentTeam)
+                .filter((player) => player)
+                .map((player) => player!.id);
 
-        // Get current team player IDs
-        const currentPlayerIds = Object.values(this.currentTeam)
-            .filter((player) => player)
-            .map((player) => player!.id);
+            if (currentPlayerIds.length === 0) {
+                el.innerHTML = `<div class="no-players">${window.languageManager
+                    ? (window.languageManager.t('noPlayersSelected') as string)
+                    : 'No hay jugadores seleccionados'
+                    }</div>`;
+                return;
+            }
+            const computed = computeBondStatuses(this.currentTeam, this.bonds);
+            const relevantBonds = computed.filter(b => b.currentCount > 0)
+                .sort((a, b) => {
+                    if (a.isActive && !b.isActive) return -1;
+                    if (!a.isActive && b.isActive) return 1;
+                    if (a.currentCount !== b.currentCount) return b.currentCount - a.currentCount;
+                    const lang = window.languageManager ? window.languageManager.getCurrentLanguage() : 'en';
+                    const aName = typeof a.name === 'object' ? (a.name as any)[lang] || (a.name as any).es : a.name;
+                    const bName = typeof b.name === 'object' ? (b.name as any)[lang] || (b.name as any).es : b.name;
+                    return aName.localeCompare(bName);
+                });
 
-        if (currentPlayerIds.length === 0) {
-            bondsSection.innerHTML = `<div class="no-players">${window.languageManager
-                ? (window.languageManager.t('noPlayersSelected') as string)
-                : 'No hay jugadores seleccionados'
-                }</div>`;
-            return;
-        }
-        const computed = computeBondStatuses(this.currentTeam, this.bonds);
-        const relevantBonds = computed.filter(b => b.currentCount > 0)
-            .sort((a, b) => {
-                if (a.isActive && !b.isActive) return -1;
-                if (!a.isActive && b.isActive) return 1;
-                if (a.currentCount !== b.currentCount) return b.currentCount - a.currentCount;
-                const lang = window.languageManager ? window.languageManager.getCurrentLanguage() : 'en';
-                const aName = typeof a.name === 'object' ? (a.name as any)[lang] || (a.name as any).es : a.name;
-                const bName = typeof b.name === 'object' ? (b.name as any)[lang] || (b.name as any).es : b.name;
-                return aName.localeCompare(bName);
-            });
+            if (relevantBonds.length === 0) {
+                el.innerHTML = `<div class="no-players">${window.languageManager
+                    ? (window.languageManager.t('noBondsAvailable') as string)
+                    : 'No hay vínculos disponibles'
+                    }</div>`;
+                return;
+            }
 
-        if (relevantBonds.length === 0) {
-            bondsSection.innerHTML = `<div class="no-players">${window.languageManager
-                ? (window.languageManager.t('noBondsAvailable') as string)
-                : 'No hay vínculos disponibles'
-                }</div>`;
-            return;
-        }
+            // Create bond items from sorted bonds
+            const bondItems = relevantBonds
+                .map((bond) => {
+                    const isActive = bond.isActive;
+                    const currentCount = bond.currentCount;
+                    const requiredCount = bond.requiredCount;
 
-        // Create bond items from sorted bonds
-        const bondItems = relevantBonds
-            .map((bond) => {
-                const isActive = bond.isActive;
-                const currentCount = bond.currentCount;
-                const requiredCount = bond.requiredCount;
+                    // Get the correct name for the current language
+                    const currentLanguage = window.languageManager ? window.languageManager.getCurrentLanguage() : 'en';
+                    const bondName = typeof bond.name === 'object' ? (bond.name as any)[currentLanguage] || (bond.name as any).es : bond.name;
 
-                // Get the correct name for the current language
-                const currentLanguage = window.languageManager ? window.languageManager.getCurrentLanguage() : 'en';
-                const bondName = typeof bond.name === 'object' ? (bond.name as any)[currentLanguage] || (bond.name as any).es : bond.name;
-
-                return `
-        <div class="bond-item ${isActive ? 'active' : 'inactive'
-                    }" data-bond-id="${bond.participants.join('-')}">
-          <div class="bond-header" onclick="teamBuilder.toggleBondDetails(this)">
-            <div class="bond-name">${bondName}</div>
-            <div class="bond-controls">
-              <span class="bond-count ${isActive ? 'complete' : ''
-                    }">${currentCount}/${requiredCount}</span>
-              <span class="expand-icon">▼</span>
+                    return `
+            <div class="bond-item ${isActive ? 'active' : 'inactive'
+                        }" data-bond-id="${bond.participants.join('-')}">
+              <div class="bond-header" onclick="teamBuilder.toggleBondDetails(this)">
+                <div class="bond-name">${bondName}</div>
+                <div class="bond-controls">
+                  <span class="bond-count ${isActive ? 'complete' : ''
+                        }">${currentCount}/${requiredCount}</span>
+                  <span class="expand-icon">▼</span>
+                </div>
+              </div>
+              <div class="bond-details" style="display: none;">
+                     ${generateBondEffectHTML(bond, currentPlayerIds, {
+                            players: this.players,
+                            getPlayerImageUrl: this.getPlayerImageUrl.bind(this),
+                            formatBonusText: this.formatBonusText.bind(this),
+                            getInitialBonusLevel: this.getInitialBonusLevel.bind(this)
+                        })}
+              </div>
             </div>
-          </div>
-          <div class="bond-details" style="display: none;">
-                 ${generateBondEffectHTML(bond, currentPlayerIds, {
-                        players: this.players,
-                        getPlayerImageUrl: this.getPlayerImageUrl.bind(this),
-                        formatBonusText: this.formatBonusText.bind(this),
-                        getInitialBonusLevel: this.getInitialBonusLevel.bind(this)
-                    })}
-          </div>
-        </div>
-      `;
-            })
-            .join('');
+          `;
+                })
+                .join('');
 
-        bondsSection.innerHTML = bondItems;
+            el.innerHTML = bondItems;
+        };
+        render(bondsSection);
+        render(drawerBondsSection);
     }
 
     private renderSchoolBonds(): void {
         const schoolStats = document.getElementById('schoolStats');
-        if (!schoolStats) return;
+        const drawerSchoolStats = document.getElementById('drawerSchoolStats');
+        // Helper to render to a given element
+        const render = (el: HTMLElement | null) => {
+            if (!el) return;
+            // Get current team composition by school
+            const schoolComposition = computeSchoolComposition(this.currentTeam);
+            const currentLanguage = window.languageManager ? window.languageManager.getCurrentLanguage() : 'en';
 
-        // Get current team composition by school
-        const schoolComposition = computeSchoolComposition(this.currentTeam);
-        const currentLanguage = window.languageManager ? window.languageManager.getCurrentLanguage() : 'en';
+            // Filter to only show school bonds that have at least 1 player (like normal bonds)
+            const relevantSchoolBonds = this.schoolBonds.filter(schoolBond => {
+                const schoolCount = schoolComposition[schoolBond.school] || 0;
+                return schoolCount > 0; // Only show if there's at least 1 player from this school
+            });
 
-        // Filter to only show school bonds that have at least 1 player (like normal bonds)
-        const relevantSchoolBonds = this.schoolBonds.filter(schoolBond => {
-            const schoolCount = schoolComposition[schoolBond.school] || 0;
-            return schoolCount > 0; // Only show if there's at least 1 player from this school
-        });
+            if (relevantSchoolBonds.length === 0) {
+                el.innerHTML = `<div class="no-players">${window.languageManager
+                    ? (window.languageManager.t('noBondsAvailable') as string)
+                    : 'No hay vínculos de escuela disponibles'
+                    }</div>`;
+                return;
+            }
 
-        if (relevantSchoolBonds.length === 0) {
-            schoolStats.innerHTML = `<div class="no-players">${window.languageManager
-                ? (window.languageManager.t('noBondsAvailable') as string)
-                : 'No hay vínculos de escuela disponibles'
-                }</div>`;
-            return;
-        }
+            const schoolBondItems = relevantSchoolBonds.map(schoolBond => {
+                const schoolCount = schoolComposition[schoolBond.school] || 0;
+                // Use only the school name, not the full bond name
+                const schoolName = schoolBond.school;
 
-        const schoolBondItems = relevantSchoolBonds.map(schoolBond => {
-            const schoolCount = schoolComposition[schoolBond.school] || 0;
-            // Use only the school name, not the full bond name
-            const schoolName = schoolBond.school;
+                // Bond is active only when it has exactly 4 players from the school
+                const isActive = schoolCount >= 4;
 
-            // Bond is active only when it has exactly 4 players from the school
-            const isActive = schoolCount >= 4;
+                // Generate just the effect text without level selectors or participant images
+                const effectText = schoolBond.rich_text ? this.generateSchoolBondEffectText(schoolBond.rich_text, currentLanguage) : '';
 
-            // Generate just the effect text without level selectors or participant images
-            const effectText = schoolBond.rich_text ? this.generateSchoolBondEffectText(schoolBond.rich_text, currentLanguage) : '';
-
-            return `
-                <div class="bond-item ${isActive ? 'active' : 'inactive'}" data-bond-id="school-${schoolBond.school}">
-                    <div class="bond-header" onclick="teamBuilder.toggleBondDetails(this)">
-                        <div class="bond-name">${schoolName}</div>
-                        <div class="bond-controls">
-                            <span class="bond-count ${isActive ? 'complete' : ''}">${schoolCount}/4</span>
-                            <span class="expand-icon">▼</span>
+                return `
+                    <div class="bond-item ${isActive ? 'active' : 'inactive'}" data-bond-id="school-${schoolBond.school}">
+                        <div class="bond-header" onclick="teamBuilder.toggleBondDetails(this)">
+                            <div class="bond-name">${schoolName}</div>
+                            <div class="bond-controls">
+                                <span class="bond-count ${isActive ? 'complete' : ''}">${schoolCount}/4</span>
+                                <span class="expand-icon">▼</span>
+                            </div>
+                        </div>
+                        <div class="bond-details" style="display: none;">
+                            ${effectText}
                         </div>
                     </div>
-                    <div class="bond-details" style="display: none;">
-                        ${effectText}
-                    </div>
-                </div>
-            `;
-        }).join('');
+                `;
+            }).join('');
 
-        schoolStats.innerHTML = schoolBondItems;
+            el.innerHTML = schoolBondItems;
+        };
+        render(schoolStats);
+        render(drawerSchoolStats);
     }
 
     private generateSchoolBondEffectText(richText: any, language: string): string {

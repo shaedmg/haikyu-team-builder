@@ -338,54 +338,65 @@
           Create Perfect Volleyball Teams with Character Bonds & School
           Synergies
         </p>
-        <div class="header-controls-row">
-          <button
-            id="bondsPanelBtn"
-            class="bonds-panel-btn"
-            type="button"
-            aria-controls="bondsPanel"
-            aria-expanded="false"
-          >
-            <span id="bondsPanelBtnLabel">Vínculos</span>
-          </button>
-          <div class="header-controls-center">
-            <div id="languageSelectorContainer"></div>
-          </div>
-        </div>
       </header>
 
       <main class="game-area" role="main">
-        <!-- Bonds Slide-out Panel (contains the school-panel for small screens) -->
-        <aside
-          id="bondsPanel"
-          class="bonds-panel-overlay"
-          aria-labelledby="bondsPanelHeading"
-          tabindex="-1"
+        <!-- Bonds Drawer Button (mobile/tablet) -->
+        <button
+          id="bondsDrawerBtn"
+          class="bonds-drawer-btn"
+          type="button"
+          aria-label="Mostrar vínculos"
         >
-          <div class="bonds-panel-header">
-            <h2 id="bondsPanelHeading">Vínculos</h2>
-            <button
-              id="closeBondsPanel"
-              class="close-bonds-panel"
-              aria-label="Cerrar vínculos"
-            >
-              ×
-            </button>
-          </div>
-          <div id="bondsPanelContent"></div>
-        </aside>
+          Vínculos
+        </button>
 
-        <!-- School composition panel (single instance, moved by CSS) -->
-        <section class="school-panel" aria-labelledby="school-heading">
+        <!-- School composition panel (desktop) / Drawer (mobile) -->
+        <section
+          class="school-panel bonds-panel-responsive"
+          aria-labelledby="school-heading"
+        >
           <h2 id="school-heading">Vínculo por Escuela</h2>
           <div class="school-stats" id="schoolStats" aria-live="polite">
             <!-- School counts will be dynamically populated here -->
           </div>
+
           <h2>Vínculos</h2>
           <div class="bonds-section" id="bondsSection" aria-live="polite">
             <!-- Bonds will be dynamically populated here -->
           </div>
         </section>
+
+        <!-- Drawer for bonds panel (mobile/tablet) -->
+        <div id="bondsDrawer" class="bonds-drawer" aria-hidden="true">
+          <div class="bonds-drawer-content">
+            <button
+              id="closeBondsDrawer"
+              class="close-bonds-drawer"
+              aria-label="Cerrar vínculos"
+            >
+              ×
+            </button>
+            <section
+              class="school-panel bonds-panel-drawer"
+              aria-labelledby="drawer-school-heading"
+            >
+              <h2 id="drawer-school-heading">Vínculo por Escuela</h2>
+              <div
+                class="school-stats"
+                id="drawerSchoolStats"
+                aria-live="polite"
+              ></div>
+              <h2>Vínculos</h2>
+              <div
+                class="bonds-section"
+                id="drawerBondsSection"
+                aria-live="polite"
+              ></div>
+            </section>
+          </div>
+          <div class="bonds-drawer-backdrop"></div>
+        </div>
 
         <!-- Court container -->
         <div class="court-container">
@@ -665,7 +676,59 @@
     </div>
 
     <!-- TypeScript compiled modules -->
+
     <script type="module" src="dist/init.js"></script>
+    <script>
+      // Responsive bonds panel/drawer logic
+      function updateBondsPanelDisplay() {
+        const width = window.innerWidth;
+        const panel = document.querySelector('.bonds-panel-responsive');
+        const btn = document.getElementById('bondsDrawerBtn');
+        if (width > 1440) {
+          panel.style.display = '';
+          btn.style.display = 'none';
+        } else {
+          panel.style.display = 'none';
+          btn.style.display = '';
+        }
+      }
+      window.addEventListener('resize', updateBondsPanelDisplay);
+      window.addEventListener('DOMContentLoaded', updateBondsPanelDisplay);
+
+      // Drawer open/close logic
+      document.addEventListener('DOMContentLoaded', function () {
+        const btn = document.getElementById('bondsDrawerBtn');
+        const drawer = document.getElementById('bondsDrawer');
+        const closeBtn = document.getElementById('closeBondsDrawer');
+        const backdrop = drawer.querySelector('.bonds-drawer-backdrop');
+        btn.addEventListener('click', () => {
+          drawer.setAttribute('aria-hidden', 'false');
+          drawer.classList.add('open');
+        });
+        function closeDrawer() {
+          drawer.setAttribute('aria-hidden', 'true');
+          drawer.classList.remove('open');
+        }
+        closeBtn.addEventListener('click', closeDrawer);
+        backdrop.addEventListener('click', closeDrawer);
+      });
+
+      // Copy bonds panel content to drawer on open
+      document.addEventListener('DOMContentLoaded', function () {
+        const btn = document.getElementById('bondsDrawerBtn');
+        const drawerSchoolStats = document.getElementById('drawerSchoolStats');
+        const drawerBondsSection =
+          document.getElementById('drawerBondsSection');
+        btn.addEventListener('click', () => {
+          // Copy school stats
+          const origStats = document.getElementById('schoolStats');
+          drawerSchoolStats.innerHTML = origStats ? origStats.innerHTML : '';
+          // Copy bonds section
+          const origBonds = document.getElementById('bondsSection');
+          drawerBondsSection.innerHTML = origBonds ? origBonds.innerHTML : '';
+        });
+      });
+    </script>
 
     <!-- Debug script to verify loading -->
     <script>
