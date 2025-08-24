@@ -381,13 +381,55 @@
               class="school-panel bonds-panel-drawer"
               aria-labelledby="drawer-school-heading"
             >
-              <h2 id="drawer-school-heading">Vínculo por Escuela</h2>
+              <h2 id="drawer-school-heading" class="drawer-header-i18n">
+                Vínculo por Escuela
+              </h2>
               <div
                 class="school-stats"
                 id="drawerSchoolStats"
                 aria-live="polite"
               ></div>
-              <h2>Vínculos</h2>
+              <h2 id="drawer-bonds-heading" class="drawer-header-i18n">
+                Vínculos
+              </h2>
+              <script>
+                // ...existing code...
+
+                // Traducción dinámica de los headers del drawer
+                function updateDrawerHeadersI18n() {
+                  const lang =
+                    window.languageManager &&
+                    typeof window.languageManager.getCurrentLanguage ===
+                      'function'
+                      ? window.languageManager.getCurrentLanguage()
+                      : 'es';
+                  const schoolHeader = document.getElementById(
+                    'drawer-school-heading'
+                  );
+                  const bondsHeader = document.getElementById(
+                    'drawer-bonds-heading'
+                  );
+                  if (schoolHeader)
+                    schoolHeader.textContent =
+                      lang === 'en' ? 'School Bond' : 'Vínculo por Escuela';
+                  if (bondsHeader)
+                    bondsHeader.textContent =
+                      lang === 'en' ? 'Bonds' : 'Vínculos';
+                }
+                document.addEventListener(
+                  'DOMContentLoaded',
+                  updateDrawerHeadersI18n
+                );
+                if (
+                  window.languageManager &&
+                  typeof window.languageManager.on === 'function'
+                ) {
+                  window.languageManager.on(
+                    'languageChanged',
+                    updateDrawerHeadersI18n
+                  );
+                }
+              </script>
               <div
                 class="bonds-section"
                 id="drawerBondsSection"
@@ -678,6 +720,83 @@
     <!-- TypeScript compiled modules -->
 
     <script type="module" src="dist/init.js"></script>
+    <script>
+      // Responsive bonds panel/drawer logic
+      function updateBondsPanelDisplay() {
+        const width = window.innerWidth;
+        const panel = document.querySelector('.bonds-panel-responsive');
+        const btn = document.getElementById('bondsDrawerBtn');
+        if (width > 1440) {
+          panel.style.display = '';
+          btn.style.display = 'none';
+        } else {
+          panel.style.display = 'none';
+          btn.style.display = '';
+        }
+      }
+      window.addEventListener('resize', updateBondsPanelDisplay);
+      window.addEventListener('DOMContentLoaded', updateBondsPanelDisplay);
+
+      // Drawer open/close logic
+      document.addEventListener('DOMContentLoaded', function () {
+        const btn = document.getElementById('bondsDrawerBtn');
+        const drawer = document.getElementById('bondsDrawer');
+        const closeBtn = document.getElementById('closeBondsDrawer');
+        const backdrop = drawer.querySelector('.bonds-drawer-backdrop');
+        btn.addEventListener('click', () => {
+          drawer.setAttribute('aria-hidden', 'false');
+          drawer.classList.add('open');
+        });
+        function closeDrawer() {
+          drawer.setAttribute('aria-hidden', 'true');
+          drawer.classList.remove('open');
+        }
+        closeBtn.addEventListener('click', closeDrawer);
+        backdrop.addEventListener('click', closeDrawer);
+      });
+
+      // Delegated event for bond level selectors (drawer and main panel)
+      document.addEventListener('click', function (e) {
+        const target = e.target;
+        if (
+          target &&
+          target.classList &&
+          target.classList.contains('level-btn')
+        ) {
+          // Simula el click como si fuera en el panel principal
+          if (window.teamBuilder) {
+            target.click();
+          } else if (window.teamBuilderInstance) {
+            target.click();
+          }
+        }
+      });
+
+      // Cambia el texto del botón de vínculos según idioma
+      function updateBondsButtonText() {
+        const btn = document.getElementById('bondsDrawerBtn');
+        if (!btn) return;
+        let lang = 'es';
+        if (
+          window.languageManager &&
+          typeof window.languageManager.getCurrentLanguage === 'function'
+        ) {
+          lang = window.languageManager.getCurrentLanguage();
+        }
+        btn.textContent = lang === 'en' ? 'Bonds' : 'Vínculos';
+        btn.setAttribute(
+          'aria-label',
+          lang === 'en' ? 'Show bonds' : 'Mostrar vínculos'
+        );
+      }
+      document.addEventListener('DOMContentLoaded', updateBondsButtonText);
+      if (
+        window.languageManager &&
+        typeof window.languageManager.on === 'function'
+      ) {
+        window.languageManager.on('languageChanged', updateBondsButtonText);
+      }
+    </script>
     <script>
       // Responsive bonds panel/drawer logic
       function updateBondsPanelDisplay() {

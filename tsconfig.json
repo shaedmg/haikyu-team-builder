@@ -10,11 +10,10 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    
+
     "sourceMap": true,
     "removeComments": false,
-    "noEmitOnError": true,
-    
+    "noEmitOnError": true
   },
   "include": ["src/**/*", "src/global.d.ts"],
   "exclude": ["node_modules", "dist"]
