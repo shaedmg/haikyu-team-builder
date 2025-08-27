@@ -7386,6 +7386,63 @@ export const bondsData: BondsData = {
         ],
         "maxLevels": 5
       }
+    },
+    {
+      "name": {
+        "es": "Festival de Fuegos Artificiales",
+        "en": "Fireworks Festival"
+      },
+      "id": 96,
+      "participants": [
+        104,
+        17
+      ],
+      "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "Aumenta el parámetro principal de los miembros aliados en un [Bonus].\nAl final de cada rally, aplica el efecto negativo [Ira] al delantero rival ([Remate/Remate rápido] se reduce en un 10%). Este efecto dura hasta que el balón cruce la red 8 veces.\nSi un miembro rival ya tiene el efecto negativo [Ira] y se vuelve a aplicar, en su lugar se aplica el efecto negativo [Distraído] ([Remate/Remate rápido] se reduce en un 20%). Este efecto dura hasta que el balón cruce la red 8 veces. El efecto [Distraído] no se puede eliminar.",
+          "en": "Increases the main parameter of allied members by [Bonus].\nAfter each rally, applies the [Anger] debuff to the opposing front row ([Power Spike/Quick Attack] decreases by 10%). This effect lasts until the ball crosses the net 8 times.\nIf the opposing member already has the [Anger] debuff and it is applied again, the [Distracted] debuff is applied instead ([Power Spike/Quick Attack] decreases by 20%). This effect lasts until the ball crosses the net 8 times. The [Distracted] debuff cannot be removed."
+        },
+        "variables": [
+          {
+            "name": "Bonus",
+            "levels": {
+              "es": ["6%", "7%", "8%", "9%", "10%"],
+              "en": ["6%", "7%", "8%", "9%", "10%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
+    },
+    {
+      "name": {
+        "es": "Cerebro y Comandante",
+        "en": "Brain and Commander"
+      },
+      "id": 97,
+      "participants": [
+        104,
+        89
+      ],
+      "is_link_skill": true,
+      "rich_text": {
+        "template": {
+          "es": "KENMA KOZUME (Hanami) realiza un pase y TETSURO KUROO (Festival de Fuegos Artificiales) ejecuta un remate rápido con una potencia de [QuickPower]. Esta jugada siempre será una jugada destacada. Los miembros aliados obtienen un aumento del 10% en [Técnica de Ataque] durante 1 set.",
+          "en": "KENMA KOZUME (Hanami) sets the ball and TETSURO KUROO (Fireworks Festival) performs a quick attack with [QuickPower] power. This play will always be a Nice Play. Allied members' [Attack Technique] increases by 10% for 1 set."
+        },
+        "variables": [
+          {
+            "name": "QuickPower",
+            "levels": {
+              "ja": ["280%", "300%", "320%", "340%", "360%"],
+              "es": ["280%", "300%", "320%", "340%", "360%"],
+              "en": ["280%", "300%", "320%", "340%", "360%"]
+            }
+          }
+        ],
+        "maxLevels": 5
+      }
     }
   ]
 };

@@ -1134,6 +1134,17 @@ export const charactersData: CharactersData = {
             "position": "S",
             "profile_image_url": "./assets/images/characters/103_Kenma.png",
             "personal_page_url": null
-        }
+        },
+        "104": {
+            "id": 104,
+            "school": "Nekoma",
+            "name": "Tetsuro Kuroo",
+            "name_jp": "黒尾鉄朗",
+            "variant": null,
+            "rarity": "SP",
+            "position": "MB",
+            "profile_image_url": "./assets/images/characters/104_Tetsuro_Kuroo.png",
+            "personal_page_url": "https://naoshisan.com/?p=4963"
+        },
     }
 };
