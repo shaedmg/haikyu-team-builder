@@ -244,8 +244,19 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-  <!-- SEO Content Header oculto para usuarios, visible para Google -->
-  <section id="seo-content" style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">
+    <!-- SEO Content Header oculto para usuarios, visible para Google -->
+    <section
+      id="seo-content"
+      style="
+        position: absolute;
+        left: -9999px;
+        top: -9999px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      "
+      aria-hidden="true"
+    >
       <h2>What is Haikyu Team Builder?</h2>
       <p>
         Haikyu Team Builder is a free online tool to create your perfect
@@ -663,7 +674,7 @@
         const width = window.innerWidth;
         const panel = document.querySelector('.bonds-panel-responsive');
         const btn = document.getElementById('bondsDrawerBtn');
-        if (width > 1440) {
+        if (width > 1439) {
           panel.style.display = '';
           btn.style.display = 'none';
         } else {
@@ -764,7 +775,7 @@
         const width = window.innerWidth;
         const panel = document.querySelector('.bonds-panel-responsive');
         const btn = document.getElementById('bondsDrawerBtn');
-        if (width > 1440) {
+        if (width > 1439) {
           panel.style.display = '';
           btn.style.display = 'none';
         } else {
