@@ -1,9 +1,8 @@
-
 # Haikyu team builder / Haikyuu team builder
 
 [Visita la app aquí](https://shaedmg.github.io/haikyu-team-builder/)
 
-# 🏐 Haikyu Flight High - Team Builder
+# 🏐 Haikyu Fly High - Team Builder
 
 Un team builder interactivo inspirado en el anime/manga Haikyu!! que permite crear formaciones de voleibol con personajes del anime.
 

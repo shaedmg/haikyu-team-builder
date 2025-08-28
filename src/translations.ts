@@ -5,7 +5,7 @@ export const translations: Translations = {
         // Search/No results
         noPlayersFound: 'No players found matching your search.',
         // Header
-        title: '🏐 Haikyu Flight High Team Builder',
+        title: '🏐 Haikyu Fly High Team Builder',
         subtitle: 'Create Perfect Volleyball Teams with Character Bonds & School Synergies',
 
         // Main sections
@@ -125,16 +125,16 @@ export const translations: Translations = {
         },
 
         // Meta tags
-        pageTitle: 'Haikyu Flight High Team Builder | Create Perfect Volleyball Teams | Free Online Tool',
-        metaDescription: '🏐 Build your perfect Haikyu Flight High volleyball team! Create teams with Karasuno, Nekoma, Shiratorizawa characters. Interactive team builder with bonds, statistics and school synergies. Free Haikyu team planner tool.',
-        metaKeywords: 'haikyu flight high team builder, haikyu fly high team, haikyu volleyball team creator, haikyu team planner, haikyu flight high characters, haikyu team composition, karasuno team builder, nekoma team builder, shiratorizawa team builder, haikyu bonds calculator, volleyball team simulator, haikyu game team, anime volleyball team, haikyu interactive tool, haikyu team optimizer, flight high team maker, haikyu squad builder, volleyball anime team'
+        pageTitle: 'Haikyu Fly High Team Builder by Shaedmg',
+        metaDescription: '🏐 Build your perfect Haikyu Fly High volleyball team! Create teams with Karasuno, Nekoma, Shiratorizawa characters. Interactive team builder with bonds, statistics and school synergies.',
+        metaKeywords: 'haikyu fly high team builder, haikyu fly high team, haikyu volleyball team creator, haikyu team planner, haikyu fly high characters, haikyu team composition, karasuno team builder, nekoma team builder, shiratorizawa team builder, haikyu bonds calculator, volleyball team simulator, haikyu game team, anime volleyball team, haikyu interactive tool, haikyu team optimizer, flight high team maker, haikyu squad builder, volleyball anime team'
     },
 
     es: {
         // Search/No results
         noPlayersFound: 'No se encontraron jugadores que coincidan con la búsqueda.',
         // Header
-        title: '🏐 Constructor de Equipos Haikyu Flight High',
+        title: '🏐 Constructor de Equipos Haikyu Fly High',
         subtitle: 'Crea Equipos de Voleibol Perfectos con Vínculos de Personajes y Sinergias Escolares',
 
         // Main sections
@@ -254,8 +254,8 @@ export const translations: Translations = {
         },
 
         // Meta tags
-        pageTitle: 'Constructor de Equipos Haikyu Flight High | Crea Equipos de Voleibol Perfectos | Herramienta Gratuita Online',
-        metaDescription: '🏐 ¡Construye tu equipo perfecto de Haikyu Flight High! Crea equipos con personajes de Karasuno, Nekoma, Shiratorizawa. Constructor de equipos interactivo con vínculos, estadísticas y sinergias escolares. Herramienta gratuita de planificación de equipos Haikyu.',
-        metaKeywords: 'constructor equipos haikyu flight high, equipo haikyu fly high, creador equipos voleibol haikyu, planificador equipos haikyu, personajes haikyu flight high, composición equipos haikyu, constructor equipos karasuno, constructor equipos nekoma, constructor equipos shiratorizawa, calculadora vínculos haikyu, simulador equipos voleibol, equipo juego haikyu, equipo voleibol anime, herramienta interactiva haikyu, optimizador equipos haikyu, creador equipos flight high, constructor escuadras haikyu, equipo anime voleibol'
+        pageTitle: 'Constructor de Equipos Haikyu Fly High | Crea Equipos de Voleibol Perfectos | Herramienta Gratuita Online',
+        metaDescription: '🏐 ¡Construye tu equipo perfecto de Haikyu Fly High! Crea equipos con personajes de Karasuno, Nekoma, Shiratorizawa. Constructor de equipos interactivo con vínculos, estadísticas y sinergias escolares. Herramienta gratuita de planificación de equipos Haikyu.',
+        metaKeywords: 'constructor equipos haikyu fly high, equipo haikyu fly high, creador equipos voleibol haikyu, planificador equipos haikyu, personajes haikyu fly high, composición equipos haikyu, constructor equipos karasuno, constructor equipos nekoma, constructor equipos shiratorizawa, calculadora vínculos haikyu, simulador equipos voleibol, equipo juego haikyu, equipo voleibol anime, herramienta interactiva haikyu, optimizador equipos haikyu, creador equipos flight high, constructor escuadras haikyu, equipo anime voleibol'
     }
 };

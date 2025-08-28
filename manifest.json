@@ -1,7 +1,7 @@
 {
-  "name": "Haikyu Flight High Team Builder - Create Perfect Volleyball Teams",
+  "name": "Haikyu Fly High Team Builder - Create Perfect Volleyball Teams",
   "short_name": "Haikyu Team Builder",
-  "description": "🏐 Build your ultimate Haikyu Flight High volleyball team! Interactive team creator with character bonds, school synergies and real-time statistics. Free online tool for anime fans.",
+  "description": "🏐 Build your ultimate Haikyu Fly High volleyball team! Interactive team creator with character bonds, school synergies and real-time statistics.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -42,12 +42,6 @@
     }
   ],
 
-  
-
-  
-
   "related_applications": [],
   "prefer_related_applications": false
-
-  
 }
