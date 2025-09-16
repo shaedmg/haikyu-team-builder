@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercises - Haikyu Fly High Team Builder</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Additional styles for exercises page */
+      .exercises-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .exercise-card {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        margin-bottom: 24px;
+        padding: 24px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .exercise-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      }
+
+      .exercise-question {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #fff;
+        font-weight: 500;
+      }
+
+      .exercise-options {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .option-card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 16px;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .option-image {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .option-label {
+        font-size: 14px;
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .exercises-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .exercises-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        background: linear-gradient(135deg, #4a90e2, #7b68ee);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 10px;
+      }
+
+      .exercises-subtitle {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 30px;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .exercise-options {
+          grid-template-columns: 1fr;
+        }
+
+        .exercises-title {
+          font-size: 2rem;
+        }
+
+        .option-image {
+          width: 60px;
+          height: 60px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .exercises-container {
+          padding: 15px;
+        }
+
+        .exercise-card {
+          padding: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="/" class="navbar-brand"> 🏐 Haikyu Team Builder </a>
+        <div class="navbar-nav">
+          <a href="/" class="nav-link" data-i18n="nav.team_builder"
+            >Team Builder</a
+          >
+          <a
+            href="exercises.html"
+            class="nav-link active"
+            data-i18n="nav.exercises"
+            >Exercises</a
+          >
+        </div>
+
+        <div class="language-selector-nav">
+          <img
+            src="assets/images/world-svgrepo-com.svg"
+            alt="Language"
+            class="language-icon"
+          />
+          <select id="languageSelectNav">
+            <option value="en">EN</option>
+            <option value="es">ES</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="exercises-container">
+      <div class="exercises-header">
+        <h1 class="exercises-title" data-i18n="exercises.title">Exercises</h1>
+        <p class="exercises-subtitle" data-i18n="exercises.subtitle">
+          Browse through the exercise questions and their possible rewards
+        </p>
+      </div>
+
+      <div id="exercisesGrid" class="exercises-grid">
+        <!-- Exercise cards will be dynamically generated here -->
+      </div>
+    </div>
+
+    <!-- TypeScript compiled modules -->
+    <script type="module" src="dist/exercisesInit.js"></script>
+  </body>
+</html>

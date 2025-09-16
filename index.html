@@ -91,8 +91,8 @@
     />
 
     <meta
-  property="og:image"
-  content="https://shaedmg.github.io/haikyu-team-builder/assets/images/og-image.png"
+      property="og:image"
+      content="https://shaedmg.github.io/haikyu-team-builder/assets/images/og-image.png"
     />
     <meta
       property="og:image:alt"
@@ -116,7 +116,7 @@
       content="https://shaedmg.github.io/haikyu-team-builder/"
     />
     <meta property="og:image:type" content="image/svg+xml" />
-  <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:width" content="1200" />
@@ -139,8 +139,8 @@
       content="🏐 Build your ultimate Haikyu Fly High volleyball team! Interactive team creator with character bonds, school synergies and statistics."
     />
     <meta
-  property="twitter:image"
-  content="https://shaedmg.github.io/haikyu-team-builder/assets/images/og-image.png"
+      property="twitter:image"
+      content="https://shaedmg.github.io/haikyu-team-builder/assets/images/og-image.png"
     />
     <meta
       name="twitter:image:alt"
@@ -245,6 +245,32 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="/" class="navbar-brand"> 🏐 Haikyu Team Builder </a>
+        <div class="navbar-nav">
+          <a href="/" class="nav-link active" data-i18n="nav.team_builder"
+            >Team Builder</a
+          >
+          <a href="exercises.html" class="nav-link" data-i18n="nav.exercises"
+            >Exercises</a
+          >
+        </div>
+        <div class="language-selector-nav">
+          <img
+            src="assets/images/world-svgrepo-com.svg"
+            alt="Language"
+            class="language-icon"
+          />
+          <select id="languageSelectNav">
+            <option value="en">EN</option>
+            <option value="es">ES</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+
     <!-- SEO Content Header oculto para usuarios, visible para Google -->
     <section
       id="seo-content"

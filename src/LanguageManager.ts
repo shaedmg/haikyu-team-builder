@@ -44,6 +44,7 @@ export class LanguageManager {
 
     private init(): void {
         this.createLanguageSelector();
+        this.setupNavigationLanguageSelector();
         this.applyLanguage(this.currentLanguage);
     }
 
@@ -52,8 +53,6 @@ export class LanguageManager {
         if (!header) return;
 
         // Create language selector container
-        const languageContainer = document.createElement('div');
-        languageContainer.className = 'language-selector';
 
         // Create bonds button (move from static HTML)
         const bondsBtn = document.getElementById('bondsDrawerBtn');
@@ -66,21 +65,7 @@ export class LanguageManager {
         }
 
         // Build language selector HTML
-        languageContainer.innerHTML = `
-                <button
-          id="bondsDrawerBtn"
-          class="bonds-drawer-btn"
-          type="button"
-          aria-label="Mostrar vínculos"
-        >
-          Vínculos
-        </button>  
-        <label for="languageSelect">${this.translations[this.currentLanguage]?.language || 'Language'}</label>
-          <select id="languageSelect">
-            <option value="en" ${this.currentLanguage === 'en' ? 'selected' : ''}>English</option>
-            <option value="es" ${this.currentLanguage === 'es' ? 'selected' : ''}>Español</option>
-          </select>
-        `;
+
 
         // Insert bonds button as first child if present
         if (bondsBtnClone) {
@@ -90,24 +75,13 @@ export class LanguageManager {
             bondsBtnClone.style.transform = 'translateY(-50%)';
             bondsBtnClone.style.margin = '0';
             bondsBtnClone.style.zIndex = '2';
-            languageContainer.style.position = 'relative';
-            languageContainer.insertBefore(bondsBtnClone, languageContainer.firstChild);
         }
 
         // Insert after the subtitle
         const subtitle = header.querySelector('.header-subtitle');
         if (subtitle) {
-            subtitle.insertAdjacentElement('afterend', languageContainer);
         }
 
-        // Add event listener
-        const languageSelect = languageContainer.querySelector('#languageSelect') as HTMLSelectElement;
-        if (languageSelect) {
-            languageSelect.addEventListener('change', (e) => {
-                const target = e.target as HTMLSelectElement;
-                this.changeLanguage(target.value as Language);
-            });
-        }
 
         // Add event listener for injected bonds button (open drawer)
         if (bondsBtnClone) {
@@ -121,9 +95,32 @@ export class LanguageManager {
         }
     }
 
+    private setupNavigationLanguageSelector(): void {
+        const navLanguageSelect = document.getElementById('languageSelectNav') as HTMLSelectElement;
+        if (navLanguageSelect) {
+            navLanguageSelect.value = this.currentLanguage;
+            navLanguageSelect.addEventListener('change', (e) => {
+                const target = e.target as HTMLSelectElement;
+                this.changeLanguage(target.value as Language);
+            });
+        }
+    }
+
     public changeLanguage(lang: Language): void {
         this.currentLanguage = lang;
         localStorage.setItem('haikyu-language', lang);
+
+        // Update both language selectors
+        const mainLanguageSelect = document.getElementById('languageSelect') as HTMLSelectElement;
+        if (mainLanguageSelect) {
+            mainLanguageSelect.value = lang;
+        }
+
+        const navLanguageSelect = document.getElementById('languageSelectNav') as HTMLSelectElement;
+        if (navLanguageSelect) {
+            navLanguageSelect.value = lang;
+        }
+
         this.applyLanguage(lang);
 
         // Reload data with appropriate language JSON
@@ -182,6 +179,17 @@ export class LanguageManager {
             headerSubtitle.textContent = t.subtitle;
         }
 
+        // Update navigation
+        const navLinks = document.querySelectorAll('[data-i18n]');
+        navLinks.forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            if (key) {
+                const translation = this.getNestedTranslation(t, key);
+                if (translation) {
+                    element.textContent = translation;
+                }
+            }
+        });
 
         // Update section headings (panel principal)
         const schoolHeading = document.querySelector('#school-heading');
@@ -382,6 +390,15 @@ export class LanguageManager {
 
         // If no translation found, return original
         return attribute;
+    }
+
+    private getNestedTranslation(translations: any, key: string): string | null {
+        const keys = key.split('.');
+        let value = translations;
+        for (const k of keys) {
+            value = value?.[k];
+        }
+        return typeof value === 'string' ? value : null;
     }
 
     private updateBondAttributes(): void {

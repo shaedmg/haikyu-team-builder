@@ -2,6 +2,12 @@ import { Translations } from './types/index.js';
 
 export const translations: Translations = {
     en: {
+        // Navigation
+        nav: {
+            teamBuilder: 'Team Builder',
+            exercises: 'Exercises'
+        },
+
         // Search/No results
         noPlayersFound: 'No players found matching your search.',
         // Header
@@ -131,6 +137,12 @@ export const translations: Translations = {
     },
 
     es: {
+        // Navigation
+        nav: {
+            teamBuilder: 'Constructor de Equipo',
+            exercises: 'Ejercicios'
+        },
+
         // Search/No results
         noPlayersFound: 'No se encontraron jugadores que coincidan con la búsqueda.',
         // Header

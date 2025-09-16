@@ -127,6 +127,12 @@ export interface SchoolStats {
 }
 
 export interface TranslationStrings {
+    // Navigation
+    nav: {
+        teamBuilder: string;
+        exercises: string;
+    };
+
     // Header
     title: string;
     subtitle: string;
