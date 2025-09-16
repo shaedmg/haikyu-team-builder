@@ -9,10 +9,10 @@ const translations = {
         language: 'Language',
         nav: {
             team_builder: 'Team Builder',
-            exercises: 'Exercises'
+            exercises: 'Exercises Answers'
         },
         exercises: {
-            title: 'Exercises',
+            title: 'Exercises Answers',
             subtitle: 'Browse through the exercise mode questions and their possible rewards',
             option: 'Option',
             search_placeholder: 'Search exercises...',
@@ -26,10 +26,10 @@ const translations = {
         language: 'Idioma',
         nav: {
             team_builder: 'Constructor de Equipo',
-            exercises: 'Ejercicios'
+            exercises: 'Respuestas Ejercicios'
         },
         exercises: {
-            title: 'Ejercicios',
+            title: 'Respuestas Ejercicios',
             subtitle: 'Explora las preguntas del modo ejercicios y sus posibles recompensas',
             option: 'Opción',
             search_placeholder: 'Buscar ejercicios...',
@@ -176,15 +176,15 @@ class ExercisesPage {
         }
 
         const normalizedSearch = this.normalizeText(this.searchTerm);
-        
+
         this.filteredExercises = exerciseAnswers.filter(exercise => {
             // Only search in the current language
             const currentLanguageText = this.currentLanguage === 'es' ? exercise.es : exercise.en;
             const normalizedText = this.normalizeText(currentLanguageText);
-            
+
             return normalizedText.includes(normalizedSearch);
         });
-    }    private updateSearchResults(): void {
+    } private updateSearchResults(): void {
         const resultsInfo = document.getElementById('searchResultsInfo');
         if (!resultsInfo) return;
 

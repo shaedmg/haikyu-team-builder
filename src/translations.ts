@@ -5,7 +5,7 @@ export const translations: Translations = {
         // Navigation
         nav: {
             teamBuilder: 'Team Builder',
-            exercises: 'Exercises'
+            exercises: 'Exercises Answers'
         },
 
         // Search/No results
@@ -140,7 +140,7 @@ export const translations: Translations = {
         // Navigation
         nav: {
             teamBuilder: 'Constructor de Equipo',
-            exercises: 'Ejercicios'
+            exercises: 'Respuestas Ejercicios'
         },
 
         // Search/No results
