@@ -91,6 +91,109 @@
         margin-bottom: 30px;
       }
 
+      /* Search Container Styles */
+      .search-container {
+        max-width: 600px;
+        margin: 0 auto 40px auto;
+        padding: 0 20px;
+      }
+
+      .search-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 25px;
+        padding: 12px 20px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .search-wrapper:focus-within {
+        border-color: rgba(116, 144, 226, 0.6);
+        box-shadow: 0 4px 25px rgba(116, 144, 226, 0.2);
+        transform: translateY(-2px);
+      }
+
+      .search-icon {
+        color: rgba(255, 255, 255, 0.6);
+        margin-right: 12px;
+        flex-shrink: 0;
+      }
+
+      .search-input {
+        flex: 1;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 0;
+        width: 100%;
+      }
+
+      .search-input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+        font-weight: 300;
+      }
+
+      .search-clear {
+        color: rgba(255, 255, 255, 0.6);
+        cursor: pointer;
+        padding: 4px;
+        border-radius: 50%;
+        transition: all 0.2s ease;
+        margin-left: 8px;
+        flex-shrink: 0;
+      }
+
+      .search-clear:hover {
+        color: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .search-results-info {
+        text-align: center;
+        margin-top: 12px;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+        font-weight: 300;
+        min-height: 20px;
+      }
+
+      /* Hidden state for exercises */
+      .exercise-card.hidden {
+        display: none !important;
+      }
+
+      /* No results message */
+      .no-results {
+        text-align: center;
+        padding: 60px 20px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .no-results-icon {
+        font-size: 48px;
+        margin-bottom: 16px;
+        opacity: 0.5;
+      }
+
+      .no-results-title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .no-results-subtitle {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
       /* Responsive design */
       @media (max-width: 768px) {
         .exercise-options {
@@ -105,6 +208,19 @@
           width: 60px;
           height: 60px;
         }
+
+        .search-container {
+          padding: 0 15px;
+          margin-bottom: 30px;
+        }
+
+        .search-wrapper {
+          padding: 14px 18px;
+        }
+
+        .search-input {
+          font-size: 16px; /* Prevents zoom on iOS */
+        }
       }
 
       @media (max-width: 480px) {
@@ -114,6 +230,40 @@
 
         .exercise-card {
           padding: 18px;
+        }
+
+        .search-container {
+          padding: 0 10px;
+          margin-bottom: 25px;
+        }
+
+        .search-wrapper {
+          padding: 12px 16px;
+          border-radius: 20px;
+        }
+
+        .search-icon {
+          margin-right: 10px;
+        }
+
+        .search-input {
+          font-size: 16px;
+        }
+
+        .no-results {
+          padding: 40px 15px;
+        }
+
+        .no-results-icon {
+          font-size: 36px;
+        }
+
+        .no-results-title {
+          font-size: 20px;
+        }
+
+        .no-results-subtitle {
+          font-size: 14px;
         }
       }
     </style>
@@ -156,6 +306,30 @@
         <p class="exercises-subtitle" data-i18n="exercises.subtitle">
           Browse through the exercise questions and their possible rewards
         </p>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-container">
+        <div class="search-wrapper">
+          <div class="search-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <input 
+            type="text" 
+            id="exerciseSearchInput" 
+            class="search-input" 
+            data-i18n-placeholder="exercises.search_placeholder"
+            placeholder="Search exercises..."
+          />
+          <div class="search-clear" id="searchClear" style="display: none;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="search-results-info" id="searchResultsInfo"></div>
       </div>
 
       <div id="exercisesGrid" class="exercises-grid">
