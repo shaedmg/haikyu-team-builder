@@ -55,7 +55,7 @@ class ExercisesPage {
     }
 
     private setupLanguageSelector(): void {
-        const select = document.getElementById('languageSelect') as HTMLSelectElement;
+        const select = document.getElementById('languageSelectNav') as HTMLSelectElement;
         if (select) {
             select.value = this.currentLanguage;
 
