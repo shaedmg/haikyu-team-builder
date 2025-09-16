@@ -3,14 +3,164 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercises - Haikyu Fly High Team Builder</title>
+    <title>
+      Haikyu Exercises - Volleyball Quiz & Training | Haikyu Fly High Team
+      Builder
+    </title>
+    <meta
+      name="description"
+      content="Test your Haikyu knowledge with interactive volleyball exercises and quizzes. Challenge yourself with questions about characters, teams, and strategies from Haikyu Fly High."
+    />
+    <meta
+      name="keywords"
+      content="haikyu exercises, haikyu quiz, volleyball quiz, haikyu trivia, haikyu fly high quiz, karasuno quiz, volleyball training, anime quiz, haikyu characters quiz, haikyu knowledge test"
+    />
+    <meta name="author" content="Angelo" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Haikyu Exercises - Volleyball Quiz & Training"
+    />
+    <meta
+      property="og:description"
+      content="Test your Haikyu knowledge with interactive volleyball exercises and quizzes. Challenge yourself with questions about characters, teams, and strategies."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://shaedmg.github.io/haikyu-team-builder/exercises.html"
+    />
+    <meta
+      property="og:image"
+      content="https://shaedmg.github.io/haikyu-team-builder/assets/images/og-image.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Haikyu Exercises - Volleyball Quiz & Training"
+    />
+    <meta
+      name="twitter:description"
+      content="Test your Haikyu knowledge with interactive volleyball exercises and quizzes."
+    />
+    <meta
+      name="twitter:image"
+      content="https://shaedmg.github.io/haikyu-team-builder/assets/images/og-image.png"
+    />
+    <link
+      rel="canonical"
+      href="https://shaedmg.github.io/haikyu-team-builder/exercises.html"
+    />
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Haikyu Exercises - Volleyball Quiz & Training",
+        "description": "Test your Haikyu knowledge with interactive volleyball exercises and quizzes. Challenge yourself with questions about characters, teams, and strategies from Haikyu Fly High.",
+        "url": "https://shaedmg.github.io/haikyu-team-builder/exercises.html",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Haikyu Fly High Team Builder",
+          "url": "https://shaedmg.github.io/haikyu-team-builder/"
+        },
+        "mainEntity": {
+          "@type": "Quiz",
+          "name": "Haikyu Volleyball Knowledge Quiz",
+          "description": "Interactive quiz about Haikyu characters, teams, and volleyball strategies",
+          "educationalLevel": "All levels",
+          "about": [
+            {
+              "@type": "Thing",
+              "name": "Haikyu",
+              "description": "Japanese volleyball anime and manga series"
+            },
+            {
+              "@type": "Thing",
+              "name": "Volleyball",
+              "description": "Team sport involving strategy and teamwork"
+            }
+          ]
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Angelo"
+        },
+        "dateModified": "2025-09-16",
+        "inLanguage": "en"
+      }
+    </script>
+
     <style>
       /* Additional styles for exercises page */
       .exercises-container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 20px;
+      }
+
+      .exercises-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .exercises-title {
+        font-size: 2.5rem;
+        margin-bottom: 16px;
+        color: #fff;
+        font-weight: 700;
+      }
+
+      .exercises-subtitle {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+
+      .exercises-intro {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 600px;
+        backdrop-filter: blur(10px);
+      }
+
+      .exercises-intro p {
+        color: #fff;
+        margin-bottom: 12px;
+        font-weight: 500;
+      }
+
+      .exercises-intro ul {
+        color: rgba(255, 255, 255, 0.9);
+        list-style: none;
+        padding: 0;
+      }
+
+      .exercises-intro li {
+        padding: 4px 0;
+        position: relative;
+        padding-left: 20px;
+      }
+
+      .exercises-intro li:before {
+        content: '🏐';
+        position: absolute;
+        left: 0;
+      }
+
+      /* Hide content for visual users but keep for SEO */
+      .seo-hidden {
+        position: absolute;
+        left: -10000px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
       }
 
       .exercise-card {
@@ -300,13 +450,26 @@
     </nav>
 
     <!-- Main Content -->
-    <div class="exercises-container">
-      <div class="exercises-header">
-        <h1 class="exercises-title" data-i18n="exercises.title">Exercises</h1>
+    <main class="exercises-container">
+      <header class="exercises-header">
+        <h1 class="exercises-title" data-i18n="exercises.title">
+          Haikyu Volleyball Exercises & Quiz
+        </h1>
         <p class="exercises-subtitle" data-i18n="exercises.subtitle">
-          Browse through the exercise questions and their possible rewards
+          Test your knowledge of Haikyu characters, teams, and volleyball
+          strategies. Discover exciting rewards as you master each question
+          about your favorite volleyball anime.
         </p>
-      </div>
+        <div class="exercises-intro seo-hidden">
+          <p>Challenge yourself with interactive questions covering:</p>
+          <ul>
+            <li>Character knowledge and abilities</li>
+            <li>Team formations and strategies</li>
+            <li>Volleyball techniques and rules</li>
+            <li>School rivalries and matches</li>
+          </ul>
+        </div>
+      </header>
 
       <!-- Search Bar -->
       <div class="search-container">
@@ -359,7 +522,7 @@
       <div id="exercisesGrid" class="exercises-grid">
         <!-- Exercise cards will be dynamically generated here -->
       </div>
-    </div>
+    </main>
 
     <!-- TypeScript compiled modules -->
     <script type="module" src="dist/exercisesInit.js"></script>
