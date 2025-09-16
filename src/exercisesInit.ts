@@ -176,17 +176,15 @@ class ExercisesPage {
         }
 
         const normalizedSearch = this.normalizeText(this.searchTerm);
-
+        
         this.filteredExercises = exerciseAnswers.filter(exercise => {
-            const englishText = this.normalizeText(exercise.en);
-            const spanishText = this.normalizeText(exercise.es);
-
-            return englishText.includes(normalizedSearch) ||
-                spanishText.includes(normalizedSearch);
+            // Only search in the current language
+            const currentLanguageText = this.currentLanguage === 'es' ? exercise.es : exercise.en;
+            const normalizedText = this.normalizeText(currentLanguageText);
+            
+            return normalizedText.includes(normalizedSearch);
         });
-    }
-
-    private updateSearchResults(): void {
+    }    private updateSearchResults(): void {
         const resultsInfo = document.getElementById('searchResultsInfo');
         if (!resultsInfo) return;
 
