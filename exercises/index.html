@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Haikyu Exercises - Volleyball Quiz & Training | Haikyu Fly High Team
+      Builder
+    </title>
+    <meta
+      name="description"
+      content="Test your Haikyu knowledge with interactive volleyball exercises and quizzes. Challenge yourself with questions about characters, teams, and strategies from Haikyu Fly High."
+    />
+    <meta
+      name="keywords"
+      content="haikyu exercises, haikyu quiz, volleyball quiz, haikyu trivia, haikyu fly high quiz, karasuno quiz, volleyball training, anime quiz, haikyu characters quiz, haikyu knowledge test"
+    />
+    <meta name="author" content="Angelo" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Haikyu Exercises - Volleyball Quiz & Training"
+    />
+    <meta
+      property="og:description"
+      content="Test your Haikyu knowledge with interactive volleyball exercises and quizzes. Challenge yourself with questions about characters, teams, and strategies."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://shaedmg.github.io/haikyu-team-builder/exercises/"
+    />
+    <meta
+      property="og:image"
+      content="https://shaedmg.github.io/haikyu-team-builder/assets/images/og-image.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Haikyu Exercises - Volleyball Quiz & Training"
+    />
+    <meta
+      name="twitter:description"
+      content="Test your Haikyu knowledge with interactive volleyball exercises and quizzes."
+    />
+    <meta
+      name="twitter:image"
+      content="https://shaedmg.github.io/haikyu-team-builder/assets/images/og-image.png"
+    />
+    <link
+      rel="canonical"
+      href="https://shaedmg.github.io/haikyu-team-builder/exercises/"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Haikyu Exercises - Volleyball Quiz & Training",
+        "description": "Test your Haikyu knowledge with interactive volleyball exercises and quizzes. Challenge yourself with questions about characters, teams, and strategies from Haikyu Fly High.",
+        "url": "https://shaedmg.github.io/haikyu-team-builder/exercises/",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Haikyu Fly High Team Builder",
+          "url": "https://shaedmg.github.io/haikyu-team-builder/"
+        },
+        "mainEntity": {
+          "@type": "Quiz",
+          "name": "Haikyu Volleyball Knowledge Quiz",
+          "description": "Interactive quiz about Haikyu characters, teams, and volleyball strategies",
+          "educationalLevel": "All levels",
+          "about": [
+            {
+              "@type": "Thing",
+              "name": "Haikyu",
+              "description": "Japanese volleyball anime and manga series"
+            },
+            {
+              "@type": "Thing",
+              "name": "Volleyball",
+              "description": "Team sport involving strategy and teamwork"
+            }
+          ]
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Angelo"
+        },
+        "dateModified": "2025-09-16",
+        "inLanguage": "en"
+      }
+    </script>
+
+    <style>
+      /* Additional styles for exercises page */
+      .exercises-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .exercises-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .exercises-title {
+        font-size: 2.5rem;
+        margin-bottom: 16px;
+        color: #fff;
+        font-weight: 700;
+      }
+
+      .exercises-subtitle {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+
+      .exercises-intro {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 600px;
+        backdrop-filter: blur(10px);
+      }
+
+      .exercises-intro p {
+        color: #fff;
+        margin-bottom: 12px;
+        font-weight: 500;
+      }
+
+      .exercises-intro ul {
+        color: rgba(255, 255, 255, 0.9);
+        list-style: none;
+        padding: 0;
+      }
+
+      .exercises-intro li {
+        padding: 4px 0;
+        position: relative;
+        padding-left: 20px;
+      }
+
+      .exercises-intro li:before {
+        content: '🏐';
+        position: absolute;
+        left: 0;
+      }
+
+      /* Hide content for visual users but keep for SEO */
+      .seo-hidden {
+        position: absolute;
+        left: -10000px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+
+      .exercise-card {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        margin-bottom: 24px;
+        padding: 24px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .exercise-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      }
+
+      .exercise-question {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #fff;
+        font-weight: 500;
+      }
+
+      .exercise-options {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .option-card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 16px;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .option-image {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .option-label {
+        font-size: 14px;
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .exercises-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .exercises-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        background: linear-gradient(135deg, #4a90e2, #7b68ee);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 10px;
+      }
+
+      .exercises-subtitle {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 30px;
+      }
+
+      /* Search Container Styles */
+      .search-container {
+        max-width: 600px;
+        margin: 0 auto 40px auto;
+        padding: 0 20px;
+      }
+
+      .search-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 25px;
+        padding: 12px 20px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .search-wrapper:focus-within {
+        border-color: rgba(116, 144, 226, 0.6);
+        box-shadow: 0 4px 25px rgba(116, 144, 226, 0.2);
+        transform: translateY(-2px);
+      }
+
+      .search-icon {
+        color: rgba(255, 255, 255, 0.6);
+        margin-right: 12px;
+        flex-shrink: 0;
+      }
+
+      .search-input {
+        flex: 1;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 0;
+        width: 100%;
+      }
+
+      .search-input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+        font-weight: 300;
+      }
+
+      .search-clear {
+        color: rgba(255, 255, 255, 0.6);
+        cursor: pointer;
+        padding: 4px;
+        border-radius: 50%;
+        transition: all 0.2s ease;
+        margin-left: 8px;
+        flex-shrink: 0;
+      }
+
+      .search-clear:hover {
+        color: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .search-results-info {
+        text-align: center;
+        margin-top: 12px;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+        font-weight: 300;
+        min-height: 20px;
+      }
+
+      /* Hidden state for exercises */
+      .exercise-card.hidden {
+        display: none !important;
+      }
+
+      /* No results message */
+      .no-results {
+        text-align: center;
+        padding: 60px 20px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .no-results-icon {
+        font-size: 48px;
+        margin-bottom: 16px;
+        opacity: 0.5;
+      }
+
+      .no-results-title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .no-results-subtitle {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .exercise-options {
+          grid-template-columns: 1fr;
+        }
+
+        .exercises-title {
+          font-size: 2rem;
+        }
+
+        .option-image {
+          width: 60px;
+          height: 60px;
+        }
+
+        .search-container {
+          padding: 0 15px;
+          margin-bottom: 30px;
+        }
+
+        .search-wrapper {
+          padding: 14px 18px;
+        }
+
+        .search-input {
+          font-size: 16px; /* Prevents zoom on iOS */
+        }
+      }
+
+      /* Attribution footer */
+      .attribution {
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 0.75rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .attribution a {
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .attribution a:hover {
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      @media (max-width: 768px) {
+        .attribution {
+          font-size: 0.7rem;
+          padding: 15px;
+          margin-top: 30px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .exercises-container {
+          padding: 15px;
+        }
+
+        .attribution {
+          font-size: 0.65rem;
+          padding: 10px;
+          margin-top: 20px;
+        }
+
+        .exercise-card {
+          padding: 18px;
+        }
+
+        .search-container {
+          padding: 0 10px;
+          margin-bottom: 25px;
+        }
+
+        .search-wrapper {
+          padding: 12px 16px;
+          border-radius: 20px;
+        }
+
+        .search-icon {
+          margin-right: 10px;
+        }
+
+        .search-input {
+          font-size: 16px;
+        }
+
+        .no-results {
+          padding: 40px 15px;
+        }
+
+        .no-results-icon {
+          font-size: 36px;
+        }
+
+        .no-results-title {
+          font-size: 20px;
+        }
+
+        .no-results-subtitle {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="/haikyu-team-builder/" class="navbar-brand">
+          🏐 Haikyu Team Builder
+        </a>
+        <div class="navbar-nav">
+          <a
+            href="/haikyu-team-builder/"
+            class="nav-link"
+            data-i18n="nav.team_builder"
+            >Team Builder</a
+          >
+          <a
+            href="/haikyu-team-builder/exercises/"
+            class="nav-link active"
+            data-i18n="nav.exercises"
+            >Exercises</a
+          >
+        </div>
+
+        <div class="language-selector-nav">
+          <img
+            src="../assets/images/world-svgrepo-com.svg"
+            alt="Language"
+            class="language-icon"
+          />
+          <select id="languageSelectNav">
+            <option value="en">EN</option>
+            <option value="es">ES</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="exercises-container">
+      <header class="exercises-header">
+        <h1 class="exercises-title" data-i18n="exercises.title">
+          Haikyu Volleyball Exercises & Quiz
+        </h1>
+        <p class="exercises-subtitle" data-i18n="exercises.subtitle">
+          Test your knowledge of Haikyu characters, teams, and volleyball
+          strategies. Discover exciting rewards as you master each question
+          about your favorite volleyball anime.
+        </p>
+        <div class="exercises-intro seo-hidden">
+          <p>Challenge yourself with interactive questions covering:</p>
+          <ul>
+            <li>Character knowledge and abilities</li>
+            <li>Team formations and strategies</li>
+            <li>Volleyball techniques and rules</li>
+            <li>School rivalries and matches</li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- Search Bar -->
+      <div class="search-container">
+        <div class="search-wrapper">
+          <div class="search-icon">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <input
+            type="text"
+            id="exerciseSearchInput"
+            class="search-input"
+            data-i18n-placeholder="exercises.search_placeholder"
+            placeholder="Search exercises..."
+          />
+          <div class="search-clear" id="searchClear" style="display: none">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 6L6 18M6 6L18 18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="search-results-info" id="searchResultsInfo"></div>
+      </div>
+
+      <div id="exercisesGrid" class="exercises-grid">
+        <!-- Exercise cards will be dynamically generated here -->
+      </div>
+
+      <footer class="attribution">
+        <p>Exercise data compiled with assistance from sofimaulen</p>
+      </footer>
+    </main>
+
+    <!-- TypeScript compiled modules -->
+    <script type="module" src="../dist/exercisesInit.js"></script>
+  </body>
+</html>

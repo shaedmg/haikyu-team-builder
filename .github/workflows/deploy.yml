@@ -41,6 +41,7 @@ jobs:
           cp -R *.html styles.css manifest.json sw.js robots.txt sitemap.xml build/ 2>/dev/null || true
           cp -R assets build/assets
           cp -R dist build/dist
+          cp -R exercises build/exercises 2>/dev/null || true
           # Update SW version with commit hash for cache busting
           sed -i "s/const CACHE_VERSION = '[^']*'/const CACHE_VERSION = '${GITHUB_SHA:0:8}'/" sw.js || true
           sed -i "s/const CACHE_NAME = 'haikyu-team-builder-v[^']*'/const CACHE_NAME = 'haikyu-team-builder-v${GITHUB_SHA:0:8}'/" sw.js || true

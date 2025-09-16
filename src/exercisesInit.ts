@@ -211,7 +211,7 @@ class ExercisesPage {
     }
 
     private getRewardImagePath(rewardName: string): string {
-        return `assets/images/answers_rewards/${rewardName}`;
+        return `../assets/images/answers_rewards/${rewardName}`;
     }
 
     private renderExercises(): void {
