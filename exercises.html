@@ -373,9 +373,43 @@
         }
       }
 
+      /* Attribution footer */
+      .attribution {
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 0.75rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .attribution a {
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .attribution a:hover {
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      @media (max-width: 768px) {
+        .attribution {
+          font-size: 0.7rem;
+          padding: 15px;
+          margin-top: 30px;
+        }
+      }
+
       @media (max-width: 480px) {
         .exercises-container {
           padding: 15px;
+        }
+
+        .attribution {
+          font-size: 0.65rem;
+          padding: 10px;
+          margin-top: 20px;
         }
 
         .exercise-card {
@@ -422,9 +456,14 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
       <div class="navbar-container">
-        <a href="/haikyu-team-builder/" class="navbar-brand"> 🏐 Haikyu Team Builder </a>
+        <a href="/haikyu-team-builder/" class="navbar-brand">
+          🏐 Haikyu Team Builder
+        </a>
         <div class="navbar-nav">
-          <a href="/haikyu-team-builder/" class="nav-link" data-i18n="nav.team_builder"
+          <a
+            href="/haikyu-team-builder/"
+            class="nav-link"
+            data-i18n="nav.team_builder"
             >Team Builder</a
           >
           <a
@@ -522,6 +561,10 @@
       <div id="exercisesGrid" class="exercises-grid">
         <!-- Exercise cards will be dynamically generated here -->
       </div>
+
+      <footer class="attribution">
+        <p>Exercise data compiled with assistance from sofimaulen</p>
+      </footer>
     </main>
 
     <!-- TypeScript compiled modules -->
