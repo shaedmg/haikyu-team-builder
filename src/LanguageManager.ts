@@ -53,6 +53,8 @@ export class LanguageManager {
         if (!header) return;
 
         // Create language selector container
+        const languageContainer = document.createElement('div');
+        languageContainer.className = 'language-selector';
 
         // Create bonds button (move from static HTML)
         const bondsBtn = document.getElementById('bondsDrawerBtn');
@@ -63,6 +65,18 @@ export class LanguageManager {
             bondsBtnClone.id = 'bondsDrawerBtnInjected';
             bondsBtnClone.classList.add('injected');
         }
+
+        languageContainer.innerHTML = `
+                <button
+          id="bondsDrawerBtn"
+          class="bonds-drawer-btn"
+          type="button"
+          aria-label="Mostrar vínculos"
+        >
+          Vínculos
+        </button>  
+        `;
+
 
         // Build language selector HTML
 
@@ -75,11 +89,15 @@ export class LanguageManager {
             bondsBtnClone.style.transform = 'translateY(-50%)';
             bondsBtnClone.style.margin = '0';
             bondsBtnClone.style.zIndex = '2';
+            languageContainer.style.position = 'relative';
+            languageContainer.insertBefore(bondsBtnClone, languageContainer.firstChild);
+
         }
 
         // Insert after the subtitle
         const subtitle = header.querySelector('.header-subtitle');
         if (subtitle) {
+            subtitle.insertAdjacentElement('afterend', languageContainer);
         }
 
 
